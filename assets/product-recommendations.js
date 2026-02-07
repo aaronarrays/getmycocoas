@@ -115,7 +115,10 @@ class ProductRecommendations extends HTMLElement {
     try {
       let success = false;
 
+      // Skip HTML API for carousel - server often returns grid layout; build carousel from JSON instead
       if (isCarousel) {
+        console.log('[ProductRecs] Carousel: skipping HTML API, using JSON/collection for correct layout');
+      } else if (!isCarousel) {
         console.log('[ProductRecs] Trying HTML API first...');
         success = await this.#tryHtmlApiFirst(productId, sectionId, intent, id);
         console.log('[ProductRecs] tryHtmlApiFirst result:', success);
