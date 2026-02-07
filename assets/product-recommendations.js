@@ -327,7 +327,7 @@ class ProductRecommendations extends HTMLElement {
     const styleClass = ` slideshow-control--style-${iconsStyle}`;
     const arrowSvg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--icon-stroke-width)" vector-effect="non-scaling-stroke" d="M4.25 10h11.5m0 0-4-4m4 4-4 4"/></svg>';
     const arrowsHtml = showArrows
-      ? `<slideshow-arrows position="center"><button type="button" class="slideshow-control slideshow-control--previous${shapeClass}${styleClass} button button-unstyled button-unstyled--transparent" ref="previous" on:click="/previous" aria-label="Previous"><span class="svg-wrapper icon-arrow">${arrowSvg}</span></button><button type="button" class="slideshow-control slideshow-control--next${shapeClass}${styleClass} button button-unstyled button-unstyled--transparent flip-x" ref="next" on:click="/next" aria-label="Next"><span class="svg-wrapper icon-arrow">${arrowSvg}</span></button></slideshow-arrows>`
+      ? `<slideshow-arrows position="center"><button type="button" class="slideshow-control slideshow-control--previous${shapeClass}${styleClass} button button-unstyled button-unstyled--transparent flip-x" ref="previous" on:click="/previous" aria-label="Previous"><span class="svg-wrapper icon-arrow">${arrowSvg}</span></button><button type="button" class="slideshow-control slideshow-control--next${shapeClass}${styleClass} button button-unstyled button-unstyled--transparent" ref="next" on:click="/next" aria-label="Next"><span class="svg-wrapper icon-arrow">${arrowSvg}</span></button></slideshow-arrows>`
       : '';
 
     return `
