@@ -77,7 +77,11 @@ class ProductRecommendations extends HTMLElement {
       return;
     }
 
-    if (recommendationsPerformed === 'true') return;
+    // Only skip when Liquid already rendered products; if empty (data-has-recommendations=false), run our fetch
+    if (recommendationsPerformed === 'true') {
+      const hasProducts = this.querySelector('.resource-list[data-has-recommendations="true"]');
+      if (hasProducts) return;
+    }
 
     const listContainer = this.querySelector('.resource-list') || this.querySelector('[data-testid="resource-list-grid"]');
     if (!listContainer) return;
