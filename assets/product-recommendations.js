@@ -141,6 +141,7 @@ class ProductRecommendations extends HTMLElement {
 
   /**
    * Render product cards HTML into container
+   * Uses theme structure: resource-list__item > product-card > link + content
    */
   #renderProductCards(listContainer, products) {
     const formatPrice = (value) => {
@@ -155,33 +156,44 @@ class ProductRecommendations extends HTMLElement {
         const imgUrl = typeof img === 'string' ? img : (img?.src ?? img?.url ?? '');
         const root = (window.Shopify?.routes?.root || '/').replace(/\/$/, '');
         const productUrl = product.url ?? (product.handle ? `${root}/products/${product.handle}` : '#');
+        const title = (product.title || '').replace(/"/g, '&quot;');
+        const comparePrice = product.compare_at_price ?? 0;
+        const price = product.price ?? 0;
+        const hasSale = comparePrice > price;
         return `
           <div class="resource-list__item">
-            <a href="${productUrl}" class="product-card__link" style="display:block;text-decoration:none;color:inherit;">
-              <div class="product-card__media" style="aspect-ratio:1;overflow:hidden;">
-                <img
-                  src="${imgUrl}"
-                  alt="${(product.title || '').replace(/"/g, '&quot;')}"
-                  loading="lazy"
-                  width="400"
-                  height="400"
-                  style="width:100%;height:100%;object-fit:contain;"
-                />
-              </div>
-              <div class="product-card__content" style="padding:1rem 0;">
-                <h3 class="product-card__title" style="margin:0 0 0.5rem;font-size:1rem;">${product.title || ''}</h3>
+            <div class="product-card">
+              <a href="${productUrl}" class="product-card__link" aria-label="${title}">
+                <span class="visually-hidden">${title}</span>
+              </a>
+              <div class="product-card__content layout-panel-flex layout-panel-flex--column product-grid__card gap-style" style="--product-card-gap: 4px;">
+                <div class="card-gallery" style="aspect-ratio: 1; overflow: hidden; position: relative;">
+                  <img
+                    src="${imgUrl}"
+                    alt="${title}"
+                    loading="lazy"
+                    width="400"
+                    height="400"
+                    style="width:100%;height:100%;object-fit:contain;"
+                  />
+                </div>
+                <h4 class="h4" style="margin:0;font-size:1rem;">${product.title || ''}</h4>
                 <div class="price">
-                  <span class="price__regular">${formatPrice(product.price)}</span>
-                  ${product.compare_at_price > product.price ? `<s class="price__sale" style="margin-left:0.5rem;opacity:0.7;">${formatPrice(product.compare_at_price)}</s>` : ''}
+                  <span class="price__regular">${formatPrice(price)}</span>
+                  ${hasSale ? `<s class="price__sale" style="margin-left:0.5rem;opacity:0.7;">${formatPrice(comparePrice)}</s>` : ''}
                 </div>
               </div>
-            </a>
+            </div>
           </div>
         `;
       })
       .join('');
 
     listContainer.setAttribute('data-has-recommendations', 'true');
+
+    // When JS injects content, the container may have been carousel - switch to grid layout
+    listContainer.classList.remove('resource-list__carousel', 'force-full-width');
+    listContainer.classList.add('resource-list--grid');
   }
 
   /**

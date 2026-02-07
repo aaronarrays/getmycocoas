@@ -196,6 +196,24 @@
   product-recommendations:has([data-has-recommendations='false']) {
     display: none;
   }
+
+  /* JS-rendered product cards: ensure layout matches theme */
+  .product-recommendations .resource-list__item .product-card {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    min-width: 0;
+    grid-template-rows: 1fr auto;
+  }
+
+  .product-recommendations .resource-list__item .product-card .card-gallery {
+    min-height: 0;
+  }
+
+  .product-recommendations .resource-list__item .product-card .card-gallery img {
+    object-fit: contain;
+    object-position: center;
+  }
 {% endstylesheet %}
 
 {% schema %}
