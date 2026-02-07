@@ -1,0 +1,198 @@
+{% comment %}
+  Banner Responsive Section
+  Una sola imagen que se adapta al ancho y mantiene su proporción.
+  Funciona igual en mobile y web - responsive por naturaleza.
+{% endcomment %}
+
+{% liquid
+  assign image = section.settings.image
+  assign link_url = section.settings.link_url
+%}
+
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<div class="banner-responsive section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+  <div class="banner-responsive__wrapper">
+    {% if link_url != blank %}
+      <a href="{{ link_url }}" class="banner-responsive__link" {% if section.settings.open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}>
+    {% endif %}
+
+    <div class="banner-responsive__container" style="--banner-position: {{ section.settings.image_position }};">
+      {% if image != blank %}
+        <img
+          class="banner-responsive__img"
+          src="{{ image | image_url: width: 1600 }}"
+          srcset="
+            {{ image | image_url: width: 375 }} 375w,
+            {{ image | image_url: width: 550 }} 550w,
+            {{ image | image_url: width: 750 }} 750w,
+            {{ image | image_url: width: 1100 }} 1100w,
+            {{ image | image_url: width: 1500 }} 1500w,
+            {{ image | image_url: width: 1920 }} 1920w
+          "
+          sizes="100vw"
+          alt="{{ image.alt | escape }}"
+          width="{{ image.width }}"
+          height="{{ image.height }}"
+          loading="lazy"
+        >
+      {% else %}
+        <div class="banner-responsive__placeholder">
+          {{ 'lifestyle-1' | placeholder_svg_tag: 'banner-responsive__placeholder-svg' }}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if link_url != blank %}
+      </a>
+    {% endif %}
+  </div>
+</div>
+
+{% stylesheet %}
+  .banner-responsive.section--full-width .banner-responsive__wrapper {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+  }
+
+  .banner-responsive__wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .banner-responsive__link {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  .banner-responsive__container {
+    position: relative;
+    width: 100%;
+    line-height: 0;
+  }
+
+  .banner-responsive__img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    object-position: var(--banner-position, center center);
+    vertical-align: middle;
+  }
+
+  .banner-responsive__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    background: rgba(128, 128, 128, 0.1);
+  }
+
+  .banner-responsive__placeholder-svg {
+    width: 50%;
+    opacity: 0.3;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Banner adaptable",
+  "tag": "section",
+  "class": "banner-responsive-section",
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Imagen"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen del banner",
+      "info": "Una sola imagen para mobile y web. La sección se adapta automáticamente."
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Enfoque de la imagen",
+      "options": [
+        { "value": "center center", "label": "Centro" },
+        { "value": "top center", "label": "Arriba" },
+        { "value": "bottom center", "label": "Abajo" },
+        { "value": "center left", "label": "Izquierda" },
+        { "value": "center right", "label": "Derecha" }
+      ],
+      "default": "center center"
+    },
+    {
+      "type": "header",
+      "content": "Enlace"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Enlace del banner"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_new_tab",
+      "label": "Abrir en nueva pestaña",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Diseño"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Ancho de sección",
+      "options": [
+        { "value": "page-width", "label": "Ancho de página" },
+        { "value": "full-width", "label": "Ancho completo" }
+      ],
+      "default": "full-width"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Esquema de color",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Espaciado"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Arriba",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Abajo",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner adaptable",
+      "category": "Imagen"
+    }
+  ]
+}
+{% endschema %}

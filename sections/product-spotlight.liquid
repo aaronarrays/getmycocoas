@@ -1,0 +1,550 @@
+{% comment %}
+  Product Spotlight Section - Destacado de producto para homepage
+  Layout 50/50: imagen izquierda, contenido derecha
+  Incluye: badge, título, subtítulo, párrafo, botón "Saber más", compra directa, contador de compradores
+{% endcomment %}
+
+{% liquid
+  assign product = section.settings.product
+  assign badge_text = section.settings.badge_text
+  assign title_text = section.settings.title_text
+  assign subtitle_text = section.settings.subtitle_text
+  assign paragraph_text = section.settings.paragraph_text
+  assign button_label = section.settings.button_label
+  assign counter_number = section.settings.counter_number | default: 0 | plus: 0
+  assign counter_suffix = section.settings.counter_suffix
+  assign use_product_image = section.settings.use_product_image
+  assign custom_image = section.settings.custom_image
+
+  comment
+    Si hay producto seleccionado y el campo está vacío, usar datos del producto
+  endcomment
+  if product != blank
+    if title_text == blank
+      assign title_text = product.title
+    endif
+    if paragraph_text == blank
+      assign paragraph_text = product.description | strip_html | truncate: 200
+    endif
+  endif
+
+  assign display_image = custom_image
+  if use_product_image and product != blank and product.featured_image != blank
+    assign display_image = product.featured_image
+  endif
+
+  assign product_url = product.url | default: section.settings.button_link
+  if button_label == blank
+    assign button_label = 'Saber más'
+  endif
+  if counter_suffix == blank
+    assign counter_suffix = 'personas compraron en el último mes'
+  endif
+
+  assign variant = product.selected_or_first_available_variant
+  assign can_add_to_cart = false
+  assign add_to_cart_text = 'products.product.unavailable' | t
+  if variant
+    if variant.available
+      assign can_add_to_cart = true
+      assign add_to_cart_text = 'products.product.add_to_cart' | t
+    elsif variant.inventory_management == 'shopify' and variant.inventory_quantity <= 0 and variant.inventory_policy == 'deny'
+      assign add_to_cart_text = 'products.product.sold_out' | t
+    endif
+  endif
+%}
+
+<script type="application/ld+json">
+  {% if product != blank %}
+    {{ product | structured_data }}
+  {% endif %}
+</script>
+
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<div
+  class="product-spotlight section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }} {% if section.settings.media_position == 'right' %}product-spotlight--media-right{% endif %}"
+  style="{% render 'spacing-style', settings: section.settings %}"
+>
+  <div class="product-spotlight__wrapper">
+    {% comment %} Columna imagen - izquierda {% endcomment %}
+    <div class="product-spotlight__media">
+      {% if display_image != blank %}
+        {% if product_url != blank %}
+          <a href="{{ product_url }}" class="product-spotlight__media-link">
+            {% render 'image',
+              image: display_image,
+              class: 'product-spotlight__image',
+              unset_image_tag: true
+            %}
+          </a>
+        {% else %}
+          {% render 'image',
+            image: display_image,
+            class: 'product-spotlight__image',
+            unset_image_tag: true
+          %}
+        {% endif %}
+      {% else %}
+        <div class="product-spotlight__placeholder">
+          {{ 'product-1' | placeholder_svg_tag: 'product-spotlight__placeholder-svg' }}
+        </div>
+      {% endif %}
+    </div>
+
+    {% comment %} Columna contenido - derecha {% endcomment %}
+    <div class="product-spotlight__content">
+      <div class="product-spotlight__content-inner">
+        {% if badge_text != blank %}
+          <span class="product-spotlight__badge">{{ badge_text }}</span>
+        {% endif %}
+
+        {% if title_text != blank %}
+          <h2 class="product-spotlight__title">{{ title_text }}</h2>
+        {% endif %}
+
+        {% if subtitle_text != blank %}
+          <h3 class="product-spotlight__subtitle">{{ subtitle_text }}</h3>
+        {% endif %}
+
+        {% if paragraph_text != blank %}
+          <div class="product-spotlight__paragraph">{{ paragraph_text }}</div>
+        {% endif %}
+
+        <div class="product-spotlight__buttons">
+          {% if product_url != blank %}
+            <a href="{{ product_url }}" class="product-spotlight__link">
+              {{ button_label }}
+            </a>
+          {% endif %}
+
+          {% if product != blank %}
+            {% assign product_form_id = 'ProductSpotlight-Form-' | append: section.id %}
+            {% form 'product', product, id: product_form_id, data-type: 'add-to-cart-form' %}
+              <input type="hidden" name="id" value="{{ variant.id }}">
+              <input type="hidden" name="return_to" value="{{ request.path }}">
+              {% render 'add-to-cart-button',
+                can_add_to_cart: can_add_to_cart,
+                product: product,
+                add_to_cart_text: add_to_cart_text,
+                class: 'product-spotlight__btn product-spotlight__btn--primary'
+              %}
+            {% endform %}
+          {% else %}
+            <button type="button" class="product-spotlight__btn product-spotlight__btn--primary" disabled>
+              {{ 'products.product.sold_out' | t }}
+            </button>
+          {% endif %}
+        </div>
+
+        {% if counter_number > 0 or counter_suffix != blank %}
+          <div class="product-spotlight__counter" id="product-spotlight-counter-{{ section.id }}">
+            <span class="product-spotlight__counter-number" data-final="{{ counter_number }}">0</span>
+            <span class="product-spotlight__counter-suffix">{{ counter_suffix }}</span>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const counterEl = document.getElementById('product-spotlight-counter-{{ section.id }}');
+    if (!counterEl) return;
+
+    const numberEl = counterEl.querySelector('.product-spotlight__counter-number');
+    if (!numberEl) return;
+
+    const finalNumber = parseInt(numberEl.dataset.final || '0', 10);
+    if (finalNumber <= 0) return;
+
+    const duration = 2000;
+    const startTime = performance.now();
+
+    function animate(timestamp) {
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      const current = Math.floor(easeOut * finalNumber);
+      numberEl.textContent = current + '+';
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        numberEl.textContent = finalNumber + '+';
+      }
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          requestAnimationFrame(animate);
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.2 });
+
+    observer.observe(counterEl);
+  })();
+</script>
+
+{% stylesheet %}
+  .product-spotlight__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    align-items: stretch;
+    min-height: 400px;
+  }
+
+  @media (min-width: 750px) {
+    .product-spotlight__wrapper {
+      grid-template-columns: 1fr 1fr;
+      min-height: 500px;
+    }
+  }
+
+  .product-spotlight__media {
+    position: relative;
+    overflow: hidden;
+    background: rgb(var(--color-foreground-rgb) / 0.05);
+  }
+
+  .product-spotlight__media-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+  }
+
+  .product-spotlight__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  .product-spotlight__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+  }
+
+  .product-spotlight__placeholder-svg {
+    width: 60%;
+    opacity: 0.3;
+  }
+
+  .product-spotlight__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--page-margin);
+  }
+
+  .product-spotlight__content-inner {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-spotlight__badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: #d0473e;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 20px;
+  }
+
+  .product-spotlight__title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: rgb(var(--color-foreground-heading));
+  }
+
+  .product-spotlight__subtitle {
+    margin: 0;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+    color: rgb(var(--color-foreground-heading));
+  }
+
+  .product-spotlight__paragraph {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: rgb(var(--color-foreground));
+  }
+
+  .product-spotlight__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 280px;
+    align-items: center;
+  }
+
+  .product-spotlight__link {
+    color: rgb(var(--color-foreground));
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+
+  .product-spotlight__link:hover {
+    opacity: 0.8;
+    color: rgb(var(--color-primary));
+  }
+
+  .product-spotlight__btn {
+    width: 100%;
+    padding: 14px 24px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .product-spotlight__btn:hover:not(:disabled) {
+    opacity: 0.9;
+  }
+
+  .product-spotlight__btn--primary {
+    background: #ffba25;
+    color: #011732;
+  }
+
+  .product-spotlight__btn--primary:disabled {
+    background: #e8e4dc;
+    color: #6b6b6b;
+    cursor: not-allowed;
+  }
+
+  .product-spotlight__counter {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: rgb(var(--color-foreground));
+    margin-top: 8px;
+  }
+
+  .product-spotlight__counter-number {
+    font-weight: 700;
+    color: rgb(var(--color-foreground-heading));
+  }
+
+  @media (min-width: 750px) {
+    .product-spotlight--media-right .product-spotlight__wrapper {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .product-spotlight--media-right .product-spotlight__media {
+      order: 2;
+    }
+
+    .product-spotlight--media-right .product-spotlight__content {
+      order: 1;
+    }
+  }
+
+  @media (max-width: 749px) {
+    .product-spotlight__media {
+      order: -1;
+    }
+
+    .product-spotlight--media-right .product-spotlight__media {
+      order: -1;
+    }
+
+    .product-spotlight--media-right .product-spotlight__content {
+      order: 0;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Destacado de producto",
+  "tag": "section",
+  "class": "product-spotlight-section",
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Producto"
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Producto",
+      "info": "Selecciona un producto para usar su imagen, enlace y botón de compra. Los textos vacíos usarán los datos del producto."
+    },
+    {
+      "type": "checkbox",
+      "id": "use_product_image",
+      "label": "Usar imagen del producto",
+      "default": true,
+      "info": "Si está desactivado, usa la imagen personalizada de abajo"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_image",
+      "label": "Imagen personalizada",
+      "info": "Se usa cuando no hay producto o cuando 'Usar imagen del producto' está desactivado"
+    },
+    {
+      "type": "header",
+      "content": "Contenido"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge",
+      "default": "MÁS VENDIDO"
+    },
+    {
+      "type": "text",
+      "id": "title_text",
+      "label": "Título",
+      "default": "PACK",
+      "info": "Vacío = título del producto"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_text",
+      "label": "Subtítulo",
+      "default": "THE KING'S",
+      "info": "Vacío = no se muestra"
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph_text",
+      "label": "Párrafo / Descripción",
+      "default": "El pack más completo para cuidar de ti y tus cocos: práctico, seguro y con todo lo que necesitas en un solo kit.",
+      "info": "Vacío = descripción del producto (recortada)"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Texto del botón principal",
+      "default": "Saber más",
+      "info": "Enlace al producto cuando hay producto seleccionado"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Enlace del botón (sin producto)",
+      "info": "Solo si no hay producto seleccionado"
+    },
+    {
+      "type": "header",
+      "content": "Contador de compradores"
+    },
+    {
+      "type": "text",
+      "id": "counter_number",
+      "label": "Número",
+      "default": "529",
+      "info": "Ej: 529, 1200, etc."
+    },
+    {
+      "type": "text",
+      "id": "counter_suffix",
+      "label": "Texto después del número",
+      "default": "personas compraron en el último mes"
+    },
+    {
+      "type": "header",
+      "content": "Diseño"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Ancho de sección",
+      "options": [
+        { "value": "page-width", "label": "Ancho de página" },
+        { "value": "full-width", "label": "Ancho completo" }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "select",
+      "id": "media_position",
+      "label": "Posición de la imagen",
+      "options": [
+        { "value": "left", "label": "Izquierda" },
+        { "value": "right", "label": "Derecha" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Esquema de color",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Espaciado"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Arriba",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Abajo",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Destacado de producto",
+      "category": "Productos",
+      "settings": {
+        "badge_text": "MÁS VENDIDO",
+        "title_text": "PACK",
+        "subtitle_text": "THE KING'S",
+        "paragraph_text": "El pack más completo para cuidar de ti y tus cocos: práctico, seguro y con todo lo que necesitas en un solo kit.",
+        "button_label": "Saber más",
+        "counter_number": "529",
+        "counter_suffix": "personas compraron en el último mes"
+      }
+    }
+  ]
+}
+{% endschema %}

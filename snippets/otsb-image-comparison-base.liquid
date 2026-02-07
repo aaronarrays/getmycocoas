@@ -1,0 +1,823 @@
+{%- liquid
+    assign border_image = section.settings.image_corner_radius | minus: 0
+    assign position = 'top-1/2 -translate-y-1/2'
+    assign position_after = 'top-1/2 -translate-y-1/2'
+    if section.settings.layout_comparison == "vertical"
+        assign position = 'left-1/2 -translate-x-1/2'
+        assign position_after = 'left-1/2 -translate-x-1/2'
+    endif
+
+    if section.settings.heading_before_image_position == 'top'
+        assign position = 'top-6'
+        if section.settings.layout_comparison == "vertical"
+            assign position = 'left-6'
+        endif
+    endif
+    if section.settings.heading_before_image_position == 'bottom'
+        assign position = 'bottom-6'
+        if section.settings.layout_comparison == "vertical"
+            assign position = 'right-6'
+        endif
+    endif
+    if section.settings.heading_after_image_position == 'top'
+        assign position_after = 'top-6'
+        if section.settings.layout_comparison == "vertical"
+            assign position_after = 'left-6'
+        endif
+    endif
+    if section.settings.heading_after_image_position == 'bottom'
+        assign position_after = 'bottom-6'
+        if section.settings.layout_comparison == "vertical"
+            assign position_after = 'right-6'
+        endif
+    endif
+-%}
+{%- style -%}
+    #shopify-section-{{ section.id }}{
+    --colors-heading: var(--color-foreground);
+    --colors-line-and-border: {{ section.settings.color_line.red }}, {{ section.settings.color_line.green }}, {{ section.settings.color_line.blue }};
+    }
+    #shopify-section-{{ section.id }} .dragging .heading-before-{{ section.id }},
+    #shopify-section-{{ section.id }} .dragging .heading-after-{{ section.id }} { 
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    #shopify-section-{{ section.id }} .otsb-bg-comparison {
+        {% if section.settings.color_line.alpha != 0.0 %}
+        background: rgb(var(--colors-line-and-border));
+        {% else %}
+        background: #fff;
+        {% endif %}
+    }
+    #shopify-section-{{ section.id }} .otsb-bg-comparison-troke svg rect,
+    #shopify-section-{{ section.id }} .otsb-bg-comparison-troke svg path {
+        {% if section.settings.color_line.alpha != 0.0 %}
+        stroke: rgb(var(--colors-line-and-border));
+        {% else %}
+        stroke: #fff;
+        {% endif %}
+    }
+    {% if section.settings.layout_comparison == "vertical" %}
+        .otsb-image-comparison .otsb-vertical.otsb-before-after__slider {
+        cursor: row-resize;
+        -webkit-appearance: slider-vertical;
+        -moz-appearance: slider-vertical;
+        appearance: slider-vertical;
+        writing-mode: lr;
+        opacity: 0;
+        }
+    {% endif %}
+    :root, *:before {
+    {% if section.settings.layout_comparison == "vertical" %}
+        --compare_{{ section.id }}: 0;
+        --compare_vertical_{{ section.id }}: 0%;
+    {%- else -%}
+        --compare_{{ section.id }}: 100%;
+        --compare_vertical_{{ section.id }}: 0;
+    {%- endif -%}
+    }
+    .main-img-{{ section.id }} {
+    clip-path: inset(var(--compare_vertical_{{ section.id }}) 0px 0px var(--compare_{{ section.id }}));
+    }
+    {%- if section.settings.image != blank -%}
+        .mobile-{{ section.id }}-natural {
+        padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
+        }
+    {%- endif -%}
+    .border-radius-{{ section.id }} {
+    border-radius: {{ border_image }}px;
+    }
+    .heading-before-{{ section.id }} {
+    {%- if settings.text_base_size != blank -%}
+        font-size: {{ section.settings.heading_base_size_before_image | times: 0.01 | times: settings.text_base_size | times: 0.00875 | times: 0.9 }}rem;
+    {%- else -%}
+        font-size: {{ section.settings.heading_base_size_before_image | times: 0.01 | times: 120 | times: 0.00875 | times: 0.9 }}rem;
+    {%- endif -%}
+    }
+    .heading-after-{{ section.id }} {
+    {%- if settings.text_base_size != blank -%}
+        font-size: {{ section.settings.heading_base_size_after_image | times: 0.01 | times: settings.text_base_size | times: 0.00875 | times: 0.9 }}rem;
+    {%- else -%}
+        font-size: {{ section.settings.heading_base_size_after_image | times: 0.01 | times: 120 | times: 0.00875 | times: 0.9 }}rem;
+    {%- endif -%}
+    }
+    .heading-before-{{ section.id }},
+    .heading-after-{{ section.id }} {
+    {%- if section.settings.heading_color.alpha != 0.0 -%}
+        color: {{ section.settings.heading_color }};
+    {%- else -%}
+        color: rgba(var(--colors-button-text, 255, 255, 255));
+    {%- endif -%}
+    {%- if section.settings.background_color.alpha != 0.0 -%}
+        background: rgba({{ section.settings.background_color.red }}, {{ section.settings.background_color.blue }}, {{ section.settings.background_color.green }},0.45 );
+    {%- else -%}
+        background: rgba(var(--colors-button, 0, 0, 0));
+    {%- endif -%}
+    }
+    .dark .heading-before-{{ section.id }},
+    .dark .heading-after-{{ section.id }} {
+    {%- if section.settings.heading_color_dark.alpha != 0.0 -%}
+        color: {{ section.settings.heading_color_dark }};
+    {%- else -%}
+        color: rgba(var(--colors-button-text, 0, 0, 0));
+    {%- endif -%}
+    {%- if section.settings.background_color_dark.alpha != 0.0 -%}
+        background: {{ section.settings.background_color_dark }};
+    {%- else -%}
+        background: rgba(var(--colors-button, 255, 255, 255));
+    {%- endif -%}
+    }
+    .ic--{{ section.id }} {
+    {% if section.settings.text_background_light.alpha != 0.0 %}
+        background: {{ section.settings.text_background_light }};
+    {% else %}
+        background: rgb(var(--colors-background-secondary, 246, 246, 246));
+    {% endif %}
+    }
+    .dark .ic--{{ section.id }} {
+    {% if section.settings.text_background_dark.alpha != 0.0 %}
+        background: {{ section.settings.text_background_dark }};
+    {% else %}
+        background: rgb(var(--colors-background-secondary, 42, 42, 42));
+    {% endif %}
+    }
+
+    @media screen and (min-width: 768px) {
+    {%- if section.settings.image != blank -%}
+        .desktop-{{ section.id }}-natural {
+        padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
+        }
+    {%- endif -%}
+    .heading-before-{{ section.id }} {
+    {%- if settings.text_base_size != blank -%}
+        font-size: {{ section.settings.heading_base_size_before_image | times: 0.01 | times: settings.text_base_size | times: 0.00875 }}rem;
+    {%- else -%}
+        font-size: {{ section.settings.heading_base_size_before_image | times: 0.01 | times: 120 | times: 0.00875 }}rem;
+    {%- endif -%}
+    }
+    .heading-after-{{ section.id }} {
+    {%- if settings.text_base_size != blank -%}
+        font-size: {{ section.settings.heading_base_size_after_image | times: 0.01 | times: settings.text_base_size | times: 0.00875 }}rem;
+    {%- else -%}
+        font-size: {{ section.settings.heading_base_size_after_image | times: 0.01 | times: 120 | times: 0.00875 }}rem;
+    {%- endif -%}
+    }
+    }
+{%- endstyle -%}
+{% if request.design_mode %}
+  <style>
+    .otsb_nope {
+      display: none !important;
+      height: 0 !important;
+      overflow: hidden !important;
+      visibility: hidden !important;
+      width: 0 !important;
+      opacity: 0 !important;
+    }
+    ._otsb_warning {
+      position: relative;
+      box-shadow: 0rem 0.1875rem 0.0625rem -0.0625rem rgba(26, 26, 26, 0.07);
+      border-radius: 1rem;
+    }
+    ._otsb_warning::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      box-shadow: 0.0625rem 0rem 0rem 0rem rgba(0, 0, 0, 0.13) inset, -0.0625rem 0rem 0rem 0rem rgba(0, 0, 0, 0.13) inset, 0rem -0.0625rem 0rem 0rem rgba(0, 0, 0, 0.17) inset, 0rem 0.0625rem 0rem 0rem rgba(204, 204, 204, 0.5) inset;
+      border-radius: 1rem;
+      pointer-events: none;
+      mix-blend-mode: luminosity;
+    }
+  </style>
+  <div x-data="otsb_script_require" class="page-width" style="margin-top:36px;margin-bottom:36px">
+    <div class="_otsb_warning">
+      <div style="border-top-left-radius:1rem;border-top-right-radius:1rem;border:1px solid #fcaf0a;background:#fcb827;padding:1rem">
+        <div style="align-items:center;gap:8px;display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:space-between">
+          <div style="display:flex;gap:4px;flex-direction:row;flex-wrap:nowrap;justify-content:space-between">
+            <span style="display:block;height:20px;width:20px;max-height:100%;max-width:100%;margin:auto">
+              <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true"><path d="M10 6.75a.75.75 0 0 1 .75.75v3.5a.75.75 0 1 1-1.5 0v-3.5a.75.75 0 0 1 .75-.75Z"></path><path d="M11 13.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path><path fill-rule="evenodd" d="M10 3.5c-1.045 0-1.784.702-2.152 1.447a449.26 449.26 0 0 1-2.005 3.847l-.028.052a403.426 403.426 0 0 0-2.008 3.856c-.372.752-.478 1.75.093 2.614.57.863 1.542 1.184 2.464 1.184h7.272c.922 0 1.895-.32 2.464-1.184.57-.864.465-1.862.093-2.614-.21-.424-1.113-2.147-2.004-3.847l-.032-.061a429.497 429.497 0 0 1-2.005-3.847c-.368-.745-1.107-1.447-2.152-1.447Zm-.808 2.112c.404-.816 1.212-.816 1.616 0 .202.409 1.112 2.145 2.022 3.88a418.904 418.904 0 0 1 2.018 3.875c.404.817 0 1.633-1.212 1.633h-7.272c-1.212 0-1.617-.816-1.212-1.633.202-.408 1.113-2.147 2.023-3.883a421.932 421.932 0 0 0 2.017-3.872Z"></path></svg>
+            </span>
+            <h2 style="overflow-wrap:anywhere;word-break:normal;font-size:100%;font-weight:650;line-height:1.25;color:rgb(37,26,0)">App Embeds Are Disabled</h2>
+          </div>
+        </div>
+      </div>
+      <div style="padding:1rem;color:rgb(37,26,0)">
+        <p>To use this section, the app embeds of OT: Theme Sections must be enabled in the theme editor. Please follow these steps to activate them:</p>
+        <ul>
+          <li>In the left panel, click the last icon that says <b>“App embeds”</b>.</li>
+          <li>Enter <b>“OT”</b> on the search bar to quickly find and embed the apps from OT: Theme Sections.</li>
+          <li>Turn on the Toggle buttons of "Section Builder Script" and "Section Builder Style", then click <b>Save</b>.</li>
+        </ul>
+        <p>Please refer to the User Guide <a href="https://support.omnithemes.com/blogs/ot-theme-sections-get-started/1-embed-app-to-shopify-theme" target="_blank">here</a></p>
+        <p>For further support: feel free to contact us at <a href="mailto:support@omnithemes.com">support@omnithemes.com</a>!</p>
+      </div>
+    </div>
+  </div>
+{% endif %}
+<style>#shopify-section-{{section.id}} .otsb_trademark_root {user-select:none;color:#999;font-size:.75em;text-align:right;margin-top:2.5rem}#shopify-section-{{section.id}} .otsb_trademark_root a {color:#999;background:none;text-decoration: none;}</style>
+<div class="otsb_nope" x-data="otsb_script_1">
+{% render 'otsb-section-divider' %}
+<div
+    class="pt-[{{ section.settings.top_padding_mobile }}px] md:pt-[{{ section.settings.top_padding }}px] pb-[{{ section.settings.bottom_padding_mobile }}px] md:pb-[{{ section.settings.bottom_padding }}px]
+    {% if section.settings.full_width %} {% if section.settings.padding_full_width %} md:pl-5 md:pr-5{% else %} md:pl-0 md:pr-0{% endif %}{% else %} otsb-page-width{% endif %}{% if section.settings.full_width_mobile %} otsb-full-width-mobile{% else %} pr-5 pl-5{% endif %}"
+>
+    {%- if section.settings.heading != blank -%}
+    {%- liquid
+        if settings.heading_base_size != blank
+            assign heading_size = section.settings.heading_base_size | times: settings.heading_base_size | times: 0.000225
+        else
+            assign heading_size = section.settings.heading_base_size | times: 100 | times: 0.000225
+        endif
+    -%}
+    {%- style -%}
+        .otsb__root .otsb-h2.heading--{{ section.id }} {
+        font-size: {{ heading_size | times: 0.6 }}rem;
+        }
+        @media screen and (min-width: 768px) {
+        .otsb__root .otsb-h2.heading--{{ section.id }}{ font-size: {{ heading_size }}rem; }
+        }
+    {%- endstyle -%}
+    <{{ section.settings.heading_tag }} class="heading--{{ section.id }} otsb-h2 block py-2 leading-tight text-center
+    mb-6{% if section.settings.full_width %} px-5 md:px-0{% endif %}
+    ">{{ section.settings.heading | escape }}</{{ section.settings.heading_tag }}>
+{%- endif -%}
+<div class="otsb-image-comparison otsb-content-wrapper  text-[rgb(var(--colors-text))] flex flex-col md:flex-row ic--{{ section.id }} border-radius-{{ section.id }} {{ section.settings.image_alignment_mobile }} {{ section.settings.image_alignment }}">
+    <div
+        class="otsb-ic-image z-0 promotion w-full{% if section.blocks.size > 0 %} md:w-1/2{% endif %} flex overflow-hidden border-radius-{{ section.id }}"
+        x-data='xImageComparison("{{ section.id }}", "{{ section.settings.layout_comparison }}")'>
+        <div
+            x-ref="image"
+            class="promotion w-full relative md:h-auto min-h-[100%]{% if section.settings.desktop_height == "natural" %}{% if section.settings.image != blank %} md:h-0 desktop-{{ section.id }}-natural{% else %} md:promotion:h-[650px]{% endif %}{% else %} md:promotion:h-[{{ section.settings.desktop_height }}] md:promotion:pb-0{% endif %}{% if section.settings.mobile_height == "natural" %}{% if section.settings.image != blank %} h-0 mobile-{{ section.id }}-natural{% else %} h-[550px]{% endif %}{% else %} h-[{{ section.settings.mobile_height }}] md:h-auto{% endif %}"
+        >
+            <div
+                class="w-full h-full{% if section.settings.mobile_height == 'natural' %} absolute top-0 left-0 bottom-0{% else %} relative{% endif %}{% if section.settings.desktop_height == "natural" %} md:absolute md:top-0 md:left-0 md:bottom-0{% else %} md:promotion:relative{% endif %}"
+            >
+                <div
+                    class="main-img-{{ section.id }} border-radius-{{ section.id }} w-full overflow-hidden h-full z-20 relative pointer-events-none select-none">
+                    {% if section.settings.heading_after_image != blank %}
+                        <p class="heading-after-{{ section.id }} px-[36px] py-[11px]  border-radius-{{ section.id }} absolute z-10 w-max max-w-[calc(100%-48px)] {{ position_after }}{% if section.settings.layout_comparison == "vertical" %} bottom-6{% else %} right-6{%- endif %}">
+                            {{ section.settings.heading_after_image }}
+                        </p>
+                    {%- endif %}
+                    {%- capture sizeImage -%}
+                        {%- if section.blocks.size > 0 -%}
+                            (min-width: 768px){% if section.settings.full_width %} 50vw{% else %} {{ settings.page_width | divided_by: 2 }}px{% endif %}, 100vw
+                        {%- else -%}
+                            (min-width: 768px){% if section.settings.full_width %} 100vw{% else %} {{ settings.page_width }}px{% endif %}, 100vw
+                        {%- endif -%}
+                    {%- endcapture -%}
+                    {% if section.settings.image_after != blank %}
+                        <parallax-image
+                            class="h-full w-full{% if section.settings.image_mobile_after != blank %} otsb-hidden md:block{% else %} block{% endif %}">
+                            <parallax-movement x-data="xParallax" x-intersect.once.margin.200px="load({{ section.settings.disable_parallax_effect }})"class="{% if  section.settings.disable_parallax_effect == true %}no_parallax_effect {% endif %}" >
+                                <img
+                                    class="h-full w-full object-cover pointer-events-none select-none border-radius-{{ section.id }}"
+                                    srcset="{{ section.settings.image_after | image_url: width: 450 }} 450w,
+                    {{ section.settings.image_after | image_url: width: 750 }} 750w,
+                    {{ section.settings.image_after | image_url: width: 900 }} 900w,
+                    {{ section.settings.image_after | image_url: width: 1100 }} 1100w,
+                    {{ section.settings.image_after | image_url: width: 1500 }} 1500w,
+                    {{ section.settings.image_after | image_url: width: 1780 }} 1780w,
+                    {{ section.settings.image_after | image_url: width: 2000 }} 2000w,
+                    {{ section.settings.image_after | image_url: width: 3000 }} 3000w,
+                    {{ section.settings.image_after | image_url: width: 3840 }} 3840w,
+                    {{ section.settings.image_after | image_url }} {{ section.settings.image_after.width }}w"
+                                    src="{{ section.settings.image_after | image_url: width: 3840 }}"
+                                    alt="{{ section.settings.image_after.alt | escape }}"
+                                    loading="lazy"
+                                    sizes="{{ sizeImage }}"
+                                    width="{{ section.settings.image_after.width }}"
+                                    height="{{ section.settings.image_after.height }}"
+                                    style="object-position: {{ section.settings.image_after.presentation.focal_point }}"
+                                >
+                            </parallax-movement>
+                        </parallax-image>
+                    {% else %}
+                        {{ 'image' | placeholder_svg_tag: 'absolute w-full h-full bg-[#C9C9C9] text-[#acacac] otsb-hidden md:block' }}
+                    {% endif %}
+                    {%- if section.settings.image_mobile_after != blank -%}
+                        <parallax-image class="block h-full w-full md:otsb-hidden">
+                            <parallax-movement x-data="xParallax" x-intersect.once.margin.200px="load({{ section.settings.disable_parallax_effect }})" class="{% if  section.settings.disable_parallax_effect == true %}no_parallax_effect {% endif %}">
+                                {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+                                <img
+                                    srcset="{{ section.settings.image_mobile_after | image_url: width: 375 }} 375w,
+                    {{ section.settings.image_mobile_after | image_url: width: 450 }} 450w,
+                    {{ section.settings.image_mobile_after | image_url: width: 750 }} 750w,
+                    {{ section.settings.image_mobile_after | image_url: width: 900 }} 900w,
+                    {{ section.settings.image_mobile_after | image_url: width: 1100 }} 1100w,
+                    {{ section.settings.image_mobile_after | image_url: width: 1500 }} 1500w"
+                                    sizes="100vw"
+                                    src="{{ section.settings.image_mobile_after | image_url: width: 750 }}"
+                                    alt="{{ section.settings.image_mobile_after.alt | escape }}"
+                                    class="object-cover h-full w-full"
+                                    loading="lazy"
+                                    width="{{ section.settings.image_mobile_after.width }}"
+                                    height="{{ section.settings.image_mobile_after.height }}"
+                                    style="object-position: {{ section.settings.image_mobile_after.presentation.focal_point }}"
+                                />
+                                {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
+                            </parallax-movement>
+                        </parallax-image>
+                    {% else %}
+                        {{ 'image' | placeholder_svg_tag: 'absolute w-full h-full bg-[#C9C9C9] text-[#acacac] md:otsb-hidden' }}
+                    {%- endif %}
+                </div>
+                <div
+                    class="absolute top-0 z-10 border-radius-{{ section.id }} h-full w-full overflow-hidden pointer-events-none select-none">
+                    {% if section.settings.heading_before_image != blank %}
+                        <p
+                            class="heading-before-{{ section.id }} border-radius-{{ section.id }} px-[36px] py-[11px] absolute z-10 w-max max-w-[calc(100%-48px)] {{ position }}{% if section.settings.layout_comparison == "vertical" %} top-6{% else %} left-6{%- endif %}"
+                        >
+                            {{ section.settings.heading_before_image }}
+                        </p>
+                    {%- endif %}
+                    {% if section.settings.image != blank %}
+                        <parallax-image
+                            class="h-full w-full{% if section.settings.image_mobile != blank %} otsb-hidden md:block{% else %} block{% endif %}">
+                            <parallax-movement x-data="xParallax" x-intersect.once.margin.200px="load({{ section.settings.disable_parallax_effect }})" class="{% if  section.settings.disable_parallax_effect == true %}no_parallax_effect {% endif %}">
+                                <img
+                                    class="h-full w-full pointer-events-none select-none object-cover border-radius-{{ section.id }}"
+                                    srcset="{{ section.settings.image | image_url: width: 450 }} 450w,
+                    {{ section.settings.image | image_url: width: 750 }} 750w,
+                    {{ section.settings.image | image_url: width: 900 }} 900w,
+                    {{ section.settings.image | image_url: width: 1100 }} 1100w,
+                    {{ section.settings.image | image_url: width: 1500 }} 1500w,
+                    {{ section.settings.image | image_url: width: 1780 }} 1780w,
+                    {{ section.settings.image | image_url: width: 2000 }} 2000w,
+                    {{ section.settings.image | image_url: width: 3000 }} 3000w,
+                    {{ section.settings.image | image_url: width: 3840 }} 3840w,
+                    {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
+                                    src="{{ section.settings.image | image_url: width: 3840 }}"
+                                    alt="{{ section.settings.image.alt | escape }}"
+                                    loading="lazy"
+                                    sizes="{{ sizeImage }}"
+                                    width="{{ section.settings.image.width }}"
+                                    height="{{ section.settings.image.height }}"
+                                    style="object-position: {{ section.settings.image.presentation.focal_point }}"
+                                >
+                            </parallax-movement>
+                        </parallax-image>
+                    {% else %}
+                        {{ 'image' | placeholder_svg_tag: 'absolute w-full h-full bg-[#C9C9C9] text-[#acacac] otsb-hidden md:block' }}
+                    {% endif %}
+                    {%- if section.settings.image_mobile != blank -%}
+                        <parallax-image class="block h-full w-full md:otsb-hidden">
+                            <parallax-movement x-data="xParallax" x-intersect.once.margin.200px="load({{ section.settings.disable_parallax_effect }})" class="{% if  section.settings.disable_parallax_effect == true %}no_parallax_effect {% endif %}">
+                                {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+                                <img
+                                    srcset="{{ section.settings.image_mobile | image_url: width: 375 }} 375w,
+                    {{ section.settings.image_mobile | image_url: width: 450 }} 450w,
+                    {{ section.settings.image_mobile | image_url: width: 750 }} 750w,
+                    {{ section.settings.image_mobile | image_url: width: 900 }} 900w,
+                    {{ section.settings.image_mobile | image_url: width: 1100 }} 1100w,
+                    {{ section.settings.image_mobile | image_url: width: 1500 }} 1500w"
+                                    sizes="100vw"
+                                    src="{{ section.settings.image_mobile | image_url: width: 750 }}"
+                                    alt="{{ section.settings.image_mobile.alt | escape }}"
+                                    class="object-cover h-full w-full md:otsb-hidden"
+                                    loading="lazy"
+                                    width="{{ section.settings.image_mobile.width }}"
+                                    height="{{ section.settings.image_mobile.height }}"
+                                    style="object-position: {{ section.settings.image_mobile.presentation.focal_point }}"
+                                />
+                                {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
+                            </parallax-movement>
+                        </parallax-image>
+                    {% else %}
+                        {{ 'image' | placeholder_svg_tag: 'absolute w-full h-full bg-[#C9C9C9] text-[#acacac] md:otsb-hidden' }}
+                    {%- endif %}
+                </div>
+                <input x-on:focus="disableScroll($el)" @init-run.window="resizeWindow($el)" x-intersect.once="setMinMaxInput($el)" x-intersect.full.once="animateValue($el)" x-on:input.change="load($event)" x-on:mousedown="dragStart($event, $el)" type="range" min="2" max="98" step="0.1"
+                       value="{% if section.settings.layout_comparison == 'vertical' %}{{ 100 | minus: section.settings.default_scroll_position }}{% else %}{{ section.settings.default_scroll_position }}{% endif %}"
+                       class="otsb-before-after__slider otsb-ltr{% if section.settings.layout_comparison == "vertical" %} otsb-vertical{% endif %}"
+                       orient="{{ section.settings.layout_comparison }}" aria-label="range"
+                />
+                <div
+                    class="otsb-button-comparison absolute select-none z-20 {% if section.settings.layout_comparison == "vertical" %} left-0 w-full h-px{% else %} top-0 -translate-x-1/2 h-full{%- endif %}"
+                    style="top: var(--compare_vertical_{{ section.id }}); left: var(--compare_{{ section.id }});"
+                >
+            <span
+                class="select-none p-1 absolute rounded-full top-1/2 -translate-y-1/2 otsb-bg-comparison-troke left-1/2 -translate-x-1/2{% if section.settings.layout_comparison == "vertical" %} rotate-90{%- endif %}">
+              {% render 'otsb-icon-alls', icon: 'icon-comparison' %}
+            </span>
+            <span
+                        class="select-none absolute h-full top-0 left-1/2 -translate-x-1/2 otsb-bg-comparison block {% if section.settings.layout_comparison == "vertical" %} w-full{% else %} w-px{% endif %}"></span>
+                </div>
+            </div>
+            <div class="block absolute z-[45] top-0 left-0 h-full w-full"
+                 style="{% if section.settings.layout_comparison == "vertical" %}height: calc(var(--compare_vertical_{{ section.id }}) - 50px);{% else %}width: calc(var(--compare_{{ section.id }}) - 50px){% endif %}"></div>
+            <div class="block absolute z-[45] bottom-0 right-0 h-full w-full"
+                 style="{% if section.settings.layout_comparison == "vertical" %}height: calc(100% - var(--compare_vertical_{{ section.id }}) - 50px);{% else %}width: calc(100% - var(--compare_{{ section.id }}) - 50px){% endif %}"></div>
+        </div>
+    </div>
+    {% if section.blocks.size > 0 %}
+    <div
+        class="otsb-ic-content w-full md:w-1/2 flex items-{{ section.settings.text_position }} {% if section.settings.image_alignment == 'md:flex-row-reverse' %}md:justify-end{% endif %}">
+        <div
+            class="w-full md:max-w-[576px] py-3 px-5 md:py-10 {% if section.settings.image_alignment == 'md:flex-row' %}lg:pl-24 lg:pr-11{% else %}lg:pr-24 lg:pl-11{% endif %}">
+            {%- for block in section.blocks -%}
+            {% case block.type %}
+            {%- when 'heading' -%}
+            {%- liquid
+                if settings.heading_base_size != blank
+                    assign base_size_heading = settings.heading_base_size | times: 0.0225
+                else
+                    assign base_size_heading = 100 | times: 0.0225
+                endif
+                assign size_heading = block.settings.heading_base_size | times: 0.01 | times: base_size_heading
+                assign size_heading_mobile = size_heading | times: 0.6
+            -%}
+            {%- style -%}
+                .otsb__root .otsb-h2.heading-size--{{ block.id }} {
+                font-size: {{ size_heading_mobile }}rem;
+                }
+                .color-text-{{ block.id }} {
+                --colors-text: var(--colors-text-secondary);
+                --colors-heading: var(--colors-heading-secondary);
+                {% if block.settings.heading_light.alpha != 0.0 %}
+                    --colors-heading: {{ block.settings.heading_light.red }}, {{ block.settings.heading_light.green }}, {{ block.settings.heading_light.blue }};
+                {% endif %}
+                {% if block.settings.text_light.alpha != 0.0 %}
+                    --colors-text: {{ block.settings.text_light.red }}, {{ block.settings.text_light.green }}, {{ block.settings.text_light.blue }};
+                    --colors-text-link: {{ block.settings.text_light.red }}, {{ block.settings.text_light.green }}, {{ block.settings.text_light.blue }};
+                {% endif %}
+                }
+                
+                
+                #shopify-section-{{ section.id }}.otsb__root .otsb-rte {
+                --colors-text-link: var(--color-foreground);
+                {% if block.settings.text_light.alpha != 0.0 %}
+                    --colors-text-link: {{ block.settings.text_light.red }}, {{ block.settings.text_light.green }}, {{ block.settings.text_light.blue }};
+                {% endif %}
+                {% if block.settings.color_text_link.alpha != 0.0 %}
+                    --colors-text-link: {{ block.settings.color_text_link.red }}, {{ block.settings.color_text_link.green }}, {{ block.settings.color_text_link.blue }};
+                {% endif %}
+                }
+
+                .dark .color-text-{{ block.id }} {
+                --colors-text: var(--colors-text-secondary, 153, 153, 153);
+                --colors-heading: var(--colors-heading-secondary, 255, 255, 255);
+                {% if block.settings.heading_dark.alpha != 0.0 %}
+                    --colors-heading: {{ block.settings.heading_dark.red }}, {{ block.settings.heading_dark.green }}, {{ block.settings.heading_dark.blue }};
+                {% endif %}
+                {% if block.settings.text_dark.alpha != 0.0 %}
+                    --colors-text: {{ block.settings.text_dark.red }}, {{ block.settings.text_dark.green }}, {{ block.settings.text_dark.blue }};
+                {% endif %}
+                }
+                @media (min-width: 768px) {
+                .otsb__root .otsb-h2.heading-size--{{ block.id }} {
+                font-size: {{ size_heading }}rem;
+                }
+                }
+                .color-text-{{ block.id }} {
+                --h1-font-size: calc(var(--font-heading-scale) * 4rem);
+                --h2-font-size: calc(var(--font-heading-scale) * 2.4rem);
+                --h3-font-size: calc(var(--font-heading-scale) * 1.8rem);
+                --h4-font-size: calc(var(--font-heading-scale) * 1.5rem);
+                --h5-font-size: calc(var(--font-heading-scale) * 1.3rem);
+                --h6-font-size: calc(var(--font-heading-scale) * 1.1rem);
+                --h1-font-size-mobile: calc(var(--font-heading-scale) * 3rem);
+                --h2-font-size-mobile: calc(var(--font-heading-scale) * 2rem);
+                --h3-font-size-mobile: calc(var(--font-heading-scale) * 1.7rem);
+                --h4-font-size-mobile: calc(var(--font-heading-scale) * 1.5rem);
+                --h5-font-size-mobile: calc(var(--font-heading-scale) * 1.2rem);
+                --h6-font-size-mobile: calc(var(--font-heading-scale) * 1.1rem);
+                }
+
+            {%- endstyle -%}
+            <div
+                class="color-text-{{ block.id }} w-full mt-4 text-{{ section.settings.text_alignment }}"{{ block.shopify_attributes }}>
+                {% if block.settings.subheading != blank %}
+                    <p class="font-medium text-[rgb(var(--colors-text))]">{{ block.settings.subheading | escape }}</p>
+                {% endif %}
+                {% if block.settings.heading != blank %}
+                <{{ block.settings.heading_tag }} class="heading-size--{{ block.id }} otsb-h2 block mt-2 mb-1.5
+                md:mt-2.5 md:mb-3">
+                {{ block.settings.heading | escape }}
+            </{{ block.settings.heading_tag }}>
+            {% endif %}
+            {% if block.settings.text != blank %}
+                <div class="otsb-rte text-[rgb(var(--colors-text))]">
+                    {{ block.settings.text }}
+                </div>
+            {% endif %}
+        </div>
+        {%- when 'button' -%}
+            {% if block.settings.button_label != blank %}
+                {%- liquid
+                    case block.settings.button_type
+                        when 'rounded'
+                            assign borderRadius = '100px'
+                        when 'rounded_corners'
+                            assign borderRadius = '6px'
+                        when 'mixed'
+                            assign borderRadius = '6px 0 6px 0'
+                        else
+                            assign borderRadius = '0'
+                    endcase
+                %}
+                {% style %}
+                    .button-{{ block.id }}, .button-{{ block.id }} *:before {
+                    --border-radius: {{ borderRadius }};
+                    {% if block.settings.button_animation == 'slide' %}
+                        --button-width: 102%;
+                        --button-height: 500%;
+                        --button-transform: rotate3d(0,0,1,-10deg) translate3d(-130%,-10em,0);
+                        --button-transform-origin: 100% 0%;
+                    {% elsif block.settings.button_animation == 'fill_up' %}
+                        --button-width: 120%;
+                        --button-height: 100%;
+                        --button-transform: rotate3d(0,0,1,10deg) translate3d(-1.2em,110%,0);
+                        --button-transform-origin: 0% 100%;
+                    {% endif %}
+
+                    {% if block.settings.button_light.alpha != 0.0 %}
+                        --colors-button: {{ block.settings.button_light.red }}, {{ block.settings.button_light.green }}, {{ block.settings.button_light.blue }};
+                    {% endif %}
+                    {% if block.settings.button_text_light.alpha != 0.0 %}
+                        --colors-button-text: {{ block.settings.button_text_light.red }}, {{ block.settings.button_text_light.green }}, {{ block.settings.button_text_light.blue }};
+                    {% endif %}
+                    {% if block.settings.button_hover_light.alpha != 0.0 %}
+                        --colors-button-hover: rgb({{ block.settings.button_hover_light.red }}, {{ block.settings.button_hover_light.green }}, {{ block.settings.button_hover_light.blue }});
+                    {% endif %}
+                    {% if block.settings.button_text_hover_light.alpha != 0.0 %}
+                        --colors-button-text-hover: {{ block.settings.button_text_hover_light.red }}, {{ block.settings.button_text_hover_light.green }}, {{ block.settings.button_text_hover_light.blue }};
+                    {% endif %}
+                    {% if block.settings.secondary_button_text_light.alpha != 0.0 %}
+                        --colors-secondary-button: {{ block.settings.secondary_button_text_light.red }}, {{ block.settings.secondary_button_text_light.green }}, {{ block.settings.secondary_button_text_light.blue }};
+                        --colors-line-secondary-button: {{ block.settings.secondary_button_text_light.red }}, {{ block.settings.secondary_button_text_light.green }}, {{ block.settings.secondary_button_text_light.blue }};
+                        --background-secondary-button: transparent;
+                    {% endif %}
+                    {% if block.settings.secondary_button_light.alpha != 0.0 %}
+                        --background-secondary-button: {{ block.settings.secondary_button_light.red }}, {{ block.settings.secondary_button_light.green }}, {{ block.settings.secondary_button_light.blue }};
+                        --colors-line-secondary-button: {{ block.settings.secondary_button_light.red }}, {{ block.settings.secondary_button_light.green }}, {{ block.settings.secondary_button_light.blue }};
+                    {% endif %}
+                    }
+                    .dark .button-{{ block.id }}, .dark .button-{{ block.id }} *:before {
+                    {% if block.settings.button_dark.alpha != 0.0 %}
+                        --colors-button: {{ block.settings.button_dark.red }}, {{ block.settings.button_dark.green }}, {{ block.settings.button_dark.blue }};
+                    {% else %}
+                        {%- if settings.colors_dark_button.red != blank and settings.colors_dark_button.green != blank and settings.colors_dark_button.blue != blank -%}
+                            --colors-button: {{ settings.colors_dark_button.red }}, {{ settings.colors_dark_button.green }}, {{ settings.colors_dark_button.blue }};
+                        {%- else -%}
+                            --colors-button: 255, 255, 255;
+                        {%- endif -%}
+                    {% endif %}
+                    {% if block.settings.button_text_dark.alpha != 0.0 %}
+                        --colors-button-text: {{ block.settings.button_text_dark.red }}, {{ block.settings.button_text_dark.green }}, {{ block.settings.button_text_dark.blue }};
+                    {% else %}
+                        {%- if settings.colors_dark_button_text.red != blank and settings.colors_dark_button_text.green != blank and settings.colors_dark_button_text.blue != blank -%}
+                            --colors-button-text: {{ settings.colors_dark_button_text.red }}, {{ settings.colors_dark_button_text.green }}, {{ settings.colors_dark_button_text.blue }};
+                        {%- else -%}
+                            --colors-button-text: 0, 0, 0;
+                        {%- endif -%}
+                    {% endif %}
+                    {% if block.settings.button_hover_dark.alpha != 0.0 %}
+                        --colors-button-hover: rgb({{ block.settings.button_hover_dark.red }}, {{ block.settings.button_hover_dark.green }}, {{ block.settings.button_hover_dark.blue }});
+                    {% else %}
+                        {%- if settings.colors_dark_button_hover.red != blank and settings.colors_dark_button_hover.green != blank and settings.colors_dark_button_hover.blue != blank -%}
+                            --colors-button-hover: {{ settings.colors_dark_button_hover.red }}, {{ settings.colors_dark_button_hover.green }}, {{ settings.colors_dark_button_hover.blue }};
+                        {%- else -%}
+                            --colors-button-hover: 255, 102, 0;
+                        {%- endif -%}
+                    {% endif %}
+                    {% if block.settings.button_text_hover_dark.alpha != 0.0 %}
+                        --colors-button-text-hover: {{ block.settings.button_text_hover_dark.red }}, {{ block.settings.button_text_hover_dark.green }}, {{ block.settings.button_text_hover_dark.blue }};
+                    {% else %}
+                        {%- if settings.colors_dark_button_text_hover.red != blank and settings.colors_dark_button_text_hover.green != blank and settings.colors_dark_button_text_hover.blue != blank -%}
+                            --colors-button-text-hover: {{ settings.colors_dark_button_text_hover.red }}, {{ settings.colors_dark_button_text_hover.green }}, {{ settings.colors_dark_button_text_hover.blue }};
+                        {%- else -%}
+                            --colors-button-text-hover: 0, 0, 0;
+                        {%- endif -%}
+                    {% endif %}
+                    {% if block.settings.secondary_button_text_dark.alpha != 0.0 %}
+                        --colors-secondary-button: {{ block.settings.secondary_button_text_dark.red }}, {{ block.settings.secondary_button_text_dark.green }}, {{ block.settings.secondary_button_text_dark.blue }};
+                        --colors-line-secondary-button: {{ block.settings.secondary_button_text_dark.red }}, {{ block.settings.secondary_button_text_dark.green }}, {{ block.settings.secondary_button_text_dark.blue }};
+                        --background-secondary-button: transparent;
+                    {% else %}
+                        {% if settings.colors_button_secondary %}
+                            --colors-secondary-button: {{ settings.colors_button_secondary.red }}, {{ settings.colors_button_secondary.green }}, {{ settings.colors_button_secondary.blue }};
+                            --colors-line-secondary-button: {{ settings.colors_button_secondary.red }}, {{ settings.colors_button_secondary.green }}, {{ settings.colors_button_secondary.blue }};
+                        {% else %}
+                            --colors-secondary-button: 255, 255, 255;
+                            --colors-line-secondary-button: 255, 255, 255;
+                        {% endif %}
+                    {% endif %}
+                    {% if block.settings.secondary_button_dark.alpha != 0.0 %}
+                        --background-secondary-button: {{ block.settings.secondary_button_dark.red }}, {{ block.settings.secondary_button_dark.green }}, {{ block.settings.secondary_button_dark.blue }};
+                        --colors-line-secondary-button: {{ block.settings.secondary_button_dark.red }}, {{ block.settings.secondary_button_dark.green }}, {{ block.settings.secondary_button_dark.blue }};
+                    {% elsif settings.background_dark_button_secondary.alpha != 0.0 %}
+                        --background-secondary-button: {{ settings.background_dark_button_secondary.red }}, {{ settings.background_dark_button_secondary.green }}, {{ settings.background_dark_button_secondary.blue }};
+                        --colors-line-secondary-button: {{ settings.background_dark_button_secondary.red }}, {{ settings.background_dark_button_secondary.green }}, {{ settings.background_dark_button_secondary.blue }};
+                    {% else %}
+                        --background-secondary-button: transparent;
+                    {% endif %}
+                    }
+
+                    {% if block.settings.button_color_mobile == "hover" %}
+                        .x-button-{{ block.id }} [role="button"], .x-button-{{ block.id }} [type="button"], .x-button-{{ block.id }} .otsb-button {
+                        color: rgb(var(--colors-button-text-hover));
+                        }
+                        .x-button-{{ block.id }} button.otsb-button-solid, .x-button-{{ block.id }} .otsb-button.otsb-button-solid {
+                        border: none;
+                        background-color: var(--colors-button-hover);
+                        }
+                        .x-button-{{ block.id }} button.otsb-button-disable-effect, .x-button-{{ block.id }} .otsb-button.otsb-button-disable-effect {
+                        color: rgba(var(--colors-button-text-hover));
+                        background-color: var(--colors-button-hover);
+                        }
+                        .x-button-{{ block.id }} .otsb-button-action {
+                        border: none;
+                        color: rgba(var(--colors-button-text-hover));
+                        background-color: var(--colors-button-hover);
+                        }
+                    {% else %}
+                        .x-button-{{ block.id }} [role="button"], .x-button-{{ block.id }} [type="button"], .x-button-{{ block.id }} .otsb-button {
+                        color: rgb(var(--colors-button-text));
+                        }
+                        .x-button-{{ block.id }} button.otsb-button-solid, .x-button-{{ block.id }} .otsb-button.otsb-button-solid {
+                        border: none;
+                        {% if block.settings.button_light.alpha != 0.0 %}
+                            background-color: rgba(var(--colors-button));
+                        {% endif %}
+                        }
+                        .x-button-{{ block.id }} button.otsb-button-disable-effect, .x-button-{{ block.id }} .otsb-button.otsb-button-disable-effect {
+                        color: rgb(var(--colors-button-text));
+                        {% if block.settings.button_light.alpha != 0.0 %}
+                            background-color: rgba(var(--colors-button));
+                        {% endif %}
+                        }
+                        .x-button-{{ block.id }} .otsb-button-action {
+                        border: none;
+                        color: rgb(var(--colors-button-text));
+                        {% if block.settings.button_light.alpha != 0.0 %}
+                            background-color: rgba(var(--colors-button));
+                        {% endif %}
+                        }
+                    {% endif %}
+                    .x-button-{{ block.id }} [role="button"], .x-button-{{ block.id }} [type="button"], .x-button-{{ block.id }} .otsb-button {
+                    direction: ltr;
+                    }
+
+                    {% if block.settings.button_animation == 'sliced' %}
+                        .x-button-{{ block.id }} .otsb-button.otsb-button-outline:not(.not-icon), .x-button-{{ block.id }} .otsb-button.otsb-button-solid:not(.not-icon) {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding-left: 1.5rem;
+                        padding-right: 1.5rem;
+                        }
+                        .x-button-{{ block.id }} .otsb-button-solid .otsb-button-icon, .x-button-{{ block.id }} .otsb-button-solid .otsb-button-text {
+                        transition-timing-function: cubic-bezier(0,.71,.4,1);
+                        }
+                        .x-button-{{ block.id }} .otsb-button-solid .otsb-button-icon {
+                        transition: opacity .25s,transform .5s;
+                        }
+                        .x-button-{{ block.id }} .otsb-button-solid .otsb-button-text {
+                        transition: transform .5s;
+                        transform: translateX(0.625rem);
+                        }
+                        .x-button-{{ block.id }} .otsb-button-solid:hover .otsb-button-text {
+                        opacity: 1;
+                        transform: translateX(0px);
+                        }
+                        .x-button-{{ block.id }} .otsb-button-solid:hover .otsb-button-icon {
+                        opacity: 1;
+                        transform: translateX(0.3125rem);
+                        }
+                    {% endif %}
+                    {% if block.settings.button_animation == 'underline' %}
+                        .x-button-{{ block.id }} .otsb-button-solid .otsb-button-text {
+                        position: relative;
+                        display: block;
+                        }
+                        .x-button-{{ block.id }} .otsb-button-solid .otsb-button-text::after {
+                        content: "";
+                        pointer-events: none;
+                        bottom: 1px;
+                        left: 50%;
+                        position: absolute;
+                        width: 0%;
+                        height: 1px;
+                        background-color: rgba(var(--colors-button-text));
+                        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+                        transition-duration: 400ms;
+                        transition-property: width, left;
+                        }
+                        .x-button-{{ block.id }} .otsb-button-solid:hover .otsb-button-text::after {
+                        {% if block.settings.button_color_mobile == "hover" %}
+                            background-color: rgba(var(--colors-button-text-hover));
+                        {% else %}
+                            background-color: rgba(var(--colors-button-text));
+                        {% endif %}
+                        width: 100%;
+                        left: 0%;
+                        }
+                    {% endif %}
+
+                    @media (min-width: 1024px){
+                    .x-button-{{ block.id }} [role="button"], .x-button-{{ block.id }} [type="button"], .x-button-{{ block.id }} .otsb-button {
+                    color: rgba(var(--colors-button-text));
+                    }
+                    .x-button-{{ block.id }} button.otsb-button-solid, .x-button-{{ block.id }} .otsb-button.otsb-button-solid {
+                    border: none;
+                    box-shadow: none;
+                    color: rgb(var(--colors-button-text));
+                    {% if block.settings.button_light.alpha != 0.0 %}
+                        background-color: rgba(var(--colors-button));
+                    {% endif %}
+                    overflow: hidden;
+                    background-origin: border-box;
+                    }
+                    .x-button-{{ block.id }} button.otsb-button-solid:hover, .x-button-{{ block.id }} .otsb-button.otsb-button-solid:hover {
+                    {% if block.settings.button_animation == 'sliced' or block.settings.button_animation == 'underline' %}
+                        transition-duration: 0.2s;
+                    {% else %}
+                        transition-delay: 0.5s;
+                    {% endif %}
+                    transition-property: background-color;
+                    background-color: var(--colors-button-hover);
+                    color: rgba(var(--colors-button-text-hover));
+                    background-origin: border-box;
+                    }
+                    .x-button-{{ block.id }} .otsb-button-action {
+                    border: none;
+                    color: rgba(var(--colors-button-text-hover));
+                    background-color: var(--colors-button-hover);
+                    }
+                    .x-button-{{ block.id }} button.otsb-button-disable-effect, .x-button-{{ block.id }} .otsb-button.otsb-button-disable-effect {
+                    color: rgb(var(--colors-button-text));
+                    {% if block.settings.button_light.alpha != 0.0 %}
+                        background-color: rgba(var(--colors-button));
+                    {% endif %}
+                    }
+                    .x-button-{{ block.id }} button.otsb-button-disable-effect:hover, .x-button-{{ block.id }} .otsb-button.otsb-button-disable-effect:hover {
+                    color: rgba(var(--colors-button-text-hover));
+                    background-color: var(--colors-button-hover);
+                    }
+                    {% if block.settings.button_animation == 'slide' or block.settings.button_animation == 'fill_up' %}
+                        .x-button-{{ block.id }} button.otsb-button-solid:before, .x-button-{{ block.id }} .otsb-button.otsb-button-solid:before {
+                        content: "";
+                        z-index: -1;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        width: var(--button-width);
+                        height: var(--button-height);
+                        background-color: var(--colors-button-hover);
+                        backface-visibility: hidden;
+                        will-change: transform;
+                        transform: var(--button-transform);
+                        transform-origin: var(--button-transform-origin);
+                        transition: transform 0.5s ease;
+                        }
+                        .x-button-{{ block.id }} button.otsb-button-solid:hover:before, .x-button-{{ block.id }} .otsb-button.otsb-button-solid:hover:before {
+                        transform: rotate3d(0,0,1,0) translateZ(0);
+                        }
+                    {% endif %}
+                    {% if block.settings.button_animation == 'underline' %}
+                        .x-button-{{ block.id }} .otsb-button-solid:hover .otsb-button-text::after {
+                        background-color: rgba(var(--colors-button-text-hover));
+                        }
+                    {% endif %}
+                    }
+                    .button-{{ block.id }} .otsb-button.otsb-button-outline {
+                    {% if block.settings.secondary_button_text_light.alpha != 0.0 %}
+                        --colors-secondary-button: {{ block.settings.secondary_button_text_light.red }}, {{ block.settings.secondary_button_text_light.green }}, {{ block.settings.secondary_button_text_light.blue }};
+                        --colors-line-secondary-button: {{ block.settings.secondary_button_text_light.red }}, {{ block.settings.secondary_button_text_light.green }}, {{ block.settings.secondary_button_text_light.blue }};
+                    {% endif %}
+                    {% if block.settings.secondary_button_light.alpha != 0.0 %}
+                        --background-secondary-button: {{ block.settings.secondary_button_light.red }}, {{ block.settings.secondary_button_light.green }}, {{ block.settings.secondary_button_light.blue }};
+                        --colors-line-secondary-button: {{ block.settings.secondary_button_light.red }}, {{ block.settings.secondary_button_light.green }}, {{ block.settings.secondary_button_light.blue }};
+                    {% endif %}
+                    }
+                {% endstyle %}
+                <div
+                    class="x-button-{{ block.id }} button-{{ block.id }} flex justify-{{ section.settings.text_alignment }} mt-4 mb-9 md:mt-8 md:mb-4"{{ block.shopify_attributes }}>
+                    {% if block.settings.button_link == blank %}
+                        <p class="button otsb-button{% if block.settings.button_primary %} button--primary otsb-button-solid{% else %} otsb-button-outline{% endif %} leading-normal empty:otsb-hidden text-center pl-7 pr-7 pt-2.5 pb-2.5 md:pl-8 md:pr-8 md:pt-3 md:pb-3 opacity-70 hover:cursor-not-allowed">
+                            {% render 'otsb-button-label', button_animation: block.settings.button_animation, custom_icon_button: block.settings.custom_icon_button, button_label: block.settings.button_label, show_button_primary: block.settings.button_primary %}
+                        </p>
+                    {% else %}
+                        <a class="button otsb-button{% if block.settings.button_primary %} otsb-button-solid{% else %} otsb-button-outline{% endif %} leading-normal empty:otsb-hidden text-center pl-7 pr-7 pt-2.5 pb-2.5 md:pl-8 md:pr-8 md:pt-3 md:pb-3"
+                           href="{{ block.settings.button_link }}"{% if block.settings.open_new_window %} target="_blank"{% endif %}>
+                            {% render 'otsb-button-label', button_animation: block.settings.button_animation, custom_icon_button: block.settings.custom_icon_button, button_label: block.settings.button_label, show_button_primary: block.settings.button_primary %}
+                        </a>
+                    {% endif %}
+                </div>
+            {% endif %}
+        {% endcase %}
+        {%- endfor -%}
+    </div>
+</div>
+{% endif %}
+</div>
+</div>
+</div>

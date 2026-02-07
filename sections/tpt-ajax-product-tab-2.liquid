@@ -1,0 +1,58 @@
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+{%- assign pageUrl = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first | split:'.myshopify.com' | last |
+    replace:'\/','/' | 
+    replace:'%20',' ' | 
+    replace:'\u0026','&'
+-%}
+{%- assign pageQuerystring = pageUrl | split:'?' | last -%}
+{%- assign limitProduct = pageQuerystring | split:'tpt-products-limit=' | last -%}
+{%- assign limit = limitProduct | plus: 0 -%}
+{%- assign media_aspect_ratio = pageQuerystring | split: 'media-aspect-ratio=' | last -%}
+{%- assign media_aspect_ratio = media_aspect_ratio | plus: 0 -%}
+{%- assign show_secondary_image = pageQuerystring | split: 'show-secondary-image=' | last -%}
+
+{%- if show_secondary_image == 'true' -%}
+  {%- assign show_secondary_image = true -%}
+{%- else -%}
+  {%- assign show_secondary_image = false -%}
+{%- endif -%}
+
+{%- assign section_id = section.id | append: '-' | append: collection.id -%}
+
+
+<ul class="tpt-grid list-tab-product product-grid">
+  {%- if collection.products -%}
+    {%- for product in collection.products limit: limit -%}
+      <li
+        class="tpt-grid_item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        {% if settings.animations_reveal_on_scroll %}
+          data-cascade
+          style="--animation-order: {{ forloop.index }};"
+        {% endif %}
+      >
+        {% render 'tpt-card-product',
+          card_product: product,
+          media_aspect_ratio: media_aspect_ratio,
+          show_secondary_image: show_secondary_image,
+          section_id: section_id
+        %}
+      </li>
+    {%- endfor -%}
+  {%- else -%}
+    {%- for i in (1..limit) -%}
+      <li
+        class="tpt-grid_item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        {% if settings.animations_reveal_on_scroll %}
+          data-cascade
+          style="--animation-order: {{ forloop.index }};"
+        {% endif %}
+      >
+        {% render 'tpt-card-product',
+          media_aspect_ratio: media_aspect_ratio,
+          image_shape: settings.product_image_shape,
+          show_vendor: settings.product_show_vendor
+        %}
+      </li>
+    {%- endfor -%}
+  {%- endif -%}
+</ul>

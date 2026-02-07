@@ -1,0 +1,16 @@
+{%- if section.settings.bottom_button_label != blank -%}
+  <div class="tpt-section-footer tpt-section_align-center">
+    <div class="tpt-section-footer_button">
+      <a
+        class="tpt-button tpt-button__primary"
+        href="{{ section.settings.bottom_button_link | default: "#" }}"
+        {%- assign mtm_link = section.settings.bottom_button_link -%}
+        {%- if mtm_link contains 'http' -%}
+          {% unless mtm_link contains shop.domain %} rel="nofollow" {% endunless %}
+        {%- endif -%}
+      >
+        <span>{{ section.settings.bottom_button_label }}</span>
+      </a>
+    </div>
+  </div>
+{%- endif -%}

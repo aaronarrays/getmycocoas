@@ -1,0 +1,11 @@
+tpt-tabs-component,
+tpt-tabs-component,
+tpt-tabs-component tpt-tab-containers,
+tpt-tabs-component tpt-tab-data.active {
+	display: block;
+}
+
+tpt-tabs-component tpt-tab-data {
+	display: none;
+	padding: 3rem 0 0;
+}

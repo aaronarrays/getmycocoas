@@ -1,0 +1,50 @@
+.tpt-feature-collection-2 ul {
+	list-style: none;
+	padding: 0;
+}
+
+.tpt-feature-collection-2 .view-all-button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	padding: 20px 0;
+}
+
+.tpt-feature-collection-2 .tabs-default tpt-tab-list {
+	margin-top: -2.5rem;
+	row-gap: unset;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	padding: 48px 0 0;
+}
+
+.tpt-feature-collection-2 .tpt-tab-item-button {
+	display: inline-block;
+	font-size: inherit;
+	padding: 1.1rem 3rem;
+	text-decoration: none;
+	outline: none;
+	box-shadow: none;
+	border-radius: var(--tpt-input-button-radius);
+	cursor: pointer;
+	background: none;
+	border: 1px solid rgb(var(--tpt-section-button-outline-color));
+	color: rgb(var(--tpt-section-button-outline-color));
+}
+
+.tpt-feature-collection-2 .active .tpt-tab-item-button {
+	border: none;
+	background-color: rgb(var(--tpt-section-button-background-color));
+	color: rgb(var(--tpt-section-button-text-color));
+}
+
+@media screen and (max-width: 767px) {
+	.tpt-feature-collection-2 .tabs-default tpt-tab-list {
+		justify-content: start;
+		overflow-x: auto;
+	}
+}

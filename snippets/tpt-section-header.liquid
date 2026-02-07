@@ -1,0 +1,95 @@
+{%- if section.settings.sub_heading != blank
+  or section.settings.heading != blank
+  or section.settings.description != blank
+  or section.settings.top_button_label != blank
+-%}
+  <div class="tpt-section-header tpt-section_align-{{ section.settings.alignment }}">
+    {%- if section.settings.sub_heading != blank -%}
+      <div class="tpt-section-header_sub-heading tpt-section__foreground--color">
+        {{ section.settings.sub_heading }}
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.heading != blank -%}
+      <div class="tpt-section-header_heading">
+        <h2 class="tpt-section-header_title tpt-section__title--color {{ section.settings.heading_size }}">
+          {{ section.settings.heading }}
+        </h2>
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.description != blank -%}
+      <div class="tpt-section-header_description tpt-section__foreground--color">
+        {%- assign htmlStr = section.settings.description -%}
+        {% capture new_line %}
+        {% endcapture %}
+        {% assign new_line = new_line | replace: ' ', '' %}
+        {% assign new_line_a = "<a" | append: new_line %}
+        {% assign htmlStr = htmlStr | replace: new_line_a, "<a " | replace: "<a>", "<a >"  %}
+        {% assign imgStarter = "<a " %}
+        {% assign skipFirst = true %}
+        {% assign prefixHtml = htmlStr | slice: 0, imgStarter.size    %} 
+        {% if prefixHtml == imgStarter %}
+            {% assign skipFirst = false %}
+        {% endif %}
+        {% assign firstImgDivision = htmlStr | split: imgStarter %}
+        {% assign fullPack = "" %}
+        {% for piece in firstImgDivision %}
+            {% if forloop.first and skipFirst %}
+                {% assign fullPack = fullPack | append: piece %}
+                {% continue %}
+            {% endif %}
+            {% assign copyOfPiece = piece %}
+            {% assign imageEndDivision = copyOfPiece | split: ">" %}
+            {% assign contentText = imageEndDivision[0] %}
+            {% assign replaceText = contentText %}
+            {% assign hrefTemp = contentText | split: 'href="' %}
+            {% assign hrefContent = hrefTemp[1] | split: '"' | first %}
+            {% assign additionalElement = ' rel="nofollow" '    %}
+            {% assign storeHost = 'https://' | append: request.host %}
+            {% assign storeHostLen = storeHost | size %}
+            {% assign hrefHost = hrefContent | slice: 0, storeHostLen %}
+            {% unless hrefHost == storeHost %}
+                {% unless contentText contains "rel=" %}
+                    {% assign replaceText = contentText | append: additionalElement %}
+                {% else %}
+                        {% assign relTemp = contentText | split: 'rel="' %}
+                        {% assign relContent = relTemp[1] | split: '"' | first %}
+                        {% unless relContent contains "nofollow" %}
+                            {% assign newRel = relContent | append: " nofollow" %}
+                            {% assign replaceText = contentText | replace: relContent, newRel %}
+                        {% endunless %}
+                {% endunless %}
+            {% endunless %}
+            {% assign changedText ="" %}
+            {% if contentText %}
+                {% assign changedText = copyOfPiece | replace_first: contentText, replaceText %}
+            {% else %}
+                {% assign changedText = copyOfPiece    %}
+            {% endif %}
+            {% if forloop.first %}
+                {% assign fullPack = fullPack | append: changedText %}
+            {% else %}
+                {% assign fullPack = fullPack | append: imgStarter | append: changedText %}
+            {% endif %}  
+        {% endfor %}
+        {{ fullPack }}
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.top_button_label != blank -%}
+      <div class="tpt-section-header_button">
+        <a
+          class="tpt-button tpt-button__primary"
+          href="{{ section.settings.top_button_link | default: "#" }}"
+          {%- assign mtm_link = section.settings.top_button_link -%}
+          {%- if mtm_link contains 'http' -%}
+            {% unless mtm_link contains shop.domain %} rel="nofollow" {% endunless %}
+          {%- endif -%}
+        >
+          <span>{{ section.settings.top_button_label }}</span>
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+{%- endif -%}

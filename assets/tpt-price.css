@@ -1,0 +1,104 @@
+.tpt-price {
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    line-height: calc(1 + 0.5 / var(--font-body-scale));
+    color: rgb(var(--color-foreground));
+  }
+  
+  .tpt-price > * {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .tpt-price.tpt-price--unavailable {
+    visibility: hidden;
+  }
+  
+  .tpt-price--end {
+    text-align: right;
+  }
+  
+  .tpt-price .tpt-price-item {
+    display: inline-block;
+    margin: 0 1rem 0 0;
+    font-weight: 600;
+  }
+  
+  .tpt-price__regular .tpt-price-item--regular {
+    margin-right: 0;
+    font-weight: 600;
+  }
+  
+  .tpt-price:not(.tpt-price--show-badge) .tpt-price-item--last:last-of-type {
+    margin: 0;
+  }
+  
+  @media screen and (min-width: 750px) {
+    .tpt-price {
+      margin-bottom: 0;
+    }
+  }
+  
+  .tpt-price--large {
+    font-size: 1.6rem;
+    line-height: calc(1 + 0.5 / var(--font-body-scale));
+    letter-spacing: 0.13rem;
+  }
+  
+  @media screen and (min-width: 750px) {
+    .tpt-price--large {
+      font-size: 1.8rem;
+    }
+  }
+  
+  .tpt-price--sold-out .tpt-price__availability,
+  .tpt-price__regular {
+    display: block;
+  }
+  
+  .tpt-price__sale,
+  .tpt-price__availability,
+  .tpt-price .tpt-tpt-price__badge-sale,
+  .tpt-price .tpt-price__badge-sold-out,
+  .tpt-price--on-sale .tpt-price__regular,
+  .tpt-price--on-sale .tpt-price__availability {
+    display: none;
+  }
+  
+  .tpt-price--sold-out .tpt-price__badge-sold-out,
+  .tpt-price--on-sale .tpt-price__badge-sale,
+  .tpt-volume-pricing--sale-badge .tpt-price__badge-sale {
+    display: inline-block;
+  }
+  
+  .tpt-volume-pricing--sale-badge .tpt-price__badge-sale {
+    margin-left: 0.5rem;
+  }
+  
+  .tpt-price--on-sale .tpt-price__sale {
+    display: initial;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .tpt-price--center {
+    display: initial;
+    justify-content: center;
+  }
+  
+  .tpt-price--on-sale .tpt-price-item--regular {
+    text-decoration: line-through;
+    color: rgba(var(--color-foreground), 0.75);
+    font-size: 1.3rem;
+  }
+  
+  .tpt-unit-price {
+    display: block;
+    font-size: 1.1rem;
+    letter-spacing: 0.04rem;
+    line-height: calc(1 + 0.2 / var(--font-body-scale));
+    margin-top: 0.2rem;
+    text-transform: uppercase;
+    color: rgba(var(--color-foreground), 0.7);
+  }
+  

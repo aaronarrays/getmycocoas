@@ -1,0 +1,233 @@
+{% doc %}
+  @prompt
+    quiero aqui citar la reseña de un cliente que aprezcan las estrellas y el texto de la reseña 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-customer-review-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    padding: 24px;
+    background-color: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    border: {{ block.settings.border_width }}px solid {{ block.settings.border_color }};
+  }
+
+  .ai-customer-review__stars-{{ ai_gen_id }} {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+
+  .ai-customer-review__star-{{ ai_gen_id }} {
+    width: {{ block.settings.star_size }}px;
+    height: {{ block.settings.star_size }}px;
+    fill: {{ block.settings.star_color }};
+  }
+
+  .ai-customer-review__star-{{ ai_gen_id }}--empty {
+    fill: {{ block.settings.empty_star_color }};
+  }
+
+  .ai-customer-review__text-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.text_size }}px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .ai-customer-review__author-{{ ai_gen_id }} {
+    color: {{ block.settings.author_color }};
+    font-size: {{ block.settings.author_size }}px;
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-customer-review-{{ ai_gen_id }} {
+      padding: 20px;
+    }
+  }
+{% endstyle %}
+
+<customer-review-{{ ai_gen_id }} class="ai-customer-review-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-customer-review__stars-{{ ai_gen_id }}">
+    {% for i in (1..5) %}
+      {% if i <= block.settings.rating %}
+        <svg class="ai-customer-review__star-{{ ai_gen_id }}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+      {% else %}
+        <svg class="ai-customer-review__star-{{ ai_gen_id }} ai-customer-review__star-{{ ai_gen_id }}--empty" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  {% if block.settings.review_text != blank %}
+    <div class="ai-customer-review__text-{{ ai_gen_id }}">
+      {{ block.settings.review_text }}
+    </div>
+  {% endif %}
+
+  {% if block.settings.author_name != blank %}
+    <div class="ai-customer-review__author-{{ ai_gen_id }}">
+      {{ block.settings.author_name }}
+    </div>
+  {% endif %}
+</customer-review-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class CustomerReview{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+    }
+    customElements.define('customer-review-{{ ai_gen_id }}', CustomerReview{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Reseña de cliente",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Calificación"
+    },
+    {
+      "type": "range",
+      "id": "rating",
+      "label": "Estrellas",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "star_size",
+      "label": "Tamaño de estrellas",
+      "min": 16,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Color de estrellas",
+      "default": "#FFD700"
+    },
+    {
+      "type": "color",
+      "id": "empty_star_color",
+      "label": "Color de estrellas vacías",
+      "default": "#E6E6E6"
+    },
+    {
+      "type": "header",
+      "content": "Contenido"
+    },
+    {
+      "type": "richtext",
+      "id": "review_text",
+      "label": "Texto de la reseña",
+      "default": "<p>Excelente producto, superó mis expectativas. La calidad es increíble y llegó muy rápido.</p>"
+    },
+    {
+      "type": "text",
+      "id": "author_name",
+      "label": "Nombre del cliente",
+      "default": "María González"
+    },
+    {
+      "type": "header",
+      "content": "Estilo"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Color de fondo",
+      "default": "#F5F5F5"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color del texto",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Tamaño del texto",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "author_color",
+      "label": "Color del nombre",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "author_size",
+      "label": "Tamaño del nombre",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Radio del borde",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "label": "Ancho del borde",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Color del borde",
+      "default": "#E6E6E6"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Ancho en escritorio",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    }
+  ],
+  "presets": [
+    {
+      "name": "Reseña de cliente"
+    }
+  ]
+}
+{% endschema %}

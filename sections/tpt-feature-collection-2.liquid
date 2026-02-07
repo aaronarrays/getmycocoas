@@ -1,0 +1,476 @@
+{% comment %} Section layout style {% endcomment %}
+{{ 'tpt-section.css' | asset_url | stylesheet_tag }}
+
+{% comment %} Section configuration {% endcomment %}
+{%- render 'tpt-section-setting', section: section -%}
+
+{%- if section.index and section.settings.section_lazyload -%}
+  <script src="{{ 'tpt-section-lazyload.js' | asset_url }}" defer="defer"></script>
+
+  <tpt-section-lazyload data-url="?section_id={{ section.id }}">
+    <div data-lazyload-element></div>
+    <span class="tpt-section_loader"></span>
+  </tpt-section-lazyload>
+{%- else -%}
+  {% comment %} Grid style {% endcomment %}
+  {{ 'tpt-grid.css' | asset_url | stylesheet_tag }}
+
+  {% comment %} Current section style {% endcomment %}
+  {{ 'tpt-tab-item.css' | asset_url | stylesheet_tag }}
+  {{ 'tpt-feature-collection-2.css' | asset_url | stylesheet_tag }}
+
+  <script src="{{ 'tpt-tab-item.js' | asset_url }}" defer="defer"></script>
+  {% assign tab_index = 0 %}
+  {% assign collection = 0 %}
+  {% assign products_limit = section.settings.products_limit %}
+
+  {%- capture sizes -%}
+    (min-width: 1281px) calc(100vw / {{ section.settings.desktop_column }}), (min-width: 992px) calc(100vw / {{ section.settings.tablet_column }}), 100vw
+  {%- endcapture -%}
+
+  <div class="tpt-section_container">
+    <div class="tpt-section_content">
+      <div class="tpt-product-tab_container tpt-feature-collection-2">
+        {% comment %} Section header {% endcomment %}
+        {%- render 'tpt-section-header', section: section -%}
+
+        <div class="tpt-section-body">
+          {% comment %} Section body {% endcomment %}
+          <div class="tpt-product-tabs">
+            <div class="product-tab-container">
+              <tpt-tabs-component class="tabs-default">
+                <tpt-tab-list>
+                  {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                      {%- when 'tab' -%}
+                        {% assign tab_index = tab_index | plus: 1 %}
+                        <tpt-tab-item
+                          class="text-heading {% if tab_index == 1 %}active loaded{% endif %} focus-inset"
+                          data-tab-target="{{ block.id }}"
+                          data-ajax-url="{{ block.settings.collection.url }}?section_id=tpt-ajax-product-tab-2&tpt-products-limit={{ products_limit }}&media-aspect-ratio={{ section.settings.image_ratio }}&show-secondary-image={{ section.settings.show_secondary_image }}"
+                          tabindex="0"
+                        >
+                          <span class="tpt-tab-item-button">{{ block.settings.tab_name }}</span>
+                          {% comment %} <span class="{% if tab_index == 1 %}tpt-button__primary{%else%}tpt-button__secondary{% endif %}">{{ block.settings.tab_name }}</span> {% endcomment %}
+                        </tpt-tab-item>
+                    {%- endcase -%}
+                  {%- endfor -%}
+                </tpt-tab-list>
+
+                <tpt-tab-containers class="desktop-{{ section.settings.desktop_column }}-columns tablet-{{ section.settings.tablet_column }}-columns mobile-{{ section.settings.mobile_column }}-columns">
+                  {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                      {%- when 'tab' -%}
+                        {% assign collection = collection | plus: 1 %}
+                        {% if collection == 1 %}
+                          <tpt-tab-data class="active" data-tab-container="{{ block.id }}">
+                            <div class="tab-ajax-container" data-ajax-content="{{ block.id }}">
+                              <div class="tpt-grid tpt-grid_products list-tab-product product-grid">
+                                {%- if block.settings.collection.products -%}
+                                  {%- for product in block.settings.collection.products limit: products_limit -%}
+                                    <div
+                                      class="tpt-grid_item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                                      {% if settings.animations_reveal_on_scroll %}
+                                        data-cascade
+                                        style="--animation-order: {{ forloop.index }};"
+                                      {% endif %}
+                                    >
+                                      {% render 'tpt-card-product',
+                                        card_product: product,
+                                        media_aspect_ratio: section.settings.image_ratio,
+                                        sizes: sizes,
+                                        show_secondary_image: section.settings.show_secondary_image,
+                                        section_id: section.id
+                                      %}
+                                    </div>
+                                  {%- endfor -%}
+                                {%- else -%}
+                                  {%- for i in (1..products_limit) -%}
+                                    <div
+                                      class="tpt-grid_item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                                      {% if settings.animations_reveal_on_scroll %}
+                                        data-cascade
+                                        style="--animation-order: {{ forloop.index }};"
+                                      {% endif %}
+                                    >
+                                      {% render 'tpt-card-product',
+                                        media_aspect_ratio: settings.product_image_ratio,
+                                        image_shape: settings.product_image_shape,
+                                        show_vendor: settings.product_show_vendor
+                                      %}
+                                    </div>
+                                  {%- endfor -%}
+                                {%- endif -%}
+                              </div>
+                              <div class="view-all-button">
+                                <a class="tpt-button__primary" href="{{ block.settings.collection.url }}">View All</a>
+                              </div>
+                            </div>
+
+                            {%- if section.settings.tab_button_text != blank -%}
+                              <div class="section-bottom-button">
+                                <a
+                                  role="button"
+                                  class="button button-effect button--secondary"
+                                  href="{{ block.settings.collection.url | default: "#" }}"
+                                >
+                                  <span class="btn-text">
+                                    {{- section.settings.tab_button_text -}}
+                                  </span>
+
+                                  <span class="screen-reader-text">{{ block.settings.tab_name }}</span>
+                                </a>
+                              </div>
+                            {%- endif -%}
+                          </tpt-tab-data>
+                        {% else -%}
+                          <tpt-tab-data class="" data-tab-container="{{ block.id }}">
+                            <div class="tab-ajax-container" data-ajax-content="{{ block.id }}">&nbsp;</div>
+
+                            {%- if section.settings.tab_button_text != blank -%}
+                              <div class="section-bottom-button">
+                                <a
+                                  role="button"
+                                  class="button button-effect button--secondary"
+                                  href="{{ block.settings.collection.url | default: "#" }}"
+                                >
+                                  <span class="btn-text">
+                                    {{- section.settings.tab_button_text -}}
+                                  </span>
+
+                                  <span class="screen-reader-text">{{ block.settings.tab_name }}</span>
+                                </a>
+                              </div>
+                            {%- endif -%}
+                            <div class="view-all-button">
+                              <a class="tpt-button__primary" href="{{ block.settings.collection.url }}">View All</a>
+                            </div>
+                          </tpt-tab-data>
+                        {% endif -%}
+                    {%- endcase -%}
+                  {%- endfor -%}
+                </tpt-tab-containers>
+              </tpt-tabs-component>
+            </div>
+          </div>
+          {% comment %} End section body {% endcomment %}
+        </div>
+      </div>
+
+      {% comment %} Section footer {% endcomment %}
+      {%- render 'tpt-section-footer', section: section -%}
+    </div>
+  </div>
+{%- endif -%}{%- unless content_for_header contains 'tapita-section-script-tags' -%}{% style %}#shopify-section-{{ section.id }}{display: none !important;}{% endstyle %}{%- endunless -%}
+{% schema %}
+{
+  "name": "Tpt-Feature collection #2",
+  "tag": "section",
+  "class": "section tpt-section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section header"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Collection",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        {
+          "value": "h4",
+          "label": "Small"
+        },
+        {
+          "value": "h2",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "sub_heading",
+      "label": "Sub-heading"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "text",
+      "id": "top_button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "top_button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Section body"
+    },
+    {
+      "type": "range",
+      "id": "image_ratio",
+      "min": 50,
+      "max": 150,
+      "step": 1,
+      "label": "Image ratio",
+      "default": 80
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "label": "Show second image on hover",
+      "default": true
+    },
+    {
+      "type": "number",
+      "id": "products_limit",
+      "label": "Products limit",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "desktop_column",
+      "min": 3,
+      "max": 6,
+      "step": 1,
+      "label": "Number of columns on desktop",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "tablet_column",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "label": "Number of columns on tablet",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "mobile_column",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "label": "Number of columns on mobile",
+      "default": 2
+    },
+    {
+      "type": "header",
+      "content": "Section footer"
+    },
+    {
+      "type": "text",
+      "id": "bottom_button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "bottom_button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Section layout"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_full_width",
+      "label": "Section full width",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "section_max_width",
+      "min": 1200,
+      "max": 1900,
+      "step": 20,
+      "unit": "px",
+      "label": "Section max width",
+      "default": 1600
+    },
+    {
+      "type": "checkbox",
+      "id": "content_full_width",
+      "label": "Content full width",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "min": 800,
+      "max": 1900,
+      "step": 20,
+      "unit": "px",
+      "label": "Content max width",
+      "default": 1440
+    },
+    {
+      "type": "range",
+      "id": "padding_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding desktop",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_tablet_mobile",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding tablet, mobile",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Margin desktop",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "margin_tablet_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Margin tablet, mobile",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Section color"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient_color",
+      "label": "Background gradient"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "foreground_color",
+      "label": "Foreground",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "outline_button_color",
+      "label": "Button outline",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Section optimize"
+    },
+    {
+      "type": "checkbox",
+      "id": "section_lazyload",
+      "label": "Section lazyload",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_name",
+          "label": "Tab name",
+          "default": "NEW ARRIVALS"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tpt-Feature collection #2",
+      "blocks": [
+        {
+          "type": "tab"
+        },
+        {
+          "type": "tab"
+        }
+      ]
+    }
+  ]
+} 
+{% endschema %}

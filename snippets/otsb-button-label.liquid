@@ -1,0 +1,30 @@
+{% liquid
+  assign is_primary_button = false
+  if show_button_primary or show_button_style == 'primary'
+    assign is_primary_button = true
+  endif
+%}
+{% if x_text_quickview %}
+  <span class="otsb-button-text otsb-btn-text" x-text="$store.xQuickView && $store.xQuickView.buttonLabel"></span>
+{% else %}
+  {% if show_button_style == 'text-link' %}
+    <div class="relative block-text-button overflow-hidden leading-normal">
+      <span class="otsb-button-text otsb-btn-text btn-text-link-effect-1 relative top-0 inline-block is-focus-button:opacity-0">{{ button_label | escape }}</span>
+      <span class="otsb-button-text otsb-btn-text btn-text-link-effect-2 absolute top-full left-0 is-focus-button:opacity-0">{{ button_label | escape }}</span>
+    </div>
+  {% else %}
+    <span class="otsb-button-text otsb-btn-text is-focus-button:opacity-0">{{ button_label | escape }}</span>
+  {% endif %}
+{% endif %}
+{% if button_animation == 'sliced' and is_primary_button %}
+  <span class="otsb-button-icon otsb-btn-icon opacity-0 -translate-x-[5px] w-5">
+    {% if custom_icon_button != blank %}
+      {{ custom_icon_button }}
+    {% else %}
+      <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewbox="0 0 19 19" fill="none" style="fill:none">
+        <path d="M4.25 9.49927H14.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M9.5 4.24927L14.75 9.49927L9.5 14.7493" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    {% endif %}
+  </span>
+{% endif %}

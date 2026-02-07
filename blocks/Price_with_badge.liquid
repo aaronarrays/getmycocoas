@@ -1,0 +1,184 @@
+  {% doc %}
+  @prompt
+    Crear una etiqueta o badge de descuento que muestre el porcentaje de ahorro cuando un producto tiene precio comparativo y tenga un texto cortp editable que pueda poner despues del porcentaje. 
+    Que me permita elegir la plantilla de colores del badge 
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-discount-badge-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    border-radius: {{ block.settings.badge_border_radius }}px;
+    background-color: {{ block.settings.badge_background_color }};
+    color: {{ block.settings.badge_text_color }};
+    font-weight: bold;
+    font-size: {{ block.settings.badge_font_size }}px;
+    line-height: 1.2;
+    max-width: 100%;
+    box-shadow: {% if block.settings.show_shadow %}0 2px 4px rgba(0, 0, 0, 0.1){% else %}none{% endif %};
+    transform: rotate({{ block.settings.badge_rotation }}deg);
+    z-index: 2;
+  }
+
+  .ai-discount-badge-{{ ai_gen_id }} .percentage {
+    font-size: {{ block.settings.percentage_font_size }}px;
+    color: {{ block.settings.percentage_text_color }};
+  }
+
+  .ai-discount-badge-{{ ai_gen_id }} .text {
+    margin-left: 4px;
+  }
+{% endstyle %}
+
+{% if product.compare_at_price > product.price %}
+  {% assign savings_percentage = product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | round %}
+  
+  {% if savings_percentage > 0 %}
+    <div class="ai-discount-badge-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+      <span class="percentage">{{ savings_percentage }}%</span>
+      {% if block.settings.badge_text != blank %}
+        <span class="text">{{ block.settings.badge_text }}</span>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "Discount Badge",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Badge Content"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Text after percentage",
+      "default": "OFF"
+    },
+    {
+      "type": "header",
+      "content": "Badge Style"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "badge_background_color",
+      "label": "Background color",
+      "default": "#FF5733"
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "Text color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "percentage_text_color",
+      "label": "Percentage text color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "badge_font_size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Text font size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "percentage_font_size",
+      "min": 12,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Percentage font size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "badge_border_radius",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Badge Position"
+    },
+    {
+      "type": "select",
+      "id": "badge_position",
+      "label": "Position",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "Top left"
+        },
+        {
+          "value": "top-right",
+          "label": "Top right"
+        },
+        {
+          "value": "bottom-left",
+          "label": "Bottom left"
+        },
+        {
+          "value": "bottom-right",
+          "label": "Bottom right"
+        }
+      ],
+      "default": "top-left"
+    },
+    {
+      "type": "range",
+      "id": "badge_margin",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Margin from edge",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "badge_rotation",
+      "min": -45,
+      "max": 45,
+      "step": 1,
+      "unit": "°",
+      "label": "Rotation",
+      "default": 0
+    },
+    {
+      "type": "checkbox",
+      "id": "show_shadow",
+      "label": "Show shadow",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Discount Badge"
+    }
+  ]
+}
+{% endschema %}

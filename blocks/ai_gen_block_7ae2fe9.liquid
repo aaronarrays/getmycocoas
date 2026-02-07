@@ -1,0 +1,174 @@
+{% doc %}
+  @prompt
+    necesito un banner que contenga opcion de imagen tanto para escritorio y telefono y que cubra hasta el borde de la pagina
+    , quiero que sea completo el banner que no tenga espacios a los lados 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-full-width-banner-{{ ai_gen_id }} {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ai-full-width-banner-{{ ai_gen_id }}__image-wrapper {
+    width: 100%;
+    height: {{ block.settings.banner_height_desktop }}px;
+    position: relative;
+    display: block;
+  }
+
+  .ai-full-width-banner-{{ ai_gen_id }}__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .ai-full-width-banner-{{ ai_gen_id }}__image--mobile {
+    display: none;
+  }
+
+  .ai-full-width-banner-{{ ai_gen_id }}__placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-full-width-banner-{{ ai_gen_id }}__placeholder svg {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+  .ai-full-width-banner-{{ ai_gen_id }}__empty-state {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-full-width-banner-{{ ai_gen_id }}__image-wrapper {
+      height: {{ block.settings.banner_height_mobile }}px;
+    }
+
+    .ai-full-width-banner-{{ ai_gen_id }}__image--desktop {
+      display: none;
+    }
+
+    .ai-full-width-banner-{{ ai_gen_id }}__image--mobile {
+      display: block;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-full-width-banner-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-full-width-banner-{{ ai_gen_id }}__image-wrapper">
+    {% if block.settings.image_desktop or block.settings.image_mobile %}
+      {% if block.settings.image_desktop %}
+        <img
+          src="{{ block.settings.image_desktop | image_url: width: 2400 }}"
+          alt="{{ block.settings.image_desktop.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.image_desktop.width }}"
+          height="{{ block.settings.image_desktop.height }}"
+          class="ai-full-width-banner-{{ ai_gen_id }}__image ai-full-width-banner-{{ ai_gen_id }}__image--desktop"
+        >
+      {% endif %}
+
+      {% if block.settings.image_mobile %}
+        <img
+          src="{{ block.settings.image_mobile | image_url: width: 1200 }}"
+          alt="{{ block.settings.image_mobile.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.image_mobile.width }}"
+          height="{{ block.settings.image_mobile.height }}"
+          class="ai-full-width-banner-{{ ai_gen_id }}__image ai-full-width-banner-{{ ai_gen_id }}__image--mobile"
+        >
+      {% elsif block.settings.image_desktop %}
+        <img
+          src="{{ block.settings.image_desktop | image_url: width: 1200 }}"
+          alt="{{ block.settings.image_desktop.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.image_desktop.width }}"
+          height="{{ block.settings.image_desktop.height }}"
+          class="ai-full-width-banner-{{ ai_gen_id }}__image ai-full-width-banner-{{ ai_gen_id }}__image--mobile"
+        >
+      {% endif %}
+    {% else %}
+      <div class="ai-full-width-banner-{{ ai_gen_id }}__placeholder">
+        {{ 'hero-apparel-1' | placeholder_svg_tag }}
+        <div class="ai-full-width-banner-{{ ai_gen_id }}__empty-state">
+          Agrega una imagen de escritorio y móvil
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Banner ancho completo",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Imagen de escritorio"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "Imagen de escritorio"
+    },
+    {
+      "type": "range",
+      "id": "banner_height_desktop",
+      "min": 200,
+      "max": 800,
+      "step": 50,
+      "unit": "px",
+      "label": "Altura en escritorio",
+      "default": 500
+    },
+    {
+      "type": "header",
+      "content": "Imagen móvil"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Imagen móvil"
+    },
+    {
+      "type": "range",
+      "id": "banner_height_mobile",
+      "min": 200,
+      "max": 600,
+      "step": 50,
+      "unit": "px",
+      "label": "Altura en móvil",
+      "default": 400
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner ancho completo"
+    }
+  ]
+}
+{% endschema %}

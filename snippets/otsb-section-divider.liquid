@@ -1,0 +1,7 @@
+{%- if section.settings.show_section_divider or section.settings.show_section_divider_mobile -%}
+  <div
+    class="divider border-t{% unless section.settings.show_section_divider_mobile %} otsb-hidden{% endunless %}{% if section.settings.show_section_divider %} md:block{% else %} md:otsb-hidden{% endif %}"
+  >
+    <div></div>
+  </div>
+{%- endif -%}

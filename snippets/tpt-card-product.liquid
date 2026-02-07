@@ -1,0 +1,88 @@
+{% comment %}
+  Renders a product card
+
+  Accepts:
+  - card_product: {Object} Product Liquid object (optional)
+  - media_aspect_ratio: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
+  - image_shape: {String} Image mask to apply to the product image card. Values are "arch", "blob", "chevronleft", "chevronright", "diamond", "parallelogram", and "round". (optional)
+  - show_secondary_image: {Boolean} Show the secondary image on hover. Default: false (optional)
+  - show_vendor: {Boolean} Show the product vendor. Default: false
+  - show_rating: {Boolean} Show the product rating. Default: false
+  - extend_height: {Boolean} Card height extends to available container space. Default: true (optional)
+  - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+  - quick_add: {Boolean} Show the quick add button.
+  - section_id: {String} The ID of the section that contains this card.
+  - horizontal_class: {Boolean} Add a card--horizontal class if set to true. Default: false (optional)
+  - horizontal_quick_add: {Boolean} Changes the quick add button styles when set to true. Default: false (optional)
+  - placeholder_image: {String} The placeholder image to use when no product exists. Default: 'product-apparel-2' (optional)
+
+  Usage:
+  {% render 'card-product', show_vendor: section.settings.show_vendor %}
+{% endcomment %}
+
+{{ 'tpt-card-product.css' | asset_url | stylesheet_tag }}
+
+{%- if card_product and card_product != empty -%}
+  <div class="tpt-card-wrapper tpt-product-card-wrapper tpt-product-card-wrapper">
+    <div class="tpt-card {% if card_product.media[1] != null and show_secondary_image %}tpt-show-second-image{% endif %}">
+      <div class="tpt-card__inner" style="--ratio-percent: {{ media_aspect_ratio | divided_by: 100.0 }};">
+        {%- if card_product.featured_media -%}
+          <div class="tpt-card__media">
+            <div class="tpt-media">
+              {{
+                card_product.featured_media
+                | image_url: width: 3840
+                | image_tag:
+                  sizes: sizes,
+                  widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                  loading: 'lazy',
+                  class: 'tpt-image-first',
+                  alt: shop.name
+                | default: shop.name
+              }}
+              {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
+
+              {%- if card_product.media[1] != null and show_secondary_image -%}
+                {{
+                  card_product.media[1]
+                  | image_url: width: 3840
+                  | image_tag:
+                    sizes: sizes,
+                    widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                    loading: 'lazy',
+                    class: 'tpt-image-hover',
+                    alt: shop.name
+                  | default: shop.name
+                }}
+              {%- endif -%}
+
+              <a class="tpt-card__link" href="{{ card_product.url }}">
+                <span class="hidden"> {{ card_product.title | escape }}</span>
+              </a>
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+      <div class="tpt-card__content">
+        <div class="tpt-card__information">
+          <h3 class="tpt-card__heading tpt-section__foreground--color h5">
+            <a
+              href="{{ card_product.url }}"
+              id="CardLink-{{ section_id }}-{{ card_product.id }}"
+              class="tpt-card__heading-link tpt-section__foreground--color"
+              aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
+            >
+              {{ card_product.title | escape }}
+            </a>
+          </h3>
+          <div class="tpt-card-information">
+            <span class="tpt-caption-large tpt-light tpt-section__foreground--color">
+              {{- block.settings.description | escape -}}
+            </span>
+            {% render 'tpt-price', product: card_product, price_class: '', show_compare_at_price: true %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}

@@ -1,0 +1,213 @@
+{% comment %}
+  Banner Image Section
+  Imagen de banner con versión para mobile y desktop, con enlace configurable
+{% endcomment %}
+
+{% liquid
+  assign image_desktop = section.settings.image_desktop
+  assign image_mobile = section.settings.image_mobile
+  assign link_url = section.settings.link_url
+
+  if image_mobile == blank and image_desktop != blank
+    assign image_mobile = image_desktop
+  endif
+  if image_desktop == blank and image_mobile != blank
+    assign image_desktop = image_mobile
+  endif
+%}
+
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<div class="banner-image section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}" style="padding-top: {{ section.settings.padding_block_start }}px; padding-bottom: {{ section.settings.padding_block_end }}px;">
+  <div class="banner-image__wrapper">
+    {% if link_url != blank %}
+      <a href="{{ link_url }}" class="banner-image__link" {% if section.settings.open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}>
+    {% endif %}
+
+    <div class="banner-image__container" style="--banner-object-position: {{ section.settings.image_position }};">
+      {% if image_desktop != blank %}
+        <div class="banner-image__desktop">
+          {% render 'image', image: image_desktop, class: 'banner-image__img' %}
+        </div>
+      {% endif %}
+
+      {% if image_mobile != blank %}
+        <div class="banner-image__mobile">
+          {% render 'image', image: image_mobile, class: 'banner-image__img' %}
+        </div>
+      {% endif %}
+
+      {% if image_desktop == blank and image_mobile == blank %}
+        <div class="banner-image__placeholder">
+          {{ 'lifestyle-1' | placeholder_svg_tag: 'banner-image__placeholder-svg' }}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if link_url != blank %}
+      </a>
+    {% endif %}
+  </div>
+</div>
+
+{% stylesheet %}
+  .banner-image__wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .banner-image__link {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  .banner-image__container {
+    position: relative;
+    width: 100%;
+  }
+
+  .banner-image__desktop {
+    display: none;
+  }
+
+  .banner-image__mobile {
+    display: block;
+  }
+
+  @media (min-width: 750px) {
+    .banner-image__desktop {
+      display: block;
+    }
+
+    .banner-image__mobile {
+      display: none;
+    }
+  }
+
+  .banner-image__img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: var(--banner-object-position, center center);
+  }
+
+  .banner-image__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    background: rgba(128, 128, 128, 0.1);
+  }
+
+  .banner-image__placeholder-svg {
+    width: 50%;
+    opacity: 0.3;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Banner con imagen",
+  "tag": "section",
+  "class": "banner-image-section",
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Imágenes"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "Imagen para escritorio"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Imagen para móvil"
+    },
+    {
+      "type": "header",
+      "content": "Enlace"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Enlace del banner"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_new_tab",
+      "label": "Abrir en nueva pestaña",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Diseño"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Posición de la imagen",
+      "info": "La sección toma la altura natural de la imagen",
+      "options": [
+        { "value": "center center", "label": "Centro" },
+        { "value": "top center", "label": "Arriba" },
+        { "value": "bottom center", "label": "Abajo" },
+        { "value": "center left", "label": "Izquierda" },
+        { "value": "center right", "label": "Derecha" }
+      ],
+      "default": "center center"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Ancho de sección",
+      "options": [
+        { "value": "page-width", "label": "Ancho de página" },
+        { "value": "full-width", "label": "Ancho completo" }
+      ],
+      "default": "full-width"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Esquema de color",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Espaciado"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start",
+      "label": "Arriba",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end",
+      "label": "Abajo",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner con imagen",
+      "category": "Imagen"
+    }
+  ]
+}
+{% endschema %}
