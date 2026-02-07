@@ -219,6 +219,28 @@
     object-fit: contain;
     object-position: center;
   }
+
+  /* Carrusel: flechas siempre visibles y fijas en los bordes izquierdo/derecho */
+  .product-recommendations .resource-list__carousel slideshow-container {
+    position: relative;
+  }
+
+  .product-recommendations .resource-list__carousel slideshow-arrows {
+    position: absolute !important;
+    inset: 0 !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    pointer-events: none;
+    padding-inline: var(--util-page-margin-offset);
+    z-index: 2;
+  }
+
+  .product-recommendations .resource-list__carousel slideshow-arrows .slideshow-control {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+    flex-shrink: 0;
+  }
 {% endstylesheet %}
 
 {% schema %}
