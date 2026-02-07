@@ -65,80 +65,97 @@ class ProductRecommendations extends HTMLElement {
 
   /**
    * Load the product recommendations
+   * Uses JSON API first (more reliable), then HTML section as fallback
    */
-  #loadRecommendations() {
+  async #loadRecommendations() {
     const { productId, recommendationsPerformed, sectionId, intent } = this.dataset;
     const id = this.id;
 
     if (!productId || !id) {
-      throw new Error('Product ID and an ID attribute are required');
-    }
-
-    // If the recommendations have already been loaded, accounts for the case where the Theme Editor
-    // is loaded the section from the editor's visual preview context.
-    if (recommendationsPerformed === 'true') {
+      if (!window.Shopify?.designMode) this.#handleError(new Error('Product ID is required'));
       return;
     }
 
-    this.#fetchCachedRecommendations(productId, sectionId, intent)
-      .then(async (result) => {
-        if (!result.success) {
-          const jsonSuccess = await this.#fetchJsonRecommendations(productId, intent);
-          if (!jsonSuccess && !window.Shopify?.designMode) this.#handleError(new Error(`Server returned ${result.status}`));
-          return;
+    if (recommendationsPerformed === 'true') return;
+
+    const listContainer = this.querySelector('.resource-list') || this.querySelector('[data-testid="resource-list-grid"]');
+    if (!listContainer) return;
+
+    try {
+      let success = await this.#fetchJsonRecommendations(productId, intent);
+
+      if (!success) {
+        success = await this.#fetchFromCollection(productId, listContainer);
+      }
+
+      if (!success) {
+        const result = await this.#fetchCachedRecommendations(productId, sectionId, intent);
+        if (result.success) {
+          const html = document.createElement('div');
+          html.innerHTML = result.data || '';
+          const recommendations = html.querySelector(`product-recommendations[id="${id}"]`);
+          if (recommendations?.innerHTML?.trim()) {
+            this.dataset.recommendationsPerformed = 'true';
+            this.innerHTML = recommendations.innerHTML;
+            success = true;
+          }
         }
+      }
 
-        const html = document.createElement('div');
-        html.innerHTML = result.data || '';
-        const recommendations = html.querySelector(`product-recommendations[id="${id}"]`);
-
-        if (recommendations?.innerHTML && recommendations.innerHTML.trim().length) {
-          this.dataset.recommendationsPerformed = 'true';
-          this.innerHTML = recommendations.innerHTML;
-          return;
-        }
-
-        const jsonSuccess = await this.#fetchJsonRecommendations(productId, intent);
-        if (!jsonSuccess) this.#handleError(new Error('No recommendations available'));
-      })
-      .catch((e) => {
-        this.#fetchJsonRecommendations(productId, this.dataset.intent || 'related').then((success) => {
-          if (!success) this.#handleError(e);
-        }).catch(() => this.#handleError(e));
-      });
+      if (success) {
+        this.dataset.recommendationsPerformed = 'true';
+      } else if (!window.Shopify?.designMode) {
+        this.#handleError(new Error('No recommendations available'));
+      }
+    } catch (e) {
+      const jsonSuccess = await this.#fetchJsonRecommendations(productId, intent);
+      if (!jsonSuccess) this.#handleError(e);
+    }
   }
 
   /**
-   * Fallback: fetch recommendations via JSON API and render product cards
+   * Fallback: fetch products from collection when recommendations API returns empty
    */
-  async #fetchJsonRecommendations(productId, intent) {
+  async #fetchFromCollection(productId, listContainer) {
     const baseUrl = window.Shopify?.routes?.root || '/';
     const limit = this.dataset.url?.match(/limit=(\d+)/)?.[1] || 4;
-    const url = `${baseUrl}recommendations/products.json?product_id=${productId}&limit=${limit}&intent=${intent || 'related'}`;
+    const collectionHandle = this.dataset.collectionHandle || 'all';
 
     try {
+      const url = `${baseUrl}collections/${collectionHandle}/products.json?limit=${limit}`;
       const response = await fetch(url);
       if (!response.ok) return false;
 
       const { products } = await response.json();
       if (!products?.length) return false;
 
-      const listContainer = this.querySelector('.resource-list') || this.querySelector('[data-testid="resource-list-grid"]');
-      if (!listContainer) return false;
+      const filtered = products.filter((p) => String(p.id) !== String(productId));
+      if (!filtered.length) return false;
 
-      const formatPrice = (value) => {
-        if (value == null) return '';
-        if (typeof value === 'string') return value;
-        return (value / 100).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-      };
+      this.#renderProductCards(listContainer, filtered.slice(0, parseInt(limit, 10)));
+      return true;
+    } catch {
+      return false;
+    }
+  }
 
-      listContainer.innerHTML = products
-        .map(
-          (product) => {
-            const img = product.featured_image ?? product.images?.[0] ?? product.variants?.[0]?.featured_image;
-            const imgUrl = typeof img === 'string' ? img : (img?.src ?? img?.url ?? '');
-            const productUrl = product.url ?? (product.handle ? `/products/${product.handle}` : '#');
-            return `
+  /**
+   * Render product cards HTML into container
+   */
+  #renderProductCards(listContainer, products) {
+    const formatPrice = (value) => {
+      if (value == null) return '';
+      if (typeof value === 'string') return value;
+      return (value / 100).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    };
+
+    listContainer.innerHTML = products
+      .map((product) => {
+        const img = product.featured_image ?? product.images?.[0] ?? product.variants?.[0]?.featured_image;
+        const imgUrl = typeof img === 'string' ? img : (img?.src ?? img?.url ?? '');
+        const root = (window.Shopify?.routes?.root || '/').replace(/\/$/, '');
+        const productUrl = product.url ?? (product.handle ? `${root}/products/${product.handle}` : '#');
+        return `
           <div class="resource-list__item">
             <a href="${productUrl}" class="product-card__link" style="display:block;text-decoration:none;color:inherit;">
               <div class="product-card__media" style="aspect-ratio:1;overflow:hidden;">
@@ -161,11 +178,31 @@ class ProductRecommendations extends HTMLElement {
             </a>
           </div>
         `;
-          }
-        )
-        .join('');
+      })
+      .join('');
 
-      listContainer.setAttribute('data-has-recommendations', 'true');
+    listContainer.setAttribute('data-has-recommendations', 'true');
+  }
+
+  /**
+   * Fetch recommendations via JSON API and render product cards
+   */
+  async #fetchJsonRecommendations(productId, intent) {
+    const baseUrl = window.Shopify?.routes?.root || '/';
+    const limit = this.dataset.url?.match(/limit=(\d+)/)?.[1] || 4;
+    const url = `${baseUrl}recommendations/products.json?product_id=${productId}&limit=${limit}&intent=${intent || 'related'}`;
+
+    try {
+      const response = await fetch(url);
+      if (!response.ok) return false;
+
+      const { products } = await response.json();
+      if (!products?.length) return false;
+
+      const listContainer = this.querySelector('.resource-list') || this.querySelector('[data-testid="resource-list-grid"]');
+      if (!listContainer) return false;
+
+      this.#renderProductCards(listContainer, products);
       return true;
     } catch {
       return false;
