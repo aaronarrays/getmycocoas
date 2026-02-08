@@ -1,1 +1,330 @@
-{"parent":"index.json","context":{"market":"panama"},"sections":{"product_spotlight_XXL3d":{"type":"product-spotlight","disabled":false,"settings":{"header-755b891eb5fa2af29b5640e6f5f8f007":null,"product":"kin-gs-pack-4-0","use_product_image":true,"custom_image":null,"header-7165d512b22f2eaabf8d14d8c5e56fe3":null,"badge_text":"MÁS VENDIDO","title_text":"","subtitle_text":"THE CRACK PACK","paragraph_text":"El pack más completo para cuidar de ti y tus cocos: práctico, seguro y con todo lo que necesitas en un solo kit.","button_label":"Saber más","button_link":"","header-544fc36bb058c59b32ebf8de129042a7":null,"counter_number":"529","counter_suffix":"personas compraron en el último mes","header-592a3e6920eef64ae24be8825a1cfbb6":null,"section_width":"page-width","media_position":"left","color_scheme":"","header-20683819bde615a14d29079e2a6dfc6e":null,"padding-block-start":40,"padding-block-end":40},"blocks":{},"block_order":[],"name":"Destacado de producto"},"banner_image_tGak7":{"type":"banner-image","disabled":true,"settings":{"header-ac0c0529a60b30780e31539d2058ca07":null,"image_desktop":"shopify:\/\/shop_images\/35_Panama.webp","image_mobile":"shopify:\/\/shop_images\/Banner_web_mycocos_PA_35.webp","header-04f0c8217a26e5b73474685281af1e68":null,"link_url":"shopify:\/\/products\/rasuradora-masculina-my-cocos-4-0","open_new_tab":false,"header-5e4cc03e98971d8740bb61449ed32c0b":null,"image_position":"center center","section_width":"full-width","color_scheme":"","header-505a4b5054cc058a9d79fe7e507c87da":null,"padding_block_start":0,"padding_block_end":0},"blocks":{},"block_order":[],"name":"Banner con imagen"},"ss_slideshow_4_E4AGWC":{"custom_css":["@media (max-width: 768px) {.custom-slideshow-content-block_RLUt3i {top: 78%; } .custom-slideshow-content-block_RLUt3i {padding: 12px 12px; } .custom-slideshow-content-block_RLUt3i a {font-weight: 500; }}"],"settings":{},"blocks":{"block_9BmcA":{"type":"block","disabled":false,"settings":{"header-cc9051d3078a452a49e3e7b5eb31d44b":null,"slide_url":"","header-2bd05da15eb3d113769fac87c814472f":null,"image":"shopify:\/\/shop_images\/1_jpg.jpg","image_mobile":"shopify:\/\/shop_images\/Copia_de_Este_San_Calentin_obten_hasta_un_47_OFF_jpg_74c3ac42-a34c-440a-9b22-5e72f769677e.jpg","image_overlay":0,"header-6a6e525e3efefbac9a76e50b21434cda":null,"container_use":false,"container_width":70,"container_width_mobile":90,"container_alpha":0.2,"container_padding_horizontal":16,"container_padding_vertical":16,"container_radius":0,"container_align":"middle-center","header-3ad5a94f9709884dd333c8b06bd3b22d":null,"heading":"","heading_custom":false,"heading_font":"assistant_n4","heading_size":50,"heading_size_mobile":50,"heading_letter":0,"heading_height":100,"heading_align":"center","heading_align_mobile":"center","header-3286abb676c5cce188f4b6dce2c6c4ce":null,"subheading":"","subheading_custom":false,"subheading_font":"assistant_n4","subheading_size":28,"subheading_size_mobile":22,"subheading_letter":0,"subheading_height":120,"subheading_mt":8,"subheading_align":"center","subheading_align_mobile":"center","subheading_color1":"#ffffff","header-142e09d77c3be1417e38da2914e6440e":null,"text":"","text_custom":false,"text_font":"assistant_n4","text_size":24,"text_size_mobile":24,"text_letter":0,"text_height":130,"text_mt":16,"text_align":"center","text_align_mobile":"center","header-7da4b7f51745ff78e4ef14d8479b6da3":null,"button_position":"center-bottom","button":"Comprar Ahora","button_url":"shopify:\/\/collections\/all","button_custom":false,"button_font":"assistant_n4","button_size":20,"button_size_mobile":20,"button_letter":0,"button_height":100,"button_align":"center","button_align_mobile":"center","button_mt":16,"button_style":"button","button_thickness":0,"button_padding_horizontal":16,"button_padding_vertical":12,"button_radius":24,"button_max_width":0,"button_max_width_mobile":0,"header-517bf18dd8080d566e9adfb0ef3aa85d":null,"slide_bg_color":"#a9a9a9","heading_color":"#ffffff","subheading_color":"#ffffff","text_color":"#ffffff","container_bg":"#000000","header-010a4b68701e068d63bbacc568bc520f":null,"button_color":"#ffffff","button_hover_color":"#cfcdcd","button_bg_color":"#121212","button_bg_hover_color":"#121212","button_border_color":"#ffffff","button_border_hover_color":"#cfcdcd","header-c3ef643f9c990343306dfa537a3e1a34":null,"slide_padding_horizontal":32,"slide_padding_vertical":32}},"block_RLUt3i":{"disabled":false,"settings":{"button_position":"inline"}}},"block_order":["block_9BmcA","block_RLUt3i"]},"section_4URWY6":{"settings":{},"blocks":{"group_CLBnr3":{"disabled":false,"settings":{}}}},"media_with_content_GgzVen":{"disabled":true,"settings":{},"blocks":{"media":{"settings":{"image":null,"link":"shopify:\/\/products\/gift-pack-daily"}},"content":{"blocks":{"group_zQtci":{"type":"group","name":"t:names.group","disabled":false,"blocks":{"text_fCYyd":{"type":"text","name":"t:names.caption","disabled":false,"settings":{"text":"<p>más vendido<\/p>","header-7ceb0cd5ada165f633093ea5c587dcd6":null,"width":"fit-content","max_width":"normal","alignment":"left","header-a809ac2b5be1848b552bd0f4e1c85207":null,"type_preset":"h6","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-primary)","header-e808d83f7264a2e5d4a6c3a270949537":null,"background":true,"background_color":"#d0473e","corner_radius":20,"header-d0e1045b163bb6d07c99a376448ad610":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}}},"block_order":["text_fCYyd"],"settings":{"header-e24d1728cfa2cd2ffd91364ad40f39a2":null,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":12,"header-fb145ca11035c230416f1457af788471":null,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"header-b2ab7626159205e7011e5ac8e8720085":null,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video":null,"video_position":"cover","background_image":null,"background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","header-d6dccbe9792fcea631c9ca955e0359ff":null,"link":"","open_in_new_tab":false,"placeholder":"","header-47cd4e291c3976ae41abcdd1894a93c0":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}},"group_XBBb44":{"blocks":{"button_jtAVVY":{"settings":{"style_class":"button","width":"custom","custom_width":97}}},"settings":{}}},"block_order":["group_zQtci","group_XBBb44","buy_buttons_hKhUCh","custom_liquid_hAnqTi","button_i8ABDb"],"settings":{}}}},"collection_list_CVhM9X":{"settings":{"collection_list":["los-mas-vendidos"]},"blocks":{}}},"order":["ss_slideshow_4_E4AGWC","marquee_faYTKA","product_list_qU3bEB","section_4URWY6","product_spotlight_XXL3d","media_with_content_GgzVen","collection_list_CVhM9X","product_list_7XVjtA","banner_image_tGak7","section_hHV4dU","product_list_TURAjw","section_VLKGPt","section_aQwcph","175648197376f746f1"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "index.json",
+  "context": {
+    "market": "panama"
+  },
+  "sections": {
+    "product_spotlight_XXL3d": {
+      "type": "product-spotlight",
+      "disabled": false,
+      "settings": {
+        "header-b7c29fe44e300373e710da913c904e1c": null,
+        "product": "kin-gs-pack-4-0",
+        "use_product_image": true,
+        "custom_image": null,
+        "header-da6c18b82a880f54b013474dcc746f84": null,
+        "badge_text": "MÁS VENDIDO",
+        "title_text": "",
+        "subtitle_text": "THE CRACK PACK",
+        "paragraph_text": "El pack más completo para cuidar de ti y tus cocos: práctico, seguro y con todo lo que necesitas en un solo kit.",
+        "button_label": "Saber más",
+        "button_link": "",
+        "header-1b1e6dfac9db253d28a949fe2e2f7efb": null,
+        "counter_number": "529",
+        "counter_suffix": "personas compraron en el último mes",
+        "header-d0ad12ae939cb421baeb7bda78fbd799": null,
+        "section_width": "page-width",
+        "media_position": "left",
+        "color_scheme": "",
+        "header-8b21d08c72fdaf19a51b0a3aa2c51b72": null,
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Destacado de producto"
+    },
+    "banner_image_tGak7": {
+      "type": "banner-image",
+      "disabled": true,
+      "settings": {
+        "header-4d400df74fa95b47ce3d356ea33e470d": null,
+        "image_desktop": "shopify://shop_images/35_Panama.webp",
+        "image_mobile": "shopify://shop_images/Banner_web_mycocos_PA_35.webp",
+        "header-a8851c1b853cd7c442b686827f867cb9": null,
+        "link_url": "shopify://products/rasuradora-masculina-my-cocos-4-0",
+        "open_new_tab": false,
+        "header-92b0529006b2870ccef7dc2d715f52cc": null,
+        "image_position": "center center",
+        "section_width": "full-width",
+        "color_scheme": "",
+        "header-a90c7b93bc679b52ffb5286c8a11349a": null,
+        "padding_block_start": 0,
+        "padding_block_end": 0
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Banner con imagen"
+    },
+    "ss_slideshow_4_E4AGWC": {
+      "custom_css": [
+        "@media (max-width: 768px) {.custom-slideshow-content-block_RLUt3i {top: 78%; } .custom-slideshow-content-block_RLUt3i {padding: 12px 12px; } .custom-slideshow-content-block_RLUt3i a {font-weight: 500; }}",
+        ".custom-slideshow-btn-positioned-block_YgBWq .custom-slideshow-btn-bottom-link {display: inline-block; text-decoration: none; transition: all 0.3s; font-size: 20px; color: #000000; line-height: 100%; letter-spacing: 0px; padding: 9px 12px; border-radius: 24px; background: rgb(255 186 36); border: 0px solid #ffffff;}"
+      ],
+      "settings": {},
+      "blocks": {
+        "block_9BmcA": {
+          "type": "block",
+          "disabled": false,
+          "settings": {
+            "header-96524d075eb1e0f9f78d8d77e02b11e7": null,
+            "slide_url": "",
+            "header-1d83b35428c04b64a71b57bbc0e58f18": null,
+            "image": "shopify://shop_images/1_jpg.jpg",
+            "image_mobile": "shopify://shop_images/Copia_de_Este_San_Calentin_obten_hasta_un_47_OFF_jpg_74c3ac42-a34c-440a-9b22-5e72f769677e.jpg",
+            "image_overlay": 0,
+            "header-3bf20cba9f4366518b204b1df2702369": null,
+            "container_use": false,
+            "container_width": 70,
+            "container_width_mobile": 90,
+            "container_alpha": 0.2,
+            "container_padding_horizontal": 16,
+            "container_padding_vertical": 16,
+            "container_radius": 0,
+            "container_align": "middle-center",
+            "header-7582fa392354aac7894b4e4b4d0f801d": null,
+            "heading": "",
+            "heading_custom": false,
+            "heading_font": "assistant_n4",
+            "heading_size": 50,
+            "heading_size_mobile": 50,
+            "heading_letter": 0,
+            "heading_height": 100,
+            "heading_align": "center",
+            "heading_align_mobile": "center",
+            "header-b2f7b86e09da81d5f7be5c16518bcf59": null,
+            "subheading": "",
+            "subheading_custom": false,
+            "subheading_font": "assistant_n4",
+            "subheading_size": 28,
+            "subheading_size_mobile": 22,
+            "subheading_letter": 0,
+            "subheading_height": 120,
+            "subheading_mt": 8,
+            "subheading_align": "center",
+            "subheading_align_mobile": "center",
+            "subheading_color1": "#ffffff",
+            "header-752d781b00deb5a40a9a39f674439d71": null,
+            "text": "",
+            "text_custom": false,
+            "text_font": "assistant_n4",
+            "text_size": 24,
+            "text_size_mobile": 24,
+            "text_letter": 0,
+            "text_height": 130,
+            "text_mt": 16,
+            "text_align": "center",
+            "text_align_mobile": "center",
+            "header-0a21cd30243701410d7122c98f8ca57f": null,
+            "button_position": "center-bottom",
+            "button": "Comprar Ahora",
+            "button_url": "shopify://collections/all",
+            "button_custom": false,
+            "button_font": "assistant_n4",
+            "button_size": 20,
+            "button_size_mobile": 20,
+            "button_letter": 0,
+            "button_height": 100,
+            "button_align": "center",
+            "button_align_mobile": "center",
+            "button_mt": 16,
+            "button_style": "button",
+            "button_thickness": 0,
+            "button_padding_horizontal": 16,
+            "button_padding_vertical": 12,
+            "button_radius": 24,
+            "button_max_width": 0,
+            "button_max_width_mobile": 0,
+            "header-7bc2928af2dcc041de570ef37c20858c": null,
+            "slide_bg_color": "#a9a9a9",
+            "heading_color": "#ffffff",
+            "subheading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "container_bg": "#000000",
+            "header-3426469d51811e403848a1fc0117c26e": null,
+            "button_color": "#ffffff",
+            "button_hover_color": "#cfcdcd",
+            "button_bg_color": "#121212",
+            "button_bg_hover_color": "#121212",
+            "button_border_color": "#ffffff",
+            "button_border_hover_color": "#cfcdcd",
+            "header-cc635547959814c1774ff1c1dcc9812e": null,
+            "slide_padding_horizontal": 32,
+            "slide_padding_vertical": 32
+          }
+        },
+        "block_RLUt3i": {
+          "disabled": false,
+          "settings": {
+            "button_position": "inline"
+          }
+        }
+      },
+      "block_order": [
+        "block_9BmcA",
+        "block_RLUt3i"
+      ]
+    },
+    "section_4URWY6": {
+      "settings": {},
+      "blocks": {
+        "group_CLBnr3": {
+          "disabled": false,
+          "settings": {}
+        }
+      }
+    },
+    "media_with_content_GgzVen": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {
+        "media": {
+          "settings": {
+            "image": null,
+            "link": "shopify://products/gift-pack-daily"
+          }
+        },
+        "content": {
+          "blocks": {
+            "group_zQtci": {
+              "type": "group",
+              "name": "t:names.group",
+              "disabled": false,
+              "blocks": {
+                "text_fCYyd": {
+                  "type": "text",
+                  "name": "t:names.caption",
+                  "disabled": false,
+                  "settings": {
+                    "text": "<p>más vendido</p>",
+                    "header-160bd821b5ad6441ae1c387455c1e5ac": null,
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "header-3e196cc6df0a6d772a83e25390dba48d": null,
+                    "type_preset": "h6",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-primary)",
+                    "header-007047ae7080eff96731158ebc00c9fe": null,
+                    "background": true,
+                    "background_color": "#d0473e",
+                    "corner_radius": 20,
+                    "header-5a10c7fd672f1d9396fbc9a01ce276d1": null,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                }
+              },
+              "block_order": [
+                "text_fCYyd"
+              ],
+              "settings": {
+                "header-322fd60b89a96115becf1c2b034c6f3d": null,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "header-daab450a85267b45db10f7429c9245ef": null,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "header-bd9968c01011e50fdca3737f39814b2d": null,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video": null,
+                "video_position": "cover",
+                "background_image": null,
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "header-8f82d39bd4e3f9c9d0461a82bf649c50": null,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "header-148151681a0e660dd30e834b82cb1139": null,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
+            "group_XBBb44": {
+              "blocks": {
+                "button_jtAVVY": {
+                  "settings": {
+                    "style_class": "button",
+                    "width": "custom",
+                    "custom_width": 97
+                  }
+                }
+              },
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "group_zQtci",
+            "group_XBBb44",
+            "buy_buttons_hKhUCh",
+            "custom_liquid_hAnqTi",
+            "button_i8ABDb"
+          ],
+          "settings": {}
+        }
+      }
+    },
+    "collection_list_CVhM9X": {
+      "settings": {
+        "collection_list": [
+          "los-mas-vendidos"
+        ]
+      },
+      "blocks": {}
+    }
+  },
+  "order": [
+    "ss_slideshow_4_E4AGWC",
+    "marquee_faYTKA",
+    "product_list_qU3bEB",
+    "section_4URWY6",
+    "product_spotlight_XXL3d",
+    "media_with_content_GgzVen",
+    "collection_list_CVhM9X",
+    "product_list_7XVjtA",
+    "banner_image_tGak7",
+    "section_hHV4dU",
+    "product_list_TURAjw",
+    "section_VLKGPt",
+    "section_aQwcph",
+    "175648197376f746f1"
+  ]
+}
