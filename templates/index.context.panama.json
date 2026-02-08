@@ -68,7 +68,7 @@
     "ss_slideshow_4_E4AGWC": {
       "custom_css": [
         "@media (max-width: 768px) {.custom-slideshow-content-block_RLUt3i {top: 78%; } .custom-slideshow-content-block_RLUt3i {padding: 12px 12px; } .custom-slideshow-content-block_RLUt3i a {font-weight: 500; }}",
-        ".custom-slideshow-btn-positioned-block_YgBWq .custom-slideshow-btn-bottom-link {display: inline-block; text-decoration: none; transition: all 0.3s; font-size: 20px; color: #000000; line-height: 100%; letter-spacing: 0px; padding: 9px 12px; border-radius: 24px; background: rgb(255 186 36); border: 0px solid #ffffff;}"
+        ".custom-slideshow-btn-bottom-link {display: inline-block; text-decoration: none; transition: all 0.3s; font-size: 20px; color: #000000; line-height: 100%; letter-spacing: 0px; padding: 9px 12px; border-radius: 24px; background: rgb(255 186 36); border: 0px solid #ffffff;}"
       ],
       "settings": {},
       "blocks": {
@@ -127,7 +127,7 @@
             "header-0a21cd30243701410d7122c98f8ca57f": null,
             "button_position": "center-bottom",
             "button": "Comprar Ahora",
-            "button_url": "shopify://collections/all",
+            "button_url": "shopify://collections/store",
             "button_custom": false,
             "button_font": "assistant_n4",
             "button_size": 20,
