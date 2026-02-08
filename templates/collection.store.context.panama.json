@@ -1,1 +1,71 @@
-{"parent":"collection.store.json","context":{"market":"panama"},"sections":{"ss_slideshow_4_efApqz":{"disabled":true,"settings":{"image_custom":true,"image_height_desktop":700},"blocks":{"block_NFCVVL":{"settings":{"image":"shopify:\/\/shop_images\/Copia_de_Copia_de_Copia_de_Copia_de_Copia_de_Copia_de_Copia_de_Copia_de_Raleway.jpg","image_mobile":"shopify:\/\/shop_images\/Banner_web_mycocos_1295_x_573_px_1080_x_1080_px.svg"}}}}}}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "collection.store.json",
+  "context": {
+    "market": "panama"
+  },
+  "sections": {
+    "ss_slideshow_4_efApqz": {
+      "disabled": true,
+      "settings": {
+        "image_custom": true,
+        "image_height_desktop": 700
+      },
+      "blocks": {
+        "block_NFCVVL": {
+          "settings": {
+            "image": "shopify://shop_images/Copia_de_Copia_de_Copia_de_Copia_de_Copia_de_Copia_de_Copia_de_Copia_de_Raleway.jpg",
+            "image_mobile": "shopify://shop_images/Banner_web_mycocos_1295_x_573_px_1080_x_1080_px.svg"
+          }
+        }
+      }
+    },
+    "banner_responsive_rMr4r": {
+      "type": "banner-responsive",
+      "disabled": false,
+      "settings": {
+        "header-82523df90358ce4114d1f0e2c0d7d4dc": null,
+        "image": "shopify://shop_images/Copia_de_Copia_de_Copia_de_Copia_de_Copia_de_Copia_de_Copia_de_Copia_de_Raleway_jpg_58f2e5c9-ea01-40d3-90ef-cbd549aa1625.jpg",
+        "image_position": "center center",
+        "header-51a457f42909334c2749163b6b62caf3": null,
+        "link_url": "",
+        "open_new_tab": false,
+        "header-20dcd71288eb0f4cd02892ce721f7b2c": null,
+        "section_width": "full-width",
+        "color_scheme": "",
+        "header-41ceadcf98b5a8e6f0533cffd0ec401d": null,
+        "padding_top": 0,
+        "padding_bottom": 0
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Banner adaptable"
+    }
+  },
+  "order": [
+    "section",
+    "ss_slideshow_4_efApqz",
+    "sp_link_grid_WPg8AR",
+    "main",
+    "custom_liquid_rddKHW",
+    "banner_responsive_rMr4r",
+    "product_list_8xxMPa",
+    "divider_TqLbqz",
+    "custom_liquid_xgUtA4",
+    "product_list_h4PeX4",
+    "divider_eXEn6R",
+    "custom_liquid_j8qtGy",
+    "product_list_URcbyx",
+    "divider_tNddqV",
+    "custom_liquid_UeKaDY",
+    "product_list_Anr9mH"
+  ]
+}
