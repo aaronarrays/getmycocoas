@@ -263,7 +263,7 @@
             "constrain_to_viewport": false,
             "media_fit": "cover",
             "media_radius": 0,
-            "extend_media": true,
+            "extend_media": false,
             "zoom": false,
             "video_loop": false,
             "hide_variants": true,
