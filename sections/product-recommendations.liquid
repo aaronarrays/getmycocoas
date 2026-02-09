@@ -204,11 +204,11 @@
 
   /* JS-rendered product cards: ensure layout matches theme */
   .product-recommendations .resource-list__item .product-card {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
     min-width: 0;
-    grid-template-rows: 1fr auto;
   }
 
   .product-recommendations .resource-list__item .product-card .card-gallery {

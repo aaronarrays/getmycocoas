@@ -7,7 +7,6 @@ class ProductRecommendations extends HTMLElement {
     (entries, observer) => {
       if (!entries[0]?.isIntersecting) return;
 
-      console.log('[ProductRecs] IntersectionObserver: element in view, loading...');
       observer.disconnect();
       this.#loadRecommendations();
     },
@@ -55,7 +54,6 @@ class ProductRecommendations extends HTMLElement {
   #activeFetch = null;
 
   connectedCallback() {
-    console.log('[ProductRecs] connectedCallback', this.id, 'productId=', this.dataset.productId);
     this.#intersectionObserver.observe(this);
     this.#mutationObserver.observe(this, { attributes: true });
   }
@@ -74,17 +72,7 @@ class ProductRecommendations extends HTMLElement {
     const { productId, recommendationsPerformed, sectionId, intent, layoutType } = this.dataset;
     const id = this.id;
 
-    console.log('[ProductRecs] #loadRecommendations start', {
-      productId,
-      recommendationsPerformed,
-      sectionId,
-      intent,
-      layoutType,
-      id
-    });
-
     if (!productId || !id) {
-      console.log('[ProductRecs] ABORT: missing productId or id');
       if (!window.Shopify?.designMode) this.#handleError(new Error('Product ID is required'));
       return;
     }
@@ -92,54 +80,31 @@ class ProductRecommendations extends HTMLElement {
     // Only skip when Liquid already rendered products; if empty (data-has-recommendations=false), run our fetch
     if (recommendationsPerformed === 'true') {
       const hasProducts = this.querySelector('.resource-list[data-has-recommendations="true"]');
-      if (hasProducts) {
-        console.log('[ProductRecs] SKIP: Liquid already rendered products');
-        return;
-      }
-      console.log('[ProductRecs] recommendationsPerformed=true but no products, will fetch');
+      if (hasProducts) return;
     }
 
     const listContainer = this.querySelector('.resource-list') || this.querySelector('[data-testid="resource-list-grid"]');
-    if (!listContainer) {
-      console.log('[ProductRecs] ABORT: listContainer not found');
-      return;
-    }
-    console.log('[ProductRecs] listContainer found', {
-      hasDataAttr: listContainer.getAttribute('data-has-recommendations'),
-      classes: listContainer.className
-    });
+    if (!listContainer) return;
 
     const isCarousel = layoutType === 'carousel';
-    console.log('[ProductRecs] isCarousel:', isCarousel);
 
     try {
       let success = false;
 
-      // Skip HTML API for carousel - server often returns grid layout; build carousel from JSON instead
-      if (isCarousel) {
-        console.log('[ProductRecs] Carousel: skipping HTML API, using JSON/collection for correct layout');
-      } else if (!isCarousel) {
-        console.log('[ProductRecs] Trying HTML API first...');
+      if (!isCarousel) {
         success = await this.#tryHtmlApiFirst(productId, sectionId, intent, id);
-        console.log('[ProductRecs] tryHtmlApiFirst result:', success);
       }
 
       if (!success) {
-        console.log('[ProductRecs] Trying JSON API...');
         success = await this.#fetchJsonRecommendations(productId, intent);
-        console.log('[ProductRecs] fetchJsonRecommendations result:', success);
       }
 
       if (!success) {
-        console.log('[ProductRecs] Trying collection fallback...');
         success = await this.#fetchFromCollection(productId, listContainer);
-        console.log('[ProductRecs] fetchFromCollection result:', success);
       }
 
       if (!success) {
-        console.log('[ProductRecs] Trying HTML API fallback...');
         const result = await this.#fetchCachedRecommendations(productId, sectionId, intent);
-        console.log('[ProductRecs] fetchCachedRecommendations result:', result.success, 'data length:', result.data?.length);
         if (result.success) {
           const html = document.createElement('div');
           html.innerHTML = result.data || '';
@@ -148,22 +113,16 @@ class ProductRecommendations extends HTMLElement {
             this.dataset.recommendationsPerformed = 'true';
             this.innerHTML = recommendations.innerHTML;
             success = true;
-            console.log('[ProductRecs] HTML fallback SUCCESS');
-          } else {
-            console.log('[ProductRecs] HTML fallback: no product-recommendations element or empty');
           }
         }
       }
 
       if (success) {
         this.dataset.recommendationsPerformed = 'true';
-        console.log('[ProductRecs] SUCCESS - recommendations loaded');
-      } else {
-        console.log('[ProductRecs] FAILED - no recommendations available');
-        if (!window.Shopify?.designMode) this.#handleError(new Error('No recommendations available'));
+      } else if (!window.Shopify?.designMode) {
+        this.#handleError(new Error('No recommendations available'));
       }
     } catch (e) {
-      console.log('[ProductRecs] CATCH error:', e);
       const jsonSuccess = await this.#fetchJsonRecommendations(productId, intent);
       if (!jsonSuccess) this.#handleError(e);
     }
@@ -174,28 +133,18 @@ class ProductRecommendations extends HTMLElement {
    */
   async #tryHtmlApiFirst(productId, sectionId, intent, id) {
     const result = await this.#fetchCachedRecommendations(productId, sectionId, intent);
-    if (!result.success) {
-      console.log('[ProductRecs] tryHtmlApiFirst: fetch failed');
-      return false;
-    }
+    if (!result.success) return false;
 
     const html = document.createElement('div');
     html.innerHTML = result.data || '';
     const recommendations = html.querySelector(`product-recommendations[id="${id}"]`);
-    if (!recommendations?.innerHTML?.trim()) {
-      console.log('[ProductRecs] tryHtmlApiFirst: no product-recommendations[id="' + id + '"] in response');
-      return false;
-    }
+    if (!recommendations?.innerHTML?.trim()) return false;
 
     const hasProducts = recommendations.querySelector('[data-has-recommendations="true"]');
-    if (!hasProducts) {
-      console.log('[ProductRecs] tryHtmlApiFirst: HTML has no products (data-has-recommendations!=true)');
-      return false;
-    }
+    if (!hasProducts) return false;
 
     this.dataset.recommendationsPerformed = 'true';
     this.innerHTML = recommendations.innerHTML;
-    console.log('[ProductRecs] tryHtmlApiFirst: SUCCESS - using HTML from server');
     return true;
   }
 
@@ -208,29 +157,20 @@ class ProductRecommendations extends HTMLElement {
     const collectionHandle = this.dataset.collectionHandle || 'all';
 
     const url = `${baseUrl}/collections/${collectionHandle}/products.json?limit=${limit}`;
-    console.log('[ProductRecs] fetchFromCollection URL:', url);
 
     try {
       const response = await fetch(url);
-      if (!response.ok) {
-        console.log('[ProductRecs] fetchFromCollection: response not ok', response.status);
-        return false;
-      }
+      if (!response.ok) return false;
 
       const { products } = await response.json();
-      console.log('[ProductRecs] fetchFromCollection: got', products?.length || 0, 'products');
-
       if (!products?.length) return false;
 
       const filtered = products.filter((p) => String(p.id) !== String(productId));
-      console.log('[ProductRecs] fetchFromCollection: after filter', filtered.length, 'products');
-
       if (!filtered.length) return false;
 
       this.#renderProductCards(listContainer, filtered.slice(0, parseInt(limit, 10)), this.dataset.layoutType);
       return true;
-    } catch (err) {
-      console.log('[ProductRecs] fetchFromCollection CATCH:', err);
+    } catch {
       return false;
     }
   }
@@ -241,29 +181,32 @@ class ProductRecommendations extends HTMLElement {
    * When layout is carousel, builds full slideshow structure
    */
   #renderProductCards(listContainer, products, layoutType = 'grid') {
-    console.log('[ProductRecs] #renderProductCards', { productsCount: products.length, layoutType });
-
     const formatPrice = (value) => {
       if (value == null) return '';
       if (typeof value === 'string') return value;
       return (value / 100).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     };
 
+    const root = (window.Shopify?.routes?.root || '/').replace(/\/$/, '') || '';
+    const getProductUrl = (p) => {
+      const url = p.url;
+      if (url && typeof url === 'string' && url.trim()) {
+        return url.startsWith('/') ? root + url : url;
+      }
+      return p.handle ? `${root}/products/${p.handle}` : '#';
+    };
+
     const cardHtml = (product) => {
       const img = product.featured_image ?? product.images?.[0] ?? product.variants?.[0]?.featured_image;
       const imgUrl = typeof img === 'string' ? img : (img?.src ?? img?.url ?? '');
-      const root = (window.Shopify?.routes?.root || '/').replace(/\/$/, '');
-      const productUrl = product.url ?? (product.handle ? `${root}/products/${product.handle}` : '#');
+      const productUrl = getProductUrl(product);
       const title = (product.title || '').replace(/"/g, '&quot;');
-      const comparePrice = product.compare_at_price ?? 0;
-      const price = product.price ?? 0;
+      const comparePrice = product.compare_at_price ?? product.variants?.[0]?.compare_at_price ?? 0;
+      const price = product.price ?? product.variants?.[0]?.price ?? 0;
       const hasSale = comparePrice > price;
       return `
         <div class="resource-list__item">
-          <div class="product-card">
-            <a href="${productUrl}" class="product-card__link" aria-label="${title}">
-              <span class="visually-hidden">${title}</span>
-            </a>
+          <a href="${productUrl}" class="product-card product-card__link" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;height:100%;">
             <div class="product-card__content layout-panel-flex layout-panel-flex--column product-grid__card gap-style" style="--product-card-gap: 4px;">
               <div class="card-gallery" style="aspect-ratio: 1; overflow: hidden; position: relative;">
                 <img
@@ -281,7 +224,7 @@ class ProductRecommendations extends HTMLElement {
                 ${hasSale ? `<s class="price__sale" style="margin-left:0.5rem;opacity:0.7;">${formatPrice(comparePrice)}</s>` : ''}
               </div>
             </div>
-          </div>
+          </a>
         </div>
       `;
     };
@@ -297,7 +240,6 @@ class ProductRecommendations extends HTMLElement {
     }
 
     listContainer.setAttribute('data-has-recommendations', 'true');
-    console.log('[ProductRecs] #renderProductCards DONE, layoutType=', layoutType);
   }
 
   /**
@@ -357,30 +299,19 @@ class ProductRecommendations extends HTMLElement {
     const limit = this.dataset.url?.match(/limit=(\d+)/)?.[1] || 4;
     const url = `${baseUrl}/recommendations/products.json?product_id=${productId}&limit=${limit}&intent=${intent || 'related'}`;
 
-    console.log('[ProductRecs] fetchJsonRecommendations URL:', url);
-
     try {
       const response = await fetch(url);
-      if (!response.ok) {
-        console.log('[ProductRecs] fetchJsonRecommendations: response not ok', response.status);
-        return false;
-      }
+      if (!response.ok) return false;
 
       const { products } = await response.json();
-      console.log('[ProductRecs] fetchJsonRecommendations: got', products?.length || 0, 'products');
-
       if (!products?.length) return false;
 
       const listContainer = this.querySelector('.resource-list') || this.querySelector('[data-testid="resource-list-grid"]');
-      if (!listContainer) {
-        console.log('[ProductRecs] fetchJsonRecommendations: listContainer not found');
-        return false;
-      }
+      if (!listContainer) return false;
 
       this.#renderProductCards(listContainer, products, this.dataset.layoutType);
       return true;
-    } catch (err) {
-      console.log('[ProductRecs] fetchJsonRecommendations CATCH:', err);
+    } catch {
       return false;
     }
   }
@@ -400,28 +331,22 @@ class ProductRecommendations extends HTMLElement {
         : null
     ].filter(Boolean);
 
-    console.log('[ProductRecs] fetchCachedRecommendations URLs:', urlsToTry);
-
     for (const url of urlsToTry) {
       const cachedResponse = this.#cachedRecommendations[url];
-      if (cachedResponse) {
-        console.log('[ProductRecs] fetchCachedRecommendations: cache HIT');
-        return { success: true, data: cachedResponse };
-      }
+      if (cachedResponse) return { success: true, data: cachedResponse };
 
       this.#activeFetch?.abort();
       this.#activeFetch = new AbortController();
 
       try {
         const response = await fetch(url, { signal: this.#activeFetch.signal });
-        console.log('[ProductRecs] fetchCachedRecommendations:', url, 'status=', response.status);
         if (response.ok) {
           const text = await response.text();
           this.#cachedRecommendations[url] = text;
           return { success: true, data: text };
         }
-      } catch (err) {
-        console.log('[ProductRecs] fetchCachedRecommendations CATCH:', err);
+      } catch {
+        /* try next url */
       } finally {
         this.#activeFetch = null;
       }
