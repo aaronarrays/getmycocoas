@@ -1139,7 +1139,6 @@
         "group_K6D6Vk": {
           "type": "group",
           "name": "t:names.group",
-          "disabled": true,
           "settings": {
             "content_direction": "row",
             "vertical_on_mobile": false,
@@ -1185,7 +1184,7 @@
                 "link": "",
                 "image_ratio": "landscape",
                 "width": "custom",
-                "custom_width": 25,
+                "custom_width": 40,
                 "width_mobile": "custom",
                 "custom_width_mobile": 0,
                 "height": "fit",
@@ -1203,12 +1202,11 @@
             "text_VwdKen": {
               "type": "text",
               "name": "t:names.text",
-              "disabled": true,
               "settings": {
                 "text": "<p>4.3 (13,434 REVIEWS)</p>",
                 "width": "100%",
                 "max_width": "narrow",
-                "alignment": "left",
+                "alignment": "center",
                 "type_preset": "paragraph",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
