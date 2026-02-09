@@ -606,6 +606,11 @@ export class Slideshow extends Component {
       return;
     }
 
+    // Allow normal link/button clicks - don't capture drag when clicking interactive elements
+    if (event.target.closest('a[href], button')) {
+      return;
+    }
+
     event.preventDefault();
     // Store initial position but don't start handling yet
     const { axis } = this.#scroll;

@@ -202,13 +202,20 @@
     display: none;
   }
 
-  /* JS-rendered product cards: ensure layout matches theme */
-  .product-recommendations .resource-list__item .product-card {
+  /* JS-rendered product cards: ensure layout matches theme and links are clickable */
+  .product-recommendations .resource-list__item .product-card,
+  .product-recommendations .resource-list__item .product-card__link {
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
     min-width: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .product-recommendations .resource-list__item a.product-card__link {
+    cursor: pointer;
   }
 
   .product-recommendations .resource-list__item .product-card .card-gallery {

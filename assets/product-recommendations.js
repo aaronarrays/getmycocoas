@@ -190,27 +190,35 @@ class ProductRecommendations extends HTMLElement {
     const root = (window.Shopify?.routes?.root || '/').replace(/\/$/, '') || '';
     const getProductUrl = (p) => {
       const url = p.url;
-      if (url && typeof url === 'string' && url.trim()) {
+      if (url && typeof url === 'string' && url.trim() && url !== '#') {
         return url.startsWith('/') ? root + url : url;
       }
-      return p.handle ? `${root}/products/${p.handle}` : '#';
+      if (p.handle && typeof p.handle === 'string') {
+        return `${root}/products/${p.handle}`;
+      }
+      return '';
     };
 
+    const escapeAttr = (s) => (s || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
     const cardHtml = (product) => {
       const img = product.featured_image ?? product.images?.[0] ?? product.variants?.[0]?.featured_image;
       const imgUrl = typeof img === 'string' ? img : (img?.src ?? img?.url ?? '');
       const productUrl = getProductUrl(product);
-      const title = (product.title || '').replace(/"/g, '&quot;');
+      const title = escapeAttr(product.title);
       const comparePrice = product.compare_at_price ?? product.variants?.[0]?.compare_at_price ?? 0;
       const price = product.price ?? product.variants?.[0]?.price ?? 0;
       const hasSale = comparePrice > price;
+      const linkAttrs = productUrl
+        ? `href="${escapeAttr(productUrl)}" class="product-card product-card__link"`
+        : 'class="product-card product-card__link"';
+      const tag = productUrl ? 'a' : 'div';
       return `
         <div class="resource-list__item">
-          <a href="${productUrl}" class="product-card product-card__link" style="display:flex;flex-direction:column;text-decoration:none;color:inherit;height:100%;">
+          <${tag} ${linkAttrs} style="display:flex;flex-direction:column;text-decoration:none;color:inherit;height:100%;cursor:${productUrl ? 'pointer' : 'default'};">
             <div class="product-card__content layout-panel-flex layout-panel-flex--column product-grid__card gap-style" style="--product-card-gap: 4px;">
               <div class="card-gallery" style="aspect-ratio: 1; overflow: hidden; position: relative;">
                 <img
-                  src="${imgUrl}"
+                  src="${escapeAttr(imgUrl)}"
                   alt="${title}"
                   loading="lazy"
                   width="400"
@@ -218,13 +226,13 @@ class ProductRecommendations extends HTMLElement {
                   style="width:100%;height:100%;object-fit:contain;"
                 />
               </div>
-              <h4 class="h4" style="margin:0;font-size:1rem;">${product.title || ''}</h4>
+              <h4 class="h4" style="margin:0;font-size:1rem;">${escapeAttr(product.title)}</h4>
               <div class="price">
                 <span class="price__regular">${formatPrice(price)}</span>
                 ${hasSale ? `<s class="price__sale" style="margin-left:0.5rem;opacity:0.7;">${formatPrice(comparePrice)}</s>` : ''}
               </div>
             </div>
-          </a>
+          </${tag}>
         </div>
       `;
     };
