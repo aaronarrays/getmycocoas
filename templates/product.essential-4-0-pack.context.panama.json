@@ -1,1 +1,60 @@
-{"parent":"product.essential-4-0-pack.json","context":{"market":"panama"},"sections":{"main":{"settings":{},"blocks":{"product-details":{"blocks":{"divider_rQPr6F":{"disabled":true,"settings":{}},"divider_wm3rRJ":{"disabled":true,"settings":{}},"custom_liquid_Ah9BWr":{"disabled":true,"settings":{}},"payment_icons_APmeyj":{"disabled":true,"settings":{}},"group_JbmQwr":{"disabled":false,"settings":{}}},"block_order":["buy_buttons_eYQEYi","custom_liquid_Ah9BWr","essential_upsell_frequently_bought_together_app_block_zgCbfJ","group_JbmQwr","group_exLLmr","payment_icons_APmeyj","text_aEtTtq","divider_WTFb8Y","variant_picker_R3rGDr","divider_rQPr6F","divider_wm3rRJ","accordion_BxYggA"],"settings":{}}}},"section_H8P74R":{"settings":{},"blocks":{"text_DwyjhC":{"settings":{"text":"<h2>MÁS DE 300K CLIENTES FELICES EN LATINOAMERICA<\/h2>"}}}}}}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "product.essential-4-0-pack.json",
+  "context": {
+    "market": "panama"
+  },
+  "sections": {
+    "main": {
+      "settings": {},
+      "blocks": {
+        "product-details": {
+          "blocks": {
+            "custom_liquid_Ah9BWr": {
+              "disabled": true,
+              "settings": {}
+            },
+            "payment_icons_APmeyj": {
+              "disabled": true,
+              "settings": {}
+            },
+            "group_JbmQwr": {
+              "disabled": false,
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "buy_buttons_eYQEYi",
+            "custom_liquid_Ah9BWr",
+            "essential_upsell_frequently_bought_together_app_block_zgCbfJ",
+            "group_JbmQwr",
+            "group_exLLmr",
+            "payment_icons_APmeyj",
+            "text_aEtTtq",
+            "variant_picker_R3rGDr",
+            "accordion_BxYggA"
+          ],
+          "settings": {}
+        }
+      }
+    },
+    "section_H8P74R": {
+      "settings": {},
+      "blocks": {
+        "text_DwyjhC": {
+          "settings": {
+            "text": "<h2>MÁS DE 300K CLIENTES FELICES EN LATINOAMERICA</h2>"
+          }
+        }
+      }
+    }
+  }
+}
