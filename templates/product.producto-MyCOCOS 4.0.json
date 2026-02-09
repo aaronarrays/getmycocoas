@@ -952,18 +952,6 @@
               },
               "blocks": {}
             },
-            "divider_ydkCqC": {
-              "type": "_divider",
-              "name": "t:names.divider",
-              "settings": {
-                "thickness": 1,
-                "corner_radius": "square",
-                "width_percent": 100,
-                "padding-block-start": 0,
-                "padding-block-end": 0
-              },
-              "blocks": {}
-            },
             "accordion_tfwhdW": {
               "type": "accordion",
               "name": "t:names.accordion",
@@ -1118,7 +1106,6 @@
             "group_JbmQwr",
             "divider_DmT4bL",
             "text_aEtTtq",
-            "divider_ydkCqC",
             "accordion_tfwhdW"
           ]
         }
