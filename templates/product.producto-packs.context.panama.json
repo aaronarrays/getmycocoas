@@ -12,5 +12,23 @@
     "market": "panama"
   },
   "parent": "product.producto-packs.json",
-  "sections": {}
+  "sections": {
+    "main": {
+      "settings": {
+        "padding-block-start": 0
+      },
+      "blocks": {
+        "media-gallery": {
+          "settings": {
+            "extend_media": false
+          }
+        },
+        "product-details": {
+          "settings": {
+            "padding-block-start": 0
+          }
+        }
+      }
+    }
+  }
 }
