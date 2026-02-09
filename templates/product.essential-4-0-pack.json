@@ -1034,10 +1034,10 @@
         "padding-block-end": 50
       }
     },
-    "section_H8P74R": {
+    "section_KNk4ED": {
       "type": "section",
       "blocks": {
-        "text_DwyjhC": {
+        "text_C44Cgm": {
           "type": "text",
           "settings": {
             "text": "<h2>MÁS DE 12K CLIENTES FELICES EN PANAMÁ</h2>",
@@ -1062,7 +1062,7 @@
           },
           "blocks": {}
         },
-        "group_K6D6Vk": {
+        "group_ErwdLk": {
           "type": "group",
           "name": "t:names.group",
           "settings": {
@@ -1102,10 +1102,9 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "image_68RLzA": {
+            "image_KrbpVj": {
               "type": "image",
               "name": "t:names.image",
-              "disabled": true,
               "settings": {
                 "image": "shopify://shop_images/Diseno_sin_titulo_-_2025-05-29T041718.688.png",
                 "link": "",
@@ -1126,10 +1125,9 @@
               },
               "blocks": {}
             },
-            "text_VwdKen": {
+            "text_WKwLtM": {
               "type": "text",
               "name": "t:names.text",
-              "disabled": true,
               "settings": {
                 "text": "<p>4.3 (13,434 REVIEWS)</p>",
                 "width": "100%",
@@ -1155,14 +1153,14 @@
             }
           },
           "block_order": [
-            "image_68RLzA",
-            "text_VwdKen"
+            "image_KrbpVj",
+            "text_WKwLtM"
           ]
         }
       },
       "block_order": [
-        "text_DwyjhC",
-        "group_K6D6Vk"
+        "text_C44Cgm",
+        "group_ErwdLk"
       ],
       "name": "Reviews",
       "settings": {
@@ -4018,7 +4016,7 @@
   "order": [
     "section_QnDbUw",
     "main",
-    "section_H8P74R",
+    "section_KNk4ED",
     "sp_icon_grid_FePY8X",
     "section_qECJHB",
     "section_Mmj3Lq",
