@@ -1,1 +1,410 @@
-{"parent":"product.producto-MyCOCOS 4.0.json","context":{"market":"panama"},"sections":{"section_CRjNXK":{"settings":{},"blocks":{"group_cJaqNL":{"blocks":{"text_bhrYLc":{"settings":{"text":"<h6><strong>RASURA TU CUERPO... Y TUS COCOS, SIN MIEDO<\/strong><\/h6>"}}},"settings":{}},"loox_reviews_loox_rating_YMGM43":{"type":"shopify:\/\/apps\/loox-reviews\/blocks\/loox-rating\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e","disabled":false,"settings":{"header-e11b810478bd6e99f12ec8d09f0c81c5":null,"contentSize":16,"pattern":"[count] Reseñas verificadas","paragraph-072137417a9386a446bc0072548deb09":null,"hideText":false,"alignment":"","layout":"","textColor":"","starColor":"","showAllReviews":false,"looxOpenFloatingWidget":false,"emptyRatingWidget":false,"header-92c1d0a54c81c93201aaa2e584113797":null,"paragraph-a177e9dd8769af873e614294584fd04b":null,"paragraph-305ed11fcd683b39b867627e2a951e38":null}},"group_ihjh4m":{"blocks":{},"block_order":["price_fYDCtf","price_with_badge_mEyMzf"],"settings":{}}},"block_order":["custom_liquid_KnEcJg","group_cJaqNL","loox_reviews_loox_rating_YMGM43","group_ihjh4m"]},"main":{"custom_css":[".variant-option__button,.variant-option__button-label {min-width: 0;}",".variant-option__button-label {box-sizing: border-box; width: 38px; height: 38px; max-width: 38px; max-height: 38px; padding: 0; margin: 4px; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; overflow: hidden;}",".variant-option--buttons {--button-min-width: 38px; --variant-option-button-min-width: 38px;}",".variant-option--swatches .variant-option__list {grid-auto-columns: auto; gap: 6px;}"],"settings":{"gap":8},"blocks":{"media-gallery":{"settings":{"aspect_ratio":"1\/1.25","extend_media":false,"constrain_to_viewport":false,"padding-block-start":0}},"product-details":{"blocks":{"divider_BBq9NJ":{"disabled":true,"settings":{}},"variant_picker_R3rGDr":{"disabled":true,"settings":{}},"divider_rQPr6F":{"disabled":true,"settings":{}},"buy_buttons_eYQEYi":{"blocks":{"add-to-cart":{"settings":{"style_class":"button"}}},"settings":{}},"group_JbmQwr":{"disabled":false,"blocks":{"group_DygWUK":{"settings":{"content_direction":"column","horizontal_alignment_flex_direction_column":"center"}},"group_ntP7QE":{"settings":{"content_direction":"column","horizontal_alignment_flex_direction_column":"center"}},"group_7xLQDW":{"disabled":true,"settings":{}},"group_xbkgWK":{"disabled":true,"settings":{}}},"settings":{"content_direction":"row","vertical_on_mobile":false,"horizontal_alignment":"flex-start"}},"custom_liquid_cJ386L":{"disabled":true,"settings":{}},"ai_gen_block_ee54780_3pBaY":{"type":"ai_gen_block_ee54780","disabled":false,"settings":{"header-8b21d05fa0de836c8994a3c27c94084c":null,"rating":5,"star_size":20,"star_color":"#ffd700","empty_star_color":"#e6e6e6","header-292587a10a3da7588f6fcf86816d5f0e":null,"review_text":"<p>Tenía miedo de cortarme y esta máquina es otra cosa. La uso en la ducha sin problema.<\/p>","author_name":"Jose Gabriel R.","header-caa8c1c4a9397c622d3656dc3d1f8a38":null,"background_color":"#f5f5f5","text_color":"#000000","text_size":16,"author_color":"#000000","author_size":14,"border_radius":8,"border_width":1,"border_color":"#e6e6e6","desktop_width_percent":100}},"divider_DmT4bL":{"disabled":true,"settings":{}},"divider_ydkCqC":{"disabled":true,"settings":{}}},"block_order":["divider_BBq9NJ","variant_picker_R3rGDr","divider_rQPr6F","buy_buttons_eYQEYi","group_JbmQwr","custom_liquid_cJ386L","text_aEtTtq","ai_gen_block_ee54780_3pBaY","essential_upsell_frequently_bought_together_app_block_tRmNK3","group_6wm8td","divider_DmT4bL","divider_ydkCqC","accordion_tfwhdW"],"settings":{}}}},"section_qECJHB":{"disabled":true,"settings":{},"blocks":{}},"ss_comparison_table_20_Q7ALAF":{"settings":{"row_width":100},"blocks":{}},"hero_FLxRa":{"type":"hero","disabled":false,"settings":{"header-e64fb04b25169679f8711c1d4b4f0698":null,"media_type_1":"image","image_1":"shopify:\/\/shop_images\/600.000_COCOS_SALVADOS_EN_LATINOAMERICA.webp","video_1":"shopify:\/\/files\/videos\/BANNER_VIDEOMYCOCOS OPTIMIZADO.mp4","header-0bcf216027aac3dba7ecfbb5f833a6d2":null,"media_type_2":"image","image_2":null,"video_2":null,"header-8287381cc3b8dfd794d8010cb3356312":null,"stack_media_on_mobile":false,"custom_mobile_media":true,"header-9d5458c9591df5a2de12de54ce07322e":null,"media_type_1_mobile":"image","image_1_mobile":"shopify:\/\/shop_images\/600.000_cocos_salvados_en_toda_latinoamerica.webp","video_1_mobile":null,"header-e0012b9a284ba10fd832ff3cd38735c8":null,"media_type_2_mobile":"image","image_2_mobile":null,"video_2_mobile":null,"header-ec6c0e0524f21c646ec92a1d7806fd22":null,"link":"","open_in_new_tab":false,"header-369883bb121b687e9c8371a819a2abc8":null,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":0,"section_width":"full-width","section_height":"auto","section_height_custom":50,"header-96efd3cc262289a4f617552ced76a72d":null,"color_scheme":"scheme-6","toggle_overlay":true,"overlay_color":"#000e2024","overlay_style":"solid","gradient_direction":"to top","blurred_reflection":false,"reflection_opacity":75,"header-f4a21085e6c018545aae01203eb8d9eb":null,"padding-block-start":0,"padding-block-end":0},"blocks":{"marquee_PHhNaf":{"type":"_marquee","disabled":true,"name":"t:names.marquee","blocks":{"text_ndkLN7":{"type":"text","disabled":false,"settings":{"text":"<p>La rasuradora #1<\/p>","header-9d9e4a79188697b69640b06267aa5f5e":null,"width":"100%","max_width":"normal","alignment":"center","header-a0724ce84def87f9cbab5e0c9c7eafec":null,"type_preset":"h2","font":"var(--font-body--family)","font_size":"1rem","line_height":"tight","letter_spacing":"tight","case":"none","wrap":"nowrap","color":"var(--color-foreground)","header-7813a10bdaa56a2bc899091e5b883486":null,"background":false,"background_color":"#00000026","corner_radius":0,"header-f73cbddc84c057503f532e117550d20f":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}}},"block_order":["text_ndkLN7"],"settings":{"movement_direction":"normal","inherit_color_scheme":true,"color_scheme":"","transparent_background":true,"header-f4d9c3006599775382851bb07ba44e41":null,"padding-block-start":24,"padding-block-end":24,"gap_between_elements":24}}},"block_order":["marquee_PHhNaf"],"name":"Video"},"sp_before_and_after_4D9pA":{"type":"sp-before-and-after","disabled":false,"settings":{"header-e1330a984f0b56867ee14c47842f3d6c":null,"override_fonts":false,"headline_font":"system_ui_n4","text_font":"system_ui_n4","header-5f3c94cd69f1d669f2b32d5da476e4c3":null,"override_text_sizes":false,"text_size":15,"mobile_text_size":15,"text_line_height":"inherit","headline_size":40,"mobile_headline_size":40,"headline_line_height":"inherit","override_text_colors":true,"text_color":"#ffffff","link_color":"#005bd3","header-6eaaff8a0d892c7fd92537c97a7a1e9c":null,"show_on_device":"all","section_background_color":"linear-gradient(127deg, rgba(0, 25, 54, 1) 11%, rgba(0, 25, 54, 1) 81%)","paragraph-b4f65164c5e6d58cf04f17c6706d3de4":null,"section_background_image":null,"section_background_image_color":"","section_background_size":"cover","paragraph-1caf4e7328d3b4129c07791f9897e6cf":null,"mobile_section_background_image":null,"mobile_section_background_image_color":"","mobile_section_background_size":"contain","paragraph-f4b4634d2944c3095436230f00b400b4":null,"section_padding_top_bottom":50,"mobile_section_padding_top_bottom":30,"section_padding_left_right":0,"mobile_section_padding_left_right":25,"header-bebf6d57aef7a8536d185422b7bec0e8":null,"container_background_color":"","container_max_width":1000,"container_padding_top_bottom":20,"mobile_container_padding_top_bottom":10,"container_padding_left_right":10,"mobile_container_padding_left_right":10,"element_spacing":15,"container_radius":0,"container_shadow":false,"container_border_size":0,"container_border_color":"#888888","header-58efdeb86cdc307b27366fe9e027ebe7":null,"grid_gap":20,"header-996f24e5d15ae73d935ed4c7bf1d88ac":null,"media_location":"left","direction":"horizontal","start_percent":50,"show_bar":true,"show_circle":true,"bar_color":"#ffffff","bar_opacity":50,"circle_color":"#ffffff","circle_opacity":95,"circle_icon_color":"#111111","media_aspect_ratio":"3 \/ 4","media_radius":5,"media_shadow":true,"before_image":"shopify:\/\/shop_images\/ANTESMCC.webp","before_caption":"Antes","after_image":"shopify:\/\/shop_images\/DESPUESMCC.webp","after_caption":"Despues","header-784df20a89703885fd71c6d4f2341986":null,"text_alignment":"left","mobile_text_alignment":"center","headline":"ANTES Y DESPUÉS DE CUIDAR TUS COCOS","content":"<p>Menos vello. Cero cortes. <strong>Más confianza<\/strong>. Esto es lo que pasa cuando usas <strong>MyCOCOS® 4.0.<\/strong><\/p>","link_text":"","link":"","headline_spacing":0,"header-ec9a4c8f10a33b81492dc3da53e7614b":null,"button_background_color":"linear-gradient(164deg, rgba(17, 17, 17, 1), rgba(51, 51, 51, 1) 100%)","button_text_color":"#ffffff","button_text_size":15,"button_padding_tb":25,"button_padding_lr":25,"button_border_radius":5},"blocks":{},"block_order":[],"name":"🚀 Antes y Después"}},"order":["section_CRjNXK","main","media_with_content_MJ4eBE","section_MmiFck","section_7K3cxK","section_bYLB6V","17563511517c41fe70","section_H8P74R","hero_FLxRa","sp_before_and_after_4D9pA","section_qECJHB","section_bMzn3Y","ss_comparison_table_20_Q7ALAF","section_rJGPUA","section_Cxpprq","section_dAnbpV","1755181071a02392c1","product_recommendations_QJmz3y"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "product.producto-MyCOCOS 4.0.json",
+  "context": {
+    "market": "panama"
+  },
+  "sections": {
+    "section_CRjNXK": {
+      "settings": {},
+      "blocks": {
+        "group_cJaqNL": {
+          "blocks": {
+            "text_bhrYLc": {
+              "settings": {
+                "text": "<h6><strong>RASURA TU CUERPO... Y TUS COCOS, SIN MIEDO</strong></h6>"
+              }
+            }
+          },
+          "settings": {}
+        },
+        "loox_reviews_loox_rating_YMGM43": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "disabled": false,
+          "settings": {
+            "header-e11b810478bd6e99f12ec8d09f0c81c5": null,
+            "contentSize": 16,
+            "pattern": "[count] Reseñas verificadas",
+            "paragraph-072137417a9386a446bc0072548deb09": null,
+            "hideText": false,
+            "alignment": "",
+            "layout": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false,
+            "header-92c1d0a54c81c93201aaa2e584113797": null,
+            "paragraph-a177e9dd8769af873e614294584fd04b": null,
+            "paragraph-305ed11fcd683b39b867627e2a951e38": null
+          }
+        },
+        "group_ihjh4m": {
+          "blocks": {},
+          "block_order": [
+            "price_fYDCtf",
+            "price_with_badge_mEyMzf"
+          ],
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "custom_liquid_KnEcJg",
+        "group_cJaqNL",
+        "loox_reviews_loox_rating_YMGM43",
+        "group_ihjh4m"
+      ]
+    },
+    "main": {
+      "custom_css": [
+        ".variant-option__button,.variant-option__button-label {min-width: 0;}",
+        ".variant-option__button-label {box-sizing: border-box; width: 38px; height: 38px; max-width: 38px; max-height: 38px; padding: 0; margin: 4px; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; overflow: hidden;}",
+        ".variant-option--buttons {--button-min-width: 38px; --variant-option-button-min-width: 38px;}",
+        ".variant-option--swatches .variant-option__list {grid-auto-columns: auto; gap: 6px;}"
+      ],
+      "settings": {
+        "gap": 8
+      },
+      "blocks": {
+        "media-gallery": {
+          "settings": {
+            "aspect_ratio": "1/1.25",
+            "extend_media": false,
+            "constrain_to_viewport": false,
+            "padding-block-start": 0
+          }
+        },
+        "product-details": {
+          "blocks": {
+            "variant_picker_R3rGDr": {
+              "disabled": true,
+              "settings": {}
+            },
+            "divider_rQPr6F": {
+              "disabled": true,
+              "settings": {}
+            },
+            "buy_buttons_eYQEYi": {
+              "blocks": {
+                "add-to-cart": {
+                  "settings": {
+                    "style_class": "button"
+                  }
+                }
+              },
+              "settings": {}
+            },
+            "group_JbmQwr": {
+              "disabled": false,
+              "blocks": {
+                "group_DygWUK": {
+                  "settings": {
+                    "content_direction": "column",
+                    "horizontal_alignment_flex_direction_column": "center"
+                  }
+                },
+                "group_ntP7QE": {
+                  "settings": {
+                    "content_direction": "column",
+                    "horizontal_alignment_flex_direction_column": "center"
+                  }
+                },
+                "group_7xLQDW": {
+                  "disabled": true,
+                  "settings": {}
+                },
+                "group_xbkgWK": {
+                  "disabled": true,
+                  "settings": {}
+                }
+              },
+              "settings": {
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "horizontal_alignment": "flex-start"
+              }
+            },
+            "custom_liquid_cJ386L": {
+              "disabled": true,
+              "settings": {}
+            },
+            "ai_gen_block_ee54780_3pBaY": {
+              "type": "ai_gen_block_ee54780",
+              "disabled": false,
+              "settings": {
+                "header-8b21d05fa0de836c8994a3c27c94084c": null,
+                "rating": 5,
+                "star_size": 20,
+                "star_color": "#ffd700",
+                "empty_star_color": "#e6e6e6",
+                "header-292587a10a3da7588f6fcf86816d5f0e": null,
+                "review_text": "<p>Tenía miedo de cortarme y esta máquina es otra cosa. La uso en la ducha sin problema.</p>",
+                "author_name": "Jose Gabriel R.",
+                "header-caa8c1c4a9397c622d3656dc3d1f8a38": null,
+                "background_color": "#f5f5f5",
+                "text_color": "#000000",
+                "text_size": 16,
+                "author_color": "#000000",
+                "author_size": 14,
+                "border_radius": 8,
+                "border_width": 1,
+                "border_color": "#e6e6e6",
+                "desktop_width_percent": 100
+              }
+            },
+            "divider_DmT4bL": {
+              "disabled": true,
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "variant_picker_R3rGDr",
+            "divider_rQPr6F",
+            "buy_buttons_eYQEYi",
+            "group_JbmQwr",
+            "custom_liquid_cJ386L",
+            "text_aEtTtq",
+            "ai_gen_block_ee54780_3pBaY",
+            "essential_upsell_frequently_bought_together_app_block_tRmNK3",
+            "group_6wm8td",
+            "divider_DmT4bL",
+            "accordion_tfwhdW"
+          ],
+          "settings": {}
+        }
+      }
+    },
+    "section_qECJHB": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "ss_comparison_table_20_Q7ALAF": {
+      "settings": {
+        "row_width": 100
+      },
+      "blocks": {}
+    },
+    "hero_FLxRa": {
+      "type": "hero",
+      "disabled": false,
+      "settings": {
+        "header-e64fb04b25169679f8711c1d4b4f0698": null,
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/600.000_COCOS_SALVADOS_EN_LATINOAMERICA.webp",
+        "video_1": "shopify://files/videos/BANNER_VIDEOMYCOCOS OPTIMIZADO.mp4",
+        "header-0bcf216027aac3dba7ecfbb5f833a6d2": null,
+        "media_type_2": "image",
+        "image_2": null,
+        "video_2": null,
+        "header-8287381cc3b8dfd794d8010cb3356312": null,
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": true,
+        "header-9d5458c9591df5a2de12de54ce07322e": null,
+        "media_type_1_mobile": "image",
+        "image_1_mobile": "shopify://shop_images/600.000_cocos_salvados_en_toda_latinoamerica.webp",
+        "video_1_mobile": null,
+        "header-e0012b9a284ba10fd832ff3cd38735c8": null,
+        "media_type_2_mobile": "image",
+        "image_2_mobile": null,
+        "video_2_mobile": null,
+        "header-ec6c0e0524f21c646ec92a1d7806fd22": null,
+        "link": "",
+        "open_in_new_tab": false,
+        "header-369883bb121b687e9c8371a819a2abc8": null,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "section_width": "full-width",
+        "section_height": "auto",
+        "section_height_custom": 50,
+        "header-96efd3cc262289a4f617552ced76a72d": null,
+        "color_scheme": "scheme-6",
+        "toggle_overlay": true,
+        "overlay_color": "#000e2024",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "header-f4a21085e6c018545aae01203eb8d9eb": null,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      },
+      "blocks": {
+        "marquee_PHhNaf": {
+          "type": "_marquee",
+          "disabled": true,
+          "name": "t:names.marquee",
+          "blocks": {
+            "text_ndkLN7": {
+              "type": "text",
+              "disabled": false,
+              "settings": {
+                "text": "<p>La rasuradora #1</p>",
+                "header-9d9e4a79188697b69640b06267aa5f5e": null,
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
+                "header-a0724ce84def87f9cbab5e0c9c7eafec": null,
+                "type_preset": "h2",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "tight",
+                "letter_spacing": "tight",
+                "case": "none",
+                "wrap": "nowrap",
+                "color": "var(--color-foreground)",
+                "header-7813a10bdaa56a2bc899091e5b883486": null,
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "header-f73cbddc84c057503f532e117550d20f": null,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            }
+          },
+          "block_order": [
+            "text_ndkLN7"
+          ],
+          "settings": {
+            "movement_direction": "normal",
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "transparent_background": true,
+            "header-f4d9c3006599775382851bb07ba44e41": null,
+            "padding-block-start": 24,
+            "padding-block-end": 24,
+            "gap_between_elements": 24
+          }
+        }
+      },
+      "block_order": [
+        "marquee_PHhNaf"
+      ],
+      "name": "Video"
+    },
+    "sp_before_and_after_4D9pA": {
+      "type": "sp-before-and-after",
+      "disabled": false,
+      "settings": {
+        "header-e1330a984f0b56867ee14c47842f3d6c": null,
+        "override_fonts": false,
+        "headline_font": "system_ui_n4",
+        "text_font": "system_ui_n4",
+        "header-5f3c94cd69f1d669f2b32d5da476e4c3": null,
+        "override_text_sizes": false,
+        "text_size": 15,
+        "mobile_text_size": 15,
+        "text_line_height": "inherit",
+        "headline_size": 40,
+        "mobile_headline_size": 40,
+        "headline_line_height": "inherit",
+        "override_text_colors": true,
+        "text_color": "#ffffff",
+        "link_color": "#005bd3",
+        "header-6eaaff8a0d892c7fd92537c97a7a1e9c": null,
+        "show_on_device": "all",
+        "section_background_color": "linear-gradient(127deg, rgba(0, 25, 54, 1) 11%, rgba(0, 25, 54, 1) 81%)",
+        "paragraph-b4f65164c5e6d58cf04f17c6706d3de4": null,
+        "section_background_image": null,
+        "section_background_image_color": "",
+        "section_background_size": "cover",
+        "paragraph-1caf4e7328d3b4129c07791f9897e6cf": null,
+        "mobile_section_background_image": null,
+        "mobile_section_background_image_color": "",
+        "mobile_section_background_size": "contain",
+        "paragraph-f4b4634d2944c3095436230f00b400b4": null,
+        "section_padding_top_bottom": 50,
+        "mobile_section_padding_top_bottom": 30,
+        "section_padding_left_right": 0,
+        "mobile_section_padding_left_right": 25,
+        "header-bebf6d57aef7a8536d185422b7bec0e8": null,
+        "container_background_color": "",
+        "container_max_width": 1000,
+        "container_padding_top_bottom": 20,
+        "mobile_container_padding_top_bottom": 10,
+        "container_padding_left_right": 10,
+        "mobile_container_padding_left_right": 10,
+        "element_spacing": 15,
+        "container_radius": 0,
+        "container_shadow": false,
+        "container_border_size": 0,
+        "container_border_color": "#888888",
+        "header-58efdeb86cdc307b27366fe9e027ebe7": null,
+        "grid_gap": 20,
+        "header-996f24e5d15ae73d935ed4c7bf1d88ac": null,
+        "media_location": "left",
+        "direction": "horizontal",
+        "start_percent": 50,
+        "show_bar": true,
+        "show_circle": true,
+        "bar_color": "#ffffff",
+        "bar_opacity": 50,
+        "circle_color": "#ffffff",
+        "circle_opacity": 95,
+        "circle_icon_color": "#111111",
+        "media_aspect_ratio": "3 / 4",
+        "media_radius": 5,
+        "media_shadow": true,
+        "before_image": "shopify://shop_images/ANTESMCC.webp",
+        "before_caption": "Antes",
+        "after_image": "shopify://shop_images/DESPUESMCC.webp",
+        "after_caption": "Despues",
+        "header-784df20a89703885fd71c6d4f2341986": null,
+        "text_alignment": "left",
+        "mobile_text_alignment": "center",
+        "headline": "ANTES Y DESPUÉS DE CUIDAR TUS COCOS",
+        "content": "<p>Menos vello. Cero cortes. <strong>Más confianza</strong>. Esto es lo que pasa cuando usas <strong>MyCOCOS® 4.0.</strong></p>",
+        "link_text": "",
+        "link": "",
+        "headline_spacing": 0,
+        "header-ec9a4c8f10a33b81492dc3da53e7614b": null,
+        "button_background_color": "linear-gradient(164deg, rgba(17, 17, 17, 1), rgba(51, 51, 51, 1) 100%)",
+        "button_text_color": "#ffffff",
+        "button_text_size": 15,
+        "button_padding_tb": 25,
+        "button_padding_lr": 25,
+        "button_border_radius": 5
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "🚀 Antes y Después"
+    }
+  },
+  "order": [
+    "section_CRjNXK",
+    "main",
+    "media_with_content_MJ4eBE",
+    "section_MmiFck",
+    "section_7K3cxK",
+    "section_bYLB6V",
+    "17563511517c41fe70",
+    "section_H8P74R",
+    "hero_FLxRa",
+    "sp_before_and_after_4D9pA",
+    "section_qECJHB",
+    "section_bMzn3Y",
+    "ss_comparison_table_20_Q7ALAF",
+    "section_rJGPUA",
+    "section_Cxpprq",
+    "section_dAnbpV",
+    "1755181071a02392c1",
+    "product_recommendations_QJmz3y"
+  ]
+}

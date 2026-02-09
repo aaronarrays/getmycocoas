@@ -1,1 +1,1057 @@
-{"parent":"product.producto-MyCOCOS 4.0.json","context":{"market":"costa-rica"},"sections":{"section_dgeq4f":{"type":"section","disabled":false,"settings":{"header-c5f86a98f51fccd0e7b1f8b6cab293a2":null,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":0,"header-f53d80f58c14cfffb8f46a91e90164c4":null,"section_width":"page-width","section_height":"","section_height_custom":50,"header-d1e5cdab6aa17d26b20438535c181c55":null,"color_scheme":"scheme-5","background_media":"none","video":null,"video_position":"cover","background_image":null,"background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","header-00ec1e7d6cf28f8220a86c5e10bae529":null,"padding-block-start":40,"padding-block-end":30},"blocks":{"text_36aQNR":{"type":"text","name":"t:names.heading","disabled":false,"settings":{"text":"<p>Los cocos no mienten y los numeros tampoco<\/p>","header-3874809c141442df0e5b48d0875059c6":null,"width":"100%","max_width":"normal","alignment":"center","header-60150bcfcc564aed8b50caa90db888e8":null,"type_preset":"h3","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground-heading)","header-6c28d1e0090542acac6c6f24c5d1c2ed":null,"background":false,"background_color":"#00000026","corner_radius":0,"header-ad2b8d603752ac350ae81e90f4dab62d":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}},"image_TzGxjV":{"type":"image","disabled":true,"settings":{"image":null,"link":"","header-7c61dd64e2012a998967c66f01f810a0":null,"image_ratio":"square","width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","header-a8ac8e5b03893ad8c3d5c5890c90be28":null,"border":"none","border_width":1,"border_opacity":100,"border_radius":0,"header-579f3a37d74bdf4ae0ccda3bc89d18e5":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}},"group_mF8nEP":{"type":"group","disabled":false,"blocks":{"group_YNteE7":{"type":"group","name":"t:names.group","disabled":false,"blocks":{"icon_HMTB4Y":{"type":"icon","name":"t:names.icon","disabled":false,"settings":{"icon":"price_tag","image_upload":"shopify:\/\/shop_images\/97-por-ciento.png","width":160,"link":"","open_in_new_tab":false}},"text_bA9bXj":{"type":"text","name":"t:names.text","disabled":false,"settings":{"text":"<p>De las parejas afirman que no rasurar la zona intima es el principal motivo de perder el apetito sexual.<\/p>","header-d35942b1ad868efc4cb7c003bacce29d":null,"width":"fit-content","max_width":"none","alignment":"center","header-4790217409d2235e8348c244f98102ae":null,"type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","header-795a6492c95ba666db69fe7b9f9bb81a":null,"background":false,"background_color":"#00000026","corner_radius":0,"header-07e93f5915cfeeae7e2397ed1675e05f":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}}},"block_order":["icon_HMTB4Y","text_bA9bXj"],"settings":{"link":"","open_in_new_tab":false,"header-4b4f8158ec2231f65a4a80c46db09b41":null,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":12,"header-f1652edbed37516bac9ba1834a2bd3dd":null,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"header-d4ea02aa722cb1f699745d217180af94":null,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video":null,"video_position":"cover","background_image":null,"background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","header-1cc5a7db86060f224b83b6794237cd08":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}},"group_RH49KU":{"type":"group","name":"t:names.group","disabled":false,"blocks":{"icon_9i7xfK":{"type":"icon","name":"t:names.icon","disabled":false,"settings":{"icon":"price_tag","image_upload":"shopify:\/\/shop_images\/88-por-ciento.png","width":160,"link":"","open_in_new_tab":false}},"text_iQHxjx":{"type":"text","name":"t:names.text","disabled":false,"settings":{"text":"<p>De las parejas prefiere un hombre bien rasurado en sus partes intimas.<\/p><p><\/p><p><\/p><p><\/p><p><\/p>","header-f6607700b1a4f59db91916fdca10996d":null,"width":"fit-content","max_width":"none","alignment":"center","header-580193aa51159ccff65f972f6cc57c70":null,"type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","header-ea5a47a9442053912fcdd63872d53650":null,"background":false,"background_color":"#00000026","corner_radius":0,"header-9d00d402893d04ff160682603c9c2a33":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}}},"block_order":["icon_9i7xfK","text_iQHxjx"],"settings":{"link":"","open_in_new_tab":false,"header-42aa7cbcf9114c50f59c3d278cc84733":null,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":12,"header-4664732b836595ab6ff9121d6d8d5a13":null,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"header-26fc00cb6c12b0568509fbc7091f75e6":null,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video":null,"video_position":"cover","background_image":null,"background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","header-a96d3fb5d3b546540fa666068a47d91c":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}},"group_9egiQQ":{"type":"group","name":"t:names.group","disabled":false,"blocks":{"icon_KXJWJB":{"type":"icon","name":"t:names.icon","disabled":false,"settings":{"icon":"price_tag","image_upload":"shopify:\/\/shop_images\/94-por-ciento.png","width":160,"link":"","open_in_new_tab":false}},"text_aHD7GG":{"type":"text","name":"t:names.text","disabled":false,"settings":{"text":"<p>De los hombres piensan que estar bien rasurado es parte esencial del exito personal.<\/p>","header-5dd1918c01ee02f070b0320a07c50038":null,"width":"fit-content","max_width":"none","alignment":"center","header-79ff38cb6513056007bd280a9a79f727":null,"type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","header-4a025cfd2502b500040f67314c7b50c0":null,"background":false,"background_color":"#00000026","corner_radius":0,"header-fea7cca4e5f716c3d4159761cd497eb4":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}}},"block_order":["icon_KXJWJB","text_aHD7GG"],"settings":{"link":"","open_in_new_tab":false,"header-c4b9f595f2b2918bfa4f2d1b5a568ae3":null,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":12,"header-f5a620e08310dbf578ec6d2e79883e08":null,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"header-92aa7cdd9e0fc41ae69d93873e8aa532":null,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video":null,"video_position":"cover","background_image":null,"background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","header-91b42e0b177d62f351e5e2daf7e50e31":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}}},"block_order":["group_YNteE7","group_RH49KU","group_9egiQQ"],"settings":{"link":"","open_in_new_tab":false,"header-7e65354c88400ff26fbd22954654dc24":null,"content_direction":"row","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"flex-start","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"header-a6bebb3b764af8d156e714841637db2d":null,"width":"custom","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"header-35b87052af626a1fa9a5740d7ca1c425":null,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video":null,"video_position":"cover","background_image":null,"background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","header-4080bfa52a66ae813d224972c811925f":null,"padding-block-start":15,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}}},"block_order":["text_36aQNR","image_TzGxjV","group_mF8nEP"],"name":"Cocos %"},"section_CRjNXK":{"settings":{},"blocks":{"custom_liquid_KnEcJg":{"disabled":true,"settings":{}},"group_cJaqNL":{"blocks":{"text_yzhcx":{"type":"text","name":"t:names.heading","disabled":false,"settings":{"text":"<h2>Rasuradora  mycocos® 4.0<\/h2>","header-c40defa5b07a959b87ee40c907f0dfa0":null,"width":"fit-content","max_width":"normal","alignment":"left","header-daa98a05c1a9da9a7cfcaf970f65adef":null,"type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","header-950e381b0595d23966c1051b05afd76c":null,"background":false,"background_color":"#00000026","corner_radius":0,"header-cd507e042de87ee1dd876ab555d78d8b":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}},"text_myNLx":{"type":"text","name":"t:names.heading","disabled":false,"settings":{"text":"<h6><strong>Para tus cocos y todo tu cuerpo<\/strong><\/h6>","header-3428249c47772ab69b8858ad02f3f685":null,"width":"fit-content","max_width":"normal","alignment":"left","header-c82790283a18f0d530e1d065ad045794":null,"type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","header-abe34361552fed908ebeda2bcc476bd1":null,"background":false,"background_color":"#00000026","corner_radius":0,"header-8992b57d42cf87b84dbc88cba36c3049":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}},"product_title_4mPkcw":{"disabled":true,"settings":{}},"text_bhrYLc":{"disabled":true,"settings":{}}},"block_order":["text_yzhcx","text_myNLx","product_title_4mPkcw","text_bhrYLc","divider_mjtUEB","text_TdbJCk","divider_9YzWfq"],"settings":{}}}},"main":{"settings":{},"blocks":{"product-details":{"blocks":{"buy_buttons_eYQEYi":{"blocks":{"add-to-cart":{"settings":{"style_class":"button-secondary"}}},"settings":{}},"custom_liquid_cJ386L":{"disabled":true,"settings":{"custom_liquid":"<!DOCTYPE html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"UTF-8\" \/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" \/>\n    <title>Barra de Anuncios con Desplazamiento Infinito<\/title>\n    <style>\n      .unique-announcement-bar {\n        width: 100%;\n        background-image: linear-gradient(45deg, #011732, #012a5c 80%);\n        padding: 8px 0;\n        overflow: hidden;\n        white-space: nowrap;\n        position: relative;\n        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n        margin: 5px 0; \/* Margen de 5px arriba y abajo *\/\n      }\n      .unique-announcement-wrapper {\n        display: flex;\n        animation: unique-scroll-text 8s linear infinite;\n      }\n      .unique-announcement-text {\n        color: #fffff9;\n        font-size: 14px;\n        font-weight: bold;\n        margin-right: 50px;\n      }\n      @keyframes unique-scroll-text {\n        0% {\n          transform: translateX(0);\n        }\n        100% {\n          transform: translateX(-100%);\n        }\n      }\n    <\/style>\n  <\/head>\n  <body>\n    <div class=\"unique-announcement-bar\">\n      <div class=\"unique-announcement-wrapper\">\n        <div class=\"unique-announcement-text\">Envíos a Costa Rica <\/div>\n        <div class=\"unique-announcement-text\">Envíos de 2-3 días hábiles<\/div>\n        <div class=\"unique-announcement-text\">Garantía de 1 año<\/div>\n        <div class=\"unique-announcement-text\">Pago seguro<\/div>\n      <\/div>\n    <\/div>\n  <\/body>\n<\/html>"}},"group_PKWV7L":{"type":"group","name":"Policies","disabled":false,"blocks":{"group_B87weK":{"type":"group","disabled":true,"name":"Shipping policy","blocks":{"icon_wC8dKp":{"type":"icon","name":"t:names.icon","disabled":false,"settings":{"icon":"truck","image_upload":"shopify:\/\/shop_images\/expresar.png","width":32,"link":"","open_in_new_tab":false}},"text_a8titw":{"type":"text","name":"t:names.text","disabled":false,"settings":{"text":"<p>Envio express ciudad de Panamá<\/p>","header-a3373d88f7fd7cd2221f3067ccdcf078":null,"width":"fit-content","max_width":"normal","alignment":"left","header-ac71b2d3799963b37a5fb80855427fb7":null,"type_preset":"rte","font":"var(--font-primary--family)","font_size":"","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"","header-1fef8b184d00e8bc64f23588afdf1590":null,"background":false,"background_color":"#00000026","corner_radius":0,"header-8ac079457f4f61e88a48ef76689e22fd":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}}},"block_order":["icon_wC8dKp","text_a8titw"],"settings":{"link":"","open_in_new_tab":false,"header-34c0c31884f8f55894d0743eae911db5":null,"content_direction":"row","vertical_on_mobile":false,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"header-f2759937ec113209228c1a5c1aa2279d":null,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"header-3e66010dee34aad3bcc280c68b045a3c":null,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video":null,"video_position":"cover","background_image":null,"background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","header-0ff188c5d682ae747edd7e28ab6f07dd":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}},"group_3xFBtz":{"type":"group","name":"Shipping policy","disabled":false,"blocks":{"icon_LLL9Xx":{"type":"icon","name":"t:names.icon","disabled":false,"settings":{"icon":"truck","image_upload":"shopify:\/\/shop_images\/entrega-rapida_1.png","width":32,"link":"","open_in_new_tab":false}},"text_nB9gEj":{"type":"text","name":"t:names.text","disabled":false,"settings":{"text":"<p>Envíos al interior  2-3 días hábiles<\/p>","header-5a82fd87b8e1fd2921cabc15a59446d7":null,"width":"fit-content","max_width":"normal","alignment":"left","header-08fd25afb961c8c99d047cfee0bf47d7":null,"type_preset":"rte","font":"var(--font-primary--family)","font_size":"","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"","header-81d3b7e9575714120037a49a7923791d":null,"background":false,"background_color":"#00000026","corner_radius":0,"header-3d3b049d07f4f697052a63aeb2dfc50e":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}}},"block_order":["icon_LLL9Xx","text_nB9gEj"],"settings":{"link":"","open_in_new_tab":false,"header-e00cad60dee9dd694861ffd36506fd42":null,"content_direction":"row","vertical_on_mobile":false,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"header-802a22425ab2c1adafc656f8bc026bd0":null,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"header-981cb2d9edc007a6e0f082dc551bc448":null,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video":null,"video_position":"cover","background_image":null,"background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","header-58853292837b27a24a9db22a08b4544a":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}},"group_KrVUcr":{"type":"group","disabled":true,"name":"Return policy","blocks":{"icon_H79ED8":{"type":"icon","name":"t:names.icon","disabled":false,"settings":{"icon":"return","image_upload":"shopify:\/\/shop_images\/garantia-extendida.png","width":32,"link":"","open_in_new_tab":false}},"text_fyCFDg":{"type":"text","name":"t:names.text","disabled":false,"settings":{"text":"<p>Garantía de 1 año<\/p>","header-74626d0b9477824dc8b1ccc428bcd009":null,"width":"fit-content","max_width":"normal","alignment":"left","header-d94999acba1ca77bb44508960ed116c4":null,"type_preset":"rte","font":"var(--font-primary--family)","font_size":"","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"","header-35d5288f453364e77b0102620ceb061b":null,"background":false,"background_color":"#00000026","corner_radius":0,"header-4a8d5f0c05d5b15358672b6658f94eb5":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}}},"block_order":["icon_H79ED8","text_fyCFDg"],"settings":{"link":"","open_in_new_tab":false,"header-19cbe9523853cfbd6a7a811b0b8b2631":null,"content_direction":"row","vertical_on_mobile":false,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"header-cd9cb11d93bc2e1f8f735bba0024034d":null,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"header-1261d66caddfbeb4e04a546658bbc1e3":null,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video":null,"video_position":"cover","background_image":null,"background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","header-6401c397c2bc59eb395330f9fd0a241b":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}},"group_X94L4Q":{"type":"group","disabled":true,"name":"Return policy","blocks":{"icon_PzKQfW":{"type":"icon","name":"t:names.icon","disabled":false,"settings":{"icon":"return","image_upload":"shopify:\/\/shop_images\/proteger.png","width":32,"link":"","open_in_new_tab":false}},"text_ib4fbP":{"type":"text","name":"t:names.text","disabled":false,"settings":{"text":"<p>Pago seguro<\/p>","header-71cf4a55c9a78f341980ff8016584842":null,"width":"fit-content","max_width":"normal","alignment":"left","header-864a35345f641db4aec73fd16bfd9aa3":null,"type_preset":"rte","font":"var(--font-primary--family)","font_size":"","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"","header-651f3cfb5fdadf05288215bf21885fad":null,"background":false,"background_color":"#00000026","corner_radius":0,"header-df58e2f2545b70263ec6c56daa7ed94f":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}}},"block_order":["icon_PzKQfW","text_ib4fbP"],"settings":{"link":"","open_in_new_tab":false,"header-104fd5aa98170de569c04c7cab8f98c6":null,"content_direction":"row","vertical_on_mobile":false,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"header-392be53f54989d40fac8c41ba05d8129":null,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"header-5ef915626f9d668a3ed9105b630426d1":null,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video":null,"video_position":"cover","background_image":null,"background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","header-887df8ed7656d241db174b9b1732e4c9":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}}},"block_order":["group_B87weK","group_3xFBtz","group_KrVUcr","group_X94L4Q"],"settings":{"link":"","open_in_new_tab":false,"header-445124a4d4c33317f835bfe2b0b08409":null,"content_direction":"row","vertical_on_mobile":false,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"header-75a519bd440ada29b8a3585b0f969e66":null,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"header-50c3c3cd1f02b4de655fc43a27dab9db":null,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video":null,"video_position":"cover","background_image":null,"background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","header-21e636d619fd10211fdcc05954e70083":null,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0}},"variant_picker_R3rGDr":{"disabled":false,"settings":{}}},"block_order":["divider_BBq9NJ","variant_picker_R3rGDr","divider_rQPr6F","buy_buttons_eYQEYi","custom_liquid_cJ386L","essential_upsell_frequently_bought_together_app_block_tRmNK3","group_PKWV7L","group_6wm8td","divider_DmT4bL","text_aEtTtq","divider_ydkCqC","accordion_tfwhdW"],"settings":{}}}},"section_H8P74R":{"settings":{},"blocks":{"text_DwyjhC":{"settings":{"text":"<h2>MÁS DE 500K CLIENTES FELICES EN LATINOAMRICA<\/h2>"}}}},"section_wzqH8T":{"disabled":true,"settings":{},"blocks":{}},"sp_before_and_after_DtNxNL":{"disabled":true,"settings":{},"blocks":{}}},"order":["section_CRjNXK","main","media_with_content_MJ4eBE","section_MmiFck","section_7K3cxK","section_bYLB6V","17563511517c41fe70","section_H8P74R","hero_HfkF6c","sp_icon_grid_UE33N3","section_qECJHB","section_wzqH8T","sp_before_and_after_DtNxNL","section_bMzn3Y","ss_comparison_table_20_Q7ALAF","section_dgeq4f","section_rJGPUA","section_Cxpprq","section_dAnbpV","1755181071a02392c1","product_recommendations_QJmz3y"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "product.producto-MyCOCOS 4.0.json",
+  "context": {
+    "market": "costa-rica"
+  },
+  "sections": {
+    "section_dgeq4f": {
+      "type": "section",
+      "disabled": false,
+      "settings": {
+        "header-c5f86a98f51fccd0e7b1f8b6cab293a2": null,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "header-f53d80f58c14cfffb8f46a91e90164c4": null,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "header-d1e5cdab6aa17d26b20438535c181c55": null,
+        "color_scheme": "scheme-5",
+        "background_media": "none",
+        "video": null,
+        "video_position": "cover",
+        "background_image": null,
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "header-00ec1e7d6cf28f8220a86c5e10bae529": null,
+        "padding-block-start": 40,
+        "padding-block-end": 30
+      },
+      "blocks": {
+        "text_36aQNR": {
+          "type": "text",
+          "name": "t:names.heading",
+          "disabled": false,
+          "settings": {
+            "text": "<p>Los cocos no mienten y los numeros tampoco</p>",
+            "header-3874809c141442df0e5b48d0875059c6": null,
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "header-60150bcfcc564aed8b50caa90db888e8": null,
+            "type_preset": "h3",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground-heading)",
+            "header-6c28d1e0090542acac6c6f24c5d1c2ed": null,
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "header-ad2b8d603752ac350ae81e90f4dab62d": null,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          }
+        },
+        "image_TzGxjV": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": null,
+            "link": "",
+            "header-7c61dd64e2012a998967c66f01f810a0": null,
+            "image_ratio": "square",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "header-a8ac8e5b03893ad8c3d5c5890c90be28": null,
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "header-579f3a37d74bdf4ae0ccda3bc89d18e5": null,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          }
+        },
+        "group_mF8nEP": {
+          "type": "group",
+          "disabled": false,
+          "blocks": {
+            "group_YNteE7": {
+              "type": "group",
+              "name": "t:names.group",
+              "disabled": false,
+              "blocks": {
+                "icon_HMTB4Y": {
+                  "type": "icon",
+                  "name": "t:names.icon",
+                  "disabled": false,
+                  "settings": {
+                    "icon": "price_tag",
+                    "image_upload": "shopify://shop_images/97-por-ciento.png",
+                    "width": 160,
+                    "link": "",
+                    "open_in_new_tab": false
+                  }
+                },
+                "text_bA9bXj": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "disabled": false,
+                  "settings": {
+                    "text": "<p>De las parejas afirman que no rasurar la zona intima es el principal motivo de perder el apetito sexual.</p>",
+                    "header-d35942b1ad868efc4cb7c003bacce29d": null,
+                    "width": "fit-content",
+                    "max_width": "none",
+                    "alignment": "center",
+                    "header-4790217409d2235e8348c244f98102ae": null,
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "header-795a6492c95ba666db69fe7b9f9bb81a": null,
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "header-07e93f5915cfeeae7e2397ed1675e05f": null,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                }
+              },
+              "block_order": [
+                "icon_HMTB4Y",
+                "text_bA9bXj"
+              ],
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "header-4b4f8158ec2231f65a4a80c46db09b41": null,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "header-f1652edbed37516bac9ba1834a2bd3dd": null,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "header-d4ea02aa722cb1f699745d217180af94": null,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video": null,
+                "video_position": "cover",
+                "background_image": null,
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "header-1cc5a7db86060f224b83b6794237cd08": null,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
+            "group_RH49KU": {
+              "type": "group",
+              "name": "t:names.group",
+              "disabled": false,
+              "blocks": {
+                "icon_9i7xfK": {
+                  "type": "icon",
+                  "name": "t:names.icon",
+                  "disabled": false,
+                  "settings": {
+                    "icon": "price_tag",
+                    "image_upload": "shopify://shop_images/88-por-ciento.png",
+                    "width": 160,
+                    "link": "",
+                    "open_in_new_tab": false
+                  }
+                },
+                "text_iQHxjx": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "disabled": false,
+                  "settings": {
+                    "text": "<p>De las parejas prefiere un hombre bien rasurado en sus partes intimas.</p><p></p><p></p><p></p><p></p>",
+                    "header-f6607700b1a4f59db91916fdca10996d": null,
+                    "width": "fit-content",
+                    "max_width": "none",
+                    "alignment": "center",
+                    "header-580193aa51159ccff65f972f6cc57c70": null,
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "header-ea5a47a9442053912fcdd63872d53650": null,
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "header-9d00d402893d04ff160682603c9c2a33": null,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                }
+              },
+              "block_order": [
+                "icon_9i7xfK",
+                "text_iQHxjx"
+              ],
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "header-42aa7cbcf9114c50f59c3d278cc84733": null,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "header-4664732b836595ab6ff9121d6d8d5a13": null,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "header-26fc00cb6c12b0568509fbc7091f75e6": null,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video": null,
+                "video_position": "cover",
+                "background_image": null,
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "header-a96d3fb5d3b546540fa666068a47d91c": null,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
+            "group_9egiQQ": {
+              "type": "group",
+              "name": "t:names.group",
+              "disabled": false,
+              "blocks": {
+                "icon_KXJWJB": {
+                  "type": "icon",
+                  "name": "t:names.icon",
+                  "disabled": false,
+                  "settings": {
+                    "icon": "price_tag",
+                    "image_upload": "shopify://shop_images/94-por-ciento.png",
+                    "width": 160,
+                    "link": "",
+                    "open_in_new_tab": false
+                  }
+                },
+                "text_aHD7GG": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "disabled": false,
+                  "settings": {
+                    "text": "<p>De los hombres piensan que estar bien rasurado es parte esencial del exito personal.</p>",
+                    "header-5dd1918c01ee02f070b0320a07c50038": null,
+                    "width": "fit-content",
+                    "max_width": "none",
+                    "alignment": "center",
+                    "header-79ff38cb6513056007bd280a9a79f727": null,
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "header-4a025cfd2502b500040f67314c7b50c0": null,
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "header-fea7cca4e5f716c3d4159761cd497eb4": null,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                }
+              },
+              "block_order": [
+                "icon_KXJWJB",
+                "text_aHD7GG"
+              ],
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "header-c4b9f595f2b2918bfa4f2d1b5a568ae3": null,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "header-f5a620e08310dbf578ec6d2e79883e08": null,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "header-92aa7cdd9e0fc41ae69d93873e8aa532": null,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video": null,
+                "video_position": "cover",
+                "background_image": null,
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "header-91b42e0b177d62f351e5e2daf7e50e31": null,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            }
+          },
+          "block_order": [
+            "group_YNteE7",
+            "group_RH49KU",
+            "group_9egiQQ"
+          ],
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "header-7e65354c88400ff26fbd22954654dc24": null,
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-start",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "header-a6bebb3b764af8d156e714841637db2d": null,
+            "width": "custom",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "header-35b87052af626a1fa9a5740d7ca1c425": null,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video": null,
+            "video_position": "cover",
+            "background_image": null,
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "header-4080bfa52a66ae813d224972c811925f": null,
+            "padding-block-start": 15,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_36aQNR",
+        "image_TzGxjV",
+        "group_mF8nEP"
+      ],
+      "name": "Cocos %"
+    },
+    "section_CRjNXK": {
+      "settings": {},
+      "blocks": {
+        "custom_liquid_KnEcJg": {
+          "disabled": true,
+          "settings": {}
+        },
+        "group_cJaqNL": {
+          "blocks": {
+            "text_yzhcx": {
+              "type": "text",
+              "name": "t:names.heading",
+              "disabled": false,
+              "settings": {
+                "text": "<h2>Rasuradora  mycocos® 4.0</h2>",
+                "header-c40defa5b07a959b87ee40c907f0dfa0": null,
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "header-daa98a05c1a9da9a7cfcaf970f65adef": null,
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "header-950e381b0595d23966c1051b05afd76c": null,
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "header-cd507e042de87ee1dd876ab555d78d8b": null,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
+            "text_myNLx": {
+              "type": "text",
+              "name": "t:names.heading",
+              "disabled": false,
+              "settings": {
+                "text": "<h6><strong>Para tus cocos y todo tu cuerpo</strong></h6>",
+                "header-3428249c47772ab69b8858ad02f3f685": null,
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "header-c82790283a18f0d530e1d065ad045794": null,
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "header-abe34361552fed908ebeda2bcc476bd1": null,
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "header-8992b57d42cf87b84dbc88cba36c3049": null,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
+            "product_title_4mPkcw": {
+              "disabled": true,
+              "settings": {}
+            },
+            "text_bhrYLc": {
+              "disabled": true,
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "text_yzhcx",
+            "text_myNLx",
+            "product_title_4mPkcw",
+            "text_bhrYLc",
+            "divider_mjtUEB",
+            "text_TdbJCk",
+            "divider_9YzWfq"
+          ],
+          "settings": {}
+        }
+      }
+    },
+    "main": {
+      "settings": {},
+      "blocks": {
+        "product-details": {
+          "blocks": {
+            "buy_buttons_eYQEYi": {
+              "blocks": {
+                "add-to-cart": {
+                  "settings": {
+                    "style_class": "button-secondary"
+                  }
+                }
+              },
+              "settings": {}
+            },
+            "custom_liquid_cJ386L": {
+              "disabled": true,
+              "settings": {
+                "custom_liquid": "<!DOCTYPE html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Barra de Anuncios con Desplazamiento Infinito</title>\n    <style>\n      .unique-announcement-bar {\n        width: 100%;\n        background-image: linear-gradient(45deg, #011732, #012a5c 80%);\n        padding: 8px 0;\n        overflow: hidden;\n        white-space: nowrap;\n        position: relative;\n        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n        margin: 5px 0; /* Margen de 5px arriba y abajo */\n      }\n      .unique-announcement-wrapper {\n        display: flex;\n        animation: unique-scroll-text 8s linear infinite;\n      }\n      .unique-announcement-text {\n        color: #fffff9;\n        font-size: 14px;\n        font-weight: bold;\n        margin-right: 50px;\n      }\n      @keyframes unique-scroll-text {\n        0% {\n          transform: translateX(0);\n        }\n        100% {\n          transform: translateX(-100%);\n        }\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"unique-announcement-bar\">\n      <div class=\"unique-announcement-wrapper\">\n        <div class=\"unique-announcement-text\">Envíos a Costa Rica </div>\n        <div class=\"unique-announcement-text\">Envíos de 2-3 días hábiles</div>\n        <div class=\"unique-announcement-text\">Garantía de 1 año</div>\n        <div class=\"unique-announcement-text\">Pago seguro</div>\n      </div>\n    </div>\n  </body>\n</html>"
+              }
+            },
+            "group_PKWV7L": {
+              "type": "group",
+              "name": "Policies",
+              "disabled": false,
+              "blocks": {
+                "group_B87weK": {
+                  "type": "group",
+                  "disabled": true,
+                  "name": "Shipping policy",
+                  "blocks": {
+                    "icon_wC8dKp": {
+                      "type": "icon",
+                      "name": "t:names.icon",
+                      "disabled": false,
+                      "settings": {
+                        "icon": "truck",
+                        "image_upload": "shopify://shop_images/expresar.png",
+                        "width": 32,
+                        "link": "",
+                        "open_in_new_tab": false
+                      }
+                    },
+                    "text_a8titw": {
+                      "type": "text",
+                      "name": "t:names.text",
+                      "disabled": false,
+                      "settings": {
+                        "text": "<p>Envio express ciudad de Panamá</p>",
+                        "header-a3373d88f7fd7cd2221f3067ccdcf078": null,
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "header-ac71b2d3799963b37a5fb80855427fb7": null,
+                        "type_preset": "rte",
+                        "font": "var(--font-primary--family)",
+                        "font_size": "",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "",
+                        "header-1fef8b184d00e8bc64f23588afdf1590": null,
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "header-8ac079457f4f61e88a48ef76689e22fd": null,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "icon_wC8dKp",
+                    "text_a8titw"
+                  ],
+                  "settings": {
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "header-34c0c31884f8f55894d0743eae911db5": null,
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "header-f2759937ec113209228c1a5c1aa2279d": null,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "header-3e66010dee34aad3bcc280c68b045a3c": null,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video": null,
+                    "video_position": "cover",
+                    "background_image": null,
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "header-0ff188c5d682ae747edd7e28ab6f07dd": null,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                },
+                "group_3xFBtz": {
+                  "type": "group",
+                  "name": "Shipping policy",
+                  "disabled": false,
+                  "blocks": {
+                    "icon_LLL9Xx": {
+                      "type": "icon",
+                      "name": "t:names.icon",
+                      "disabled": false,
+                      "settings": {
+                        "icon": "truck",
+                        "image_upload": "shopify://shop_images/entrega-rapida_1.png",
+                        "width": 32,
+                        "link": "",
+                        "open_in_new_tab": false
+                      }
+                    },
+                    "text_nB9gEj": {
+                      "type": "text",
+                      "name": "t:names.text",
+                      "disabled": false,
+                      "settings": {
+                        "text": "<p>Envíos al interior  2-3 días hábiles</p>",
+                        "header-5a82fd87b8e1fd2921cabc15a59446d7": null,
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "header-08fd25afb961c8c99d047cfee0bf47d7": null,
+                        "type_preset": "rte",
+                        "font": "var(--font-primary--family)",
+                        "font_size": "",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "",
+                        "header-81d3b7e9575714120037a49a7923791d": null,
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "header-3d3b049d07f4f697052a63aeb2dfc50e": null,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "icon_LLL9Xx",
+                    "text_nB9gEj"
+                  ],
+                  "settings": {
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "header-e00cad60dee9dd694861ffd36506fd42": null,
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "header-802a22425ab2c1adafc656f8bc026bd0": null,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "header-981cb2d9edc007a6e0f082dc551bc448": null,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video": null,
+                    "video_position": "cover",
+                    "background_image": null,
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "header-58853292837b27a24a9db22a08b4544a": null,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                },
+                "group_KrVUcr": {
+                  "type": "group",
+                  "disabled": true,
+                  "name": "Return policy",
+                  "blocks": {
+                    "icon_H79ED8": {
+                      "type": "icon",
+                      "name": "t:names.icon",
+                      "disabled": false,
+                      "settings": {
+                        "icon": "return",
+                        "image_upload": "shopify://shop_images/garantia-extendida.png",
+                        "width": 32,
+                        "link": "",
+                        "open_in_new_tab": false
+                      }
+                    },
+                    "text_fyCFDg": {
+                      "type": "text",
+                      "name": "t:names.text",
+                      "disabled": false,
+                      "settings": {
+                        "text": "<p>Garantía de 1 año</p>",
+                        "header-74626d0b9477824dc8b1ccc428bcd009": null,
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "header-d94999acba1ca77bb44508960ed116c4": null,
+                        "type_preset": "rte",
+                        "font": "var(--font-primary--family)",
+                        "font_size": "",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "",
+                        "header-35d5288f453364e77b0102620ceb061b": null,
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "header-4a8d5f0c05d5b15358672b6658f94eb5": null,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "icon_H79ED8",
+                    "text_fyCFDg"
+                  ],
+                  "settings": {
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "header-19cbe9523853cfbd6a7a811b0b8b2631": null,
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "header-cd9cb11d93bc2e1f8f735bba0024034d": null,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "header-1261d66caddfbeb4e04a546658bbc1e3": null,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video": null,
+                    "video_position": "cover",
+                    "background_image": null,
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "header-6401c397c2bc59eb395330f9fd0a241b": null,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                },
+                "group_X94L4Q": {
+                  "type": "group",
+                  "disabled": true,
+                  "name": "Return policy",
+                  "blocks": {
+                    "icon_PzKQfW": {
+                      "type": "icon",
+                      "name": "t:names.icon",
+                      "disabled": false,
+                      "settings": {
+                        "icon": "return",
+                        "image_upload": "shopify://shop_images/proteger.png",
+                        "width": 32,
+                        "link": "",
+                        "open_in_new_tab": false
+                      }
+                    },
+                    "text_ib4fbP": {
+                      "type": "text",
+                      "name": "t:names.text",
+                      "disabled": false,
+                      "settings": {
+                        "text": "<p>Pago seguro</p>",
+                        "header-71cf4a55c9a78f341980ff8016584842": null,
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "header-864a35345f641db4aec73fd16bfd9aa3": null,
+                        "type_preset": "rte",
+                        "font": "var(--font-primary--family)",
+                        "font_size": "",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "",
+                        "header-651f3cfb5fdadf05288215bf21885fad": null,
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "header-df58e2f2545b70263ec6c56daa7ed94f": null,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "icon_PzKQfW",
+                    "text_ib4fbP"
+                  ],
+                  "settings": {
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "header-104fd5aa98170de569c04c7cab8f98c6": null,
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "header-392be53f54989d40fac8c41ba05d8129": null,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "header-5ef915626f9d668a3ed9105b630426d1": null,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video": null,
+                    "video_position": "cover",
+                    "background_image": null,
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "header-887df8ed7656d241db174b9b1732e4c9": null,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                }
+              },
+              "block_order": [
+                "group_B87weK",
+                "group_3xFBtz",
+                "group_KrVUcr",
+                "group_X94L4Q"
+              ],
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "header-445124a4d4c33317f835bfe2b0b08409": null,
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "header-75a519bd440ada29b8a3585b0f969e66": null,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "header-50c3c3cd1f02b4de655fc43a27dab9db": null,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video": null,
+                "video_position": "cover",
+                "background_image": null,
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "header-21e636d619fd10211fdcc05954e70083": null,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
+            "variant_picker_R3rGDr": {
+              "disabled": false,
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "variant_picker_R3rGDr",
+            "divider_rQPr6F",
+            "buy_buttons_eYQEYi",
+            "custom_liquid_cJ386L",
+            "essential_upsell_frequently_bought_together_app_block_tRmNK3",
+            "group_PKWV7L",
+            "group_6wm8td",
+            "divider_DmT4bL",
+            "text_aEtTtq",
+            "accordion_tfwhdW"
+          ],
+          "settings": {}
+        }
+      }
+    },
+    "section_H8P74R": {
+      "settings": {},
+      "blocks": {
+        "text_DwyjhC": {
+          "settings": {
+            "text": "<h2>MÁS DE 500K CLIENTES FELICES EN LATINOAMRICA</h2>"
+          }
+        }
+      }
+    },
+    "section_wzqH8T": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "sp_before_and_after_DtNxNL": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    }
+  },
+  "order": [
+    "section_CRjNXK",
+    "main",
+    "media_with_content_MJ4eBE",
+    "section_MmiFck",
+    "section_7K3cxK",
+    "section_bYLB6V",
+    "17563511517c41fe70",
+    "section_H8P74R",
+    "hero_HfkF6c",
+    "sp_icon_grid_UE33N3",
+    "section_qECJHB",
+    "section_wzqH8T",
+    "sp_before_and_after_DtNxNL",
+    "section_bMzn3Y",
+    "ss_comparison_table_20_Q7ALAF",
+    "section_dgeq4f",
+    "section_rJGPUA",
+    "section_Cxpprq",
+    "section_dAnbpV",
+    "1755181071a02392c1",
+    "product_recommendations_QJmz3y"
+  ]
+}
