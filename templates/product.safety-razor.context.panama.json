@@ -1,1 +1,100 @@
-{"parent":"product.safety-razor.json","context":{"market":"panama"},"sections":{"hero_HfkF6c":{"disabled":true,"settings":{},"blocks":{}},"section_H8P74R":{"settings":{},"blocks":{"group_K6D6Vk":{"disabled":true,"settings":{}}}},"main":{"settings":{},"blocks":{"product-details":{"blocks":{"accordion_tfwhdW":{"blocks":{"accordion_row_JnBqnr":{"blocks":{"text_k9Jwmn":{"settings":{"text":"<ul><li><strong>Safety Razor MyCOCOS®<\/strong> – Afeitado preciso, duradero y elegante<\/li><li> <strong>Rasuradora de nariz y orejas<\/strong> – Limpieza rápida y segura<\/li><li><strong>Espuma de afeitar (GRATIS)<\/strong> – Protección y confort para la piel<\/li><\/ul>"}}},"settings":{}}},"settings":{}}},"settings":{}}}},"sp_icon_grid_UE33N3":{"settings":{},"blocks":{"image_wmtMAr":{"settings":{"image":"shopify:\/\/shop_images\/Captura_de_pantalla_2025-08-14_a_la_s_11.21.26_a._m..png","headline":"AFEITADO AL RAS, CON CONTROL TOTAL","text":"Precisión clásica que se siente desde la primera pasada.La Safety Razor MyCOCOS® ofrece un afeitado limpio, suave y elegante cuando se usa con espuma, reduciendo irritación y mejorando el deslizamiento para un acabado impecable."}},"image_xTDxQh":{"disabled":false,"settings":{"image":"shopify:\/\/shop_images\/DSC05372.jpg","headline":"LOS DETALLES NO SE DESCUIDAN","text":"Rápida, segura y directa al punto.Elimina el vello de nariz y orejas sin cortes ni molestias. Un retoque frente al espejo y listo."}},"image_LPAzTy":{"disabled":true,"settings":{}}}},"sp_before_and_after_DtNxNL":{"disabled":true,"settings":{},"blocks":{}},"ss_comparison_table_20_Q7ALAF":{"disabled":true,"settings":{},"blocks":{}},"section_bMzn3Y":{"disabled":true,"settings":{},"blocks":{}},"section_rJGPUA":{"disabled":true,"settings":{},"blocks":{}}}}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "product.safety-razor.json",
+  "context": {
+    "market": "panama"
+  },
+  "sections": {
+    "main": {
+      "settings": {},
+      "blocks": {
+        "product-details": {
+          "blocks": {
+            "accordion_tfwhdW": {
+              "blocks": {
+                "accordion_row_JnBqnr": {
+                  "blocks": {
+                    "text_k9Jwmn": {
+                      "settings": {
+                        "text": "<ul><li><strong>Safety Razor MyCOCOS®</strong> – Afeitado preciso, duradero y elegante</li><li> <strong>Rasuradora de nariz y orejas</strong> – Limpieza rápida y segura</li><li><strong>Espuma de afeitar (GRATIS)</strong> – Protección y confort para la piel</li></ul>"
+                      }
+                    }
+                  },
+                  "settings": {}
+                }
+              },
+              "settings": {}
+            }
+          },
+          "settings": {}
+        }
+      }
+    },
+    "section_H8P74R": {
+      "settings": {},
+      "blocks": {
+        "group_K6D6Vk": {
+          "disabled": true,
+          "settings": {}
+        }
+      }
+    },
+    "hero_HfkF6c": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "sp_icon_grid_UE33N3": {
+      "settings": {},
+      "blocks": {
+        "image_wmtMAr": {
+          "settings": {
+            "image": "shopify://shop_images/Captura_de_pantalla_2025-08-14_a_la_s_11.21.26_a._m..png",
+            "headline": "AFEITADO AL RAS, CON CONTROL TOTAL",
+            "text": "Precisión clásica que se siente desde la primera pasada.La Safety Razor MyCOCOS® ofrece un afeitado limpio, suave y elegante cuando se usa con espuma, reduciendo irritación y mejorando el deslizamiento para un acabado impecable."
+          }
+        },
+        "image_xTDxQh": {
+          "disabled": false,
+          "settings": {
+            "image": "shopify://shop_images/DSC05372.jpg",
+            "headline": "LOS DETALLES NO SE DESCUIDAN",
+            "text": "Rápida, segura y directa al punto.Elimina el vello de nariz y orejas sin cortes ni molestias. Un retoque frente al espejo y listo."
+          }
+        },
+        "image_LPAzTy": {
+          "disabled": true,
+          "settings": {}
+        }
+      }
+    },
+    "sp_before_and_after_DtNxNL": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "section_bMzn3Y": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "ss_comparison_table_20_Q7ALAF": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "section_rJGPUA": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    }
+  }
+}
