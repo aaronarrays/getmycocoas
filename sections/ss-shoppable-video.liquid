@@ -1957,6 +1957,9 @@
                 method: 'post',
                 body: new FormData(form{{ block.id | replace: '-', '' }})
               });
+              const drawer = document.querySelector('cart-drawer-component');
+drawer?.open();
+
               const res{{ forloop.index }} = await fetch("/cart.json");
               const cart{{ forloop.index }} = await res{{ forloop.index }}.json();
     
@@ -2057,6 +2060,9 @@
                 method: 'post',
                 body: new FormData(modalForm{{ block.id | replace: '-', '' }})
               });
+              const drawer = document.querySelector('cart-drawer-component');
+drawer?.open();
+
               const res{{ forloop.index }} = await fetch("/cart.json");
               const cart{{ forloop.index }} = await res{{ forloop.index }}.json();
     
