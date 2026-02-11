@@ -1948,56 +1948,22 @@
         }
 
         {% unless reload_after_adding %}
-          
-          if(form{{ block.id | replace: '-', '' }}) {
-             form{{ block.id | replace: '-', '' }}.addEventListener('submit', async (e) => {
-              console.log(form{{ block.id | replace: '-', '' }});
-              e.preventDefault();
-              await fetch('/cart/add', {
-                method: 'post',
-                body: new FormData(form{{ block.id | replace: '-', '' }})
-              });
-              const res{{ forloop.index }} = await fetch("/cart.json");
-              const cart{{ forloop.index }} = await res{{ forloop.index }}.json();
-    
-              const headerCartCount{{ forloop.index }} = document.querySelector('.cart-count-bubble span');
-              if(headerCartCount{{ forloop.index }}) {
-                headerCartCount{{ forloop.index }}.textContent = cart{{ forloop.index }}.item_count;
-              } else {
-                const headerCart{{ forloop.index }} = document.querySelector('#cart-icon-bubble');
-                const isCartIconValid = headerCart{{ forloop.index }} &&
-                  headerCart{{ forloop.index }}.childElementCount === 2 &&
-                  headerCart{{ forloop.index }}.querySelector('svg') &&
-                  headerCart{{ forloop.index }}.querySelector('span.visually-hidden');
-                
-                if (isCartIconValid) {
-                  const cartCountBubble = document.createElement('div');
-                  cartCountBubble.className = 'cart-count-bubble';
-                  if(cart{{ forloop.index }}.item_count == "1") {
-                    cartCountBubble.innerHTML = `<span aria-hidden="true">${cart{{ forloop.index }}.item_count}</span><span class="visually-hidden">${cart{{ forloop.index }}.item_count} item</span>`;
-                  } else {
-                    cartCountBubble.innerHTML = `<span aria-hidden="true">${cart{{ forloop.index }}.item_count}</span><span class="visually-hidden">${cart{{ forloop.index }}.item_count} items</span>`;
-                  }
-                
-                  headerCart{{ forloop.index }}.appendChild(cartCountBubble);
-                }
-                
-              }
-              setTimeout(function() {
-                button{{ forloop.index }}.innerText = "¡Agregado!";
-              }, 300);
-              {% if redirect_after_adding %}
-              setTimeout(function() {
-                window.location.href = "{{ shop.url }}/cart";
-              }, 500);
-              {% endif %}
-              setTimeout(function() {
-                button{{ forloop.index }}.innerText = `{{ button }}`;
-              }, 2000);
-              
-            })         
-          }
-      {% endunless %}
+  if(modalForm{{ block.id | replace: '-', '' }}) {
+    modalForm{{ block.id | replace: '-', '' }}.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      await fetch('/cart/add', {
+        method: 'post',
+        body: new FormData(modalForm{{ block.id | replace: '-', '' }})
+      });
+
+      sessionStorage.setItem('ss_open_drawer', '1');
+      location.reload();
+      return;
+    });
+  }
+{% endunless %}
+
 
        if(modalSelects{{ block.id | replace: '-', '' }}) {
 
@@ -2050,30 +2016,22 @@
         }
 
         {% unless reload_after_adding %}
-          if(modalForm{{ block.id | replace: '-', '' }}) {
-             modalForm{{ block.id | replace: '-', '' }}.addEventListener('submit', async (e) => {
-              e.preventDefault();
-              await fetch('/cart/add', {
-                method: 'post',
-                body: new FormData(modalForm{{ block.id | replace: '-', '' }})
-              });
-              const res{{ forloop.index }} = await fetch("/cart.json");
-              const cart{{ forloop.index }} = await res{{ forloop.index }}.json();
-    
-              const headerCartCount{{ forloop.index }} = document.querySelector('.cart-count-bubble span');
-              if(headerCartCount{{ forloop.index }}) {
-                headerCartCount{{ forloop.index }}.textContent = cart{{ forloop.index }}.item_count;
-              }
-              setTimeout(function() {
-                modalButton{{ forloop.index }}.innerText = "¡Agregado!";
-              }, 300);
-              setTimeout(function() {
-                modalButton{{ forloop.index }}.innerText = `{{ button }}`;
-              }, 2000);
-              
-            })         
-          }
-        {% endunless %}
+  if(form{{ block.id | replace: '-', '' }}) {
+    form{{ block.id | replace: '-', '' }}.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      await fetch('/cart/add', {
+        method: 'post',
+        body: new FormData(form{{ block.id | replace: '-', '' }})
+      });
+
+      sessionStorage.setItem('ss_open_drawer', '1');
+      location.reload();
+      return;
+    });
+  }
+{% endunless %}
+
     
       {% endfor %}
       
@@ -2233,6 +2191,31 @@
       }
     });
   }
+
+
+  window.addEventListener('load', () => {
+  if (sessionStorage.getItem('ss_open_drawer') === '1') {
+    sessionStorage.removeItem('ss_open_drawer');
+
+    const tryOpen = () => {
+      const drawer = document.querySelector('cart-drawer-component');
+      if (drawer && typeof drawer.open === 'function') {
+        drawer.open();
+        return true;
+      }
+      return false;
+    };
+
+    if (!tryOpen()) {
+      let attempts = 0;
+      const t = setInterval(() => {
+        attempts++;
+        if (tryOpen() || attempts > 30) clearInterval(t);
+      }, 100);
+    }
+  }
+});
+
 </script>
 
 {% schema %}
