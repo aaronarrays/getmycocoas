@@ -1953,10 +1953,39 @@
              form{{ block.id | replace: '-', '' }}.addEventListener('submit', async (e) => {
               console.log(form{{ block.id | replace: '-', '' }});
               e.preventDefault();
-              await fetch('/cart/add', {
-                method: 'post',
-                body: new FormData(form{{ block.id | replace: '-', '' }})
-              });
+              const formData = new FormData(form);
+
+const cartItemsComponents = document.querySelectorAll('cart-items-component');
+let sectionIds = [];
+
+cartItemsComponents.forEach((item) => {
+  if (item.dataset.sectionId) {
+    sectionIds.push(item.dataset.sectionId);
+  }
+});
+
+formData.append('sections', sectionIds.join(','));
+
+const response = await fetch('/cart/add.js', {
+  method: 'POST',
+  body: formData,
+  headers: { Accept: 'application/json' }
+});
+
+const data = await response.json();
+
+document.dispatchEvent(
+  new CustomEvent('cartUpdate', {
+    detail: {
+      data: {
+        sections: data.sections
+      }
+    }
+  })
+);
+
+document.querySelector('cart-drawer-component')?.open();
+
               const res{{ forloop.index }} = await fetch("/cart.json");
               const cart{{ forloop.index }} = await res{{ forloop.index }}.json();
     
@@ -2053,10 +2082,39 @@
           if(modalForm{{ block.id | replace: '-', '' }}) {
              modalForm{{ block.id | replace: '-', '' }}.addEventListener('submit', async (e) => {
               e.preventDefault();
-              await fetch('/cart/add', {
-                method: 'post',
-                body: new FormData(modalForm{{ block.id | replace: '-', '' }})
-              });
+              const formData = new FormData(form);
+
+const cartItemsComponents = document.querySelectorAll('cart-items-component');
+let sectionIds = [];
+
+cartItemsComponents.forEach((item) => {
+  if (item.dataset.sectionId) {
+    sectionIds.push(item.dataset.sectionId);
+  }
+});
+
+formData.append('sections', sectionIds.join(','));
+
+const response = await fetch('/cart/add.js', {
+  method: 'POST',
+  body: formData,
+  headers: { Accept: 'application/json' }
+});
+
+const data = await response.json();
+
+document.dispatchEvent(
+  new CustomEvent('cartUpdate', {
+    detail: {
+      data: {
+        sections: data.sections
+      }
+    }
+  })
+);
+
+document.querySelector('cart-drawer-component')?.open();
+
               const res{{ forloop.index }} = await fetch("/cart.json");
               const cart{{ forloop.index }} = await res{{ forloop.index }}.json();
     
