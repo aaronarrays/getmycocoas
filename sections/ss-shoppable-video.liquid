@@ -2193,28 +2193,34 @@
   }
 
 
-  window.addEventListener('load', () => {
-  if (sessionStorage.getItem('ss_open_drawer') === '1') {
-    sessionStorage.removeItem('ss_open_drawer');
+  function openDrawerWhenReady() {
+  if (sessionStorage.getItem('ss_open_drawer') !== '1') return;
 
-    const tryOpen = () => {
-      const drawer = document.querySelector('cart-drawer-component');
-      if (drawer && typeof drawer.open === 'function') {
-        drawer.open();
-        return true;
-      }
-      return false;
-    };
+  const tryOpen = () => {
+    const drawer = document.querySelector('cart-drawer-component');
 
-    if (!tryOpen()) {
-      let attempts = 0;
-      const t = setInterval(() => {
-        attempts++;
-        if (tryOpen() || attempts > 30) clearInterval(t);
-      }, 100);
+    if (drawer && typeof drawer.open === 'function') {
+      sessionStorage.removeItem('ss_open_drawer');
+      drawer.open();
+      return true;
     }
-  }
-});
+    return false;
+  };
+
+  if (tryOpen()) return;
+
+  let attempts = 0;
+  const interval = setInterval(() => {
+    attempts++;
+
+    if (tryOpen() || attempts > 40) {
+      clearInterval(interval);
+    }
+  }, 100);
+}
+
+window.addEventListener('load', openDrawerWhenReady);
+document.addEventListener('DOMContentLoaded', openDrawerWhenReady);
 
 </script>
 
