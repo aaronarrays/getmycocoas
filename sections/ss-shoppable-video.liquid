@@ -1984,7 +1984,7 @@
                 
               }
               setTimeout(function() {
-                button{{ forloop.index }}.innerText = "Added";
+                button{{ forloop.index }}.innerText = "¡Agregado!";
               }, 300);
               {% if redirect_after_adding %}
               setTimeout(function() {
@@ -2065,7 +2065,7 @@
                 headerCartCount{{ forloop.index }}.textContent = cart{{ forloop.index }}.item_count;
               }
               setTimeout(function() {
-                modalButton{{ forloop.index }}.innerText = "Added";
+                modalButton{{ forloop.index }}.innerText = "¡Agregado!";
               }, 300);
               setTimeout(function() {
                 modalButton{{ forloop.index }}.innerText = `{{ button }}`;
