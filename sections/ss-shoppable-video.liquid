@@ -1967,6 +1967,13 @@ document.dispatchEvent(
   })
 );
 
+document.dispatchEvent(
+  new CustomEvent('cartUpdate', {
+    detail: { resource: cart }
+  })
+);
+
+
 document.querySelector('cart-drawer-component')?.open();
 
 
@@ -2079,6 +2086,13 @@ document.dispatchEvent(
     detail: { resource: cart }
   })
 );
+
+document.dispatchEvent(
+  new CustomEvent('cartUpdate', {
+    detail: { resource: cart }
+  })
+);
+
 
 document.querySelector('cart-drawer-component')?.open();
 
