@@ -1988,9 +1988,8 @@
               }, 300);
               {% if redirect_after_adding %}
               setTimeout(function() {
-  sessionStorage.setItem('openCartDrawer', 'true');
-  location.reload();
-}, 400);
+                window.location.href = "{{ shop.url }}/cart";
+              }, 500);
               {% endif %}
               setTimeout(function() {
                 button{{ forloop.index }}.innerText = `{{ button }}`;
@@ -2234,18 +2233,6 @@
       }
     });
   }
-
-
-
-  if (sessionStorage.getItem('openCartDrawer') === 'true') {
-  sessionStorage.removeItem('openCartDrawer');
-
-  window.addEventListener('load', () => {
-    const drawer = document.querySelector('cart-drawer-component');
-    drawer?.open();
-  });
-}
-
 </script>
 
 {% schema %}
