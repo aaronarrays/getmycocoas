@@ -1954,11 +1954,21 @@
               console.log(form{{ block.id | replace: '-', '' }});
               e.preventDefault();
               await fetch('/cart/add', {
-                method: 'post',
-                body: new FormData(form{{ block.id | replace: '-', '' }})
-              });
-              const drawer = document.querySelector('cart-drawer-component');
-drawer?.open();
+  method: 'post',
+  body: formData
+});
+
+const cartRes = await fetch('/cart.js');
+const cart = await cartRes.json();
+
+document.dispatchEvent(
+  new CustomEvent('cart:update', {
+    detail: { resource: cart }
+  })
+);
+
+document.querySelector('cart-drawer-component')?.open();
+
 
               const res{{ forloop.index }} = await fetch("/cart.json");
               const cart{{ forloop.index }} = await res{{ forloop.index }}.json();
@@ -2057,11 +2067,21 @@ drawer?.open();
              modalForm{{ block.id | replace: '-', '' }}.addEventListener('submit', async (e) => {
               e.preventDefault();
               await fetch('/cart/add', {
-                method: 'post',
-                body: new FormData(modalForm{{ block.id | replace: '-', '' }})
-              });
-              const drawer = document.querySelector('cart-drawer-component');
-drawer?.open();
+  method: 'post',
+  body: formData
+});
+
+const cartRes = await fetch('/cart.js');
+const cart = await cartRes.json();
+
+document.dispatchEvent(
+  new CustomEvent('cart:update', {
+    detail: { resource: cart }
+  })
+);
+
+document.querySelector('cart-drawer-component')?.open();
+
 
               const res{{ forloop.index }} = await fetch("/cart.json");
               const cart{{ forloop.index }} = await res{{ forloop.index }}.json();
