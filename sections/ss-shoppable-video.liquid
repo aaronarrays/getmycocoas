@@ -1951,15 +1951,44 @@
   if(modalForm{{ block.id | replace: '-', '' }}) {
     modalForm{{ block.id | replace: '-', '' }}.addEventListener('submit', async (e) => {
       e.preventDefault();
-
-      await fetch('/cart/add', {
-        method: 'post',
-        body: new FormData(modalForm{{ block.id | replace: '-', '' }})
+      var form = modalForm{{ block.id | replace: '-', '' }};
+      var formData = new FormData(form);
+      var cartItemsComponents = document.querySelectorAll('cart-items-component');
+      var cartItemSectionIds = [];
+      cartItemsComponents.forEach(function(item) {
+        if (item.dataset && item.dataset.sectionId) cartItemSectionIds.push(item.dataset.sectionId);
       });
-
-      sessionStorage.setItem('ss_open_drawer', '1');
-      location.reload();
-      return;
+      if (cartItemSectionIds.length) formData.append('sections', cartItemSectionIds.join(','));
+      try {
+        var res = await fetch(typeof Theme !== 'undefined' && Theme.routes && Theme.routes.cart_add_url ? Theme.routes.cart_add_url : '/cart/add.js', {
+          method: 'POST',
+          headers: { 'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json' },
+          body: formData
+        });
+        var data = await res.json();
+        if (data.status && data.message) {
+          if (typeof window.alert === 'function') window.alert(data.message);
+          return;
+        }
+        document.dispatchEvent(new CustomEvent('cart:update', {
+          bubbles: true,
+          detail: {
+            resource: {},
+            sourceId: form.id || form.getAttribute('id') || '',
+            data: {
+              source: 'ss-shoppable-video',
+              itemCount: parseInt(formData.get('quantity') || '1', 10) || 1,
+              productId: form.closest('[data-product-id]') && form.closest('[data-product-id]').getAttribute('data-product-id'),
+              sections: data.sections || {}
+            }
+          }
+        }));
+        var drawer = document.querySelector('cart-drawer-component');
+        if (drawer && typeof drawer.open === 'function') drawer.open();
+      } catch (err) {
+        console.error('Add to cart failed:', err);
+        if (typeof window.alert === 'function') window.alert('No se pudo agregar al carrito. Intenta de nuevo.');
+      }
     });
   }
 {% endunless %}
@@ -2019,15 +2048,44 @@
   if(form{{ block.id | replace: '-', '' }}) {
     form{{ block.id | replace: '-', '' }}.addEventListener('submit', async (e) => {
       e.preventDefault();
-
-      await fetch('/cart/add', {
-        method: 'post',
-        body: new FormData(form{{ block.id | replace: '-', '' }})
+      var form = form{{ block.id | replace: '-', '' }};
+      var formData = new FormData(form);
+      var cartItemsComponents = document.querySelectorAll('cart-items-component');
+      var cartItemSectionIds = [];
+      cartItemsComponents.forEach(function(item) {
+        if (item.dataset && item.dataset.sectionId) cartItemSectionIds.push(item.dataset.sectionId);
       });
-
-      sessionStorage.setItem('ss_open_drawer', '1');
-      location.reload();
-      return;
+      if (cartItemSectionIds.length) formData.append('sections', cartItemSectionIds.join(','));
+      try {
+        var res = await fetch(typeof Theme !== 'undefined' && Theme.routes && Theme.routes.cart_add_url ? Theme.routes.cart_add_url : '/cart/add.js', {
+          method: 'POST',
+          headers: { 'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json' },
+          body: formData
+        });
+        var data = await res.json();
+        if (data.status && data.message) {
+          if (typeof window.alert === 'function') window.alert(data.message);
+          return;
+        }
+        document.dispatchEvent(new CustomEvent('cart:update', {
+          bubbles: true,
+          detail: {
+            resource: {},
+            sourceId: form.id || form.getAttribute('id') || '',
+            data: {
+              source: 'ss-shoppable-video',
+              itemCount: parseInt(formData.get('quantity') || '1', 10) || 1,
+              productId: form.closest('[data-product-id]') && form.closest('[data-product-id]').getAttribute('data-product-id'),
+              sections: data.sections || {}
+            }
+          }
+        }));
+        var drawer = document.querySelector('cart-drawer-component');
+        if (drawer && typeof drawer.open === 'function') drawer.open();
+      } catch (err) {
+        console.error('Add to cart failed:', err);
+        if (typeof window.alert === 'function') window.alert('No se pudo agregar al carrito. Intenta de nuevo.');
+      }
     });
   }
 {% endunless %}
