@@ -3,9 +3,22 @@
 {% liquid
   assign block_settings = block.settings
   assign product = closest.product
-  assign rating = product.metafields.reviews.rating.value.rating
-  assign scale_max = product.metafields.reviews.rating.value.scale_max
-  assign rating_count = product.metafields.reviews.rating_count
+
+  comment
+    Prefer Loox app metafields when available; fallback to Shopify native reviews
+  endcomment
+  assign loox_rating = product.metafields.loox.avg_rating
+  assign loox_count = product.metafields.loox.num_reviews
+
+  if loox_rating != blank
+    assign rating = loox_rating | times: 1.0
+    assign scale_max = 5
+    assign rating_count = loox_count | default: 0
+  else
+    assign rating = product.metafields.reviews.rating.value.rating
+    assign scale_max = product.metafields.reviews.rating.value.scale_max
+    assign rating_count = product.metafields.reviews.rating_count
+  endif
 
   if request.visual_preview_mode and product == blank
     assign product = collections.all.products.first
