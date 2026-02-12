@@ -111,11 +111,11 @@
       {% if block_settings.padding-block-end > 0 %}--zoom-out-padding-block-end: min(var(--padding-xs), {{ block_settings.padding-block-end | times: 0.7}}px);{% endif %}
     "
   >
-    {{ children }}
-    {%- comment -%} Loox review stars (app Loox) {%- endcomment -%}
+    {%- comment -%} Loox stars debajo del nombre (orden visual vía CSS order) {%- endcomment -%}
     {%- if product.id != blank -%}
       <div class="loox-rating product-card__loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div>
     {%- endif -%}
+    {{ children }}
   </div>
 </product-card>
 {%- if settings.transition_to_main_product -%}
@@ -148,7 +148,24 @@
     display: none;
   }
 
-  .product-card__loox-rating {
-    margin-top: var(--padding-3xs, 4px);
+  /* Loox: debajo del nombre, centrado. Orden visual = imagen(1), título(2), estrellas(3), precio(4) */
+  .product-card__content {
+    display: flex;
+    flex-wrap: wrap;
   }
+  .product-card__content > .product-card__loox-rating {
+    order: 3;
+    width: 100%;
+    margin-top: var(--padding-3xs, 4px);
+    margin-bottom: var(--padding-3xs, 4px);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .product-card__content > .product-card__loox-rating span {
+    justify-content: center;
+  }
+  .product-card__content > *:nth-child(2) { order: 1; }
+  .product-card__content > *:nth-child(3) { order: 2; }
+  .product-card__content > *:nth-child(4) { order: 4; }
 {% endstylesheet %}
