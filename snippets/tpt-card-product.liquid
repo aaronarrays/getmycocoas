@@ -76,6 +76,7 @@
             </a>
           </h3>
           <div class="tpt-card-information">
+            <div class="loox-rating tpt-card__loox-rating" data-id="{{ card_product.id }}" data-rating="{{ card_product.metafields.loox.avg_rating }}" data-raters="{{ card_product.metafields.loox.num_reviews }}"></div>
             <span class="tpt-caption-large tpt-light tpt-section__foreground--color">
               {{- block.settings.description | escape -}}
             </span>
