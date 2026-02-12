@@ -3048,12 +3048,25 @@
             "modal_heading": "<h3>Daily Shaver</h3>",
             "modal_text": "<p>La Daily Shaver es tu mejor aliada para un look limpio, fresco y siempre al punto. Diseñada para hombres que no dejan espacio a la improvisación, su cabezal flotante se adapta perfectamente al contorno del rostro, cuello y cabeza, entregando un afeitado ultra al ras sin irritación.<br/><br/>Compacta, potente y lista para la acción en segundos. Ideal para la rutina diaria o esos retoques express antes de una reunión o cita importante.</p>"
           }
+        },
+        "item_wU8aE8": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/Img 6986.mp4",
+            "video_url": "",
+            "autoplay": true,
+            "product": "rasuradora-masculina-my-cocos-4-0",
+            "use_variants": true,
+            "modal_heading": "<h3>Daily Shaver</h3>",
+            "modal_text": "<p>La Daily Shaver es tu mejor aliada para un look limpio, fresco y siempre al punto. Diseñada para hombres que no dejan espacio a la improvisación, su cabezal flotante se adapta perfectamente al contorno del rostro, cuello y cabeza, entregando un afeitado ultra al ras sin irritación.<br/><br/>Compacta, potente y lista para la acción en segundos. Ideal para la rutina diaria o esos retoques express antes de una reunión o cita importante.</p>"
+          }
         }
       },
       "block_order": [
         "item_b3dte9",
         "item_tLKetz",
-        "item_gKAUy6"
+        "item_gKAUy6",
+        "item_wU8aE8"
       ],
       "name": "SS - Shoppable video",
       "settings": {
@@ -3065,7 +3078,7 @@
         "heading_height": 130,
         "heading_align": "center",
         "heading_align_mobile": "center",
-        "slider_view": 3,
+        "slider_view": 4,
         "slider_view_mobile": 1.3,
         "slider_gap": 16,
         "slider_gap_mobile": 16,
