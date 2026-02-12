@@ -152,6 +152,7 @@
   .product-card__content {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
   }
   .product-card__content > .product-card__loox-rating {
     order: 3;
@@ -168,4 +169,39 @@
   .product-card__content > *:nth-child(2) { order: 1; }
   .product-card__content > *:nth-child(3) { order: 2; }
   .product-card__content > *:nth-child(4) { order: 4; }
+  .product-card__content > *:nth-child(5) { order: 5; }
+
+  /* Botón "Agregar al carrito" debajo del precio: quick-add se posiciona al final de la tarjeta */
+  .product-card__content:has(.quick-add) {
+    padding-bottom: 56px;
+  }
+  .product-card__content .quick-add {
+    position: absolute;
+    inset: auto auto 0 0;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    min-height: 48px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: stretch;
+    pointer-events: none;
+  }
+  .product-card__content .quick-add .quick-add__product-form-component,
+  .product-card__content .quick-add .shopify-product-form {
+    width: 100%;
+    justify-content: stretch;
+    pointer-events: all;
+  }
+  .product-card__content .quick-add__button {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+  }
 {% endstylesheet %}
