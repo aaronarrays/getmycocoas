@@ -2889,6 +2889,19 @@
             "padding-inline-end": 0
           },
           "blocks": {
+            "review_jcWpHf": {
+              "type": "review",
+              "name": "t:names.product_review_stars",
+              "settings": {
+                "stars_style": "shaded",
+                "show_number": true,
+                "rating_color": "primary",
+                "type_preset": "paragraph",
+                "width": "100%",
+                "alignment": "left"
+              },
+              "blocks": {}
+            },
             "buy_buttons_eqAhEN": {
               "type": "buy-buttons",
               "name": "t:names.product_buy_buttons",
@@ -2927,6 +2940,7 @@
             }
           },
           "block_order": [
+            "review_jcWpHf",
             "buy_buttons_eqAhEN"
           ]
         }
