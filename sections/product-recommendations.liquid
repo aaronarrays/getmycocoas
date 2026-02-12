@@ -97,8 +97,11 @@
       %}
       {% capture list_items %}
         {% for product in products limit: section.settings.max_products %}
-          <div class="resource-list__item">
+          <div class="resource-list__item product-recommendations__item">
             {% content_for 'block', type: '_product-card', id: 'static-product-card', closest.product: product %}
+            <a href="{{ product.url }}" class="button product-recommendations__add-to-cart">
+              {{ 'products.product.add_to_cart' | t | default: 'Agregar al carrito' }}
+            </a>
           </div>
           {% unless forloop.last %}
             <!--@list/split-->
@@ -185,6 +188,25 @@
   </div>
 </product-recommendations>
 
+<script>
+  (function() {
+    var section = document.getElementById('product-recommendations-{{ section.id }}');
+    if (!section) return;
+    function initLooxInSection() {
+      var ratings = section.querySelectorAll('.loox-rating[data-id]');
+      if (ratings.length && window.loox && typeof window.loox.init === 'function') {
+        try { window.loox.init(); } catch (e) {}
+      }
+      document.dispatchEvent(new CustomEvent('loox-refresh'));
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() { setTimeout(initLooxInSection, 500); });
+    } else {
+      setTimeout(initLooxInSection, 500);
+    }
+  })();
+</script>
+
 {% stylesheet %}
   .product-recommendations__skeleton-item {
     aspect-ratio: 3 / 4;
@@ -228,20 +250,41 @@
     object-position: center;
   }
 
-  /* Tarjetas generadas por JS: estrellas Loox centradas y botón de compra */
-  .product-recommendations .product-card__loox-rating {
+  /* Contenedor de cada tarjeta: flex para que el botón quede abajo */
+  .product-recommendations .product-recommendations__item {
     display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .product-recommendations .product-recommendations__item .product-card,
+  .product-recommendations .product-recommendations__item product-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .product-recommendations .product-recommendations__item .product-card__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Estrellas Loox siempre visibles y centradas */
+  .product-recommendations .product-card__loox-rating,
+  .product-recommendations .loox-rating {
+    display: flex !important;
     justify-content: center;
     text-align: center;
     margin-top: 4px;
     margin-bottom: 4px;
+    min-height: 20px;
   }
   .product-recommendations .product-recommendations__add-to-cart {
-    margin-top: 8px;
+    margin-top: 12px;
     width: 100%;
     justify-content: center;
     position: relative;
     z-index: 2;
+    flex-shrink: 0;
   }
 
   /* Carrusel: flechas siempre visibles y fijas en los bordes izquierdo/derecho */
@@ -629,9 +672,21 @@
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               }
+            },
+            "review": {
+              "type": "review",
+              "name": "t:names.product_review_stars",
+              "settings": {
+                "stars_style": "shaded",
+                "show_number": true,
+                "rating_color": "primary",
+                "type_preset": "paragraph",
+                "width": "100%",
+                "alignment": "center"
+              }
             }
           },
-          "block_order": ["product-card-gallery", "product_title", "price"]
+          "block_order": ["product-card-gallery", "product_title", "review", "price"]
         }
       },
       "block_order": ["header"]
