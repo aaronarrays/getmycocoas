@@ -117,3 +117,15 @@
 .tpt-show-second-image .tpt-media:hover img.tpt-image-hover {
 	opacity: 1;
 }
+
+/* Loox stars: debajo del nombre, centrado */
+.tpt-product-card-wrapper .tpt-card__loox-rating {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin-top: 4px;
+	margin-bottom: 6px;
+}
+.tpt-product-card-wrapper .tpt-card__loox-rating span {
+	justify-content: center;
+}
