@@ -39,6 +39,7 @@
   data-icons-shape="{{ section.settings.icons_shape }}"
   data-section-width="{{ section.settings.section_width }}"
   data-columns="{{ section.settings.columns }}"
+  data-add-to-cart-label="{{ 'products.product.add_to_cart' | t | default: 'Add to cart' }}"
   {{ section.shopify_attributes }}
 >
   <div class="section-background color-{{ section.settings.color_scheme }}"></div>
@@ -225,6 +226,22 @@
   .product-recommendations .resource-list__item .product-card .card-gallery img {
     object-fit: contain;
     object-position: center;
+  }
+
+  /* Tarjetas generadas por JS: estrellas Loox centradas y botón de compra */
+  .product-recommendations .product-card__loox-rating {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  .product-recommendations .product-recommendations__add-to-cart {
+    margin-top: 8px;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
   }
 
   /* Carrusel: flechas siempre visibles y fijas en los bordes izquierdo/derecho */
