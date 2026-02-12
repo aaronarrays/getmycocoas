@@ -137,6 +137,7 @@
     </p>
 
     {% if resource_type == 'product' %}
+      <div class="loox-rating resource-card__loox-rating" data-id="{{ resource.id }}" data-rating="{{ resource.metafields.loox.avg_rating }}" data-raters="{{ resource.metafields.loox.num_reviews }}"></div>
       {% render 'price', product_resource: resource, show_unit_price: true %}
     {% elsif resource_type == 'collection' and single_thumbnail_collection == false %}
       <p class="resource-card__subtext paragraph">
@@ -304,5 +305,9 @@
     &:focus {
       --resource-card-secondary-image-opacity: 1;
     }
+  }
+
+  .resource-card__loox-rating {
+    margin-top: var(--padding-3xs, 4px);
   }
 {% endstylesheet %}
