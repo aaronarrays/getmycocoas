@@ -112,6 +112,10 @@
     "
   >
     {{ children }}
+    {%- comment -%} Loox review stars (app Loox) {%- endcomment -%}
+    {%- if product.id != blank -%}
+      <div class="loox-rating product-card__loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div>
+    {%- endif -%}
   </div>
 </product-card>
 {%- if settings.transition_to_main_product -%}
@@ -142,5 +146,9 @@
   /* Hide "Choose" button when "Add" button is shown */
   [data-quick-add-button='add'] .quick-add__button--choose {
     display: none;
+  }
+
+  .product-card__loox-rating {
+    margin-top: var(--padding-3xs, 4px);
   }
 {% endstylesheet %}
