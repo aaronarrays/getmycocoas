@@ -1,208 +1,200 @@
 {% comment %}
-  Sección: Carrusel de Logos Infinito
-  Autor: Personalizable con Schema
-  Descripción: Marquesina infinita de logos con título y velocidad ajustables
+  Sección: Logos Infinitos / Estáticos
 {% endcomment %}
 
+{%- capture logos_json -%}
+[
+{%- assign first_item = true -%}
+{%- for block in section.blocks -%}
+  {%- if block.settings.logo != blank -%}
+    {%- unless first_item -%},{%- endunless -%}
+    {
+      "url": {{ block.settings.logo | image_url: width: 400 | json }},
+      "alt": {{ block.settings.logo_alt | default: 'Logo' | escape | json }},
+      "link": {{ block.settings.logo_link | default: '' | json }}
+    }
+    {%- assign first_item = false -%}
+  {%- endif -%}
+{%- endfor -%}
+]
+{%- endcapture -%}
+
 <style>
-  #shopify-section-{{ section.id }} {
-    --carousel-speed: {{ section.settings.carousel_speed }}s;
-  }
-  
-  #shopify-section-{{ section.id }} .logo-carousel-container {
-    font-family: {{ section.settings.font_family }}, sans-serif;
-    color: {{ section.settings.text_color }};
-    margin: 0;
-    padding: {{ section.settings.section_padding_top }}px 0 {{ section.settings.section_padding_bottom }}px 0;
-    background-color: {{ section.settings.background_color }};
-    overflow-x: hidden;
-  }
-  
-  #shopify-section-{{ section.id }} .section-title {
-    text-align: center;
-    font-family: {{ section.settings.font_family }}, sans-serif;
-    font-weight: {{ section.settings.title_font_weight }};
-    color: {{ section.settings.title_color }};
-    margin-bottom: 20px;
-    padding: 10px;
-    {% if section.settings.title_uppercase %}
-    text-transform: uppercase;
-    {% endif %}
-    letter-spacing: {{ section.settings.title_letter_spacing }}px;
-  }
-  
-  @media (min-width: 769px) {
-    #shopify-section-{{ section.id }} .section-title {
-      font-size: {{ section.settings.title_size_desktop }}px;
-      padding-bottom: {{ section.settings.title_margin_bottom_desktop }}px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    #shopify-section-{{ section.id }} .section-title {
-      font-size: {{ section.settings.title_size_mobile }}px;
-      padding-bottom: {{ section.settings.title_margin_bottom_mobile }}px;
-    }
-  }
-  
-  #shopify-section-{{ section.id }} .marquee-container {
-    position: relative;
-    background-color: {{ section.settings.marquee_background }};
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    width: 100%;
-    max-width: {{ section.settings.max_width }}px;
-    margin: 0 auto;
-  }
-  
-  #shopify-section-{{ section.id }} .marquee-wrapper {
-    display: flex;
-    align-items: center;
-    width: max-content;
-    animation: marquee var(--carousel-speed) linear infinite;
-    {% if section.settings.pause_on_hover %}
-    animation-play-state: running;
-    {% endif %}
-  }
-  
-  {% if section.settings.pause_on_hover %}
-  #shopify-section-{{ section.id }} .marquee-wrapper:hover {
-    animation-play-state: paused;
-  }
-  {% endif %}
-  
-  #shopify-section-{{ section.id }} .marquee-wrapper img {
-    height: auto;
-    object-fit: {{ section.settings.image_fit }};
-    border-radius: {{ section.settings.image_border_radius }}px;
-    display: block;
-    filter: {{ section.settings.image_filter }};
-    transition: all 0.3s ease;
-  }
-  
-  {% if section.settings.hover_effect %}
-  #shopify-section-{{ section.id }} .marquee-wrapper img:hover {
-    transform: scale({{ section.settings.hover_scale }});
-    filter: none;
-  }
-  {% endif %}
-  
-  @keyframes marquee {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  }
-  
-  @media (min-width: 769px) {
-    #shopify-section-{{ section.id }} .marquee-wrapper {
-      gap: {{ section.settings.logo_gap_desktop }}px;
-    }
-    #shopify-section-{{ section.id }} .marquee-wrapper img {
-      width: {{ section.settings.logo_width_desktop }}px;
-      max-width: {{ section.settings.logo_max_width_desktop }}px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    #shopify-section-{{ section.id }} .marquee-wrapper {
-      gap: {{ section.settings.logo_gap_mobile }}px;
-    }
-    #shopify-section-{{ section.id }} .marquee-wrapper img {
-      width: {{ section.settings.logo_width_mobile }}px;
-      max-width: {{ section.settings.logo_max_width_mobile }}px;
-    }
-  }
+#shopify-section-{{ section.id }} {
+  --carousel-speed: {{ section.settings.carousel_speed }}s;
+}
+
+#shopify-section-{{ section.id }} .logo-carousel-container {
+  padding: {{ section.settings.section_padding_top }}px 0 {{ section.settings.section_padding_bottom }}px 0;
+  background-color: {{ section.settings.background_color }};
+  overflow: hidden;
+}
+
+/* TITULO */
+#shopify-section-{{ section.id }} .section-title {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+/* CONTENEDOR */
+#shopify-section-{{ section.id }} .marquee-container {
+  max-width: {{ section.settings.max_width }}px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* WRAPPER */
+#shopify-section-{{ section.id }} .marquee-wrapper {
+  display: flex;
+  align-items: center;
+  gap: {{ section.settings.logo_gap_desktop }}px;
+}
+
+/* SOLO SI ESTA ACTIVADO EL CARRUSEL */
+{% if section.settings.enable_carousel %}
+#shopify-section-{{ section.id }} .marquee-wrapper {
+  width: max-content;
+  animation: marquee var(--carousel-speed) linear infinite;
+}
+{% endif %}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* MODO ESTATICO */
+{% unless section.settings.enable_carousel %}
+#shopify-section-{{ section.id }} .marquee-wrapper {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+{% endunless %}
+
+/* LOGOS */
+#shopify-section-{{ section.id }} .marquee-wrapper img {
+  width: {{ section.settings.logo_width_desktop }}px;
+  max-width: {{ section.settings.logo_max_width_desktop }}px;
+  height: auto;
+  display: block;
+  transition: 0.3s ease;
+}
+
+#shopify-section-{{ section.id }} .marquee-wrapper a,
+#shopify-section-{{ section.id }} .marquee-wrapper span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>
 
 <div class="logo-carousel-container">
+
   {% if section.settings.show_title and section.settings.section_title != blank %}
     <h2 class="section-title">{{ section.settings.section_title }}</h2>
   {% endif %}
-  
+
   <div class="marquee-container">
-    <div class="marquee-wrapper" id="marquee-{{ section.id }}">
-      <!-- Los logos se insertarán aquí via JavaScript -->
-    </div>
+    <div class="marquee-wrapper" id="marquee-{{ section.id }}"></div>
   </div>
+
 </div>
 
+<script type="application/json" id="logos-data-{{ section.id }}">
+{{ logos_json }}
+</script>
+
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const wrapper = document.getElementById('marquee-{{ section.id }}');
-    const logos = [
-      {% for block in section.blocks %}
-        {% if block.settings.logo != blank %}
-          {
-            url: "{{ block.settings.logo | image_url: width: 400 }}",
-            alt: "{{ block.settings.logo_alt | default: 'Logo' }}",
-            link: "{{ block.settings.logo_link }}"
-          }{% unless forloop.last %},{% endunless %}
-        {% endif %}
-      {% endfor %}
-    ];
-    
-    const repetitions = {{ section.settings.logo_repetitions }};
-    
-    // Crear los logos repetidas veces para efecto infinito
-    for (let i = 0; i < repetitions; i++) {
+(function(){
+  function initLogos(sectionId) {
+    const wrapper = document.getElementById('marquee-' + sectionId);
+    const dataEl = document.getElementById('logos-data-' + sectionId);
+    if (!wrapper || !dataEl) return;
+
+    let logos = [];
+    try {
+      logos = JSON.parse(dataEl.textContent.trim() || '[]');
+    } catch(e) {
+      console.warn("JSON inválido");
+      return;
+    }
+
+    wrapper.innerHTML = '';
+
+    if (!Array.isArray(logos) || logos.length === 0) return;
+
+    const repetitions = {{ section.settings.logo_repetitions | default: 16 }};
+    const enableCarousel = {{ section.settings.enable_carousel | json }};
+
+    const loopTimes = enableCarousel ? repetitions : 1;
+
+    for (let i = 0; i < loopTimes; i++) {
       logos.forEach(logo => {
-        const container = logo.link ? document.createElement('a') : document.createElement('span');
-        const imageElement = document.createElement('img');
-        
-        if (logo.link) {
+        const hasLink = logo.link && logo.link.trim() !== '';
+        const container = hasLink ? document.createElement('a') : document.createElement('span');
+        const img = document.createElement('img');
+
+        if (hasLink) {
           container.href = logo.link;
-          container.target = '_blank';
-          container.rel = 'noopener noreferrer';
+          container.target = "_blank";
+          container.rel = "noopener noreferrer";
         }
-        
-        imageElement.src = logo.url;
-        imageElement.alt = logo.alt;
-        imageElement.loading = 'lazy';
-        
-        container.appendChild(imageElement);
+
+        img.src = logo.url;
+        img.alt = logo.alt || "Logo";
+        img.loading = "lazy";
+
+        container.appendChild(img);
         wrapper.appendChild(container);
       });
     }
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    initLogos('{{ section.id }}');
   });
+
+  document.addEventListener('shopify:section:load', function(e){
+    if(e.detail.sectionId === '{{ section.id }}'){
+      initLogos('{{ section.id }}');
+    }
+  });
+})();
 </script>
 
 {% schema %}
 {
   "name": "Logos Infinitos",
-  "tag": "section",
-  "class": "logo-carousel-section",
   "settings": [
     {
-      "type": "header",
-      "content": "Configuración General"
+      "type": "checkbox",
+      "id": "enable_carousel",
+      "label": "Activar carrusel infinito",
+      "default": true
     },
     {
       "type": "text",
       "id": "section_title",
-      "label": "Título de la Sección",
-      "default": "Encuéntranos En"
+      "label": "Título",
+      "default": "Encuéntranos en"
     },
     {
       "type": "checkbox",
       "id": "show_title",
-      "label": "Mostrar Título",
+      "label": "Mostrar título",
       "default": true
     },
     {
       "type": "range",
       "id": "carousel_speed",
       "min": 10,
-      "max": 300,
+      "max": 200,
       "step": 10,
       "unit": "s",
-      "label": "Velocidad del Carrusel",
-      "default": 120,
-      "info": "Menor número = más rápido"
+      "label": "Velocidad",
+      "default": 60
     },
     {
       "type": "range",
@@ -210,183 +202,8 @@
       "min": 5,
       "max": 30,
       "step": 1,
-      "label": "Repeticiones de Logos",
-      "default": 16,
-      "info": "Más repeticiones = carrusel más fluido"
-    },
-    {
-      "type": "header",
-      "content": "Apariencia"
-    },
-    {
-      "type": "color",
-      "id": "background_color",
-      "label": "Color de Fondo",
-      "default": "#f8f8f8"
-    },
-    {
-      "type": "color",
-      "id": "marquee_background",
-      "label": "Fondo del Carrusel",
-      "default": "#ffffff"
-    },
-    {
-      "type": "range",
-      "id": "section_padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "unit": "px",
-      "label": "Padding Superior",
-      "default": 50
-    },
-    {
-      "type": "range",
-      "id": "section_padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "unit": "px",
-      "label": "Padding Inferior",
-      "default": 50
-    },
-    {
-      "type": "range",
-      "id": "max_width",
-      "min": 1200,
-      "max": 2000,
-      "step": 50,
-      "unit": "px",
-      "label": "Ancho Máximo",
-      "default": 1450
-    },
-    {
-      "type": "header",
-      "content": "Configuración del Título"
-    },
-    {
-      "type": "select",
-      "id": "font_family",
-      "label": "Fuente",
-      "options": [
-        {
-          "value": "Poppins",
-          "label": "Poppins"
-        },
-        {
-          "value": "Arial",
-          "label": "Arial"
-        },
-        {
-          "value": "Helvetica",
-          "label": "Helvetica"
-        },
-        {
-          "value": "Georgia",
-          "label": "Georgia"
-        }
-      ],
-      "default": "Poppins"
-    },
-    {
-      "type": "color",
-      "id": "title_color",
-      "label": "Color del Título",
-      "default": "#000000"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Color del Texto",
-      "default": "#000000"
-    },
-    {
-      "type": "select",
-      "id": "title_font_weight",
-      "label": "Peso del Título",
-      "options": [
-        {
-          "value": "300",
-          "label": "Ligero"
-        },
-        {
-          "value": "400",
-          "label": "Normal"
-        },
-        {
-          "value": "600",
-          "label": "Semi-negrita"
-        },
-        {
-          "value": "700",
-          "label": "Negrita"
-        },
-        {
-          "value": "800",
-          "label": "Extra-negrita"
-        }
-      ],
-      "default": "700"
-    },
-    {
-      "type": "checkbox",
-      "id": "title_uppercase",
-      "label": "Título en Mayúsculas",
-      "default": true
-    },
-    {
-      "type": "range",
-      "id": "title_letter_spacing",
-      "min": -5,
-      "max": 10,
-      "step": 1,
-      "unit": "px",
-      "label": "Espaciado de Letras",
-      "default": 2
-    },
-    {
-      "type": "range",
-      "id": "title_size_desktop",
-      "min": 20,
-      "max": 80,
-      "step": 2,
-      "unit": "px",
-      "label": "Tamaño Título (Desktop)",
-      "default": 40
-    },
-    {
-      "type": "range",
-      "id": "title_size_mobile",
-      "min": 16,
-      "max": 40,
-      "step": 2,
-      "unit": "px",
-      "label": "Tamaño Título (Móvil)",
-      "default": 28
-    },
-    {
-      "type": "range",
-      "id": "title_margin_bottom_desktop",
-      "min": 20,
-      "max": 100,
-      "step": 5,
-      "unit": "px",
-      "label": "Margen Inferior Título (Desktop)",
-      "default": 60
-    },
-    {
-      "type": "range",
-      "id": "title_margin_bottom_mobile",
-      "min": 20,
-      "max": 80,
-      "step": 5,
-      "unit": "px",
-      "label": "Margen Inferior Título (Móvil)",
-      "default": 40
-    },
-    {
-      "type": "header",
-      "content": "Configuración de Logos"
+      "label": "Repeticiones",
+      "default": 12
     },
     {
       "type": "range",
@@ -395,8 +212,8 @@
       "max": 300,
       "step": 10,
       "unit": "px",
-      "label": "Ancho Logo (Desktop)",
-      "default": 180
+      "label": "Ancho logo",
+      "default": 160
     },
     {
       "type": "range",
@@ -405,28 +222,8 @@
       "max": 400,
       "step": 10,
       "unit": "px",
-      "label": "Ancho Máximo Logo (Desktop)",
+      "label": "Máx ancho logo",
       "default": 200
-    },
-    {
-      "type": "range",
-      "id": "logo_width_mobile",
-      "min": 60,
-      "max": 200,
-      "step": 10,
-      "unit": "px",
-      "label": "Ancho Logo (Móvil)",
-      "default": 120
-    },
-    {
-      "type": "range",
-      "id": "logo_max_width_mobile",
-      "min": 100,
-      "max": 250,
-      "step": 10,
-      "unit": "px",
-      "label": "Ancho Máximo Logo (Móvil)",
-      "default": 150
     },
     {
       "type": "range",
@@ -435,97 +232,44 @@
       "max": 150,
       "step": 10,
       "unit": "px",
-      "label": "Espaciado entre Logos (Desktop)",
+      "label": "Espaciado logos",
       "default": 60
     },
     {
       "type": "range",
-      "id": "logo_gap_mobile",
-      "min": 15,
+      "id": "section_padding_top",
+      "min": 0,
       "max": 100,
       "step": 5,
       "unit": "px",
-      "label": "Espaciado entre Logos (Móvil)",
+      "label": "Padding top",
       "default": 40
     },
     {
       "type": "range",
-      "id": "image_border_radius",
+      "id": "section_padding_bottom",
       "min": 0,
-      "max": 50,
-      "step": 2,
+      "max": 100,
+      "step": 5,
       "unit": "px",
-      "label": "Radio de Bordes",
-      "default": 10
-    },
-    {
-      "type": "select",
-      "id": "image_fit",
-      "label": "Ajuste de Imagen",
-      "options": [
-        {
-          "value": "cover",
-          "label": "Cubrir"
-        },
-        {
-          "value": "contain",
-          "label": "Contener"
-        },
-        {
-          "value": "fill",
-          "label": "Rellenar"
-        }
-      ],
-      "default": "cover"
-    },
-    {
-      "type": "header",
-      "content": "Efectos"
-    },
-    {
-      "type": "checkbox",
-      "id": "pause_on_hover",
-      "label": "Pausar al Pasar el Mouse",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "hover_effect",
-      "label": "Efecto Hover en Logos",
-      "default": true
+      "label": "Padding bottom",
+      "default": 40
     },
     {
       "type": "range",
-      "id": "hover_scale",
-      "min": 1.0,
-      "max": 1.5,
-      "step": 0.1,
-      "label": "Escala en Hover",
-      "default": 1.1
+      "id": "max_width",
+      "min": 1200,
+      "max": 2000,
+      "step": 50,
+      "unit": "px",
+      "label": "Max width",
+      "default": 1450
     },
     {
-      "type": "select",
-      "id": "image_filter",
-      "label": "Filtro de Imagen",
-      "options": [
-        {
-          "value": "none",
-          "label": "Ninguno"
-        },
-        {
-          "value": "grayscale(100%)",
-          "label": "Escala de Grises"
-        },
-        {
-          "value": "opacity(0.7)",
-          "label": "Opacidad 70%"
-        },
-        {
-          "value": "grayscale(100%) opacity(0.7)",
-          "label": "Grises + Opacidad"
-        }
-      ],
-      "default": "none"
+      "type": "color",
+      "id": "background_color",
+      "label": "Color fondo",
+      "default": "#ffffff"
     }
   ],
   "blocks": [
@@ -533,23 +277,9 @@
       "type": "logo",
       "name": "Logo",
       "settings": [
-        {
-          "type": "image_picker",
-          "id": "logo",
-          "label": "Imagen del Logo"
-        },
-        {
-          "type": "text",
-          "id": "logo_alt",
-          "label": "Texto Alternativo",
-          "info": "Descripción de la imagen para accesibilidad"
-        },
-        {
-          "type": "url",
-          "id": "logo_link",
-          "label": "Enlace (Opcional)",
-          "info": "URL a la que dirigir cuando se haga clic en el logo"
-        }
+        { "type": "image_picker", "id": "logo", "label": "Imagen del logo" },
+        { "type": "text", "id": "logo_alt", "label": "Alt" },
+        { "type": "url", "id": "logo_link", "label": "Link opcional" }
       ]
     }
   ],
@@ -557,21 +287,10 @@
     {
       "name": "Logos Infinitos",
       "blocks": [
-        {
-          "type": "logo"
-        },
-        {
-          "type": "logo"
-        },
-        {
-          "type": "logo"
-        },
-        {
-          "type": "logo"
-        },
-        {
-          "type": "logo"
-        }
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" }
       ]
     }
   ]
