@@ -313,6 +313,10 @@
     "logo_carousel_Bwr8W": {
       "type": "logo-carousel",
       "disabled": false,
+      "custom_css": [
+        ".logo-carousel-container {padding: 40px 0 40px 0; background-color: #001936; overflow: hidden;}",
+        "h2.section-title {color: white;}"
+      ],
       "settings": {
         "enable_carousel": false,
         "section_title": "Encuéntranos en",
