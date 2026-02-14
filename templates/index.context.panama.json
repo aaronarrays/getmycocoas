@@ -17,25 +17,25 @@
       "type": "product-spotlight",
       "disabled": false,
       "settings": {
-        "header-d8c66c892019303b2e8fd1b3bfccb625": null,
+        "header-b97d5a27a2319c85e2e6e623e2c41580": null,
         "product": "kin-gs-pack-4-0",
         "use_product_image": true,
         "custom_image": null,
-        "header-b29ed2e892a8060314e6a23dad8e4ac7": null,
+        "header-f0c5bd3a8029b68a4e5cee903c80a5fa": null,
         "badge_text": "MÁS VENDIDO",
         "title_text": "",
         "subtitle_text": "THE CRACK PACK",
         "paragraph_text": "El pack más completo para cuidar de ti y tus cocos: práctico, seguro y con todo lo que necesitas en un solo kit.",
         "button_label": "Saber más",
         "button_link": "",
-        "header-ef0b7cb4147cab095fa9e45a4df5b01e": null,
+        "header-2d7c0a7a182e1e05cd3f37a312fbe16d": null,
         "counter_number": "529",
         "counter_suffix": "personas compraron en el último mes",
-        "header-353035e29a8fbfa089e6d2f95f212739": null,
+        "header-7f167a395b170f97bfd83fdfe1584c18": null,
         "section_width": "page-width",
         "media_position": "left",
         "color_scheme": "",
-        "header-56733a255fd0484cd90e5364219d4dd2": null,
+        "header-188811eee9f11f394481fdf77951bfdc": null,
         "padding-block-start": 40,
         "padding-block-end": 40
       },
@@ -43,21 +43,78 @@
       "block_order": [],
       "name": "Destacado de producto"
     },
+    "logo_carousel_Bwr8W": {
+      "type": "logo-carousel",
+      "disabled": false,
+      "custom_css": [
+        ".logo-carousel-container {padding: 40px 0 40px 0; background-color: #001936; overflow: hidden;}",
+        "h2.section-title {color: white;}"
+      ],
+      "settings": {
+        "enable_carousel": false,
+        "section_title": "Encuéntranos en",
+        "show_title": true,
+        "carousel_speed": 60,
+        "logo_repetitions": 13,
+        "logo_width_desktop": 160,
+        "logo_max_width_desktop": 200,
+        "logo_gap_desktop": 60,
+        "section_padding_top": 40,
+        "section_padding_bottom": 40,
+        "max_width": 1450,
+        "background_color": "#ffffff"
+      },
+      "blocks": {
+        "logo_3cfjh": {
+          "type": "logo",
+          "disabled": false,
+          "settings": {
+            "logo": "shopify://shop_images/panafoto.png",
+            "logo_alt": "",
+            "logo_link": ""
+          }
+        },
+        "logo_Yid7E": {
+          "type": "logo",
+          "disabled": false,
+          "settings": {
+            "logo": "shopify://shop_images/ulta_beauty.png",
+            "logo_alt": "",
+            "logo_link": ""
+          }
+        },
+        "logo_MMdNz": {
+          "type": "logo",
+          "disabled": false,
+          "settings": {
+            "logo": "shopify://shop_images/maissi.png",
+            "logo_alt": "",
+            "logo_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_3cfjh",
+        "logo_Yid7E",
+        "logo_MMdNz"
+      ],
+      "name": "Logos Infinitos"
+    },
     "banner_image_tGak7": {
       "type": "banner-image",
       "disabled": true,
       "settings": {
-        "header-3ffb0af71b7c96f7d634591b9d08f494": null,
+        "header-91ef5b51302b14e71862a9c24288dab8": null,
         "image_desktop": "shopify://shop_images/35_Panama.webp",
         "image_mobile": "shopify://shop_images/Banner_web_mycocos_PA_35.webp",
-        "header-26190327ae457dbc2c9b007346cfb986": null,
+        "header-2c69bedbe8dc1f9acb26a40c873c39f0": null,
         "link_url": "shopify://products/rasuradora-masculina-my-cocos-4-0",
         "open_new_tab": false,
-        "header-c7eab0cfb97e085c0558255470f92904": null,
+        "header-1323474badc398d0530794868d06d815": null,
         "image_position": "center center",
         "section_width": "full-width",
         "color_scheme": "",
-        "header-8e3518c02342a6249b0bfed4fe845d55": null,
+        "header-c6967e0d57852f43ef12ab50699cedbd": null,
         "padding_block_start": 0,
         "padding_block_end": 0
       },
@@ -76,13 +133,13 @@
           "type": "block",
           "disabled": false,
           "settings": {
-            "header-0c4e9d833ad33df5ea3d0fe413c470ea": null,
+            "header-e5cd18ce44b47a7575d3f07036030f1a": null,
             "slide_url": "",
-            "header-9a4339ab75043b8763d47560a905c80e": null,
+            "header-18fd2e07cbeec2970865c9754a04ea21": null,
             "image": "shopify://shop_images/1_jpg.jpg",
             "image_mobile": "shopify://shop_images/Copia_de_Este_San_Calentin_obten_hasta_un_47_OFF_jpg_74c3ac42-a34c-440a-9b22-5e72f769677e.jpg",
             "image_overlay": 0,
-            "header-5664add92b54388c785e63f2b6bf533d": null,
+            "header-a5389869e1a4b0348a12394dae984404": null,
             "container_use": false,
             "container_width": 70,
             "container_width_mobile": 90,
@@ -91,7 +148,7 @@
             "container_padding_vertical": 16,
             "container_radius": 0,
             "container_align": "middle-center",
-            "header-eae8cd6cd7f11186354b607304f1ea77": null,
+            "header-005929f4231b2942f3e48ef28eca46e7": null,
             "heading": "",
             "heading_custom": false,
             "heading_font": "assistant_n4",
@@ -101,7 +158,7 @@
             "heading_height": 100,
             "heading_align": "center",
             "heading_align_mobile": "center",
-            "header-49a3a9ba23a8524baef98bc0a9eecfac": null,
+            "header-1d797864541bb04d0736a476057b6e00": null,
             "subheading": "",
             "subheading_custom": false,
             "subheading_font": "assistant_n4",
@@ -113,7 +170,7 @@
             "subheading_align": "center",
             "subheading_align_mobile": "center",
             "subheading_color1": "#ffffff",
-            "header-f4fbb71af0a519ceb19fe27393b7f3d1": null,
+            "header-680073d6449e282582b873907c4f71fc": null,
             "text": "",
             "text_custom": false,
             "text_font": "assistant_n4",
@@ -124,7 +181,7 @@
             "text_mt": 16,
             "text_align": "center",
             "text_align_mobile": "center",
-            "header-b0f11a2de5cb90b0e529ac658e568fcf": null,
+            "header-ee7373a16ff67585e7db3bb9e0455b2e": null,
             "button_position": "center-bottom",
             "button": "Comprar Ahora",
             "button_url": "shopify://collections/store",
@@ -144,20 +201,20 @@
             "button_radius": 24,
             "button_max_width": 0,
             "button_max_width_mobile": 0,
-            "header-30912f1fc62fb43eda7bfc087d57272f": null,
+            "header-5c4e1a4fa5dc8363f4cae63610483925": null,
             "slide_bg_color": "#a9a9a9",
             "heading_color": "#ffffff",
             "subheading_color": "#ffffff",
             "text_color": "#ffffff",
             "container_bg": "#000000",
-            "header-015a6f1d4451c72d96811e210db45c96": null,
+            "header-d492bf85510828cf0e7d54117f0c291b": null,
             "button_color": "#ffffff",
             "button_hover_color": "#cfcdcd",
             "button_bg_color": "#121212",
             "button_bg_hover_color": "#121212",
             "button_border_color": "#ffffff",
             "button_border_hover_color": "#cfcdcd",
-            "header-b6fc895d4243cf258d1f566bddda6c71": null,
+            "header-6343d4908bff2dcfe89c4b50f5ab32cc": null,
             "slide_padding_horizontal": 32,
             "slide_padding_vertical": 32
           }
@@ -206,11 +263,11 @@
                   "disabled": false,
                   "settings": {
                     "text": "<p>más vendido</p>",
-                    "header-fed84f2df0117e4b71a05d632400b9ea": null,
+                    "header-b5244a64fd64119738d303cc283b7929": null,
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
-                    "header-fe52f7af24d5211fb0def4434789b3a1": null,
+                    "header-afe87d09bc07c7acdef2fd44e8097b58": null,
                     "type_preset": "h6",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
@@ -219,11 +276,11 @@
                     "case": "none",
                     "wrap": "pretty",
                     "color": "var(--color-primary)",
-                    "header-87c00be44295d63dc594638230d289f4": null,
+                    "header-dea661dff15cdd77c5fe9733e400478f": null,
                     "background": true,
                     "background_color": "#d0473e",
                     "corner_radius": 20,
-                    "header-827b759c7af12232ed5ba4ecb6fd7929": null,
+                    "header-7c09d9f2afab44b2b90c516418ecde36": null,
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
@@ -235,7 +292,7 @@
                 "text_fCYyd"
               ],
               "settings": {
-                "header-59bd4a462e1db3a16a35a374791ee808": null,
+                "header-f16c07c009ff0e2c87c15fd855dfe379": null,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
                 "horizontal_alignment": "flex-start",
@@ -244,14 +301,14 @@
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 12,
-                "header-b939be3edfbcbcce2a81c7da8ba85fd2": null,
+                "header-cec119b243af3bc6baeb2ac12fc614dd": null,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
                 "custom_width_mobile": 100,
                 "height": "fit",
                 "custom_height": 100,
-                "header-4949827ed826ef0d3563e5ae6d73ee6c": null,
+                "header-1a6450e7090945f945a24d3829838635": null,
                 "inherit_color_scheme": true,
                 "color_scheme": "",
                 "background_media": "none",
@@ -267,11 +324,11 @@
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
                 "gradient_direction": "to top",
-                "header-d9a428f364f631697213a25ccd59ed5f": null,
+                "header-aff45d7437064aa95ab01c2d1437310b": null,
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
-                "header-8e6a1278dc5917708b7cd33dcb858e6c": null,
+                "header-99a5f230bc5ec8e8f90f52f505dc15b6": null,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
@@ -309,63 +366,6 @@
         ]
       },
       "blocks": {}
-    },
-    "logo_carousel_Bwr8W": {
-      "type": "logo-carousel",
-      "disabled": false,
-      "custom_css": [
-        ".logo-carousel-container {padding: 40px 0 40px 0; background-color: #001936; overflow: hidden;}",
-        "h2.section-title {color: white;}"
-      ],
-      "settings": {
-        "enable_carousel": false,
-        "section_title": "Encuéntranos en",
-        "show_title": true,
-        "carousel_speed": 60,
-        "logo_repetitions": 12,
-        "logo_width_desktop": 160,
-        "logo_max_width_desktop": 200,
-        "logo_gap_desktop": 60,
-        "section_padding_top": 40,
-        "section_padding_bottom": 40,
-        "max_width": 1450,
-        "background_color": "#ffffff"
-      },
-      "blocks": {
-        "logo_3cfjh": {
-          "type": "logo",
-          "disabled": false,
-          "settings": {
-            "logo": "shopify://shop_images/panafoto.png",
-            "logo_alt": "",
-            "logo_link": ""
-          }
-        },
-        "logo_Yid7E": {
-          "type": "logo",
-          "disabled": false,
-          "settings": {
-            "logo": "shopify://shop_images/ulta_beauty.png",
-            "logo_alt": "",
-            "logo_link": ""
-          }
-        },
-        "logo_MMdNz": {
-          "type": "logo",
-          "disabled": false,
-          "settings": {
-            "logo": "shopify://shop_images/maissi.png",
-            "logo_alt": "",
-            "logo_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo_3cfjh",
-        "logo_Yid7E",
-        "logo_MMdNz"
-      ],
-      "name": "Logos Infinitos"
     }
   },
   "order": [
