@@ -1068,8 +1068,7 @@
         ".variant-option__button-label {width: 42px !important; height: 42px !important; padding: 3px !important;}",
         ".variant-option__button-label .swatch {width: 100%; height: 100%; border-radius: 8px;}",
         ".variant-option__buttons {gap: 6px !important;}",
-        "@media (min-width: 1024px) {.product-information__grid {grid-template-columns: 60% 40%; }}",
-        ".product-price.text-block {width: fit-content; display: inline-flex; align-items: center; gap: 8px;}"
+        "@media (min-width: 1024px) {.product-information__grid {grid-template-columns: 60% 40%; }}"
       ],
       "settings": {
         "product": "{{ product }}",
