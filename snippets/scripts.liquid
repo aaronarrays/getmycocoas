@@ -31,7 +31,10 @@
 
 <script
   src="{{ 'view-transitions.js' | asset_url }}"
-  defer
+  async
+  {% if settings.page_transition_enabled or settings.transition_to_main_product %}
+    blocking="render"
+  {% endif %}
 ></script>
 
 <link
