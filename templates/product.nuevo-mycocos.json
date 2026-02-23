@@ -79,7 +79,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
+                "gap": 10,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -1068,7 +1068,7 @@
         ".variant-option__button-label {width: 42px !important; height: 42px !important; padding: 3px !important;}",
         ".variant-option__button-label .swatch {width: 100%; height: 100%; border-radius: 8px;}",
         ".variant-option__buttons {gap: 6px !important;}",
-        "@media (min-width: 1024px) {.product-information__grid {grid-template-columns: 60% 40%;}}"
+        "@media (min-width: 1024px) {.product-information__grid {grid-template-columns: 60% 40%; }}"
       ],
       "settings": {
         "product": "{{ product }}",
