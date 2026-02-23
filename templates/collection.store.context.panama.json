@@ -13,46 +13,41 @@
     "market": "panama"
   },
   "sections": {
-    "ss_slideshow_4_efApqz": {
-      "disabled": true,
-      "settings": {
-        "image_custom": true,
-        "image_height_desktop": 700
-      },
-      "blocks": {
-        "block_NFCVVL": {
-          "settings": {
-            "image": "shopify://shop_images/Copia_de_Copia_de_Copia_de_Copia_de_Copia_de_Copia_de_Copia_de_Copia_de_Raleway.jpg",
-            "image_mobile": "shopify://shop_images/Banner_web_mycocos_1295_x_573_px_1080_x_1080_px.svg"
-          }
-        }
-      }
-    },
     "banner_responsive_rMr4r": {
       "type": "banner-responsive",
       "disabled": false,
       "settings": {
-        "header-82523df90358ce4114d1f0e2c0d7d4dc": null,
+        "header-bdea826ecfcc45d586ad2aecece214ab": null,
         "image": "shopify://shop_images/Copia_de_Copia_de_Copia_de_Copia_de_Copia_de_Copia_de_Copia_de_Copia_de_Raleway_jpg_58f2e5c9-ea01-40d3-90ef-cbd549aa1625.jpg",
         "image_position": "center center",
-        "header-51a457f42909334c2749163b6b62caf3": null,
+        "header-1cd237a355e308511142e3943b643fca": null,
         "link_url": "",
         "open_new_tab": false,
-        "header-20dcd71288eb0f4cd02892ce721f7b2c": null,
+        "header-856f28a29af424d408b6e879f0ebf015": null,
         "section_width": "full-width",
         "color_scheme": "",
-        "header-41ceadcf98b5a8e6f0533cffd0ec401d": null,
+        "header-3393639c54a07cac9091d929295e5993": null,
         "padding_top": 0,
         "padding_bottom": 0
       },
       "blocks": {},
       "block_order": [],
       "name": "Banner adaptable"
+    },
+    "main": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {
+        "product-card": {
+          "disabled": true,
+          "blocks": {},
+          "block_order": [],
+          "settings": {}
+        }
+      }
     }
   },
   "order": [
-    "section",
-    "ss_slideshow_4_efApqz",
     "sp_link_grid_WPg8AR",
     "main",
     "custom_liquid_rddKHW",
