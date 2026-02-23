@@ -479,7 +479,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Hasta 120 minutos</p>",
+                        "text": "<p>Hasta 120<br/>minutos</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -562,7 +562,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Hasta 120 minutos</p>",
+                        "text": "<p>Para todo<br/>el cuerpo</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -645,7 +645,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Hasta 120 minutos</p>",
+                        "text": "<p>Resistente<br/>al agua</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",

@@ -4,13 +4,22 @@
 {% assign icon_block_class = 'icon-block__media icon-block-' | append: block.id %}
 
 {% capture icon %}
-  {% render 'icon-or-image',
-    icon: block_settings.icon,
-    image_upload: block_settings.image_upload,
-    width: block_settings.width,
-    class_name: icon_block_class,
-    attributes: block.shopify_attributes
-  %}
+
+  {% if block_settings.svg_code != blank %}
+    <span class="{{ icon_block_class }}">
+      {{ block_settings.svg_code }}
+    </span>
+
+  {% elsif block_settings.image_upload != blank or block_settings.icon != 'none' %}
+    {% render 'icon-or-image',
+      icon: block_settings.icon,
+      image_upload: block_settings.image_upload,
+      width: block_settings.width,
+      class_name: icon_block_class,
+      attributes: block.shopify_attributes
+    %}
+  {% endif %}
+
 {% endcapture %}
 
 {%- if block_settings.link != blank -%}
@@ -287,6 +296,12 @@
       ],
       "default": "apple"
     },
+    {
+  "type": "textarea",
+  "id": "svg_code",
+  "label": "SVG personalizado",
+  "info": "Pega aquí el código SVG"
+},
     {
       "type": "image_picker",
       "id": "image_upload",
