@@ -1369,8 +1369,8 @@
         }
       },
       "custom_css": [
-        ".variant-option__button-label {width: 42px; height: 42px;}",
-        ".variant-option__button-label .swatch {width: 100%; height: 100%; border-radius: 8px;}",
+        ".variant-option__button-label {width: 32px; height: 32px;}",
+        ".variant-option__button-label .swatch {width: 100%; height: 100%;}",
         ".variant-option__buttons {gap: 6px !important;}",
         "@media (min-width: 1024px) {.product-information__grid {grid-template-columns: 60% 40%; }}",
         "@media (max-width: 768px) {.product-information {padding-top: 0px; }}",
