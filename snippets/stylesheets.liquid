@@ -1,4 +1,6 @@
-<link rel="preload" href="{{ 'base.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ 'base.css' | asset_url }}" as="style">
+<link rel="stylesheet" href="{{ 'base.css' | asset_url }}" media="print" onload="this.media='all'">
+
 <noscript>
   <link rel="stylesheet" href="{{ 'base.css' | asset_url }}">
 </noscript>
