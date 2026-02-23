@@ -384,18 +384,6 @@
               },
               "block_order": []
             },
-            "custom_liquid_cJ386L": {
-              "type": "custom-liquid",
-              "name": "t:names.custom_liquid",
-              "settings": {
-                "custom_liquid": "<!DOCTYPE html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Barra de Anuncios con Desplazamiento Infinito</title>\n    <style>\n      .unique-announcement-bar {\n        width: 100%;\n        background-image: linear-gradient(45deg, #011732, #012a5c 80%);\n        padding: 8px 0;\n        overflow: hidden;\n        white-space: nowrap;\n        position: relative;\n        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n        margin: 5px 0; /* Margen de 5px arriba y abajo */\n      }\n      .unique-announcement-wrapper {\n        display: flex;\n        animation: unique-scroll-text 8s linear infinite;\n      }\n      .unique-announcement-text {\n        color: #fffff9;\n        font-size: 14px;\n        font-weight: bold;\n        margin-right: 50px;\n      }\n      @keyframes unique-scroll-text {\n        0% {\n          transform: translateX(0);\n        }\n        100% {\n          transform: translateX(-100%);\n        }\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"unique-announcement-bar\">\n      <div class=\"unique-announcement-wrapper\">\n        <div class=\"unique-announcement-text\">Envío Express ciudad de Panamá </div>\n        <div class=\"unique-announcement-text\">Envíos al interior 2-3 días hábiles</div>\n        <div class=\"unique-announcement-text\">Garantía de 1 año</div>\n        <div class=\"unique-announcement-text\">Pago seguro</div>\n      </div>\n    </div>\n  </body>\n</html>"
-              },
-              "blocks": {}
-            },
-            "essential_upsell_frequently_bought_together_app_block_tRmNK3": {
-              "type": "shopify://apps/essential-upsell/blocks/frequently-bought-together-app-block/50627fd9-24fd-4250-8614-accc12826d80",
-              "settings": {}
-            },
             "group_6wm8td": {
               "type": "group",
               "name": "t:names.group",
@@ -430,8 +418,8 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
+                "padding-block-start": 20,
+                "padding-block-end": 20,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
@@ -691,6 +679,18 @@
                 "group_rk7NyU",
                 "group_7mRbLD"
               ]
+            },
+            "custom_liquid_cJ386L": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "settings": {
+                "custom_liquid": "<!DOCTYPE html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Barra de Anuncios con Desplazamiento Infinito</title>\n    <style>\n      .unique-announcement-bar {\n        width: 100%;\n        background-image: linear-gradient(45deg, #011732, #012a5c 80%);\n        padding: 8px 0;\n        overflow: hidden;\n        white-space: nowrap;\n        position: relative;\n        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n        margin: 5px 0; /* Margen de 5px arriba y abajo */\n      }\n      .unique-announcement-wrapper {\n        display: flex;\n        animation: unique-scroll-text 8s linear infinite;\n      }\n      .unique-announcement-text {\n        color: #fffff9;\n        font-size: 14px;\n        font-weight: bold;\n        margin-right: 50px;\n      }\n      @keyframes unique-scroll-text {\n        0% {\n          transform: translateX(0);\n        }\n        100% {\n          transform: translateX(-100%);\n        }\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"unique-announcement-bar\">\n      <div class=\"unique-announcement-wrapper\">\n        <div class=\"unique-announcement-text\">Envío Express ciudad de Panamá </div>\n        <div class=\"unique-announcement-text\">Envíos al interior 2-3 días hábiles</div>\n        <div class=\"unique-announcement-text\">Garantía de 1 año</div>\n        <div class=\"unique-announcement-text\">Pago seguro</div>\n      </div>\n    </div>\n  </body>\n</html>"
+              },
+              "blocks": {}
+            },
+            "essential_upsell_frequently_bought_together_app_block_tRmNK3": {
+              "type": "shopify://apps/essential-upsell/blocks/frequently-bought-together-app-block/50627fd9-24fd-4250-8614-accc12826d80",
+              "settings": {}
             },
             "group_Gkrkfh": {
               "type": "group",
@@ -1350,9 +1350,9 @@
             "variant_picker_R3rGDr",
             "divider_rQPr6F",
             "buy_buttons_eYQEYi",
+            "group_6wm8td",
             "custom_liquid_cJ386L",
             "essential_upsell_frequently_bought_together_app_block_tRmNK3",
-            "group_6wm8td",
             "group_Gkrkfh",
             "group_JbmQwr",
             "divider_DmT4bL",
