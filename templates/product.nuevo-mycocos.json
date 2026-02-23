@@ -9,309 +9,6 @@
  */
 {
   "sections": {
-    "section_CRjNXK": {
-      "type": "section",
-      "blocks": {
-        "custom_liquid_KnEcJg": {
-          "type": "custom-liquid",
-          "name": "t:names.custom_liquid",
-          "disabled": true,
-          "settings": {
-            "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Product Status Box</title>\n    <style>\n        \n        .product-status-box {\nbackground: #011732E0;\nborder-radius: 30px;\n            padding: 3px 15px;\n            font-size: 12px;\n            font-weight: bold;\n            color: #fff;\n            display: inline-block;\n            text-align: left;\n            text-transform: uppercase;\n        }\n        .center-wrapper {\n            display: flex;\n            justify-content: left;\n            align-items: left;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"center-wrapper\">\n    <div class=\"product-status-box\">MÁS VENDIDO | STOCK LIMITADO</div>\n    </div>\n</body>"
-          },
-          "blocks": {}
-        },
-        "group_cJaqNL": {
-          "type": "group",
-          "name": "Titulo y subtitulo",
-          "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "product_title_4mPkcw": {
-              "type": "product-title",
-              "name": "t:names.product_title",
-              "settings": {
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h3",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground-heading)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_bhrYLc": {
-              "type": "text",
-              "name": "t:names.text",
-              "settings": {
-                "text": "<h6><strong>RASURA EL CUERPO Y LOS COCOS</strong></h6>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "paragraph",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground-heading)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "divider_mjtUEB": {
-              "type": "_divider",
-              "name": "t:names.divider",
-              "disabled": true,
-              "settings": {
-                "thickness": 1,
-                "corner_radius": "square",
-                "width_percent": 100,
-                "padding-block-start": 0,
-                "padding-block-end": 0
-              },
-              "blocks": {}
-            },
-            "text_TdbJCk": {
-              "type": "text",
-              "name": "t:names.text",
-              "disabled": true,
-              "settings": {
-                "text": "<h2>Nuestra nueva obra maestra</h2>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h5",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "divider_9YzWfq": {
-              "type": "_divider",
-              "name": "t:names.divider",
-              "settings": {
-                "thickness": 1,
-                "corner_radius": "square",
-                "width_percent": 100,
-                "padding-block-start": 0,
-                "padding-block-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "product_title_4mPkcw",
-            "text_bhrYLc",
-            "divider_mjtUEB",
-            "text_TdbJCk",
-            "divider_9YzWfq"
-          ]
-        },
-        "group_ihjh4m": {
-          "type": "group",
-          "name": "t:names.group",
-          "settings": {
-            "content_direction": "row",
-            "vertical_on_mobile": false,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "price_fYDCtf": {
-              "type": "price",
-              "name": "t:names.product_price",
-              "settings": {
-                "show_sale_price_first": true,
-                "show_installments": false,
-                "show_tax_info": false,
-                "type_preset": "h4",
-                "width": "fit-content",
-                "alignment": "left",
-                "font": "var(--font-subheading--family)",
-                "font_size": "1.125rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "color": "var(--color-foreground)",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "price_with_badge_mEyMzf": {
-              "type": "price_with_badge",
-              "name": "Discount Badge",
-              "settings": {
-                "badge_text": "OFF",
-                "color_scheme": "scheme-1",
-                "badge_background_color": "#d0473e",
-                "badge_text_color": "#ffffff",
-                "percentage_text_color": "#ffffff",
-                "badge_font_size": 14,
-                "percentage_font_size": 14,
-                "badge_border_radius": 4,
-                "badge_position": "top-left",
-                "badge_margin": 10,
-                "badge_rotation": 0,
-                "show_shadow": false
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "price_fYDCtf",
-            "price_with_badge_mEyMzf"
-          ]
-        },
-        "loox_reviews_loox_rating_UKmqMy": {
-          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
-          "settings": {
-            "contentSize": 16,
-            "pattern": "",
-            "hideText": false,
-            "alignment": "",
-            "layout": "",
-            "textColor": "",
-            "starColor": "",
-            "showAllReviews": false,
-            "looxOpenFloatingWidget": false,
-            "emptyRatingWidget": false
-          }
-        }
-      },
-      "block_order": [
-        "custom_liquid_KnEcJg",
-        "group_cJaqNL",
-        "group_ihjh4m",
-        "loox_reviews_loox_rating_UKmqMy"
-      ],
-      "name": "t:names.custom_section",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 20,
-        "padding-block-end": 0
-      }
-    },
     "main": {
       "type": "product-information",
       "blocks": {
@@ -371,6 +68,246 @@
             "padding-inline-end": 0
           },
           "blocks": {
+            "group_ikJYnW": {
+              "type": "group",
+              "name": "Titulo y subtitulo",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "product_title_LRyVX4": {
+                  "type": "product-title",
+                  "name": "t:names.product_title",
+                  "settings": {
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h3",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground-heading)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_Dbc7jN": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<h6><strong>RASURA EL CUERPO Y LOS COCOS</strong></h6>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground-heading)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "divider_pzq68R": {
+                  "type": "_divider",
+                  "name": "t:names.divider",
+                  "disabled": true,
+                  "settings": {
+                    "thickness": 1,
+                    "corner_radius": "square",
+                    "width_percent": 100,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_fQRpYD": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "disabled": true,
+                  "settings": {
+                    "text": "<h2>Nuestra nueva obra maestra</h2>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h5",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "divider_YFK9WL": {
+                  "type": "_divider",
+                  "name": "t:names.divider",
+                  "settings": {
+                    "thickness": 1,
+                    "corner_radius": "square",
+                    "width_percent": 100,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "product_title_LRyVX4",
+                "text_Dbc7jN",
+                "divider_pzq68R",
+                "text_fQRpYD",
+                "divider_YFK9WL"
+              ]
+            },
+            "group_cYCUFC": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "price_ib3PVD": {
+                  "type": "price",
+                  "name": "t:names.product_price",
+                  "settings": {
+                    "show_sale_price_first": true,
+                    "show_installments": false,
+                    "show_tax_info": false,
+                    "type_preset": "h4",
+                    "width": "fit-content",
+                    "alignment": "left",
+                    "font": "var(--font-subheading--family)",
+                    "font_size": "1.125rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "color": "var(--color-foreground)",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "price_with_badge_rMW4nk": {
+                  "type": "price_with_badge",
+                  "name": "Discount Badge",
+                  "settings": {
+                    "badge_text": "OFF",
+                    "color_scheme": "scheme-1",
+                    "badge_background_color": "#d0473e",
+                    "badge_text_color": "#ffffff",
+                    "percentage_text_color": "#ffffff",
+                    "badge_font_size": 14,
+                    "percentage_font_size": 14,
+                    "badge_border_radius": 4,
+                    "badge_position": "top-left",
+                    "badge_margin": 10,
+                    "badge_rotation": 0,
+                    "show_shadow": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "price_ib3PVD",
+                "price_with_badge_rMW4nk"
+              ]
+            },
             "variant_picker_R3rGDr": {
               "type": "variant-picker",
               "settings": {
@@ -383,6 +320,21 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "loox_reviews_loox_rating_7zAGgM": {
+              "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+              "settings": {
+                "contentSize": 16,
+                "pattern": "",
+                "hideText": false,
+                "alignment": "",
+                "layout": "",
+                "textColor": "",
+                "starColor": "",
+                "showAllReviews": false,
+                "looxOpenFloatingWidget": false,
+                "emptyRatingWidget": false
+              }
             },
             "divider_rQPr6F": {
               "type": "_divider",
@@ -1096,7 +1048,10 @@
             }
           },
           "block_order": [
+            "group_ikJYnW",
+            "group_cYCUFC",
             "variant_picker_R3rGDr",
+            "loox_reviews_loox_rating_7zAGgM",
             "divider_rQPr6F",
             "buy_buttons_eYQEYi",
             "custom_liquid_cJ386L",
@@ -1111,8 +1066,8 @@
       },
       "custom_css": [
         "/* Tamaño del swatch */.variant-option__button-label {width: 42px !important; height: 42px !important; padding: 3px !important;}",
-        "/* Color interno */.variant-option__button-label .swatch {width: 100%; height: 100%; border-radius: 8px;}",
-        "/* Reducir espacio entre opciones */.variant-option__buttons {gap: 6px !important;}"
+        " /* Color interno */.variant-option__button-label .swatch {width: 100%; height: 100%; border-radius: 8px;}",
+        " /* Reducir espacio entre opciones */.variant-option__buttons {gap: 6px !important;}"
       ],
       "settings": {
         "product": "{{ product }}",
@@ -3978,6 +3933,8 @@
         "loox_reviews_loox_dynamic_section_468J8Q": {
           "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
+            "reviews_to_display": "",
+            "default_tab": "automatic",
             "only_photos": false,
             "aggregated": false,
             "limit": 20,
@@ -4095,7 +4052,6 @@
     }
   },
   "order": [
-    "section_CRjNXK",
     "main",
     "media_with_content_MJ4eBE",
     "section_MmiFck",
