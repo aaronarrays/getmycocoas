@@ -14,7 +14,7 @@
       >
     {%- endif -%}
 
-    {% comment %} This a way to wait for main content to load when navigating to a new page so that the view transitions can work consistently {% endcomment %}
+    {% comment %} This a way to wait for main content to load when navigating to a new page so that the view transitions can work consistently
     {% if settings.transition_to_main_product or settings.page_transition_enabled %}
       <link
         rel="expect"
@@ -22,7 +22,7 @@
         blocking="render"
         id="view-transition-render-blocker"
       >
-    {% endif %}
+    {% endif %}{% endcomment %}
 
     {%- render 'meta-tags' -%}
     {%- render 'stylesheets' -%}
