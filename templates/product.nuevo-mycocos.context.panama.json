@@ -17,29 +17,29 @@
       "type": "hero",
       "disabled": false,
       "settings": {
-        "header-c448fbb9168fd71aad3bc04e1e1fe6d4": null,
+        "header-48df3fe5bee470dddd4a55f04bc19309": null,
         "media_type_1": "image",
         "image_1": "shopify://shop_images/600.000_COCOS_SALVADOS_EN_LATINOAMERICA.webp",
         "video_1": "shopify://files/videos/BANNER_VIDEOMYCOCOS OPTIMIZADO.mp4",
-        "header-0f4e6087070e12e03d07531cdc212028": null,
+        "header-241856c42de77d32a7e4ce22710b5eef": null,
         "media_type_2": "image",
         "image_2": null,
         "video_2": null,
-        "header-0b89025d6d746d43edc31869b141b69d": null,
+        "header-53481f0168e8983f4f2ad12bc2e00d1c": null,
         "stack_media_on_mobile": false,
         "custom_mobile_media": true,
-        "header-6ed72303933a17fedcb682fe3e12427e": null,
+        "header-ea6e511a5b4e1e5ac7c8ffd3fc97d2ba": null,
         "media_type_1_mobile": "image",
         "image_1_mobile": "shopify://shop_images/600.000_cocos_salvados_en_toda_latinoamerica.webp",
         "video_1_mobile": null,
-        "header-ea93622a2c524a9802560476b5fecaa5": null,
+        "header-0ebd19689b89f6e3202d9019376a7f0b": null,
         "media_type_2_mobile": "image",
         "image_2_mobile": null,
         "video_2_mobile": null,
-        "header-4420d5bc785ea21b9f591b196f5803f5": null,
+        "header-de17fc131a9a316956def7470e965027": null,
         "link": "",
         "open_in_new_tab": false,
-        "header-9ab698c93d7566963c29752ffa718d4e": null,
+        "header-b9424088cd0e26280fc25f26b0f8742f": null,
         "content_direction": "column",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
@@ -51,7 +51,7 @@
         "section_width": "full-width",
         "section_height": "auto",
         "section_height_custom": 50,
-        "header-25bb608c260ce0cad7ad4a60364da68e": null,
+        "header-0616138c6a55a2217c10cf085944d998": null,
         "color_scheme": "scheme-6",
         "toggle_overlay": true,
         "overlay_color": "#000e2024",
@@ -59,7 +59,7 @@
         "gradient_direction": "to top",
         "blurred_reflection": false,
         "reflection_opacity": 75,
-        "header-b80bbd109d6b44a66f17bc14b912a8c4": null,
+        "header-194b67f4b00b98405a78e8f5019cbfc6": null,
         "padding-block-start": 0,
         "padding-block-end": 0
       },
@@ -74,11 +74,11 @@
               "disabled": false,
               "settings": {
                 "text": "<p>La rasuradora #1</p>",
-                "header-5e6bb3578d70daf0fef1a1c587b6e3e8": null,
+                "header-17313c2deb3a96904f92976e37e992ad": null,
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
-                "header-033010b3def832a18bbd2bb9394028be": null,
+                "header-8cefec4a5e7bb31b5b8d03967cc0deef": null,
                 "type_preset": "h2",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
@@ -87,11 +87,11 @@
                 "case": "none",
                 "wrap": "nowrap",
                 "color": "var(--color-foreground)",
-                "header-73cd66729d612cc1bd6ee6617f2ab5df": null,
+                "header-e4946b450adf43a07c0e5b4200fcd7ff": null,
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
-                "header-fc5d1714dedf275e6e18050609ab3ae4": null,
+                "header-495f12c9152be8c0ff043d9248eada75": null,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
@@ -107,7 +107,7 @@
             "inherit_color_scheme": true,
             "color_scheme": "",
             "transparent_background": true,
-            "header-a7d7f44601b736894bf1707efdaa05a5": null,
+            "header-f7f4b7a52d57787be5ecd2913a7ac681": null,
             "padding-block-start": 24,
             "padding-block-end": 24,
             "gap_between_elements": 24
@@ -118,6 +118,124 @@
         "marquee_nYQWyG"
       ],
       "name": "Video"
+    },
+    "main": {
+      "settings": {},
+      "blocks": {
+        "product-details": {
+          "blocks": {
+            "group_6wm8td": {
+              "blocks": {
+                "group_jNec69": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "disabled": false,
+                  "blocks": {
+                    "icon_QEPLD9": {
+                      "type": "icon",
+                      "name": "t:names.icon",
+                      "disabled": false,
+                      "settings": {
+                        "icon": "price_tag",
+                        "svg_code": "<svg id=\"fi_5376660\" enable-background=\"new 0 0 512.239 512.239\" height=\"40\" viewbox=\"0 0 512.239 512.239\" width=\"40\" xmlns=\"http://www.w3.org/2000/svg\"><g><path d=\"m444.739.12h-377.239c-37.22 0-67.5 30.28-67.5 67.5v377c0 37.22 30.28 67.5 67.5 67.5h290.215c4.142 0 7.5-3.357 7.5-7.5s-3.358-7.5-7.5-7.5h-290.215c-28.949 0-52.5-23.552-52.5-52.5v-377c0-28.948 23.551-52.5 52.5-52.5h377.239c28.949 0 52.5 23.552 52.5 52.5v377c0 28.948-23.551 52.5-52.5 52.5h-45.354c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h45.354c37.22 0 67.5-30.28 67.5-67.5v-377c0-37.22-30.28-67.5-67.5-67.5z\"></path><path d=\"m374.511 195.961-32.44 32.44c-7.897-17.907-18.331-36.858-31.276-56.777-24.248-37.312-48.127-63.645-49.132-64.747-2.246-2.36-7.156-3.772-11.049-.043-1.008 1.089-22.754 24.713-45.75 59.01-11.415-21.137-26.468-37.818-27.482-38.93-2.253-2.351-7.081-3.798-11.049-.043-.361.391-8.941 9.706-18.122 23.279-4.984 7.807 6.173 16.262 12.425 8.404 4.094-6.054 8.101-11.241 11.163-15.003 10.595 12.9 30.844 41.936 30.888 64.342-2.432 42.491-60.651 39.003-61.697 0 0-4.975.962-10.535 2.859-16.527 2.561-8.902-10.539-13.835-14.301-4.527-2.361 7.459-3.558 14.543-3.558 21.055 0 21.463 14.825 39.528 34.773 44.495-5.922 18.295-8.919 35.464-8.919 51.148 0 57.497 46.777 104.274 104.274 104.274s104.274-46.777 104.274-104.274c0-18.238-4.08-38.308-12.182-60.061l36.907-36.907c6.057-6.098-2.49-17.279-10.606-10.608zm-29.117 107.576c0 49.226-40.048 89.274-89.274 89.274s-89.274-40.049-89.274-89.274c0-15.087 3.143-31.886 9.347-50.001 23.247-2.2 41.495-21.83 41.495-45.642 0-8.521-2.127-17.401-5.405-26.026 17.296-26.85 35.055-48.424 43.794-58.565 14.316 16.853 53.07 65.046 74.526 116.567l-85.917 85.918-33.183-33.184c-2.929-2.928-7.678-2.928-10.606 0-2.929 2.93-2.929 7.678 0 10.607l38.486 38.486c2.236 2.129 6.825 3.394 10.606 0l86.442-86.442c5.542 16.331 8.963 32.715 8.963 48.282z\"></path></g></svg>",
+                        "image_upload": null,
+                        "width": 24,
+                        "link": "",
+                        "open_in_new_tab": false
+                      }
+                    },
+                    "text_ULHLWg": {
+                      "type": "text",
+                      "name": "t:names.text",
+                      "disabled": false,
+                      "settings": {
+                        "text": "<p>Resistente<br/>al agua</p>",
+                        "header-eac8f839f34d13acf9ba7f71722dc14a": null,
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "header-ad18782d8b891c5bc63688c93ce67d33": null,
+                        "type_preset": "custom",
+                        "font": "var(--font-body--family)",
+                        "font_size": "0.875rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "header-b856331c292633511dd02117a677b3d0": null,
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "header-90519959c8a2534d01390cad79e1db44": null,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "icon_QEPLD9",
+                    "text_ULHLWg"
+                  ],
+                  "settings": {
+                    "header-4c959795bc00ec5b604a9aa69bf3565f": null,
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "center",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "header-ba91310c326544bde70a57406146fea1": null,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "header-27eec763ca638683aecbb1e7ae6ae216": null,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video": null,
+                    "video_position": "cover",
+                    "background_image": null,
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "header-b1d953d86e04ec99bf525aefe5e3e769": null,
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "header-0390db7f8358d92f94ef3e24094942b4": null,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                }
+              },
+              "block_order": [
+                "group_FqpTLT",
+                "group_rk7NyU",
+                "group_7mRbLD",
+                "group_jNec69"
+              ],
+              "settings": {}
+            }
+          },
+          "settings": {}
+        }
+      }
     }
   },
   "order": [
