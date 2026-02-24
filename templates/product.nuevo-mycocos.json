@@ -2174,7 +2174,7 @@
         "@media screen and (min-width: 769px) {{padding-right: 150px; padding-left: 150px; }}"
       ],
       "settings": {
-        "content_direction": "column",
+        "content_direction": "row",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
