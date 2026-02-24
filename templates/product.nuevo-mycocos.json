@@ -2234,7 +2234,7 @@
           "type": "_product-card",
           "static": true,
           "settings": {
-            "product_card_gap": 16,
+            "product_card_gap": 0,
             "inherit_color_scheme": true,
             "color_scheme": "",
             "border": "none",
