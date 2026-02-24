@@ -2267,7 +2267,7 @@
               "type": "buy-buttons",
               "name": "t:names.product_buy_buttons",
               "settings": {
-                "stacking": true,
+                "stacking": false,
                 "show_pickup_availability": false,
                 "gift_card_form": false,
                 "padding-block-start": 0,
