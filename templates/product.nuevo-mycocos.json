@@ -2057,90 +2057,6 @@
         "padding-block-end": 50
       }
     },
-    "hero_HfkF6c": {
-      "type": "hero",
-      "blocks": {
-        "marquee_WwtJVN": {
-          "type": "_marquee",
-          "name": "t:names.marquee",
-          "disabled": true,
-          "settings": {
-            "movement_direction": "normal",
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "transparent_background": true,
-            "padding-block-start": 24,
-            "padding-block-end": 24,
-            "gap_between_elements": 24
-          },
-          "blocks": {
-            "text_emVgap": {
-              "type": "text",
-              "settings": {
-                "text": "<p>La rasuradora #1</p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "center",
-                "type_preset": "h2",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "tight",
-                "letter_spacing": "tight",
-                "case": "none",
-                "wrap": "nowrap",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_emVgap"
-          ]
-        }
-      },
-      "block_order": [
-        "marquee_WwtJVN"
-      ],
-      "name": "Video",
-      "settings": {
-        "media_type_1": "video",
-        "video_1": "shopify://files/videos/BANNER_VIDEOMYCOCOS OPTIMIZADO.mp4",
-        "media_type_2": "image",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
-        "media_type_1_mobile": "image",
-        "media_type_2_mobile": "image",
-        "link": "",
-        "open_in_new_tab": false,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 0,
-        "section_width": "full-width",
-        "section_height": "small",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-6",
-        "toggle_overlay": true,
-        "overlay_color": "#000e2024",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
     "sp_icon_grid_UE33N3": {
       "type": "sp-icon-grid",
       "blocks": {
@@ -4369,7 +4285,6 @@
     "section_bYLB6V",
     "17563511517c41fe70",
     "section_H8P74R",
-    "hero_HfkF6c",
     "sp_icon_grid_UE33N3",
     "section_qECJHB",
     "section_wzqH8T",
