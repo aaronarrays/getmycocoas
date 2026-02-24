@@ -2247,18 +2247,11 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "image_D39Naz": {
-              "type": "image",
-              "name": "t:names.image",
+            "product_card_gallery_t9KgHr": {
+              "type": "_product-card-gallery",
+              "name": "t:names.product_card_media",
               "settings": {
-                "image": "{{ closest.product.featured_image }}",
-                "link": "",
-                "image_ratio": "adapt",
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
+                "image_ratio": "square",
                 "border": "none",
                 "border_width": 1,
                 "border_opacity": 100,
@@ -2321,7 +2314,7 @@
             }
           },
           "block_order": [
-            "image_D39Naz",
+            "product_card_gallery_t9KgHr",
             "buy_buttons_fRWpg9",
             "review_WyCF4V"
           ]
