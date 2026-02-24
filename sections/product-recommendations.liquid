@@ -34,12 +34,6 @@
   data-intent="{{ section.settings.recommendation_type }}"
   data-testid="product-recommendations-section"
   data-recommendations-performed="{{ recommendations.performed }}"
-  data-layout-type="{{ section.settings.layout_type }}"
-  data-icons-style="{{ section.settings.icons_style }}"
-  data-icons-shape="{{ section.settings.icons_shape }}"
-  data-section-width="{{ section.settings.section_width }}"
-  data-columns="{{ section.settings.columns }}"
-  data-add-to-cart-label="{{ 'products.product.add_to_cart' | t | default: 'Add to cart' }}"
   {{ section.shopify_attributes }}
 >
   <div class="section-background color-{{ section.settings.color_scheme }}"></div>
@@ -74,18 +68,7 @@
         elsif recommendations.performed and recommendations.products_count == 0
           # No recommendations found, pull from catalog
           if section.settings.recommendation_type == 'related'
-            assign current_product = section.settings.product | default: product
-            if current_product != blank
-              assign current_product_id = current_product.id
-              # Try product's collection first (more relevant), then fallback to all products
-              if current_product.collections.size > 0
-                assign products = current_product.collections.first.products | reject: 'id', current_product_id
-              else
-                assign products = collections.all.products | reject: 'id', current_product_id
-              endif
-            else
-              assign products = collections.all.products
-            endif
+            assign products = collections.all.products | reject: 'id', section.settings.product.id
           elsif section.settings.recommendation_type == 'complementary'
             # Do not recommend the All collection as complementary products
             assign products = null
@@ -97,11 +80,8 @@
       %}
       {% capture list_items %}
         {% for product in products limit: section.settings.max_products %}
-          <div class="resource-list__item product-recommendations__item">
+          <div class="resource-list__item">
             {% content_for 'block', type: '_product-card', id: 'static-product-card', closest.product: product %}
-            <a href="{{ product.url }}" class="button product-recommendations__add-to-cart">
-              {{ 'products.product.add_to_cart' | t | default: 'Agregar al carrito' }}
-            </a>
           </div>
           {% unless forloop.last %}
             <!--@list/split-->
@@ -144,7 +124,7 @@
             {% render 'resource-list-carousel',
               ref: 'resourceListCarousel',
               slides: slides,
-              slide_count: products.size,
+              slide_count: recommendations.products.size,
               settings: section.settings
             %}
         {% endcase %}
@@ -168,7 +148,7 @@
           {% render 'resource-list-carousel',
             ref: 'resourceListCarouselMobile',
             slides: slides,
-            slide_count: products.size,
+            slide_count: recommendations.products.size,
             settings: section.settings
           %}
         </div>
@@ -187,128 +167,6 @@
     {%- endif -%}
   </div>
 </product-recommendations>
-
-<script>
-  (function() {
-    var section = document.getElementById('product-recommendations-{{ section.id }}');
-    if (!section) return;
-    function initLooxInSection() {
-      var ratings = section.querySelectorAll('.loox-rating[data-id]');
-      if (ratings.length && window.loox && typeof window.loox.init === 'function') {
-        try { window.loox.init(); } catch (e) {}
-      }
-      document.dispatchEvent(new CustomEvent('loox-refresh'));
-    }
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', function() { setTimeout(initLooxInSection, 500); });
-    } else {
-      setTimeout(initLooxInSection, 500);
-    }
-  })();
-</script>
-
-{% stylesheet %}
-  .product-recommendations__skeleton-item {
-    aspect-ratio: 3 / 4;
-    background-color: var(--color-foreground);
-    opacity: var(--skeleton-opacity);
-    border-radius: 4px;
-  }
-
-  @media screen and (max-width: 749px) {
-    .product-recommendations__skeleton-item:nth-child(2n + 1) {
-      display: none;
-    }
-  }
-
-  product-recommendations:has([data-has-recommendations='false']) {
-    display: none;
-  }
-
-  /* JS-rendered product cards: ensure layout matches theme and links are clickable */
-  .product-recommendations .resource-list__item .product-card,
-  .product-recommendations .resource-list__item .product-card__link {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    min-width: 0;
-    position: relative;
-    z-index: 1;
-  }
-
-  .product-recommendations .resource-list__item a.product-card__link {
-    cursor: pointer;
-  }
-
-  .product-recommendations .resource-list__item .product-card .card-gallery {
-    min-height: 0;
-  }
-
-  .product-recommendations .resource-list__item .product-card .card-gallery img {
-    object-fit: contain;
-    object-position: center;
-  }
-
-  /* Contenedor de cada tarjeta: flex para que el botón quede abajo */
-  .product-recommendations .product-recommendations__item {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  .product-recommendations .product-recommendations__item .product-card,
-  .product-recommendations .product-recommendations__item product-card {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-  }
-  .product-recommendations .product-recommendations__item .product-card__content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  /* Estrellas Loox siempre visibles y centradas */
-  .product-recommendations .product-card__loox-rating,
-  .product-recommendations .loox-rating {
-    display: flex !important;
-    justify-content: center;
-    text-align: center;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    min-height: 20px;
-  }
-  .product-recommendations .product-recommendations__add-to-cart {
-    margin-top: 12px;
-    width: 100%;
-    justify-content: center;
-    position: relative;
-    z-index: 2;
-    flex-shrink: 0;
-  }
-
-  /* Carrusel: flechas siempre visibles y fijas en los bordes izquierdo/derecho */
-  .product-recommendations .resource-list__carousel slideshow-container {
-    position: relative;
-  }
-
-  .product-recommendations .resource-list__carousel slideshow-arrows {
-    position: absolute !important;
-    inset: 0 !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    pointer-events: none;
-    padding-inline: var(--util-page-margin-offset);
-    z-index: 2;
-  }
-
-  .product-recommendations .resource-list__carousel slideshow-arrows .slideshow-control {
-    pointer-events: auto !important;
-    opacity: 1 !important;
-    flex-shrink: 0;
-  }
-{% endstylesheet %}
 
 {% schema %}
 {
@@ -672,21 +530,9 @@
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               }
-            },
-            "review": {
-              "type": "review",
-              "name": "t:names.product_review_stars",
-              "settings": {
-                "stars_style": "shaded",
-                "show_number": true,
-                "rating_color": "primary",
-                "type_preset": "paragraph",
-                "width": "100%",
-                "alignment": "center"
-              }
             }
           },
-          "block_order": ["product-card-gallery", "product_title", "review", "price"]
+          "block_order": ["product-card-gallery", "product_title", "price"]
         }
       },
       "block_order": ["header"]
