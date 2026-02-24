@@ -79,7 +79,7 @@
     "currency_code_enabled_product_pages": true,
     "currency_code_enabled_product_cards": false,
     "currency_code_enabled_cart_items": true,
-    "quick_add": true,
+    "quick_add": false,
     "mobile_quick_add": true,
     "quick_add_color_scheme": "scheme-4",
     "show_second_image_on_hover": true,
