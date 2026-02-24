@@ -131,13 +131,16 @@
     padding-bottom: 0px;
 }
 
-
-
 .cart__summary-totals {
     display: flex;
     flex-direction: column;
     gap: 4px;
     width: 100%;
     border-block-start: none;
+}
+
+.cart-drawer__summary .cart__summary-totals:not(:has(.cart__original-total-container:empty)) {
+    border-block-start: var(--style-border-width) solid var(--color-border);
+    padding-block-start: 5px;
 }
 </style>
