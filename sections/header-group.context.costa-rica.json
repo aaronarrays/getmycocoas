@@ -1,1 +1,27 @@
-{"parent":"header-group.json","context":{"market":"costa-rica"},"sections":{"header_announcements_mMmn8e":{"settings":{"color_scheme":"scheme-7a02f9c4-18ce-4c00-a38f-eaf880e04ca8"},"blocks":{"announcement_TEXL3z":{"settings":{"text":"\u003cstrong\u003eAPROVECHA  BLACKCOCOS HASTA 35% OFF + ENVÍO GRATIS\u003c\/strong\u003e"}}}},"header_section":{"settings":{},"blocks":{"header-menu":{"settings":{"menu":"menu-ecom-project-costa-rica"}}}}}}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "header-group.json",
+  "context": {
+    "market": "costa-rica"
+  },
+  "sections": {
+    "header_section": {
+      "settings": {},
+      "blocks": {
+        "header-menu": {
+          "settings": {
+            "menu": "menu-ecom-project-costa-rica"
+          }
+        }
+      }
+    }
+  }
+}

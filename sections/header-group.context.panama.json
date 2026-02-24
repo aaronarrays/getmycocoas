@@ -12,20 +12,5 @@
   "context": {
     "market": "panama"
   },
-  "sections": {
-    "header_announcements_mMmn8e": {
-      "disabled": false,
-      "settings": {
-        "color_scheme": "scheme-d6fe0545-9cfb-4b0e-b924-8a35a90ca9b2"
-      },
-      "blocks": {
-        "announcement_TEXL3z": {
-          "disabled": false,
-          "settings": {
-            "text": "🚚 <strong>Envío GRATIS en Panamá en compras desde $90</strong>"
-          }
-        }
-      }
-    }
-  }
+  "sections": {}
 }
