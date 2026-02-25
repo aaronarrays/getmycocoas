@@ -1022,60 +1022,6 @@
         "padding-block-end": 60
       }
     },
-    "logo_carousel_dnE39p": {
-      "type": "logo-carousel",
-      "blocks": {
-        "logo_88rgdd": {
-          "type": "logo",
-          "settings": {
-            "logo_alt": "",
-            "logo_link": ""
-          }
-        },
-        "logo_9Y7Fgw": {
-          "type": "logo",
-          "settings": {
-            "logo_alt": "",
-            "logo_link": ""
-          }
-        },
-        "logo_eEfaqt": {
-          "type": "logo",
-          "settings": {
-            "logo_alt": "",
-            "logo_link": ""
-          }
-        },
-        "logo_WatWUy": {
-          "type": "logo",
-          "settings": {
-            "logo_alt": "",
-            "logo_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo_88rgdd",
-        "logo_9Y7Fgw",
-        "logo_eEfaqt",
-        "logo_WatWUy"
-      ],
-      "name": "Logos Infinitos",
-      "settings": {
-        "enable_carousel": true,
-        "section_title": "Encuéntranos en",
-        "show_title": true,
-        "carousel_speed": 60,
-        "logo_repetitions": 12,
-        "logo_width_desktop": 160,
-        "logo_max_width_desktop": 200,
-        "logo_gap_desktop": 60,
-        "section_padding_top": 40,
-        "section_padding_bottom": 40,
-        "max_width": 1450,
-        "background_color": "#ffffff"
-      }
-    },
     "ss_shoppable_video_QjR8kc": {
       "type": "ss-shoppable-video",
       "blocks": {
@@ -3173,7 +3119,6 @@
     "product_list_qU3bEB",
     "section_4URWY6",
     "product_list_7XVjtA",
-    "logo_carousel_dnE39p",
     "ss_shoppable_video_QjR8kc",
     "collection_list_CVhM9X",
     "product_list_TURAjw",
