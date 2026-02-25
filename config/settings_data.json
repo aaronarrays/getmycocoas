@@ -1240,7 +1240,10 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "@media screen and (width < 750px) {.add-to-cart-button {font-size: 14px; } .product-form-buttons > *:not(.quantity-selector) {min-width: 140px; }}"
+      "@media screen and (width < 750px) {.add-to-cart-button {font-size: 14px; } .product-form-buttons > *:not(.quantity-selector) {min-width: 140px; }}",
+      ".filled-star {fill: #ffba24;}",
+      ".rating-color--primary {--star-fill-color: #ffba24;}",
+      ".rating-wrapper .rating-count,.rating-wrapper .rating-count-separator {color: #001936;}"
     ]
   }
 }
