@@ -209,8 +209,10 @@
 
         <div class="value">
           {% if block.settings.col2 %}
-            ✓
-          {% endif %}
+  <span class="check">✓</span>
+{% else %}
+  <span class="cross">✕</span>
+{% endif %}
         </div>
       </div>
     {% endfor %}
