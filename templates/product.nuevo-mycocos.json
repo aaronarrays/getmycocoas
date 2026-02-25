@@ -732,7 +732,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Resistente<br/>al agua</p>",
+                        "text": "<p>Garantía<br/>de 1 año</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
