@@ -1,0 +1,151 @@
+{% schema %}
+{
+  "name": "Comparison Table",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Fila",
+      "settings": [
+        {
+          "type": "text",
+          "id": "feature",
+          "label": "Característica",
+          "default": "Característica"
+        },
+        {
+          "type": "checkbox",
+          "id": "col1",
+          "label": "Producto 1",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "col2",
+          "label": "Producto 2",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Comparison Table"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="comparison-table">
+  
+  <div class="comparison-header">
+    <h2>¿Cuál es ideal para ti?</h2>
+    <div class="products">
+      <div class="product">
+        <img src="{{ 'product-1.png' | asset_url }}" alt="Producto 1">
+        <p>Producto 1</p>
+      </div>
+      <div class="product">
+        <img src="{{ 'product-2.png' | asset_url }}" alt="Producto 2">
+        <p>Producto 2</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="comparison-body">
+    {% for block in section.blocks %}
+      <div class="row">
+        <div class="feature">{{ block.settings.feature }}</div>
+        <div class="value">
+          {% if block.settings.col1 %}
+            ✓
+          {% endif %}
+        </div>
+        <div class="value">
+          {% if block.settings.col2 %}
+            ✓
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+</div>
+
+<style>
+.comparison-table {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: inherit;
+}
+
+.comparison-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.comparison-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.products {
+  display: flex;
+  gap: 40px;
+}
+
+.product {
+  text-align: center;
+}
+
+.product img {
+  width: 80px;
+  height: auto;
+}
+
+.product p {
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.comparison-body {
+  border-top: 1px solid #eee;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+}
+
+.feature {
+  font-weight: 600;
+}
+
+.value {
+  text-align: center;
+  font-size: 18px;
+  color: #1a73e8;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .comparison-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .row {
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 14px;
+  }
+
+  .feature {
+    font-size: 13px;
+  }
+}
+</style>
