@@ -814,24 +814,16 @@
                   },
                   "blocks": {}
                 },
-                "klaviyo_reviews_average_rating_7kPVjp": {
-                  "type": "shopify://apps/klaviyo-reviews/blocks/average-rating/db20e365-d984-4ac4-9655-e1588d951ca9",
+                "review_EFg3BP": {
+                  "type": "review",
+                  "name": "t:names.product_review_stars",
                   "settings": {
-                    "product": "{{closest.product}}"
-                  }
-                },
-                "swatches_qDFyq9": {
-                  "type": "swatches",
-                  "name": "t:names.swatches",
-                  "disabled": true,
-                  "settings": {
-                    "product_swatches_alignment": "center",
-                    "product_swatches_alignment_mobile": "center",
-                    "hide_padding": false,
-                    "product_swatches_padding_top": 4,
-                    "product_swatches_padding_bottom": 0,
-                    "product_swatches_padding_left": 0,
-                    "product_swatches_padding_right": 0
+                    "stars_style": "shaded",
+                    "show_number": true,
+                    "rating_color": "primary",
+                    "type_preset": "paragraph",
+                    "width": "100%",
+                    "alignment": "center"
                   },
                   "blocks": {}
                 }
@@ -839,22 +831,8 @@
               "block_order": [
                 "product_title_KVpqqc",
                 "price_UrrbmR",
-                "klaviyo_reviews_average_rating_7kPVjp",
-                "swatches_qDFyq9"
+                "review_EFg3BP"
               ]
-            },
-            "review_F4hW6T": {
-              "type": "review",
-              "name": "t:names.product_review_stars",
-              "settings": {
-                "stars_style": "shaded",
-                "show_number": true,
-                "rating_color": "primary",
-                "type_preset": "paragraph",
-                "width": "100%",
-                "alignment": "center"
-              },
-              "blocks": {}
             },
             "buy_buttons_iKAQQK": {
               "type": "buy-buttons",
@@ -898,7 +876,6 @@
           "block_order": [
             "product_card_gallery_bHGj3F",
             "group_7MiY78",
-            "review_F4hW6T",
             "buy_buttons_iKAQQK"
           ]
         }
@@ -1170,17 +1147,24 @@
                   },
                   "blocks": {}
                 },
-                "klaviyo_reviews_average_rating_GTBh7W": {
-                  "type": "shopify://apps/klaviyo-reviews/blocks/average-rating/db20e365-d984-4ac4-9655-e1588d951ca9",
+                "review_9wDMLE": {
+                  "type": "review",
+                  "name": "t:names.product_review_stars",
                   "settings": {
-                    "product": "{{closest.product}}"
-                  }
+                    "stars_style": "shaded",
+                    "show_number": true,
+                    "rating_color": "primary",
+                    "type_preset": "paragraph",
+                    "width": "100%",
+                    "alignment": "center"
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
                 "product_title_NHmVni",
                 "price_4Bh7NL",
-                "klaviyo_reviews_average_rating_GTBh7W"
+                "review_9wDMLE"
               ]
             },
             "buy_buttons_86XA6m": {
@@ -1496,17 +1480,24 @@
                   },
                   "blocks": {}
                 },
-                "klaviyo_reviews_average_rating_cp8fNj": {
-                  "type": "shopify://apps/klaviyo-reviews/blocks/average-rating/db20e365-d984-4ac4-9655-e1588d951ca9",
+                "review_7p4C4W": {
+                  "type": "review",
+                  "name": "t:names.product_review_stars",
                   "settings": {
-                    "product": "{{closest.product}}"
-                  }
+                    "stars_style": "shaded",
+                    "show_number": true,
+                    "rating_color": "primary",
+                    "type_preset": "paragraph",
+                    "width": "100%",
+                    "alignment": "center"
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
                 "product_title_ARPcKt",
                 "price_Jnw63G",
-                "klaviyo_reviews_average_rating_cp8fNj"
+                "review_7p4C4W"
               ]
             },
             "buy_buttons_tcALTQ": {
@@ -1709,7 +1700,7 @@
             "product_card_gap": 8,
             "inherit_color_scheme": true,
             "color_scheme": "",
-            "border": "solid",
+            "border": "none",
             "border_width": 1,
             "border_opacity": 10,
             "border_radius": 0,
@@ -1822,17 +1813,16 @@
                   },
                   "blocks": {}
                 },
-                "swatches_NCGMUw": {
-                  "type": "swatches",
-                  "name": "t:names.swatches",
+                "review_Ey47pE": {
+                  "type": "review",
+                  "name": "t:names.product_review_stars",
                   "settings": {
-                    "product_swatches_alignment": "flex-start",
-                    "product_swatches_alignment_mobile": "flex-start",
-                    "hide_padding": false,
-                    "product_swatches_padding_top": 4,
-                    "product_swatches_padding_bottom": 0,
-                    "product_swatches_padding_left": 0,
-                    "product_swatches_padding_right": 0
+                    "stars_style": "shaded",
+                    "show_number": true,
+                    "rating_color": "primary",
+                    "type_preset": "paragraph",
+                    "width": "100%",
+                    "alignment": "center"
                   },
                   "blocks": {}
                 }
@@ -1840,7 +1830,7 @@
               "block_order": [
                 "product_title_RPthwx",
                 "price_mWwtT3",
-                "swatches_NCGMUw"
+                "review_Ey47pE"
               ]
             },
             "buy_buttons_iLWAjX": {
@@ -1898,7 +1888,7 @@
         "layout_type": "grid",
         "carousel_on_mobile": false,
         "max_products": 8,
-        "columns": 3,
+        "columns": 4,
         "mobile_columns": "2",
         "mobile_card_size": "60cqw",
         "columns_gap": 32,
