@@ -1991,7 +1991,7 @@
         "columns": 3,
         "mobile_columns": "1",
         "section_width": "page-width",
-        "columns_gap": 80,
+        "columns_gap": 60,
         "color_scheme": "scheme-91a8241d-7843-48e4-aea0-44a67fb75cd3",
         "icons_style": "none",
         "icons_shape": "none",
