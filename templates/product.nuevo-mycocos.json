@@ -1637,7 +1637,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>De la barba a los detalles: nada se te escapa.</p>",
+                    "text": "<p>De la barba a los detalles: si quieres que nada se te escape.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
