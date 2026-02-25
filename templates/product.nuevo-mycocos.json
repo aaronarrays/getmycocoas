@@ -826,7 +826,7 @@
                   "settings": {
                     "text": "<p>Pago Seguro</p>",
                     "width": "100%",
-                    "max_width": "normal",
+                    "max_width": "none",
                     "alignment": "left",
                     "type_preset": "h5",
                     "font": "var(--font-body--family)",
