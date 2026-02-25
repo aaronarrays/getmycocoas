@@ -136,9 +136,9 @@
                   "settings": {
                     "text": "<h2>Novedades</h2>",
                     "header-67e8533b8b44a1a34361863ed7e028ec": null,
-                    "width": "fit-content",
+                    "width": "100%",
                     "max_width": "normal",
-                    "alignment": "left",
+                    "alignment": "center",
                     "header-e08400edae9f408f6b003ddf5b95c3b9": null,
                     "type_preset": "h4",
                     "font": "var(--font-body--family)",
@@ -149,10 +149,40 @@
                     "wrap": "pretty",
                     "color": "var(--color-foreground)",
                     "header-c979b4e86d9029243ab0bf982fa6670b": null,
-                    "background": false,
-                    "background_color": "#00000026",
+                    "background": true,
+                    "background_color": "#003e88",
                     "corner_radius": 0,
                     "header-2210b247c3c96083064aa721bb93a4ee": null,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                },
+                "text_La8Nc": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "disabled": false,
+                  "settings": {
+                    "text": "<h2>Novedades</h2>",
+                    "header-b57db54cd165e48af15936aa2941bdf1": null,
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "header-417bc986dd4b6f6cd2dfc20120c2c15a": null,
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "header-b6a716344df4f0e7d2082e63e382e3db": null,
+                    "background": true,
+                    "background_color": "#003370",
+                    "corner_radius": 0,
+                    "header-5dacbee6ad1e07ab0305997a4b1d491e": null,
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
@@ -162,7 +192,8 @@
               },
               "block_order": [
                 "product_card_QcexMf",
-                "text_MrqYr"
+                "text_MrqYr",
+                "text_La8Nc"
               ],
               "settings": {
                 "header-2d57d56fdca6bcbd0eef28ffeb0cd58f": null,
@@ -173,7 +204,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 12,
+                "gap": 0,
                 "header-5d06a8cc7ea7a0539309eabc5b83b6fe": null,
                 "inherit_color_scheme": true,
                 "color_scheme": "",
@@ -288,7 +319,7 @@
                     "price_dGKGN"
                   ],
                   "settings": {
-                    "product": "mundialista-pack-1",
+                    "product": "all-terrain-pack™",
                     "product_card_gap": 4,
                     "inherit_color_scheme": true,
                     "color_scheme": "",
@@ -489,6 +520,16 @@
             "card_386KD",
             "card_9MJxQ8"
           ],
+          "settings": {}
+        },
+        "static-header": {
+          "blocks": {
+            "text_AnwYRV": {
+              "settings": {
+                "text": "<h3>Descubre tu combinación ideal</h3>"
+              }
+            }
+          },
           "settings": {}
         }
       }
