@@ -675,12 +675,97 @@
                     "icon_Ddxeci",
                     "text_i8gY8J"
                   ]
+                },
+                "group_iERMV6": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "center",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "icon_dcWdxg": {
+                      "type": "icon",
+                      "name": "t:names.icon",
+                      "settings": {
+                        "icon": "price_tag",
+                        "svg_code": "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" width=\"35\" height=\"35\" x=\"0\" y=\"0\" viewbox=\"0 0 682.667 682.667\" style=\"enable-background:new 0 0 512 512\" class=\"\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xml:space=\"preserve\"><g><defs stroke-width=\"15\" style=\"stroke-width: 15;\"><clippath id=\"b\" clippathunits=\"userSpaceOnUse\" stroke-width=\"15\" style=\"stroke-width: 15;\"><path d=\"M0 512h512V0H0Z\" fill=\"#000000\" opacity=\"1\" data-original=\"#000000\" stroke-width=\"15\" style=\"stroke-width: 15;\"></path></clippath></defs><mask id=\"a\" stroke-width=\"15\" style=\"stroke-width: 15;\"><rect width=\"100%\" height=\"100%\" fill=\"#ffffff\" opacity=\"1\" data-original=\"#ffffff\" stroke-width=\"15\" style=\"stroke-width: 15;\"></rect></mask><g mask=\"url(#a)\" stroke-width=\"15\" style=\"stroke-width: 15;\"><g clip-path=\"url(#b)\" transform=\"matrix(1.33333 0 0 -1.33333 0 682.667)\" stroke-width=\"15\" style=\"stroke-width: 15;\"><path d=\"M0 0a14.248 14.248 0 0 1-5.565 9.867l-35.831 27.9a2.672 2.672 0 0 0-.945 2.905l13.401 44.217a14.257 14.257 0 0 1-1.295 11.256 14.25 14.25 0 0 1-9.098 6.749l-44.997 10.505a2.673 2.673 0 0 0-2.044 2.271l-5.744 45.846a14.236 14.236 0 0 1-5.761 9.753 14.23 14.23 0 0 1-11.056 2.466l-45.378-8.704a2.673 2.673 0 0 0-2.791 1.243l-23.898 39.545c-3.608 5.97-11.311 8.827-18.692 5.413a2.85 2.85 0 0 1-.442-.255l-39.112-27.244a2.674 2.674 0 0 0-3.055 0l-37.914 26.408a14.243 14.243 0 0 1-20.334-4.324l-23.893-39.546a2.674 2.674 0 0 0-2.791-1.243l-45.379 8.704a14.248 14.248 0 0 1-16.817-12.218l-5.743-45.847a2.675 2.675 0 0 0-2.045-2.271l-46.483-10.853-.514-.168c-7.409-3.24-10.407-10.837-8.393-17.486l13.398-44.219a2.672 2.672 0 0 0-.943-2.905L-477.182 8.96a69.239 69.239 0 0 0-.402-.363c-5.464-5.968-5.124-14.142-.571-19.404l29.223-34.946a2.67 2.67 0 0 0 .32-3.038l-23.03-41.79-.216-.491c-2.566-7.666 1.071-14.998 7.371-17.955l41.825-19.63a2.672 2.672 0 0 0 1.527-2.646l-3.913-46.04a14.238 14.238 0 0 1 3.609-10.738 14.24 14.24 0 0 1 10.3-4.711l46.199-.921a2.669 2.669 0 0 0 2.47-1.796l15.151-43.648a14.243 14.243 0 0 1 18.99-8.457l42.579 17.948a2.671 2.671 0 0 0 2.988-.635l32.625-34.814.405-.363c6.508-4.81 14.595-3.612 19.352 1.462l31.595 33.714a2.67 2.67 0 0 0 2.988.636l42.576-17.948a14.255 14.255 0 0 1 11.327.114 14.237 14.237 0 0 1 7.664 8.342l15.151 43.649a2.67 2.67 0 0 0 2.472 1.796l47.704.951.537.058c7.926 1.616 12.452 8.429 11.863 15.361l-3.913 46.04a2.674 2.674 0 0 0 1.527 2.646l41.829 19.63a14.243 14.243 0 0 1 6.423 19.77L-32.938-48.79a2.67 2.67 0 0 0 .319 3.038l29.227 34.946A14.247 14.247 0 0 1 0 0Z\" style=\"stroke-width: 15; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; stroke-dasharray: none; stroke-opacity: 1;\" transform=\"translate(496.774 283.911)\" fill=\"none\" stroke=\"#000000\" stroke-width=\"15\" stroke-linecap=\"butt\" stroke-linejoin=\"miter\" stroke-miterlimit=\"10\" stroke-dasharray=\"none\" stroke-opacity=\"\" data-original=\"#000000\"></path><path d=\"M0 0c0-62.081-50.327-112.408-112.408-112.408-62.082 0-112.409 50.327-112.409 112.408s50.327 112.408 112.409 112.408C-50.327 112.408 0 62.081 0 0Z\" style=\"stroke-width: 15; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; stroke-dasharray: none; stroke-opacity: 1;\" transform=\"translate(370 256)\" fill=\"none\" stroke=\"#000000\" stroke-width=\"15\" stroke-linecap=\"butt\" stroke-linejoin=\"miter\" stroke-miterlimit=\"10\" stroke-dasharray=\"none\" stroke-opacity=\"\" data-original=\"#000000\"></path><path d=\"m0 0-69.786-69.786\" style=\"stroke-width: 15; stroke-linecap: round; stroke-linejoin: miter; stroke-miterlimit: 10; stroke-dasharray: none; stroke-opacity: 1;\" transform=\"translate(304.818 284.952)\" fill=\"none\" stroke=\"#000000\" stroke-width=\"15\" stroke-linecap=\"round\" stroke-linejoin=\"miter\" stroke-miterlimit=\"10\" stroke-dasharray=\"none\" stroke-opacity=\"\" data-original=\"#000000\"></path><path d=\"m0 0 26.667-26.668\" style=\"stroke-width: 15; stroke-linecap: round; stroke-linejoin: miter; stroke-miterlimit: 10; stroke-dasharray: none; stroke-opacity: 1;\" transform=\"translate(208.365 241.834)\" fill=\"none\" stroke=\"#000000\" stroke-width=\"15\" stroke-linecap=\"round\" stroke-linejoin=\"miter\" stroke-miterlimit=\"10\" stroke-dasharray=\"none\" stroke-opacity=\"\" data-original=\"#000000\"></path></g></g></g></svg>",
+                        "width": 24,
+                        "link": "",
+                        "open_in_new_tab": false
+                      },
+                      "blocks": {}
+                    },
+                    "text_DhbUDy": {
+                      "type": "text",
+                      "name": "t:names.text",
+                      "settings": {
+                        "text": "<p>Resistente<br/>al agua</p>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "font": "var(--font-body--family)",
+                        "font_size": "0.75rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "icon_dcWdxg",
+                    "text_DhbUDy"
+                  ]
                 }
               },
               "block_order": [
                 "group_FqpTLT",
                 "group_rk7NyU",
-                "group_7mRbLD"
+                "group_7mRbLD",
+                "group_iERMV6"
               ]
             },
             "custom_liquid_cJ386L": {
