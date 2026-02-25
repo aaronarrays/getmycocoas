@@ -144,25 +144,6 @@
     display: none;
   }
 
-  /* Loox: debajo del nombre, centrado. Orden visual = imagen(1), título(2), estrellas(3), precio(4) */
-  .product-card__content {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-  }
-  .product-card__content > .product-card__loox-rating {
-    order: 3;
-    width: 100%;
-    margin-top: var(--padding-3xs, 4px);
-    margin-bottom: var(--padding-3xs, 4px);
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-  .product-card__content > .product-card__loox-rating span {
-    justify-content: center;
-  }
-
   /* Botón "Agregar al carrito" debajo del precio: quick-add se posiciona al final de la tarjeta */
   .product-card__content:has(.quick-add) {
     padding-bottom: 56px;
