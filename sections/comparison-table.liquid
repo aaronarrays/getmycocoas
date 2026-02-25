@@ -8,6 +8,30 @@
       "label": "Título",
       "default": "¿Cuál es ideal para ti?"
     },
+    {
+  "type": "range",
+  "id": "max_width",
+  "label": "Ancho máximo",
+  "min": 600,
+  "max": 1400,
+  "step": 20,
+  "default": 1000
+},
+{
+  "type": "range",
+  "id": "icon_size",
+  "label": "Tamaño iconos",
+  "min": 12,
+  "max": 30,
+  "step": 1,
+  "default": 18
+},
+{
+  "type": "color",
+  "id": "cross_color",
+  "label": "Color X",
+  "default": "#999999"
+},
 
     {
       "type": "image_picker",
@@ -177,8 +201,10 @@
 
         <div class="value">
           {% if block.settings.col1 %}
-            ✓
-          {% endif %}
+  <span class="check">✓</span>
+{% else %}
+  <span class="cross">✕</span>
+{% endif %}
         </div>
 
         <div class="value">
@@ -194,13 +220,15 @@
 
 <style>
 .comparison-table-{{ section.id }} {
-  max-width: 1000px;
+  max-width: {{ section.settings.max_width }}px;
   margin: 0 auto;
   color: {{ section.settings.text_color }};
 }
 
 .comparison-header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
@@ -275,5 +303,21 @@
   .row {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+.check {
+  color: {{ section.settings.check_color }};
+  font-size: {{ section.settings.icon_size }}px;
+}
+
+.cross {
+  color: {{ section.settings.cross_color }};
+  font-size: {{ section.settings.icon_size }}px;
+}
+.comparison-header h2 {
+  grid-column: 1 / 2;
+}
+
+.products {
+  display: contents;
 }
 </style>
