@@ -1,7 +1,118 @@
 {% schema %}
 {
   "name": "Comparison Table",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título",
+      "default": "¿Cuál es ideal para ti?"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "product_1_image",
+      "label": "Imagen Producto 1"
+    },
+    {
+      "type": "text",
+      "id": "product_1_name",
+      "label": "Nombre Producto 1",
+      "default": "Producto 1"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "product_2_image",
+      "label": "Imagen Producto 2"
+    },
+    {
+      "type": "text",
+      "id": "product_2_name",
+      "label": "Nombre Producto 2",
+      "default": "Producto 2"
+    },
+
+    {
+      "type": "header",
+      "content": "Tipografía"
+    },
+    {
+      "type": "range",
+      "id": "title_size_desktop",
+      "label": "Tamaño título desktop",
+      "min": 16,
+      "max": 48,
+      "step": 1,
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "label": "Tamaño título mobile",
+      "min": 14,
+      "max": 32,
+      "step": 1,
+      "default": 22
+    },
+
+    {
+      "type": "range",
+      "id": "text_size_desktop",
+      "label": "Texto desktop",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "text_size_mobile",
+      "label": "Texto mobile",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "default": 14
+    },
+
+    {
+      "type": "header",
+      "content": "Colores"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color texto",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "check_color",
+      "label": "Color check",
+      "default": "#1a73e8"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Color líneas",
+      "default": "#eeeeee"
+    },
+
+    {
+      "type": "header",
+      "content": "Espaciado"
+    },
+    {
+      "type": "range",
+      "id": "row_padding",
+      "label": "Padding filas",
+      "min": 8,
+      "max": 30,
+      "step": 2,
+      "default": 14
+    }
+  ],
+
   "blocks": [
     {
       "type": "row",
@@ -28,6 +139,7 @@
       ]
     }
   ],
+
   "presets": [
     {
       "name": "Comparison Table"
@@ -36,18 +148,24 @@
 }
 {% endschema %}
 
-<div class="comparison-table">
-  
+<div class="comparison-table-{{ section.id }}">
+
   <div class="comparison-header">
-    <h2>¿Cuál es ideal para ti?</h2>
+    <h2>{{ section.settings.title }}</h2>
+
     <div class="products">
       <div class="product">
-        <img src="{{ 'product-1.png' | asset_url }}" alt="Producto 1">
-        <p>Producto 1</p>
+        {% if section.settings.product_1_image %}
+          <img src="{{ section.settings.product_1_image | image_url: width: 200 }}" alt="">
+        {% endif %}
+        <p>{{ section.settings.product_1_name }}</p>
       </div>
+
       <div class="product">
-        <img src="{{ 'product-2.png' | asset_url }}" alt="Producto 2">
-        <p>Producto 2</p>
+        {% if section.settings.product_2_image %}
+          <img src="{{ section.settings.product_2_image | image_url: width: 200 }}" alt="">
+        {% endif %}
+        <p>{{ section.settings.product_2_name }}</p>
       </div>
     </div>
   </div>
@@ -56,11 +174,13 @@
     {% for block in section.blocks %}
       <div class="row">
         <div class="feature">{{ block.settings.feature }}</div>
+
         <div class="value">
           {% if block.settings.col1 %}
             ✓
           {% endif %}
         </div>
+
         <div class="value">
           {% if block.settings.col2 %}
             ✓
@@ -73,10 +193,10 @@
 </div>
 
 <style>
-.comparison-table {
+.comparison-table-{{ section.id }} {
   max-width: 1000px;
   margin: 0 auto;
-  font-family: inherit;
+  color: {{ section.settings.text_color }};
 }
 
 .comparison-header {
@@ -87,8 +207,7 @@
 }
 
 .comparison-header h2 {
-  font-size: 28px;
-  font-weight: 700;
+  font-size: {{ section.settings.title_size_desktop }}px;
 }
 
 .products {
@@ -102,50 +221,59 @@
 
 .product img {
   width: 80px;
-  height: auto;
 }
 
 .product p {
   margin-top: 8px;
+  font-size: {{ section.settings.text_size_desktop }}px;
   font-weight: 600;
 }
 
 .comparison-body {
-  border-top: 1px solid #eee;
+  border-top: 1px solid {{ section.settings.border_color }};
 }
 
 .row {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  padding: 14px 0;
-  border-bottom: 1px solid #eee;
+  padding: {{ section.settings.row_padding }}px 0;
+  border-bottom: 1px solid {{ section.settings.border_color }};
   align-items: center;
 }
 
 .feature {
-  font-weight: 600;
+  font-size: {{ section.settings.text_size_desktop }}px;
 }
 
 .value {
   text-align: center;
   font-size: 18px;
-  color: #1a73e8;
+  color: {{ section.settings.check_color }};
 }
 
-/* Mobile */
+/* MOBILE */
 @media (max-width: 768px) {
+
   .comparison-header {
     flex-direction: column;
     gap: 20px;
   }
 
-  .row {
-    grid-template-columns: 1fr 1fr 1fr;
-    font-size: 14px;
+  .comparison-header h2 {
+    font-size: {{ section.settings.title_size_mobile }}px;
+    text-align: center;
+  }
+
+  .product p {
+    font-size: {{ section.settings.text_size_mobile }}px;
   }
 
   .feature {
-    font-size: 13px;
+    font-size: {{ section.settings.text_size_mobile }}px;
+  }
+
+  .row {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 </style>
