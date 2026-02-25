@@ -2392,7 +2392,15 @@
         "row_qBFLDz": {
           "type": "row",
           "settings": {
-            "feature": "Característica",
+            "feature": "Diseñada para todo el cuerpo",
+            "col1": true,
+            "col2": false
+          }
+        },
+        "row_xFTirk": {
+          "type": "row",
+          "settings": {
+            "feature": "Sin irritaciones ni cortes",
             "col1": true,
             "col2": false
           }
@@ -2400,7 +2408,31 @@
         "row_j3dzc9": {
           "type": "row",
           "settings": {
-            "feature": "Característica",
+            "feature": "100% a prueba de agua",
+            "col1": true,
+            "col2": false
+          }
+        },
+        "row_JRz6n6": {
+          "type": "row",
+          "settings": {
+            "feature": "Luz LED integrada",
+            "col1": true,
+            "col2": false
+          }
+        },
+        "row_68bLtC": {
+          "type": "row",
+          "settings": {
+            "feature": "Batería de larga duración",
+            "col1": true,
+            "col2": false
+          }
+        },
+        "row_wMLjUq": {
+          "type": "row",
+          "settings": {
+            "feature": "Sin protección para la piel",
             "col1": true,
             "col2": false
           }
@@ -2408,7 +2440,11 @@
       },
       "block_order": [
         "row_qBFLDz",
-        "row_j3dzc9"
+        "row_xFTirk",
+        "row_j3dzc9",
+        "row_JRz6n6",
+        "row_68bLtC",
+        "row_wMLjUq"
       ],
       "name": "Comparison Table",
       "settings": {
