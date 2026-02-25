@@ -2411,7 +2411,21 @@
         "row_j3dzc9"
       ],
       "name": "Comparison Table",
-      "settings": {}
+      "settings": {
+        "title": "Por esto la MyCOCOS® es la MEJOR",
+        "product_1_image": "shopify://shop_images/Diseno_sin_titulo_-_2025-07-01T192226.639.png",
+        "product_1_name": "Producto 1",
+        "product_2_image": "shopify://shop_images/Diseno_sin_titulo_-_2025-07-01T192033.182_1c4cec20-e503-4516-8156-16da3646c5c9.png",
+        "product_2_name": "Producto 2",
+        "title_size_desktop": 28,
+        "title_size_mobile": 22,
+        "text_size_desktop": 16,
+        "text_size_mobile": 14,
+        "text_color": "#000000",
+        "check_color": "#1a73e8",
+        "border_color": "#eeeeee",
+        "row_padding": 14
+      }
     },
     "section_bMzn3Y": {
       "type": "section",
