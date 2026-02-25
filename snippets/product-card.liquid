@@ -111,6 +111,10 @@
       {% if block_settings.padding-block-end > 0 %}--zoom-out-padding-block-end: min(var(--padding-xs), {{ block_settings.padding-block-end | times: 0.7}}px);{% endif %}
     "
   >
+        {%- comment -%} Loox stars debajo del nombre (orden visual vía CSS order) {%- endcomment -%}
+    {%- if product.id != blank -%}
+      <div class="loox-rating product-card__loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div>
+    {%- endif -%}
     {{ children }}
   </div>
 </product-card>
