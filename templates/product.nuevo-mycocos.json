@@ -1113,7 +1113,7 @@
         "padding-block-end": 0
       }
     },
-    "carousel_UNkn4m": {
+    "carousel_VwqNrn": {
       "type": "carousel",
       "blocks": {
         "static-header": {
@@ -1157,7 +1157,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "text_AnwYRV": {
+            "text_4VVwrX": {
               "type": "text",
               "name": "t:names.header",
               "settings": {
@@ -1185,7 +1185,7 @@
             }
           },
           "block_order": [
-            "text_AnwYRV"
+            "text_4VVwrX"
           ]
         },
         "static-carousel-content": {
@@ -1207,7 +1207,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "card_naVHTM": {
+            "card_Nb3KD6": {
               "type": "_card",
               "name": "t:names.card",
               "settings": {
@@ -1218,7 +1218,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 12,
+                "gap": 0,
                 "inherit_color_scheme": true,
                 "color_scheme": "",
                 "background_media": "none",
@@ -1235,12 +1235,12 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "product_card_3dpFmj": {
+                "product_card_xd9DCK": {
                   "type": "product-card",
                   "name": "t:names.product_card",
                   "settings": {
                     "product": "mundialista-pack-1",
-                    "product_card_gap": 4,
+                    "product_card_gap": 8,
                     "inherit_color_scheme": true,
                     "color_scheme": "",
                     "border": "none",
@@ -1248,16 +1248,16 @@
                     "border_opacity": 100,
                     "border_radius": 0,
                     "padding-block-start": 0,
-                    "padding-block-end": 0,
+                    "padding-block-end": 15,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
                   "blocks": {
-                    "product_card_gallery_iBUUMJ": {
+                    "product_card_gallery_fEURUj": {
                       "type": "_product-card-gallery",
                       "name": "t:names.product_card_media",
                       "settings": {
-                        "image_ratio": "adapt",
+                        "image_ratio": "square",
                         "border": "none",
                         "border_width": 1,
                         "border_opacity": 100,
@@ -1269,14 +1269,14 @@
                       },
                       "blocks": {}
                     },
-                    "product_title_7fHf9t": {
+                    "product_title_ehNLkJ": {
                       "type": "product-title",
                       "name": "t:names.product_title",
                       "settings": {
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "center",
-                        "type_preset": "h3",
+                        "type_preset": "h4",
                         "font": "var(--font-body--family)",
                         "font_size": "1rem",
                         "line_height": "normal",
@@ -1294,7 +1294,7 @@
                       },
                       "blocks": {}
                     },
-                    "price_d7nATW": {
+                    "price_L7nXzA": {
                       "type": "price",
                       "name": "t:names.product_price",
                       "settings": {
@@ -1319,17 +1319,152 @@
                     }
                   },
                   "block_order": [
-                    "product_card_gallery_iBUUMJ",
-                    "product_title_7fHf9t",
-                    "price_d7nATW"
+                    "product_card_gallery_fEURUj",
+                    "product_title_ehNLkJ",
+                    "price_L7nXzA"
                   ]
+                },
+                "text_DaziCA": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Para quienes buscan precisión sin complicarse.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#003e88",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_M4nhmC": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Ideal si quieres cubrir lo esencial con un enfoque práctico y efectivo.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#003370",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_YEqq9B": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Rutina básica pero poderosa: cuerpo y rostro bajo control.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#003e88",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_hycYmj": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Sin excesos — solo resultados.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#003370",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_9pccXQ": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Perfecto para empezar o mantener un grooming limpio y funcional.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#003e88",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
-                "product_card_3dpFmj"
+                "product_card_xd9DCK",
+                "text_DaziCA",
+                "text_M4nhmC",
+                "text_YEqq9B",
+                "text_hycYmj",
+                "text_9pccXQ"
               ]
             },
-            "card_T788MY": {
+            "card_Ta9nKj": {
               "type": "_card",
               "name": "t:names.card",
               "settings": {
@@ -1340,7 +1475,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 12,
+                "gap": 0,
                 "inherit_color_scheme": true,
                 "color_scheme": "",
                 "background_media": "none",
@@ -1357,12 +1492,12 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "product_card_hjCPgD": {
+                "product_card_m3bim3": {
                   "type": "product-card",
                   "name": "t:names.product_card",
                   "settings": {
                     "product": "all-terrain-pack™",
-                    "product_card_gap": 4,
+                    "product_card_gap": 8,
                     "inherit_color_scheme": true,
                     "color_scheme": "",
                     "border": "none",
@@ -1370,16 +1505,16 @@
                     "border_opacity": 100,
                     "border_radius": 0,
                     "padding-block-start": 0,
-                    "padding-block-end": 0,
+                    "padding-block-end": 15,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
                   "blocks": {
-                    "product_card_gallery_BXkAPw": {
+                    "product_card_gallery_9qnLei": {
                       "type": "_product-card-gallery",
                       "name": "t:names.product_card_media",
                       "settings": {
-                        "image_ratio": "adapt",
+                        "image_ratio": "square",
                         "border": "none",
                         "border_width": 1,
                         "border_opacity": 100,
@@ -1391,14 +1526,14 @@
                       },
                       "blocks": {}
                     },
-                    "product_title_tJCkYx": {
+                    "product_title_PH7cAK": {
                       "type": "product-title",
                       "name": "t:names.product_title",
                       "settings": {
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "center",
-                        "type_preset": "h3",
+                        "type_preset": "h4",
                         "font": "var(--font-body--family)",
                         "font_size": "1rem",
                         "line_height": "normal",
@@ -1416,7 +1551,7 @@
                       },
                       "blocks": {}
                     },
-                    "price_pEtWiC": {
+                    "price_wL8bRV": {
                       "type": "price",
                       "name": "t:names.product_price",
                       "settings": {
@@ -1441,17 +1576,152 @@
                     }
                   },
                   "block_order": [
-                    "product_card_gallery_BXkAPw",
-                    "product_title_tJCkYx",
-                    "price_pEtWiC"
+                    "product_card_gallery_9qnLei",
+                    "product_title_PH7cAK",
+                    "price_wL8bRV"
                   ]
+                },
+                "text_z9FqYP": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Para quienes quieren estar listos en cualquier situación.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#003e88",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_wxU7Rx": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Cubre todas las zonas clave con seguridad y precisión.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#003370",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_ftgqpa": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>De la barba a los detalles: nada se te escapa.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#003e88",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_LQef9z": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Un pack versátil para un estilo siempre impecable.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#003370",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_CDAwQk": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Ideal si buscas control total sin llegar a lo más premium.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#003e88",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
-                "product_card_hjCPgD"
+                "product_card_m3bim3",
+                "text_z9FqYP",
+                "text_wxU7Rx",
+                "text_ftgqpa",
+                "text_LQef9z",
+                "text_CDAwQk"
               ]
             },
-            "card_HDLatK": {
+            "card_rGrewW": {
               "type": "_card",
               "name": "t:names.card",
               "settings": {
@@ -1462,7 +1732,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 12,
+                "gap": 0,
                 "inherit_color_scheme": true,
                 "color_scheme": "",
                 "background_media": "none",
@@ -1479,12 +1749,12 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "product_card_JFYty6": {
+                "product_card_YyYrnx": {
                   "type": "product-card",
                   "name": "t:names.product_card",
                   "settings": {
                     "product": "kin-gs-pack-4-0",
-                    "product_card_gap": 4,
+                    "product_card_gap": 8,
                     "inherit_color_scheme": true,
                     "color_scheme": "",
                     "border": "none",
@@ -1492,16 +1762,16 @@
                     "border_opacity": 100,
                     "border_radius": 0,
                     "padding-block-start": 0,
-                    "padding-block-end": 0,
+                    "padding-block-end": 15,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
                   "blocks": {
-                    "product_card_gallery_zGwQP9": {
+                    "product_card_gallery_nayJPm": {
                       "type": "_product-card-gallery",
                       "name": "t:names.product_card_media",
                       "settings": {
-                        "image_ratio": "adapt",
+                        "image_ratio": "square",
                         "border": "none",
                         "border_width": 1,
                         "border_opacity": 100,
@@ -1513,14 +1783,14 @@
                       },
                       "blocks": {}
                     },
-                    "product_title_ERffcn": {
+                    "product_title_FUdPJH": {
                       "type": "product-title",
                       "name": "t:names.product_title",
                       "settings": {
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "center",
-                        "type_preset": "h3",
+                        "type_preset": "h4",
                         "font": "var(--font-body--family)",
                         "font_size": "1rem",
                         "line_height": "normal",
@@ -1538,7 +1808,7 @@
                       },
                       "blocks": {}
                     },
-                    "price_mKUMhc": {
+                    "price_R6JKfa": {
                       "type": "price",
                       "name": "t:names.product_price",
                       "settings": {
@@ -1563,21 +1833,156 @@
                     }
                   },
                   "block_order": [
-                    "product_card_gallery_zGwQP9",
-                    "product_title_ERffcn",
-                    "price_mKUMhc"
+                    "product_card_gallery_nayJPm",
+                    "product_title_FUdPJH",
+                    "price_R6JKfa"
                   ]
+                },
+                "text_BTV3qC": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Para quienes quieren TODO lo necesario en un solo PACK.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#003e88",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_8CnUWz": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>La solución definitiva de pies a cabeza.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#003370",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_RPr33D": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Incluye herramientas y cuidado completo para cada detalle.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#003e88",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_kJVBXE": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Preparas, mantienes y perfeccionas tu imagen sin esfuerzo.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#003370",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_VBkaA7": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Si te tomas en serio tu grooming, este es tu nivel.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#003e88",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
-                "product_card_JFYty6"
+                "product_card_YyYrnx",
+                "text_BTV3qC",
+                "text_8CnUWz",
+                "text_RPr33D",
+                "text_kJVBXE",
+                "text_VBkaA7"
               ]
             }
           },
           "block_order": [
-            "card_naVHTM",
-            "card_T788MY",
-            "card_HDLatK"
+            "card_Nb3KD6",
+            "card_Ta9nKj",
+            "card_rGrewW"
           ]
         }
       },
@@ -1586,109 +1991,12 @@
         "columns": 3,
         "mobile_columns": "1",
         "section_width": "page-width",
-        "columns_gap": 12,
+        "columns_gap": 80,
         "color_scheme": "scheme-91a8241d-7843-48e4-aea0-44a67fb75cd3",
-        "icons_style": "arrow",
+        "icons_style": "none",
         "icons_shape": "none",
         "padding-block-start": 48,
         "padding-block-end": 48
-      }
-    },
-    "sp_icon_grid_UE33N3": {
-      "type": "sp-icon-grid",
-      "blocks": {
-        "image_wmtMAr": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/gempages_516719648461292347-f6acb24a-ffb2-42a2-ba6a-3e5d533599d6.png",
-            "headline": "TODO EL CUERPO: RASURATE SIN LÍMITES",
-            "text": "Diseñada para adaptarse a cualquier zona del cuerpo, desde la cabeza hasta los cocos, las piernas y más. Consigue un rasurado preciso, sin irritaciones ni cortes, con la tecnología avanzada de <strong>MyCOCOS® 4.0</strong>",
-            "link": ""
-          }
-        },
-        "image_xTDxQh": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/gempages_516719648461292347-c6350d1e-51ad-4a1b-9da4-07602a52054f-1.webp",
-            "headline": "LIGERA Y PORTÁTIL: LLEVALA A DONDE VAYAS",
-            "text": "Compacta, ergonómica y sin cables molestos. Llévala contigo al gimnasio, de viaje o donde la necesites. Siempre listo para un retoque rápido y una piel suave en cualquier momento. (A ella le encantará)",
-            "link": ""
-          }
-        },
-        "image_LPAzTy": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/gempages_516719648461292347-900a3885-da43-420b-b7d4-90dc776eccd0_768x_d1751cf3-1acf-488b-8512-ffe563de11f7.png",
-            "headline": "100% RESISTENTE AL AGUA",
-            "text": "Ahorra tiempo y mantén tu piel impecable con un rasurado en seco o en mojado. La <strong>MyCOCOS® 4.0</strong> funciona perfectamente bajo el agua y se limpia con facilidad, para una rutina  más práctica y eficiente.",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_wmtMAr",
-        "image_xTDxQh",
-        "image_LPAzTy"
-      ],
-      "custom_css": [],
-      "name": "🚀 Cuadrícula de iconos",
-      "settings": {
-        "override_fonts": false,
-        "headline_font": "system_ui_n4",
-        "text_font": "system_ui_n4",
-        "override_text_sizes": false,
-        "text_size": 15,
-        "mobile_text_size": 15,
-        "text_line_height": "inherit",
-        "headline_size": 40,
-        "mobile_headline_size": 40,
-        "headline_line_height": "inherit",
-        "override_text_colors": true,
-        "text_color": "#ffffff",
-        "link_color": "#005bd3",
-        "show_on_device": "all",
-        "section_background_color": "linear-gradient(127deg, rgba(2, 25, 53, 1) 11%, rgba(2, 25, 53, 1) 81%)",
-        "section_background_image_color": "",
-        "section_background_size": "cover",
-        "mobile_section_background_image_color": "",
-        "mobile_section_background_size": "cover",
-        "section_padding_top_bottom": 25,
-        "mobile_section_padding_top_bottom": 25,
-        "section_padding_left_right": 25,
-        "mobile_section_padding_left_right": 25,
-        "container_background_color": "",
-        "container_max_width": 1300,
-        "container_padding_top_bottom": 10,
-        "mobile_container_padding_top_bottom": 10,
-        "container_padding_left_right": 0,
-        "mobile_container_padding_left_right": 0,
-        "element_spacing": 15,
-        "container_radius": 0,
-        "container_shadow": false,
-        "container_border_size": 0,
-        "container_border_color": "#888888",
-        "icon_headline_size": 24,
-        "icon_text_alignment": "center",
-        "mobile_icon_text_alignment": "center",
-        "icon_shape": "square",
-        "icon_padding": 300,
-        "icon_size": 10,
-        "icon_background_color": "linear-gradient(164deg, rgba(2, 25, 53, 1), rgba(2, 25, 53, 1) 100%)",
-        "icon_color": "#ffffff",
-        "media_fit": "cover",
-        "grid_gap": 25,
-        "mobile_display": "slideshow",
-        "mobile_columns": "1fr",
-        "progress_background_color": "",
-        "progress_foreground_color": "linear-gradient(177deg, rgba(17, 17, 17, 1) 3%, rgba(17, 17, 17, 1) 100%)",
-        "indicator_color": "#ffffff",
-        "enable_autoplay": true,
-        "autoplay_time": "5000",
-        "text_alignment": "center",
-        "mobile_text_alignment": "center",
-        "headline": "Prueba las herramientas que revolucionan el cuidado masculino",
-        "text": "",
-        "headline_spacing": 15
       }
     },
     "section_wzqH8T": {
@@ -2076,77 +2384,6 @@
         "gradient_direction": "to top",
         "padding-block-start": 40,
         "padding-block-end": 30
-      }
-    },
-    "sp_before_and_after_Hm98eN": {
-      "type": "sp-before-and-after",
-      "name": "🚀 Antes y Después",
-      "settings": {
-        "override_fonts": false,
-        "headline_font": "system_ui_n4",
-        "text_font": "system_ui_n4",
-        "override_text_sizes": false,
-        "text_size": 15,
-        "mobile_text_size": 15,
-        "text_line_height": "inherit",
-        "headline_size": 40,
-        "mobile_headline_size": 40,
-        "headline_line_height": "inherit",
-        "override_text_colors": true,
-        "text_color": "#ffffff",
-        "link_color": "#005bd3",
-        "show_on_device": "all",
-        "section_background_color": "linear-gradient(127deg, rgba(0, 25, 54, 1) 11%, rgba(0, 25, 54, 1) 81%)",
-        "section_background_image_color": "",
-        "section_background_size": "cover",
-        "mobile_section_background_image_color": "",
-        "mobile_section_background_size": "contain",
-        "section_padding_top_bottom": 50,
-        "mobile_section_padding_top_bottom": 30,
-        "section_padding_left_right": 0,
-        "mobile_section_padding_left_right": 25,
-        "container_background_color": "",
-        "container_max_width": 1000,
-        "container_padding_top_bottom": 20,
-        "mobile_container_padding_top_bottom": 10,
-        "container_padding_left_right": 10,
-        "mobile_container_padding_left_right": 10,
-        "element_spacing": 15,
-        "container_radius": 0,
-        "container_shadow": false,
-        "container_border_size": 0,
-        "container_border_color": "#888888",
-        "grid_gap": 20,
-        "media_location": "left",
-        "direction": "horizontal",
-        "start_percent": 50,
-        "show_bar": true,
-        "show_circle": true,
-        "bar_color": "#ffffff",
-        "bar_opacity": 50,
-        "circle_color": "#ffffff",
-        "circle_opacity": 95,
-        "circle_icon_color": "#111111",
-        "media_aspect_ratio": "3 / 4",
-        "media_radius": 5,
-        "media_shadow": true,
-        "before_image": "shopify://shop_images/gempages_516719648461292347-f55825ff-ca74-4bd0-b21f-77af6b452b5d_768x_d8795b19-6bc7-408f-9dcf-c3e02871a1c3.png",
-        "before_caption": "Antes",
-        "after_image": "shopify://shop_images/gempages_516719648461292347-583778ab-db3f-40ea-a88e-6e216c011299.png",
-        "after_caption": "Despues",
-        "text_alignment": "left",
-        "mobile_text_alignment": "center",
-        "headline": "Antes sin mycocos y despues con mycocos",
-        "content": "<p>Si no cuidas tus cocos, nadie más lo hará. <br/>Ármate hoy con la my Cocos 4.0</p>",
-        "link_text": "",
-        "link": "",
-        "headline_spacing": 0,
-        "button_background_color": "linear-gradient(164deg, rgba(17, 17, 17, 1), rgba(51, 51, 51, 1) 100%)",
-        "button_text_color": "#ffffff",
-        "button_text_size": 15,
-        "button_padding_tb": 25,
-        "button_padding_lr": 25,
-        "button_border_radius": 5
       }
     },
     "section_bMzn3Y": {
@@ -3107,10 +3344,8 @@
   "order": [
     "main",
     "17563511517c41fe70",
-    "carousel_UNkn4m",
-    "sp_icon_grid_UE33N3",
+    "carousel_VwqNrn",
     "section_wzqH8T",
-    "sp_before_and_after_Hm98eN",
     "section_bMzn3Y",
     "ss_comparison_table_20_Q7ALAF",
     "section_rJGPUA",
