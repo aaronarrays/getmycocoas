@@ -140,7 +140,25 @@
       "max": 30,
       "step": 2,
       "default": 14
-    }
+    },
+    {
+  "type": "range",
+  "id": "padding_top",
+  "label": "Padding superior",
+  "min": 0,
+  "max": 100,
+  "step": 4,
+  "default": 40
+},
+{
+  "type": "range",
+  "id": "padding_bottom",
+  "label": "Padding inferior",
+  "min": 0,
+  "max": 100,
+  "step": 4,
+  "default": 40
+}
   ],
 
   "blocks": [
@@ -180,10 +198,12 @@
 
 <div class="comparison-table-{{ section.id }}">
 
-  <div class="comparison-header">
-    <h2>{{ section.settings.title }}</h2>
+<h2 class="title-mobile">{{ section.settings.title }}</h2>
 
-    <div class="products">
+<div class="comparison-header">
+  <h2 class="title-desktop">{{ section.settings.title }}</h2>
+
+  <div class="products">
       <div class="product">
         {% if section.settings.product_1_image %}
           <img src="{{ section.settings.product_1_image | image_url: width: 200 }}" alt="">
@@ -231,6 +251,8 @@
   max-width: {{ section.settings.max_width }}px;
   margin: 0 auto;
   color: {{ section.settings.text_color }};
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
 }
 
 .comparison-header {
@@ -339,5 +361,30 @@
 /* FILAS INTERCALADAS */
 .row:nth-child(even) {
   background-color: {{ section.settings.row_alt_bg }};
+}
+
+/* CONTROL DE TÍTULOS */
+.title-mobile {
+  display: none;
+}
+
+.title-desktop {
+  display: block;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .title-desktop {
+    display: none;
+  }
+
+  .title-mobile {
+    display: block;
+    text-align: center;
+    font-size: {{ section.settings.title_size_mobile }}px;
+    margin-bottom: 20px;
+  }
+
 }
 </style>
