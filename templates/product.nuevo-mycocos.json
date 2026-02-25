@@ -2628,32 +2628,34 @@
     "1755181071a02392c1": {
       "type": "_blocks",
       "blocks": {
-        "klaviyo_reviews_product_reviews_gjeR8r": {
-          "type": "shopify://apps/klaviyo-reviews/blocks/product-reviews/db20e365-d984-4ac4-9655-e1588d951ca9",
-          "disabled": true,
-          "settings": {}
-        },
-        "loox_reviews_loox_dynamic_section_468J8Q": {
-          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+        "loox_reviews_loox_card_carousel_section_pYfBpp": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-card-carousel-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
-            "reviews_to_display": "",
-            "default_tab": "automatic",
-            "only_photos": false,
-            "aggregated": false,
-            "limit": 20,
-            "hide_thumbnails": false,
-            "maxwidth": 1080,
-            "is_sample": true
+            "maxWidth": 1440,
+            "borderRadius": 8,
+            "itemsPerView": 4,
+            "mobileItemsPerView": 1,
+            "maxNumberOfCharacters": 100,
+            "imageRatio": "0.72",
+            "reviewerNameColor": "#000000",
+            "textColor": "#000000",
+            "itemBackgroundColor": "#ffffff",
+            "starsColor": "",
+            "starsBackgroundColor": "#ffffff",
+            "arrows_backgroundColor": "#FFFFFF",
+            "arrows_iconColor": "#9A9A9A",
+            "shadow": "offset-dark",
+            "border_active": false,
+            "border_width": 2,
+            "border_color": "#000000",
+            "productIds": ""
           }
         }
       },
       "block_order": [
-        "klaviyo_reviews_product_reviews_gjeR8r",
-        "loox_reviews_loox_dynamic_section_468J8Q"
+        "loox_reviews_loox_card_carousel_section_pYfBpp"
       ],
-      "custom_css": [
-        "@media screen and (min-width: 769px) {{padding-right: 150px; padding-left: 150px; }}"
-      ],
+      "custom_css": [],
       "settings": {
         "content_direction": "row",
         "vertical_on_mobile": true,
