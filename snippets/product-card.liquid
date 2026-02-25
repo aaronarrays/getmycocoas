@@ -144,6 +144,10 @@
     display: none;
   }
 
+  /* Botón "Agregar al carrito" debajo del precio: quick-add se posiciona al final de la tarjeta */
+  .product-card__content:has(.quick-add) {
+    padding-bottom: 15px;
+  }
   .product-card__content .quick-add {
     position: absolute;
     inset: auto auto 0 0;
