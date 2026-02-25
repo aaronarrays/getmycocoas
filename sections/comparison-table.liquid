@@ -315,11 +315,13 @@
 
 /* MOBILE */
 @media (max-width: 768px) {
+.comparison-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+}
 
-  .comparison-header {
-    flex-direction: column;
-    gap: 20px;
-  }
   .comparison-table-{{ section.id }} {
   max-width: 100%;
   margin: auto 15px;
