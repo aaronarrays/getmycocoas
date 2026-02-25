@@ -2465,7 +2465,9 @@
         "text_color": "#001936",
         "check_color": "#001936",
         "border_color": "#ffffff",
-        "row_padding": 14
+        "row_padding": 14,
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "section_bMzn3Y": {
