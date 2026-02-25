@@ -12,5 +12,11 @@
   "context": {
     "market": "panama"
   },
-  "sections": {}
+  "sections": {
+    "header_section": {
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
+    }
+  }
 }
