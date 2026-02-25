@@ -15,7 +15,8 @@
   "sections": {
     "carousel_UNkn4m": {
       "settings": {
-        "columns_gap": 80
+        "columns_gap": 80,
+        "icons_style": "none"
       },
       "blocks": {
         "static-header": {
