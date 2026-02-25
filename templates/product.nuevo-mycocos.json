@@ -2386,6 +2386,33 @@
         "padding-block-end": 30
       }
     },
+    "comparison_table_gFbfad": {
+      "type": "comparison-table",
+      "blocks": {
+        "row_qBFLDz": {
+          "type": "row",
+          "settings": {
+            "feature": "Característica",
+            "col1": true,
+            "col2": false
+          }
+        },
+        "row_j3dzc9": {
+          "type": "row",
+          "settings": {
+            "feature": "Característica",
+            "col1": true,
+            "col2": false
+          }
+        }
+      },
+      "block_order": [
+        "row_qBFLDz",
+        "row_j3dzc9"
+      ],
+      "name": "Comparison Table",
+      "settings": {}
+    },
     "section_bMzn3Y": {
       "type": "section",
       "blocks": {
@@ -3346,6 +3373,7 @@
     "17563511517c41fe70",
     "carousel_VwqNrn",
     "section_wzqH8T",
+    "comparison_table_gFbfad",
     "section_bMzn3Y",
     "ss_comparison_table_20_Q7ALAF",
     "section_rJGPUA",
