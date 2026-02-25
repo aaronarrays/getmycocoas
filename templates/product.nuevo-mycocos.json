@@ -825,7 +825,7 @@
                   "name": "t:names.text",
                   "settings": {
                     "text": "<p>Pago Seguro</p>",
-                    "width": "fit-content",
+                    "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
                     "type_preset": "h5",
@@ -850,7 +850,7 @@
                   "type": "payment-icons",
                   "name": "t:names.payment_icons",
                   "settings": {
-                    "horizontal_alignment": "center",
+                    "horizontal_alignment": "flex-start",
                     "gap": 10,
                     "padding-block-start": 0,
                     "padding-block-end": 0,
