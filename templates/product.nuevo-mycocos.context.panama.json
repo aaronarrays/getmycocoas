@@ -19,14 +19,6 @@
         "icons_style": "none"
       },
       "blocks": {
-        "static-header": {
-          "blocks": {
-            "text_AnwYRV": {
-              "settings": {}
-            }
-          },
-          "settings": {}
-        },
         "static-carousel-content": {
           "blocks": {
             "card_4qPbz4": {
@@ -972,6 +964,191 @@
       "block_order": [
         "loox_reviews_loox_card_carousel_section_bQaTK"
       ]
+    },
+    "product_recommendations_MfMpV": {
+      "type": "product-recommendations",
+      "disabled": false,
+      "settings": {
+        "product": "{{ closest.product }}",
+        "recommendation_type": "related",
+        "paragraph-a5613b0c4abd43723003c0246d417566": null,
+        "header-129584cd771546d7ea1ef93ca831b07e": null,
+        "layout_type": "grid",
+        "carousel_on_mobile": false,
+        "max_products": 4,
+        "columns": 4,
+        "mobile_columns": "2",
+        "columns_gap": 12,
+        "rows_gap": 24,
+        "header-58bdcb2c66c275cb4b7931374abfc511": null,
+        "icons_style": "arrow",
+        "icons_shape": "none",
+        "header-0b76c8705c94422617275019b61258ac": null,
+        "section_width": "page-width",
+        "gap": 28,
+        "color_scheme": "scheme-1",
+        "header-f2e6f0b01d009f838eaff1721fb4adfc": null,
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      },
+      "blocks": {
+        "text_HbYkx": {
+          "type": "text",
+          "name": "t:names.header",
+          "disabled": false,
+          "settings": {
+            "text": "<h3>Productos relacionados</h3>",
+            "header-a675d37ebc2509912abc1372d50bb53c": null,
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "header-397d9a185e4ad704ede07d8f1ef32c0d": null,
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "header-1cfc6f606da6a6449761be7b609d660a": null,
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "header-cb0177dc8abc1f9ddc0dc80c70c7656a": null,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          }
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "name": "t:names.product_card",
+          "disabled": false,
+          "static": true,
+          "blocks": {
+            "product_card_gallery_rcxM6": {
+              "type": "_product-card-gallery",
+              "name": "t:names.product_card_media",
+              "disabled": false,
+              "settings": {
+                "paragraph-7dd487b5ee5c49a6a714a56d1b8a6639": null,
+                "image_ratio": "adapt",
+                "header-18105e7aae6ea04c3f66aa59bac236b3": null,
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "header-b64c91050583071c8da7d0e68654886c": null,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
+            "product_title_Vzzfi": {
+              "type": "product-title",
+              "name": "t:names.product_title",
+              "disabled": false,
+              "settings": {
+                "paragraph-4e7b86a0bf5fa9d265b85acf671ddd2e": null,
+                "header-1f0c5237e6b0dc78e0ad85f2c42f76f2": null,
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "header-f5407c2b4b623d62e92bb856bffed9a7": null,
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "header-3f5649218c9c67f9c185de63aebb87a8": null,
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "header-09ba86fc373298a8d35b5823445e4056": null,
+                "padding-block-start": 4,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
+            "review_98C7V": {
+              "type": "review",
+              "name": "t:names.product_review_stars",
+              "disabled": false,
+              "settings": {
+                "paragraph-4dcb178fd05de1db3879e642ebd07d4d": null,
+                "paragraph-223785f7ca9bbc7303e3da55edfe4ee9": null,
+                "stars_style": "shaded",
+                "show_number": true,
+                "rating_color": "primary",
+                "header-91234b76d1af88d5ebbb96d65a4e249e": null,
+                "type_preset": "paragraph",
+                "width": "100%",
+                "alignment": "center"
+              }
+            },
+            "price_QFU9r": {
+              "type": "price",
+              "name": "t:names.product_price",
+              "disabled": false,
+              "settings": {
+                "paragraph-938dc6632d0059254e91d51362ed4013": null,
+                "paragraph-99dac34ec2e85978315eb9d7df90413f": null,
+                "show_sale_price_first": true,
+                "show_installments": false,
+                "show_tax_info": false,
+                "header-16606c2e9ce23e4ab6fcf1fff41de9b6": null,
+                "type_preset": "h6",
+                "width": "100%",
+                "alignment": "left",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "color": "var(--color-foreground)",
+                "header-920350f13da5ab201c746dbc40eb3a8e": null,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            }
+          },
+          "block_order": [
+            "product_card_gallery_rcxM6",
+            "product_title_Vzzfi",
+            "review_98C7V",
+            "price_QFU9r"
+          ],
+          "settings": {
+            "paragraph-52313ac90f080520c84db896d28cc09e": null,
+            "product_card_gap": 4,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "header-19853a935bf59db0b51f55791c95acfb": null,
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "header-6d34e90697184b60808a7fa7b6365fd6": null,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_HbYkx"
+      ],
+      "name": "t:names.product_recommendations"
     }
   },
   "order": [
@@ -984,6 +1161,7 @@
     "section_bMzn3Y",
     "ss_comparison_table_20_Q7ALAF",
     "section_rJGPUA",
-    "1755181071a02392c1"
+    "1755181071a02392c1",
+    "product_recommendations_MfMpV"
   ]
 }
