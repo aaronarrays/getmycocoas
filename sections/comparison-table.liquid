@@ -313,51 +313,51 @@
   color: {{ section.settings.check_color }};
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
-.comparison-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  text-align: center;
-}
 
   .comparison-table-{{ section.id }} {
-  max-width: 100%;
-  margin: auto 15px;
-}
+    max-width: 100%;
+    margin: auto 15px;
+  }
 
-.comparison-header > .product:nth-of-type(1) {
-  grid-column: 2;
-}
-
-.comparison-header > .product:nth-of-type(2) {
-  grid-column: 3;
-}
-
-.product {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.product img {
-  display: block;
-  margin: 0 auto;
-}
-.comparison-header {
-  column-gap: 0;
-}
-
-.row {
-  column-gap: 0;
-}
+  .comparison-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+  }
 
   .comparison-header h2 {
+    grid-column: 1 / -1;
     font-size: {{ section.settings.title_size_mobile }}px;
-    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* CLAVE: eliminar conflicto */
+  .products {
+    display: contents;
+  }
+
+  /* FORZAR COLUMNAS CORRECTAS */
+  .comparison-header .product:nth-child(1) {
+    grid-column: 2;
+  }
+
+  .comparison-header .product:nth-child(2) {
+    grid-column: 3;
+  }
+
+  .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product img {
+    display: block;
+    margin: 0 auto;
+    width: 60px;
   }
 
   .product p {
@@ -369,8 +369,11 @@
   }
 
   .row {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 0;
   }
+
 }
 .check {
   color: {{ section.settings.check_color }};
