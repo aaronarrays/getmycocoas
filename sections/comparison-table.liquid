@@ -32,6 +32,12 @@
   "label": "Color X",
   "default": "#999999"
 },
+{
+  "type": "color",
+  "id": "row_alt_bg",
+  "label": "Color fila alterna",
+  "default": "#f7f7f7"
+},
 
     {
       "type": "image_picker",
@@ -323,5 +329,9 @@
 
 .products {
   display: contents;
+}
+/* FILAS INTERCALADAS */
+.row:nth-child(even) {
+  background-color: {{ section.settings.row_alt_bg }};
 }
 </style>
