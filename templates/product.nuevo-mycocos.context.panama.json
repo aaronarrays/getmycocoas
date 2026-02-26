@@ -12,5 +12,16 @@
     "market": "panama"
   },
   "parent": "product.nuevo-mycocos.json",
-  "sections": {}
+  "sections": {
+    "main": {
+      "settings": {},
+      "blocks": {
+        "media-gallery": {
+          "settings": {
+            "thumbnail_position": "left"
+          }
+        }
+      }
+    }
+  }
 }
