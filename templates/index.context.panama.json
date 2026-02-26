@@ -12,5 +12,233 @@
   "context": {
     "market": "panama"
   },
-  "sections": {}
+  "sections": {
+    "product_spotlight_XXL3d": {
+      "type": "product-spotlight",
+      "disabled": false,
+      "settings": {
+        "header-4ece74a64c8f25151c577d9d709d3c62": null,
+        "product": "kin-gs-pack-4-0",
+        "use_product_image": true,
+        "custom_image": null,
+        "header-93a9bc1b0e329b4b94e84715c2cfac5e": null,
+        "badge_text": "MÁS VENDIDO",
+        "title_text": "",
+        "subtitle_text": "THE CRACK PACK",
+        "paragraph_text": "El pack más completo para cuidar de ti y tus cocos: práctico, seguro y con todo lo que necesitas en un solo kit.",
+        "button_label": "Saber más",
+        "button_link": "",
+        "header-b49c694b53db857f918090aa1615a973": null,
+        "counter_number": "529",
+        "counter_suffix": "personas compraron en el último mes",
+        "header-fd591207b83aea1f278820c207ac37b2": null,
+        "section_width": "page-width",
+        "media_position": "left",
+        "color_scheme": "",
+        "header-e35d1951fe0425b31fcc13ee8df245fa": null,
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Destacado de producto"
+    },
+    "logo_carousel_Bwr8W": {
+      "type": "logo-carousel",
+      "disabled": false,
+      "custom_css": [
+        ".logo-carousel-container {padding: 40px 0 40px 0; background-color: #001936; overflow: hidden;}",
+        "h2.section-title {color: white;}"
+      ],
+      "settings": {
+        "enable_carousel": false,
+        "section_title": "Encuéntranos en",
+        "show_title": true,
+        "carousel_speed": 60,
+        "logo_repetitions": 13,
+        "logo_width_desktop": 160,
+        "logo_max_width_desktop": 200,
+        "logo_gap_desktop": 60,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "max_width": 1450,
+        "background_color": "#ffffff"
+      },
+      "blocks": {
+        "logo_3cfjh": {
+          "type": "logo",
+          "disabled": false,
+          "settings": {
+            "logo": "shopify://shop_images/panafoto.png",
+            "logo_alt": "",
+            "logo_link": ""
+          }
+        },
+        "logo_Yid7E": {
+          "type": "logo",
+          "disabled": false,
+          "settings": {
+            "logo": "shopify://shop_images/ulta_beauty.png",
+            "logo_alt": "",
+            "logo_link": ""
+          }
+        },
+        "logo_MMdNz": {
+          "type": "logo",
+          "disabled": false,
+          "settings": {
+            "logo": "shopify://shop_images/maissi.png",
+            "logo_alt": "",
+            "logo_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_3cfjh",
+        "logo_Yid7E",
+        "logo_MMdNz"
+      ],
+      "name": "Logos Infinitos"
+    },
+    "ss_slideshow_4_E4AGWC": {
+      "custom_css": [
+        "@media (max-width: 768px) {.custom-slideshow-content-block_RLUt3i {top: 78%; } .custom-slideshow-content-block_RLUt3i {padding: 12px 12px; } .custom-slideshow-content-block_RLUt3i a {font-weight: 500; }}",
+        ".custom-slideshow-btn-bottom-link {display: inline-block; text-decoration: none; transition: all 0.3s; font-size: 20px; color: #000000; line-height: 100%; letter-spacing: 0px; padding: 9px 12px; border-radius: 24px; background: rgb(255 186 36); border: 0px solid #ffffff;}"
+      ],
+      "settings": {},
+      "blocks": {
+        "block_9BmcA": {
+          "type": "block",
+          "disabled": false,
+          "settings": {
+            "header-1e7146660057648629490de6ebcbd259": null,
+            "slide_url": "",
+            "header-98e28ee177073f0be056907fc03d8c2a": null,
+            "image": "shopify://shop_images/1_jpg.jpg",
+            "image_mobile": "shopify://shop_images/Copia_de_Este_San_Calentin_obten_hasta_un_47_OFF_jpg_74c3ac42-a34c-440a-9b22-5e72f769677e.jpg",
+            "image_overlay": 0,
+            "header-ef90fd31b754868d00dd9ad24fc99c0e": null,
+            "container_use": false,
+            "container_width": 70,
+            "container_width_mobile": 90,
+            "container_alpha": 0.2,
+            "container_padding_horizontal": 16,
+            "container_padding_vertical": 16,
+            "container_radius": 0,
+            "container_align": "middle-center",
+            "header-b29e8debc3ee2733a59d147c67addcd7": null,
+            "heading": "",
+            "heading_custom": false,
+            "heading_font": "assistant_n4",
+            "heading_size": 50,
+            "heading_size_mobile": 50,
+            "heading_letter": 0,
+            "heading_height": 100,
+            "heading_align": "center",
+            "heading_align_mobile": "center",
+            "header-03c712636555fe7dd9b83efca2c62264": null,
+            "subheading": "",
+            "subheading_custom": false,
+            "subheading_font": "assistant_n4",
+            "subheading_size": 28,
+            "subheading_size_mobile": 22,
+            "subheading_letter": 0,
+            "subheading_height": 120,
+            "subheading_mt": 8,
+            "subheading_align": "center",
+            "subheading_align_mobile": "center",
+            "subheading_color1": "#ffffff",
+            "header-dbc893bfcc7746e8a9971d0905540e87": null,
+            "text": "",
+            "text_custom": false,
+            "text_font": "assistant_n4",
+            "text_size": 24,
+            "text_size_mobile": 24,
+            "text_letter": 0,
+            "text_height": 130,
+            "text_mt": 16,
+            "text_align": "center",
+            "text_align_mobile": "center",
+            "header-ae4bc71c3818c5a23e80b411163b71d8": null,
+            "button_position": "center-bottom",
+            "button": "Comprar Ahora",
+            "button_url": "shopify://collections/store",
+            "button_custom": false,
+            "button_font": "assistant_n4",
+            "button_size": 20,
+            "button_size_mobile": 20,
+            "button_letter": 0,
+            "button_height": 100,
+            "button_align": "center",
+            "button_align_mobile": "center",
+            "button_mt": 16,
+            "button_style": "button",
+            "button_thickness": 0,
+            "button_padding_horizontal": 16,
+            "button_padding_vertical": 12,
+            "button_radius": 24,
+            "button_max_width": 0,
+            "button_max_width_mobile": 0,
+            "header-6326718975c0d2d04637d08c7dafbcbf": null,
+            "slide_bg_color": "#a9a9a9",
+            "heading_color": "#ffffff",
+            "subheading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "container_bg": "#000000",
+            "header-5fb7769ef756db667c359dc6975fbe90": null,
+            "button_color": "#ffffff",
+            "button_hover_color": "#cfcdcd",
+            "button_bg_color": "#121212",
+            "button_bg_hover_color": "#121212",
+            "button_border_color": "#ffffff",
+            "button_border_hover_color": "#cfcdcd",
+            "header-a803f8c1f65673513080e46ff616d29f": null,
+            "slide_padding_horizontal": 32,
+            "slide_padding_vertical": 32
+          }
+        },
+        "block_RLUt3i": {
+          "disabled": true,
+          "settings": {
+            "button_position": "inline"
+          }
+        }
+      },
+      "block_order": [
+        "block_9BmcA",
+        "block_RLUt3i"
+      ]
+    },
+    "section_4URWY6": {
+      "settings": {},
+      "blocks": {
+        "group_CLBnr3": {
+          "disabled": false,
+          "settings": {}
+        }
+      }
+    },
+    "collection_list_CVhM9X": {
+      "settings": {
+        "collection_list": [
+          "los-mas-vendidos"
+        ]
+      },
+      "blocks": {}
+    }
+  },
+  "order": [
+    "ss_slideshow_4_E4AGWC",
+    "product_list_qU3bEB",
+    "section_4URWY6",
+    "product_spotlight_XXL3d",
+    "collection_list_CVhM9X",
+    "ss_shoppable_video_QjR8kc",
+    "product_list_7XVjtA",
+    "section_hHV4dU",
+    "product_list_TURAjw",
+    "logo_carousel_Bwr8W",
+    "section_VLKGPt",
+    "175648197376f746f1"
+  ]
 }
