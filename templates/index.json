@@ -717,6 +717,27 @@
         "padding-block-end": 0
       }
     },
+    "product_spotlight_iAKJV": {
+      "type": "product-spotlight",
+      "name": "Destacado de producto",
+      "settings": {
+        "product": "kin-gs-pack-4-0",
+        "use_product_image": true,
+        "badge_text": "MÁS VENDIDO",
+        "title_text": "",
+        "subtitle_text": "THE CRACK PACK",
+        "paragraph_text": "El pack más completo para cuidar de ti y tus cocos: práctico, seguro y con todo lo que necesitas en un solo kit.",
+        "button_label": "Saber más",
+        "button_link": "",
+        "counter_number": "529",
+        "counter_suffix": "personas compraron en el último mes",
+        "section_width": "page-width",
+        "media_position": "left",
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
     "product_list_7XVjtA": {
       "type": "product-list",
       "blocks": {
@@ -3190,6 +3211,7 @@
     "ss_slideshow_4_E4AGWC",
     "product_list_qU3bEB",
     "section_4URWY6",
+    "product_spotlight_iAKJV",
     "product_list_7XVjtA",
     "ss_shoppable_video_QjR8kc",
     "collection_list_CVhM9X",
