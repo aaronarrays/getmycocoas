@@ -1918,58 +1918,6 @@
         "padding-block-end": 60
       }
     },
-    "logo_carousel_BeBPBm": {
-      "type": "logo-carousel",
-      "blocks": {
-        "logo_cmnLtA": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/panafoto.png",
-            "logo_alt": "",
-            "logo_link": ""
-          }
-        },
-        "logo_PU9VhD": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/ulta_beauty.png",
-            "logo_alt": "",
-            "logo_link": ""
-          }
-        },
-        "logo_qrcrgf": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/maissi.png",
-            "logo_alt": "",
-            "logo_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo_cmnLtA",
-        "logo_PU9VhD",
-        "logo_qrcrgf"
-      ],
-      "custom_css": [
-        ".section-title {color: #fff;}"
-      ],
-      "name": "Logos Infinitos",
-      "settings": {
-        "enable_carousel": true,
-        "section_title": "Encuéntranos en",
-        "show_title": true,
-        "carousel_speed": 60,
-        "logo_repetitions": 12,
-        "logo_width_desktop": 160,
-        "logo_max_width_desktop": 200,
-        "logo_gap_desktop": 60,
-        "section_padding_top": 60,
-        "section_padding_bottom": 60,
-        "max_width": 1450,
-        "background_color": "#001936"
-      }
-    },
     "product_list_TURAjw": {
       "type": "product-list",
       "blocks": {
@@ -2286,6 +2234,58 @@
         "color_scheme": "scheme-1",
         "padding-block-start": 60,
         "padding-block-end": 60
+      }
+    },
+    "logo_carousel_BeBPBm": {
+      "type": "logo-carousel",
+      "blocks": {
+        "logo_cmnLtA": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/panafoto.png",
+            "logo_alt": "",
+            "logo_link": ""
+          }
+        },
+        "logo_PU9VhD": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/ulta_beauty.png",
+            "logo_alt": "",
+            "logo_link": ""
+          }
+        },
+        "logo_qrcrgf": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/maissi.png",
+            "logo_alt": "",
+            "logo_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_cmnLtA",
+        "logo_PU9VhD",
+        "logo_qrcrgf"
+      ],
+      "custom_css": [
+        ".section-title {color: #fff;}"
+      ],
+      "name": "Logos Infinitos",
+      "settings": {
+        "enable_carousel": true,
+        "section_title": "Encuéntranos en",
+        "show_title": true,
+        "carousel_speed": 60,
+        "logo_repetitions": 12,
+        "logo_width_desktop": 160,
+        "logo_max_width_desktop": 200,
+        "logo_gap_desktop": 60,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "max_width": 1450,
+        "background_color": "#001936"
       }
     },
     "section_hHV4dU": {
@@ -3217,9 +3217,9 @@
     "collection_list_cnBNYp",
     "ss_shoppable_video_QjR8kc",
     "product_list_7XVjtA",
-    "logo_carousel_BeBPBm",
-    "product_list_TURAjw",
     "section_hHV4dU",
+    "product_list_TURAjw",
+    "logo_carousel_BeBPBm",
     "section_VLKGPt",
     "175648197376f746f1"
   ]
