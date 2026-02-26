@@ -22,6 +22,35 @@
           }
         }
       }
+    },
+    "carousel_VwqNrn": {
+      "custom_css": [
+        ".text-block {color: black;}"
+      ],
+      "settings": {},
+      "blocks": {
+        "static-carousel-content": {
+          "blocks": {
+            "card_Nb3KD6": {
+              "blocks": {
+                "text_DaziCA": {
+                  "settings": {
+                    "background_color": "#ffba25",
+                    "color": "var(--color-foreground)"
+                  }
+                },
+                "text_M4nhmC": {
+                  "settings": {
+                    "background_color": "#d3991c"
+                  }
+                }
+              },
+              "settings": {}
+            }
+          },
+          "settings": {}
+        }
+      }
     }
   }
 }
