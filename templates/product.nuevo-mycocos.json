@@ -1956,6 +1956,9 @@
           ]
         }
       },
+      "custom_css": [
+        ".custom-color,.custom-color > :is(h1, h2, h3, h4, h5, h6, p, *) {color: #001936;}"
+      ],
       "name": "t:names.carousel",
       "settings": {
         "columns": 3,
