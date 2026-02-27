@@ -20,6 +20,16 @@
           "settings": {
             "thumbnail_position": "left"
           }
+        },
+        "product-details": {
+          "blocks": {
+            "variant_picker_R3rGDr": {
+              "settings": {
+                "show_swatches": true
+              }
+            }
+          },
+          "settings": {}
         }
       }
     },
@@ -28,24 +38,7 @@
         ".custom-color,.custom-color > :is(h1, h2, h3, h4, h5, h6, p, *) {color: #001936;}"
       ],
       "settings": {},
-      "blocks": {
-        "static-carousel-content": {
-          "blocks": {
-            "card_Nb3KD6": {
-              "blocks": {
-                "text_DaziCA": {
-                  "settings": {}
-                },
-                "text_M4nhmC": {
-                  "settings": {}
-                }
-              },
-              "settings": {}
-            }
-          },
-          "settings": {}
-        }
-      }
+      "blocks": {}
     }
   }
 }
