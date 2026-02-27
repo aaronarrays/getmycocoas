@@ -419,5 +419,34 @@
     margin-bottom: 20px;
   }
 
+    .comparison-header .product:nth-child(1) img {
+    width: 80px;
+  }
+
+  .comparison-header .product:nth-child(2) img {
+    width: 50px;
+  }
+
+}
+/* PRIMER PRODUCTO MÁS GRANDE */
+.comparison-header .product:nth-child(1) img {
+  width: 110px; /* ajusta a gusto */
+}
+
+.comparison-header .product:nth-child(1) p {
+  font-size: calc({{ section.settings.text_size_desktop }}px + 2px);
+  font-weight: 700;
+}
+
+/* SEGUNDO PRODUCTO (más pequeño opcional) */
+.comparison-header .product:nth-child(2) img {
+  width: 70px; /* opcional */
+}
+
+.comparison-header .product:nth-child(2) p {
+  opacity: 0.8; /* opcional para contraste visual */
+}
+.comparison-header .product:nth-child(1) {
+  transform: scale(1.05);
 }
 </style>
