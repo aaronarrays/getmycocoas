@@ -77,44 +77,32 @@
                 {{ 'lifestyle-1' | placeholder_svg_tag: 'round-out-routine__placeholder-svg' }}
               </div>
             {% endif %}
-            <div class="round-out-routine__card-overlay">
-              <div class="round-out-routine__product-card">
-              {% if item_product != blank and item_product.featured_image != blank %}
-                <div class="round-out-routine__product-thumb">
-                  {% render 'image',
-                    image: item_product.featured_image,
-                    height: 120,
-                    class: 'round-out-routine__product-thumb-img'
-                  %}
-                </div>
-              {% endif %}
-              <div class="round-out-routine__product-info">
-                {% if product_title != blank %}
-                  <span class="round-out-routine__product-name">{{ product_title }}</span>
-                {% endif %}
-                {% if product_subtitle != blank %}
-                  <span class="round-out-routine__product-subtitle">{{ product_subtitle }}</span>
-                {% endif %}
-              </div>
-              {% if item_product != blank and variant != blank %}
-                {% assign form_id = 'ror-form-' | append: section.id | append: '-' | append: block.id %}
-                {% form 'product', item_product, id: form_id, data-type: 'add-to-cart-form' %}
-                  <input type="hidden" name="id" value="{{ variant.id }}">
-                  <input type="hidden" name="return_to" value="{{ request.path }}">
-                  <button type="submit" class="round-out-routine__btn" {% unless can_add %}disabled{% endunless %}>{{ item_button_label }}</button>
-                {% endform %}
-              {% elsif item_product != blank %}
-                <a href="{{ item_product.url }}" class="round-out-routine__btn">{{ item_button_label }}</a>
-              {% elsif block.settings.button_link != blank %}
-                <a href="{{ block.settings.button_link }}" class="round-out-routine__btn">{{ item_button_label }}</a>
-              {% else %}
-                <span class="round-out-routine__btn round-out-routine__btn--disabled">{{ item_button_label }}</span>
-              {% endif %}
-              </div>
-            </div>
           </div>
 
-          {% comment %} Debajo de la foto: headline y descripción {% endcomment %}
+          {% comment %} Barra de producto justo debajo de la foto: solo título + botón en una fila {% endcomment %}
+          <div class="round-out-routine__product-bar">
+            <div class="round-out-routine__product-info">
+              {% if product_title != blank %}
+                <span class="round-out-routine__product-name">{{ product_title }}</span>
+              {% endif %}
+            </div>
+            {% if item_product != blank and variant != blank %}
+              {% assign form_id = 'ror-form-' | append: section.id | append: '-' | append: block.id %}
+              {% form 'product', item_product, id: form_id, data-type: 'add-to-cart-form' %}
+                <input type="hidden" name="id" value="{{ variant.id }}">
+                <input type="hidden" name="return_to" value="{{ request.path }}">
+                <button type="submit" class="round-out-routine__btn" {% unless can_add %}disabled{% endunless %}>{{ item_button_label }}</button>
+              {% endform %}
+            {% elsif item_product != blank %}
+              <a href="{{ item_product.url }}" class="round-out-routine__btn">{{ item_button_label }}</a>
+            {% elsif block.settings.button_link != blank %}
+              <a href="{{ block.settings.button_link }}" class="round-out-routine__btn">{{ item_button_label }}</a>
+            {% else %}
+              <span class="round-out-routine__btn round-out-routine__btn--disabled">{{ item_button_label }}</span>
+            {% endif %}
+          </div>
+
+          {% comment %} Debajo: headline y descripción {% endcomment %}
           <div class="round-out-routine__card-content">
             {% if item_headline != blank %}
               <h3 class="round-out-routine__headline">{{ item_headline }}</h3>
@@ -319,50 +307,18 @@
       min-width: 0;
     }
 
-    .round-out-routine__card-overlay {
+    .round-out-routine__product-bar {
       padding: 10px 12px;
-    }
-
-    .round-out-routine__product-card {
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-      align-items: center;
       gap: 10px;
-      padding: 8px 10px;
-      text-align: left;
     }
 
-    .round-out-routine__product-card form {
-      flex-basis: auto;
-      flex-grow: 0;
-    }
-
-    .round-out-routine__product-thumb {
-      width: 44px;
-      height: 44px;
-      flex-shrink: 0;
-    }
-
-    .round-out-routine__product-info {
-      flex: 1 1 auto;
-      min-width: 0;
-      align-items: flex-start;
-      text-align: left;
-    }
-
-    .round-out-routine__product-name {
-      -webkit-line-clamp: 1;
+    .round-out-routine__product-bar .round-out-routine__product-name {
       font-size: 0.8125rem;
     }
 
-    .round-out-routine__product-subtitle {
-      font-size: 0.6875rem;
-    }
-
-    .round-out-routine__btn {
+    .round-out-routine__product-bar .round-out-routine__btn {
       padding: 6px 12px;
       font-size: 0.75rem;
-      flex-shrink: 0;
     }
   }
 
@@ -430,79 +386,37 @@
     opacity: 0.4;
   }
 
-  .round-out-routine__card-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px 12px;
+  .round-out-routine__product-bar {
+    width: 100%;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    z-index: 1;
-  }
-
-  .round-out-routine__product-card {
+    gap: 12px;
+    padding: 12px 16px;
     background: #fff;
     color: #1a1a1a;
-    padding: 12px 16px;
-    border-radius: 8px;
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    max-width: none;
     box-sizing: border-box;
     box-shadow: 0 4px 20px rgb(0 0 0 / 0.2);
-    text-align: center;
   }
 
-  .round-out-routine__product-card form,
-  .round-out-routine__product-card .round-out-routine__btn {
-    flex: 0 0 auto;
-  }
-
-  .round-out-routine__product-thumb {
-    width: 56px;
-    height: 56px;
-    flex-shrink: 0;
-    border-radius: 6px;
-    overflow: hidden;
-  }
-
-  .round-out-routine__product-thumb-img,
-  .round-out-routine__product-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .round-out-routine__product-info {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+  .round-out-routine__product-bar .round-out-routine__product-info {
     flex: 1 1 auto;
     min-width: 0;
+    display: flex;
     align-items: center;
-    overflow: hidden;
   }
 
-  .round-out-routine__product-name {
+  .round-out-routine__product-bar .round-out-routine__product-name {
     font-weight: 600;
     font-size: 0.9rem;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    white-space: nowrap;
   }
 
-  .round-out-routine__product-subtitle {
-    font-size: 0.75rem;
-    color: #555;
+  .round-out-routine__product-bar form,
+  .round-out-routine__product-bar .round-out-routine__btn {
+    flex: 0 0 auto;
   }
 
   .round-out-routine__btn {
