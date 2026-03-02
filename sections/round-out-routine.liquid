@@ -1,0 +1,651 @@
+{% comment %}
+  Round out your routine - Sección tipo MANSCAPED: título + grid/carrusel de productos con imagen, card overlay y CTA.
+  Cada bloque: imagen de fondo, producto (opcional), subtítulo, headline, descripción, botón Add.
+{% endcomment %}
+
+{% liquid
+  assign section_title = section.settings.title | default: 'Round out your routine.'
+  assign title_highlight = section.settings.title_highlight
+  assign layout = section.settings.layout
+  assign bg_color = section.settings.background_color | default: '#1a1a1a'
+  assign text_color = section.settings.text_color | default: '#ffffff'
+  assign accent_color = section.settings.accent_color | default: '#ffba25'
+  assign accent_text = section.settings.accent_text_color | default: '#011732'
+%}
+
+<div
+  class="round-out-routine section section--{{ section.settings.section_width }}"
+  style="
+    --ror-bg: {{ bg_color }};
+    --ror-text: {{ text_color }};
+    --ror-accent: {{ accent_color }};
+    --ror-accent-text: {{ accent_text }};
+    {% render 'spacing-style', settings: section.settings %}
+  "
+>
+  <div class="round-out-routine__inner">
+    <div class="round-out-routine__header">
+      <h2 class="round-out-routine__title">
+        {% if title_highlight != blank %}
+          <span class="round-out-routine__title-highlight" style="background-color: {{ title_highlight }};">{{ section_title }}</span>
+        {% else %}
+          {{ section_title }}
+        {% endif %}
+      </h2>
+    </div>
+
+    <div class="round-out-routine__grid round-out-routine__grid--{{ layout }} {% if section.blocks.size > 2 and layout == 'carousel' %}round-out-routine__grid--carousel{% endif %}" data-round-out-routine>
+      {% for block in section.blocks %}
+        {% if block.type != 'item' %}
+          {% continue %}
+        {% endif %}
+        {% liquid
+          assign item_image = block.settings.image
+          assign item_image_mobile = block.settings.image_mobile
+          assign item_product = block.settings.product
+          assign item_headline = block.settings.headline
+          assign item_description = block.settings.description
+          assign item_button_label = block.settings.button_label | default: 'Add'
+          assign product_title = item_product.title | default: block.settings.product_title_override
+          assign product_subtitle = block.settings.product_subtitle
+          if product_title == blank and block.settings.product_title_override != blank
+            assign product_title = block.settings.product_title_override
+          elsif product_title == blank and item_product != blank
+            assign product_title = item_product.title
+          endif
+
+          assign variant = item_product.selected_or_first_available_variant
+          assign can_add = false
+          if variant and variant.available
+            assign can_add = true
+          endif
+        %}
+        <div class="round-out-routine__card" {{ block.shopify_attributes }}>
+          <div class="round-out-routine__card-media">
+            {% if item_image != blank %}
+              {% if item_image_mobile != blank %}
+                <picture>
+                  <source media="(max-width: 749px)" srcset="{{ item_image_mobile | image_url: width: 670 }}">
+                  <img src="{{ item_image | image_url: width: 820 }}" alt="{{ item_image.alt | escape }}" class="round-out-routine__card-image" loading="lazy" width="820" height="{{ 820 | divided_by: item_image.aspect_ratio | round }}">
+                </picture>
+              {% else %}
+                {% render 'image', image: item_image, class: 'round-out-routine__card-image' %}
+              {% endif %}
+            {% else %}
+              <div class="round-out-routine__placeholder">
+                {{ 'lifestyle-1' | placeholder_svg_tag: 'round-out-routine__placeholder-svg' }}
+              </div>
+            {% endif %}
+          </div>
+
+          <div class="round-out-routine__card-overlay">
+            <div class="round-out-routine__product-card">
+              {% if item_product != blank and item_product.featured_image != blank %}
+                <div class="round-out-routine__product-thumb">
+                  {% render 'image',
+                    image: item_product.featured_image,
+                    height: 120,
+                    class: 'round-out-routine__product-thumb-img'
+                  %}
+                </div>
+              {% endif %}
+              <div class="round-out-routine__product-info">
+                {% if product_title != blank %}
+                  <span class="round-out-routine__product-name">{{ product_title }}</span>
+                {% endif %}
+                {% if product_subtitle != blank %}
+                  <span class="round-out-routine__product-subtitle">{{ product_subtitle }}</span>
+                {% endif %}
+              </div>
+              {% if item_product != blank and variant != blank %}
+                {% assign form_id = 'ror-form-' | append: section.id | append: '-' | append: block.id %}
+                {% form 'product', item_product, id: form_id, data-type: 'add-to-cart-form' %}
+                  <input type="hidden" name="id" value="{{ variant.id }}">
+                  <input type="hidden" name="return_to" value="{{ request.path }}">
+                  <button type="submit" class="round-out-routine__btn" {% unless can_add %}disabled{% endunless %}>{{ item_button_label }}</button>
+                {% endform %}
+              {% elsif item_product != blank %}
+                <a href="{{ item_product.url }}" class="round-out-routine__btn">{{ item_button_label }}</a>
+              {% elsif block.settings.button_link != blank %}
+                <a href="{{ block.settings.button_link }}" class="round-out-routine__btn">{{ item_button_label }}</a>
+              {% else %}
+                <span class="round-out-routine__btn round-out-routine__btn--disabled">{{ item_button_label }}</span>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="round-out-routine__card-content">
+            {% if item_headline != blank %}
+              <h3 class="round-out-routine__headline">{{ item_headline }}</h3>
+            {% endif %}
+            {% if item_description != blank %}
+              <p class="round-out-routine__description">{{ item_description }}</p>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if section.blocks.size > 2 and layout == 'carousel' %}
+      <nav class="round-out-routine__nav" aria-label="Navegación del carrusel">
+        <button type="button" class="round-out-routine__nav-btn round-out-routine__nav-btn--prev" aria-label="Anterior" data-ror-prev>
+          <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke="currentColor" stroke-width="1.5" d="M1.167 1.5 7 7.333 12.834 1.5"/>
+          </svg>
+        </button>
+        <div class="round-out-routine__dots" data-ror-dots aria-live="polite"></div>
+        <button type="button" class="round-out-routine__nav-btn round-out-routine__nav-btn--next" aria-label="Siguiente" data-ror-next>
+          <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke="currentColor" stroke-width="1.5" d="M1.167 1.5 7 7.333 12.834 1.5"/>
+          </svg>
+        </button>
+      </nav>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  (function() {
+    const section = document.querySelector('[data-round-out-routine]');
+    if (!section || !section.classList.contains('round-out-routine__grid--carousel')) return;
+
+    const prevBtn = section.closest('.round-out-routine').querySelector('[data-ror-prev]');
+    const nextBtn = section.closest('.round-out-routine').querySelector('[data-ror-next]');
+    const dotsEl = section.closest('.round-out-routine').querySelector('[data-ror-dots]');
+    const cards = section.querySelectorAll('.round-out-routine__card');
+    const total = cards.length;
+    if (total < 2) return;
+
+    let index = 0;
+    const cardWidth = cards[0].offsetWidth;
+    const gap = 16;
+
+    function updateCarousel() {
+      const offset = -(index * (cardWidth + gap));
+      section.style.transform = 'translate3d(' + offset + 'px, 0, 0)';
+      if (dotsEl) {
+        dotsEl.innerHTML = Array.from({ length: total }, function(_, i) {
+          return '<span role="button" tabindex="0" data-index="' + i + '" class="round-out-routine__dot' + (i === index ? ' is-active' : '') + '" aria-label="Slide ' + (i + 1) + '"></span>';
+        }).join('');
+        dotsEl.querySelectorAll('.round-out-routine__dot').forEach(function(dot) {
+          dot.addEventListener('click', function() {
+            index = parseInt(this.dataset.index, 10);
+            updateCarousel();
+          });
+        });
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function() {
+        index = index <= 0 ? total - 1 : index - 1;
+        updateCarousel();
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function() {
+        index = index >= total - 1 ? 0 : index + 1;
+        updateCarousel();
+      });
+    }
+
+    updateCarousel();
+    window.addEventListener('resize', function() {
+      const w = section.querySelector('.round-out-routine__card');
+      if (w) updateCarousel();
+    });
+  })();
+</script>
+
+{% stylesheet %}
+  .round-out-routine {
+    background-color: var(--ror-bg, #1a1a1a);
+    color: var(--ror-text, #fff);
+  }
+
+  .round-out-routine__inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 48px 24px 56px;
+  }
+
+  .round-out-routine__header {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  .round-out-routine__title {
+    margin: 0;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--ror-text);
+  }
+
+  .round-out-routine__title-highlight {
+    padding: 2px 12px;
+    display: inline-block;
+  }
+
+  .round-out-routine__grid {
+    display: grid;
+    gap: 0;
+    align-items: stretch;
+  }
+
+  .round-out-routine__grid--grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .round-out-routine__grid--carousel {
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+  }
+
+  @media (max-width: 749px) {
+    .round-out-routine__grid--grid,
+    .round-out-routine__grid--carousel {
+      grid-template-columns: 1fr;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      gap: 16px;
+      padding-bottom: 8px;
+    }
+
+    .round-out-routine__grid--carousel {
+      transform: none !important;
+    }
+
+    .round-out-routine__card {
+      flex: 0 0 min(85%, 340px);
+      scroll-snap-align: start;
+    }
+  }
+
+  .round-out-routine__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 380px;
+  }
+
+  .round-out-routine__card-media {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .round-out-routine__card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .round-out-routine__placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255 255 255 / 0.06);
+  }
+
+  .round-out-routine__placeholder-svg {
+    width: 50%;
+    opacity: 0.4;
+  }
+
+  .round-out-routine__card-overlay {
+    position: relative;
+    padding: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    min-height: 200px;
+    z-index: 1;
+  }
+
+  .round-out-routine__product-card {
+    background: #fff;
+    color: #1a1a1a;
+    padding: 12px 16px;
+    border-radius: 8px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    max-width: 280px;
+    box-shadow: 0 4px 20px rgb(0 0 0 / 0.2);
+  }
+
+  .round-out-routine__product-thumb {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .round-out-routine__product-thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .round-out-routine__product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .round-out-routine__product-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .round-out-routine__product-subtitle {
+    font-size: 0.75rem;
+    color: #555;
+  }
+
+  .round-out-routine__btn {
+    background: var(--ror-accent, #ffba25);
+    color: var(--ror-accent-text, #011732);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+  }
+
+  .round-out-routine__btn:hover:not(:disabled) {
+    opacity: 0.9;
+  }
+
+  .round-out-routine__btn--disabled,
+  .round-out-routine__btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .round-out-routine__card-content {
+    position: relative;
+    padding: 20px 24px 24px;
+    z-index: 1;
+  }
+
+  .round-out-routine__headline {
+    margin: 0 0 8px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ror-text);
+  }
+
+  .round-out-routine__description {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--ror-text);
+    opacity: 0.95;
+  }
+
+  .round-out-routine__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .round-out-routine__nav-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--ror-accent);
+    background: var(--ror-accent);
+    color: var(--ror-accent-text);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+  }
+
+  .round-out-routine__nav-btn:hover {
+    opacity: 0.9;
+  }
+
+  .round-out-routine__nav-btn svg {
+    width: 14px;
+    height: 9px;
+  }
+
+  .round-out-routine__nav-btn--prev svg {
+    transform: rotate(-90deg);
+  }
+
+  .round-out-routine__nav-btn--next svg {
+    transform: rotate(90deg);
+  }
+
+  .round-out-routine__dots {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .round-out-routine__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 0.4);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .round-out-routine__dot.is-active {
+    background: var(--ror-accent);
+  }
+
+  .round-out-routine__dot:hover {
+    background: rgb(255 255 255 / 0.7);
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Round out your routine",
+  "tag": "section",
+  "class": "round-out-routine-section",
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Título"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título de la sección",
+      "default": "Round out your routine."
+    },
+    {
+      "type": "color",
+      "id": "title_highlight",
+      "label": "Fondo del título (resaltado)",
+      "info": "Dejar vacío para sin fondo. Ej: azul para resaltar."
+    },
+    {
+      "type": "header",
+      "content": "Diseño"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Disposición",
+      "options": [
+        { "value": "grid", "label": "Dos columnas fijas" },
+        { "value": "carousel", "label": "Carrusel (móvil siempre en carrusel)" }
+      ],
+      "default": "grid"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Ancho de sección",
+      "options": [
+        { "value": "page-width", "label": "Ancho de página" },
+        { "value": "full-width", "label": "Ancho completo" }
+      ],
+      "default": "full-width"
+    },
+    {
+      "type": "header",
+      "content": "Colores"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Fondo",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Texto",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Botón y acentos",
+      "default": "#ffba25"
+    },
+    {
+      "type": "color",
+      "id": "accent_text_color",
+      "label": "Texto del botón",
+      "default": "#011732"
+    },
+    {
+      "type": "header",
+      "content": "Espaciado"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Arriba",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Abajo",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 56
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Producto / Tarjeta",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen de fondo"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Imagen móvil (opcional)"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Producto",
+          "info": "Opcional. Si se selecciona, el botón añadirá al carrito."
+        },
+        {
+          "type": "text",
+          "id": "product_title_override",
+          "label": "Nombre del producto (si no usas producto)"
+        },
+        {
+          "type": "text",
+          "id": "product_subtitle",
+          "label": "Subtítulo del producto",
+          "info": "Ej: Gentle Groin Exfoliant, Ball Aftershave Lotion"
+        },
+        {
+          "type": "text",
+          "id": "headline",
+          "label": "Headline",
+          "default": "Exfoliate.",
+          "info": "Ej: Exfoliate., Soothe., Trim."
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Descripción",
+          "default": "Witch hazel, willow bark, and volcanic rock scrub away and clear skin to reveal a smooth surface and clean slate to shave on."
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Texto del botón",
+          "default": "Add"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Enlace del botón (si no hay producto)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Round out your routine",
+      "category": "Productos",
+      "blocks": [
+        {
+          "type": "item",
+          "settings": {
+            "headline": "Exfoliate.",
+            "description": "Witch hazel, willow bark, and volcanic rock scrub away and clear skin to reveal a smooth surface and clean slate to shave on.",
+            "button_label": "Add"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "headline": "Soothe.",
+            "description": "This post-shave lotion hydrates and helps reduce ball skin irritation, making your testicles the most comfortable they've felt in years.",
+            "button_label": "Add"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
