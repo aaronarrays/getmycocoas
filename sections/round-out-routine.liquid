@@ -235,12 +235,17 @@
   .round-out-routine {
     background-color: var(--ror-bg, #1a1a1a);
     color: var(--ror-text, #fff);
+    overflow-x: hidden;
+    max-width: 100%;
   }
 
   .round-out-routine__inner {
     max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
     padding: 48px 24px 56px;
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
 
   .round-out-routine__header {
@@ -262,10 +267,17 @@
   }
 
   .round-out-routine__slider {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: visible;
     margin: 0 -12px;
     --ror-card-width: 50%;
     --ror-peek-offset: 25%;
+  }
+
+  @media (max-width: 749px) {
+    .round-out-routine__slider {
+      margin: 0;
+    }
   }
 
   .round-out-routine__track {
@@ -299,6 +311,13 @@
     .round-out-routine__slider {
       --ror-card-width: 66.666%;
       --ror-peek-offset: 0;
+      width: 100%;
+      min-width: 0;
+    }
+
+    .round-out-routine__track {
+      min-width: 0;
+      padding-left: 0;
     }
   }
 
