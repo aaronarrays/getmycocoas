@@ -22,6 +22,7 @@
       background-position: center;
       background-repeat: no-repeat;
     {% endif %}
+    --ror-card-bg: {{ section.settings.content_background_color | default: '#1a1a1a' }};
     --ror-bg: {{ bg_color }};
     --ror-text: {{ text_color }};
     --ror-accent: {{ accent_color }};
@@ -429,7 +430,7 @@
     opacity: 0.4;
   }
 
- 
+  {% comment %} Desktop: barra overlay sobre la imagen (esquina inferior derecha) {% endcomment %}
   @media (min-width: 750px) {
     .round-out-routine__product-bar--overlay {
       display: flex;
@@ -499,7 +500,8 @@
       flex: 0 0 auto;
     }
   }
- 
+
+  {% comment %} Barra debajo de la foto: solo en móvil; en desktop se oculta {% endcomment %}
   .round-out-routine__product-bar--below {
     display: none;
   }
@@ -570,7 +572,7 @@
     width: 100%;
     box-sizing: border-box;
     padding: 20px 16px 28px;
-    background: var(--ror-bg, #1a1a1a);
+    background: var(--ror-card-bg, #1a1a1a);
     text-align: center;
     flex: 1 1 auto;
     min-height: 0;
@@ -720,6 +722,12 @@
       "type": "color",
       "id": "background_color",
       "label": "Fondo",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "content_background_color",
+      "label": "Fondo del bloque de texto (headline y descripción)",
       "default": "#1a1a1a"
     },
     {
