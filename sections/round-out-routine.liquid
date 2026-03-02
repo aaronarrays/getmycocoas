@@ -167,8 +167,8 @@
         cardW = Math.min(w, 520);
         peek = 0;
       } else if (isMobile) {
-        cardW = w * 0.5;
-        peek = w * 0.25;
+        cardW = w * 0.72;
+        peek = w * 0.14;
       } else {
         cardW = w * 0.5;
         peek = w * 0.25;
@@ -309,8 +309,8 @@
 
   @media (max-width: 749px) {
     .round-out-routine__slider {
-      --ror-card-width: 50%;
-      --ror-peek-offset: 25%;
+      --ror-card-width: 72%;
+      --ror-peek-offset: 14%;
       width: 100%;
       min-width: 0;
     }
@@ -360,6 +360,7 @@
     display: flex;
     flex-direction: column;
     overflow: visible;
+    align-items: stretch;
   }
 
   .round-out-routine__card-media {
@@ -367,6 +368,7 @@
     width: 100%;
     aspect-ratio: 1;
     overflow: hidden;
+    flex-shrink: 0;
   }
 
   .round-out-routine__card-media picture,
@@ -507,6 +509,11 @@
     padding: 20px 16px 28px;
     background: var(--ror-bg, #1a1a1a);
     text-align: center;
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   .round-out-routine__headline {
