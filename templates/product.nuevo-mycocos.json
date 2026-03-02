@@ -1078,7 +1078,7 @@
         "equal_columns": false,
         "limit_details_width": false,
         "gap": 48,
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "padding-block-start": 40,
         "padding-block-end": 60
       }
@@ -1972,6 +1972,60 @@
         "padding-block-end": 48
       }
     },
+    "round_out_routine_nEKigU": {
+      "type": "round-out-routine",
+      "blocks": {
+        "item_d83kHr": {
+          "type": "item",
+          "settings": {
+            "image_fit": "cover",
+            "image_position": "center",
+            "image_aspect_ratio": "1",
+            "product": "",
+            "product_title_override": "",
+            "product_subtitle": "",
+            "headline": "Exfoliate.",
+            "description": "Witch hazel, willow bark, and volcanic rock scrub away and clear skin to reveal a smooth surface and clean slate to shave on.",
+            "button_label": "Add",
+            "button_link": ""
+          }
+        },
+        "item_YDw6xw": {
+          "type": "item",
+          "settings": {
+            "image_fit": "cover",
+            "image_position": "center",
+            "image_aspect_ratio": "1",
+            "product": "",
+            "product_title_override": "",
+            "product_subtitle": "",
+            "headline": "Soothe.",
+            "description": "This post-shave lotion hydrates and helps reduce ball skin irritation, making your testicles the most comfortable they've felt in years.",
+            "button_label": "Add",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_d83kHr",
+        "item_YDw6xw"
+      ],
+      "name": "Round out your routine",
+      "settings": {
+        "title": "Round out your routine.",
+        "title_highlight": "",
+        "section_width": "full-width",
+        "background_color": "#ececec",
+        "content_background_color": "#001936",
+        "headline_color": "#ffffff",
+        "description_color": "#ffffff",
+        "text_color": "#ffffff",
+        "accent_color": "#ffba25",
+        "accent_text_color": "#011732",
+        "padding-block-start": 48,
+        "padding-block-end": 56
+      }
+    },
     "ss_shoppable_video_g34nL8": {
       "type": "ss-shoppable-video",
       "blocks": {
@@ -2824,6 +2878,7 @@
   "order": [
     "main",
     "carousel_VwqNrn",
+    "round_out_routine_nEKigU",
     "ss_shoppable_video_g34nL8",
     "comparison_table_gFbfad",
     "section_rJGPUA",
