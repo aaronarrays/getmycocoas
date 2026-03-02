@@ -2019,11 +2019,11 @@
         "content_background_color": "#001936",
         "headline_color": "#ffffff",
         "description_color": "#ffffff",
-        "text_color": "#ffffff",
+        "text_color": "#001936",
         "accent_color": "#ffba25",
         "accent_text_color": "#011732",
-        "padding-block-start": 48,
-        "padding-block-end": 56
+        "padding-block-start": 60,
+        "padding-block-end": 60
       }
     },
     "ss_shoppable_video_g34nL8": {
