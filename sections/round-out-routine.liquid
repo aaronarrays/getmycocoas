@@ -6,7 +6,6 @@
 {% liquid
   assign section_title = section.settings.title | default: 'Round out your routine.'
   assign title_highlight = section.settings.title_highlight
-  assign layout = section.settings.layout
   assign bg_color = section.settings.background_color | default: '#1a1a1a'
   assign text_color = section.settings.text_color | default: '#ffffff'
   assign accent_color = section.settings.accent_color | default: '#ffba25'
@@ -34,7 +33,8 @@
       </h2>
     </div>
 
-    <div class="round-out-routine__grid round-out-routine__grid--{{ layout }} {% if section.blocks.size > 2 and layout == 'carousel' %}round-out-routine__grid--carousel{% endif %}" data-round-out-routine>
+    <div class="round-out-routine__slider {% if section.blocks.size == 1 %}round-out-routine__slider--single{% endif %}" data-round-out-routine id="round-out-routine-{{ section.id }}">
+      <div class="round-out-routine__track" data-ror-track>
       {% for block in section.blocks %}
         {% if block.type != 'item' %}
           {% continue %}
@@ -125,9 +125,10 @@
           </div>
         </div>
       {% endfor %}
+      </div>
     </div>
 
-    {% if section.blocks.size > 2 and layout == 'carousel' %}
+    {% if section.blocks.size > 1 %}
       <nav class="round-out-routine__nav" aria-label="Navegación del carrusel">
         <button type="button" class="round-out-routine__nav-btn round-out-routine__nav-btn--prev" aria-label="Anterior" data-ror-prev>
           <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -147,23 +148,24 @@
 
 <script>
   (function() {
-    const section = document.querySelector('[data-round-out-routine]');
-    if (!section || !section.classList.contains('round-out-routine__grid--carousel')) return;
-
-    const prevBtn = section.closest('.round-out-routine').querySelector('[data-ror-prev]');
-    const nextBtn = section.closest('.round-out-routine').querySelector('[data-ror-next]');
-    const dotsEl = section.closest('.round-out-routine').querySelector('[data-ror-dots]');
-    const cards = section.querySelectorAll('.round-out-routine__card');
+    const slider = document.querySelector('[data-round-out-routine]');
+    if (!slider) return;
+    const track = slider.querySelector('[data-ror-track]');
+    const prevBtn = slider.closest('.round-out-routine').querySelector('[data-ror-prev]');
+    const nextBtn = slider.closest('.round-out-routine').querySelector('[data-ror-next]');
+    const dotsEl = slider.closest('.round-out-routine').querySelector('[data-ror-dots]');
+    const cards = slider.querySelectorAll('.round-out-routine__card');
     const total = cards.length;
-    if (total < 2) return;
+    if (total < 2 || !track) return;
 
+    const gap = 24;
     let index = 0;
-    const cardWidth = cards[0].offsetWidth;
-    const gap = 16;
 
-    function updateCarousel() {
-      const offset = -(index * (cardWidth + gap));
-      section.style.transform = 'translate3d(' + offset + 'px, 0, 0)';
+    function updateSlider() {
+      if (!cards[0]) return;
+      const cardWidth = cards[0].offsetWidth;
+      const offset = index * (cardWidth + gap);
+      track.style.transform = 'translate3d(-' + offset + 'px, 0, 0)';
       if (dotsEl) {
         dotsEl.innerHTML = Array.from({ length: total }, function(_, i) {
           return '<span role="button" tabindex="0" data-index="' + i + '" class="round-out-routine__dot' + (i === index ? ' is-active' : '') + '" aria-label="Slide ' + (i + 1) + '"></span>';
@@ -171,7 +173,7 @@
         dotsEl.querySelectorAll('.round-out-routine__dot').forEach(function(dot) {
           dot.addEventListener('click', function() {
             index = parseInt(this.dataset.index, 10);
-            updateCarousel();
+            updateSlider();
           });
         });
       }
@@ -180,20 +182,21 @@
     if (prevBtn) {
       prevBtn.addEventListener('click', function() {
         index = index <= 0 ? total - 1 : index - 1;
-        updateCarousel();
+        updateSlider();
       });
     }
     if (nextBtn) {
       nextBtn.addEventListener('click', function() {
         index = index >= total - 1 ? 0 : index + 1;
-        updateCarousel();
+        updateSlider();
       });
     }
 
-    updateCarousel();
+    updateSlider();
+    var resizeTimer;
     window.addEventListener('resize', function() {
-      const w = section.querySelector('.round-out-routine__card');
-      if (w) updateCarousel();
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(updateSlider, 100);
     });
   })();
 </script>
@@ -228,42 +231,47 @@
     display: inline-block;
   }
 
-  .round-out-routine__grid {
-    display: grid;
-    gap: 0;
-    align-items: stretch;
-  }
-
-  .round-out-routine__grid--grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .round-out-routine__grid--carousel {
-    grid-template-columns: repeat(2, 1fr);
+  .round-out-routine__slider {
     overflow: hidden;
+    margin: 0 -12px;
+  }
+
+  .round-out-routine__track {
+    display: flex;
+    gap: 24px;
+    padding-left: 25%;
+    padding-right: 25%;
+    transition: transform 0.35s ease;
+    will-change: transform;
   }
 
   @media (max-width: 749px) {
-    .round-out-routine__grid--grid,
-    .round-out-routine__grid--carousel {
-      grid-template-columns: 1fr;
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      gap: 16px;
-      padding-bottom: 8px;
+    .round-out-routine__track {
+      padding-left: 10%;
+      padding-right: 10%;
     }
+  }
 
-    .round-out-routine__grid--carousel {
-      transform: none !important;
-    }
+  .round-out-routine__card {
+    flex: 0 0 50%;
+    min-width: 0;
+  }
 
+  @media (max-width: 749px) {
     .round-out-routine__card {
-      flex: 0 0 min(85%, 340px);
-      scroll-snap-align: start;
+      flex: 0 0 80%;
     }
+  }
+
+  .round-out-routine__slider--single .round-out-routine__track {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+  }
+
+  .round-out-routine__slider--single .round-out-routine__card {
+    flex: 0 0 100%;
+    max-width: 520px;
   }
 
   .round-out-routine__card {
@@ -312,8 +320,8 @@
     right: 0;
     padding: 24px;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     z-index: 1;
   }
 
@@ -325,9 +333,16 @@
     display: inline-flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     max-width: 280px;
     box-shadow: 0 4px 20px rgb(0 0 0 / 0.2);
+    text-align: center;
+  }
+
+  .round-out-routine__product-card form,
+  .round-out-routine__product-card .round-out-routine__btn {
+    flex: 0 0 auto;
   }
 
   .round-out-routine__product-thumb {
@@ -350,6 +365,7 @@
     gap: 2px;
     flex: 1;
     min-width: 0;
+    align-items: center;
   }
 
   .round-out-routine__product-name {
@@ -388,6 +404,7 @@
   .round-out-routine__card-content {
     padding: 20px 24px 28px;
     background: var(--ror-bg, #1a1a1a);
+    text-align: center;
   }
 
   .round-out-routine__headline {
@@ -395,6 +412,7 @@
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--ror-text);
+    text-align: center;
   }
 
   .round-out-routine__description {
@@ -403,6 +421,7 @@
     line-height: 1.5;
     color: var(--ror-text);
     opacity: 0.95;
+    text-align: center;
   }
 
   .round-out-routine__nav {
@@ -496,16 +515,6 @@
     {
       "type": "header",
       "content": "Diseño"
-    },
-    {
-      "type": "select",
-      "id": "layout",
-      "label": "Disposición",
-      "options": [
-        { "value": "grid", "label": "Dos columnas fijas" },
-        { "value": "carousel", "label": "Carrusel (móvil siempre en carrusel)" }
-      ],
-      "default": "grid"
     },
     {
       "type": "select",
