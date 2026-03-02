@@ -144,7 +144,7 @@
     const dotsEl = slider.closest('.round-out-routine').querySelector('[data-ror-dots]');
     const cards = slider.querySelectorAll('.round-out-routine__card');
     const total = cards.length;
-    const gap = 24;
+    const gap = 0;
     let index = 0;
 
     function setPeekVars() {
@@ -155,11 +155,11 @@
         cardW = Math.min(w, 520);
         peek = 0;
       } else if (isMobile) {
-        cardW = w * 0.72;
-        peek = w * 0.14;
+        cardW = w * 0.8;
+        peek = w * 0.1;
       } else {
-        cardW = w * 0.5;
-        peek = w * 0.25;
+        cardW = w * 0.58;
+        peek = w * 0.21;
       }
       slider.style.setProperty('--ror-card-width', cardW + 'px');
       slider.style.setProperty('--ror-peek-offset', peek + 'px');
@@ -258,8 +258,8 @@
     overflow-x: hidden;
     overflow-y: visible;
     margin: 0 -12px;
-    --ror-card-width: 50%;
-    --ror-peek-offset: 25%;
+    --ror-card-width: 58%;
+    --ror-peek-offset: 21%;
   }
 
   @media (max-width: 749px) {
@@ -270,7 +270,7 @@
 
   .round-out-routine__track {
     display: flex;
-    gap: 24px;
+    gap: 0;
     padding-left: var(--ror-peek-offset, 25%);
     padding-right: var(--ror-peek-offset, 25%);
     transition: transform 0.35s ease;
@@ -297,8 +297,8 @@
 
   @media (max-width: 749px) {
     .round-out-routine__slider {
-      --ror-card-width: 72%;
-      --ror-peek-offset: 14%;
+      --ror-card-width: 80%;
+      --ror-peek-offset: 10%;
       width: 100%;
       min-width: 0;
     }
