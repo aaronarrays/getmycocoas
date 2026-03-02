@@ -77,10 +77,40 @@
                 {{ 'lifestyle-1' | placeholder_svg_tag: 'round-out-routine__placeholder-svg' }}
               </div>
             {% endif %}
+            {% comment %} Desktop: barra sobre la imagen (esquina inferior derecha) con miniatura + nombre + subtítulo + Add {% endcomment %}
+            <div class="round-out-routine__product-bar round-out-routine__product-bar--overlay">
+              {% if item_product != blank and item_product.featured_image != blank %}
+                <div class="round-out-routine__product-thumb">
+                  {% render 'image', image: item_product.featured_image, height: 120, class: 'round-out-routine__product-thumb-img' %}
+                </div>
+              {% endif %}
+              <div class="round-out-routine__product-info">
+                {% if product_title != blank %}
+                  <span class="round-out-routine__product-name">{{ product_title }}</span>
+                {% endif %}
+                {% if product_subtitle != blank %}
+                  <span class="round-out-routine__product-subtitle">{{ product_subtitle }}</span>
+                {% endif %}
+              </div>
+              {% if item_product != blank and variant != blank %}
+                {% assign form_id_overlay = 'ror-form-overlay-' | append: section.id | append: '-' | append: block.id %}
+                {% form 'product', item_product, id: form_id_overlay, data-type: 'add-to-cart-form' %}
+                  <input type="hidden" name="id" value="{{ variant.id }}">
+                  <input type="hidden" name="return_to" value="{{ request.path }}">
+                  <button type="submit" class="round-out-routine__btn" {% unless can_add %}disabled{% endunless %}>{{ item_button_label }}</button>
+                {% endform %}
+              {% elsif item_product != blank %}
+                <a href="{{ item_product.url }}" class="round-out-routine__btn">{{ item_button_label }}</a>
+              {% elsif block.settings.button_link != blank %}
+                <a href="{{ block.settings.button_link }}" class="round-out-routine__btn">{{ item_button_label }}</a>
+              {% else %}
+                <span class="round-out-routine__btn round-out-routine__btn--disabled">{{ item_button_label }}</span>
+              {% endif %}
+            </div>
           </div>
 
-          {% comment %} Barra de producto justo debajo de la foto: solo título + botón en una fila {% endcomment %}
-          <div class="round-out-routine__product-bar">
+          {% comment %} Móvil: barra debajo de la foto, solo título + botón {% endcomment %}
+          <div class="round-out-routine__product-bar round-out-routine__product-bar--below">
             <div class="round-out-routine__product-info">
               {% if product_title != blank %}
                 <span class="round-out-routine__product-name">{{ product_title }}</span>
@@ -307,16 +337,16 @@
       min-width: 0;
     }
 
-    .round-out-routine__product-bar {
+    .round-out-routine__product-bar--below {
       padding: 10px 12px;
       gap: 10px;
     }
 
-    .round-out-routine__product-bar .round-out-routine__product-name {
+    .round-out-routine__product-bar--below .round-out-routine__product-name {
       font-size: 0.8125rem;
     }
 
-    .round-out-routine__product-bar .round-out-routine__btn {
+    .round-out-routine__product-bar--below .round-out-routine__btn {
       padding: 6px 12px;
       font-size: 0.75rem;
     }
@@ -386,7 +416,79 @@
     opacity: 0.4;
   }
 
-  .round-out-routine__product-bar {
+  {% comment %} Desktop: barra overlay sobre la imagen (esquina inferior derecha) {% endcomment %}
+  @media (min-width: 750px) {
+    .round-out-routine__product-bar--overlay {
+      display: flex;
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      left: auto;
+      width: auto;
+      max-width: calc(100% - 32px);
+      flex-direction: row;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 16px;
+      background: #fff;
+      color: #1a1a1a;
+      box-sizing: border-box;
+      box-shadow: 0 4px 20px rgb(0 0 0 / 0.2);
+      border-radius: 10px;
+      z-index: 1;
+    }
+
+    .round-out-routine__product-bar--below {
+      display: none;
+    }
+
+    .round-out-routine__product-bar--overlay .round-out-routine__product-thumb {
+      width: 56px;
+      height: 56px;
+      flex-shrink: 0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .round-out-routine__product-bar--overlay .round-out-routine__product-thumb img,
+    .round-out-routine__product-bar--overlay .round-out-routine__product-thumb-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .round-out-routine__product-bar--overlay .round-out-routine__product-info {
+      flex: 1 1 auto;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+    }
+
+    .round-out-routine__product-bar--overlay .round-out-routine__product-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+      line-height: 1.25;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .round-out-routine__product-bar--overlay .round-out-routine__product-subtitle {
+      font-size: 0.8rem;
+      color: #555;
+      line-height: 1.3;
+    }
+
+    .round-out-routine__product-bar--overlay form,
+    .round-out-routine__product-bar--overlay .round-out-routine__btn {
+      flex: 0 0 auto;
+    }
+  }
+
+  {% comment %} Barra debajo de la foto (móvil) {% endcomment %}
+  .round-out-routine__product-bar--below {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -399,14 +501,20 @@
     box-shadow: 0 4px 20px rgb(0 0 0 / 0.2);
   }
 
-  .round-out-routine__product-bar .round-out-routine__product-info {
+  @media (max-width: 749px) {
+    .round-out-routine__product-bar--overlay {
+      display: none;
+    }
+  }
+
+  .round-out-routine__product-bar--below .round-out-routine__product-info {
     flex: 1 1 auto;
     min-width: 0;
     display: flex;
     align-items: center;
   }
 
-  .round-out-routine__product-bar .round-out-routine__product-name {
+  .round-out-routine__product-bar--below .round-out-routine__product-name {
     font-weight: 600;
     font-size: 0.9rem;
     word-wrap: break-word;
@@ -414,8 +522,8 @@
     line-height: 1.3;
   }
 
-  .round-out-routine__product-bar form,
-  .round-out-routine__product-bar .round-out-routine__btn {
+  .round-out-routine__product-bar--below form,
+  .round-out-routine__product-bar--below .round-out-routine__btn {
     flex: 0 0 auto;
   }
 
