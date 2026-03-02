@@ -59,10 +59,16 @@
           if variant and variant.available
             assign can_add = true
           endif
+          assign image_fit = block.settings.image_fit | default: 'cover'
+          assign image_position = block.settings.image_position | default: 'center'
+          assign image_aspect = block.settings.image_aspect_ratio | default: '1'
+          if image_aspect == 'auto'
+            assign image_aspect = '1'
+          endif
         %}
         <div class="round-out-routine__card" {{ block.shopify_attributes }}>
           {% comment %} Zona de la foto: solo la imagen + overlay con info del producto y Add {% endcomment %}
-          <div class="round-out-routine__card-media">
+          <div class="round-out-routine__card-media" style="--ror-object-fit: {{ image_fit }}; --ror-object-position: {{ image_position }}; --ror-aspect-ratio: {{ image_aspect }};">
             {% if item_image != blank %}
               {% if item_image_mobile != blank %}
                 <picture>
@@ -377,7 +383,7 @@
   .round-out-routine__card-media {
     position: relative;
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: var(--ror-aspect-ratio, 1);
     overflow: hidden;
     flex-shrink: 0;
   }
@@ -388,18 +394,18 @@
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    object-fit: var(--ror-object-fit, cover);
+    object-position: var(--ror-object-position, center);
   }
 
   .round-out-routine__card-image {
-    object-fit: cover;
-    object-position: center;
+    object-fit: var(--ror-object-fit, cover);
+    object-position: var(--ror-object-position, center);
   }
 
   .round-out-routine__card-media img {
-    object-fit: cover;
-    object-position: center;
+    object-fit: var(--ror-object-fit, cover);
+    object-position: var(--ror-object-position, center);
   }
 
   .round-out-routine__placeholder {
@@ -620,11 +626,11 @@
   }
 
   .round-out-routine__nav-btn--prev svg {
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
   }
 
   .round-out-routine__nav-btn--next svg {
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
   }
 
   .round-out-routine__dots {
@@ -757,6 +763,58 @@
           "type": "image_picker",
           "id": "image_mobile",
           "label": "Imagen móvil (opcional)"
+        },
+        {
+          "type": "header",
+          "content": "Ajuste de la imagen"
+        },
+        {
+          "type": "select",
+          "id": "image_fit",
+          "label": "Cómo encajar la imagen",
+          "options": [
+            { "value": "cover", "label": "Cubrir (recorta para llenar)" },
+            { "value": "contain", "label": "Contener (se ve toda, puede haber espacio)" },
+            { "value": "fill", "label": "Rellenar (estira para llenar)" },
+            { "value": "none", "label": "Sin ajuste" }
+          ],
+          "default": "cover",
+          "info": "Cover suele quedar mejor en tarjetas cuadradas."
+        },
+        {
+          "type": "select",
+          "id": "image_position",
+          "label": "Posición del enfoque",
+          "options": [
+            { "value": "center", "label": "Centro" },
+            { "value": "top", "label": "Arriba" },
+            { "value": "bottom", "label": "Abajo" },
+            { "value": "left", "label": "Izquierda" },
+            { "value": "right", "label": "Derecha" },
+            { "value": "top left", "label": "Arriba izquierda" },
+            { "value": "top right", "label": "Arriba derecha" },
+            { "value": "bottom left", "label": "Abajo izquierda" },
+            { "value": "bottom right", "label": "Abajo derecha" }
+          ],
+          "default": "center",
+          "info": "Qué parte de la imagen se ve cuando se recorta (con Cubrir)."
+        },
+        {
+          "type": "select",
+          "id": "image_aspect_ratio",
+          "label": "Proporción de la tarjeta",
+          "options": [
+            { "value": "1", "label": "1:1 (cuadrado)" },
+            { "value": "4/3", "label": "4:3 (horizontal)" },
+            { "value": "3/4", "label": "3:4 (vertical)" },
+            { "value": "16/9", "label": "16:9 (panorámico)" },
+            { "value": "9/16", "label": "9:16 (vertical alto)" },
+            { "value": "3/2", "label": "3:2" },
+            { "value": "2/3", "label": "2:3" },
+            { "value": "auto", "label": "Automático (según imagen)" }
+          ],
+          "default": "1",
+          "info": "Forma del recuadro de la imagen."
         },
         {
           "type": "product",
