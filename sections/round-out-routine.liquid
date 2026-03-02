@@ -61,6 +61,7 @@
           endif
         %}
         <div class="round-out-routine__card" {{ block.shopify_attributes }}>
+          {% comment %} Zona de la foto: solo la imagen + overlay con info del producto y Add {% endcomment %}
           <div class="round-out-routine__card-media">
             {% if item_image != blank %}
               {% if item_image_mobile != blank %}
@@ -76,10 +77,8 @@
                 {{ 'lifestyle-1' | placeholder_svg_tag: 'round-out-routine__placeholder-svg' }}
               </div>
             {% endif %}
-          </div>
-
-          <div class="round-out-routine__card-overlay">
-            <div class="round-out-routine__product-card">
+            <div class="round-out-routine__card-overlay">
+              <div class="round-out-routine__product-card">
               {% if item_product != blank and item_product.featured_image != blank %}
                 <div class="round-out-routine__product-thumb">
                   {% render 'image',
@@ -111,9 +110,11 @@
               {% else %}
                 <span class="round-out-routine__btn round-out-routine__btn--disabled">{{ item_button_label }}</span>
               {% endif %}
+              </div>
             </div>
           </div>
 
+          {% comment %} Debajo de la foto: headline y descripción {% endcomment %}
           <div class="round-out-routine__card-content">
             {% if item_headline != blank %}
               <h3 class="round-out-routine__headline">{{ item_headline }}</h3>
@@ -266,29 +267,33 @@
   }
 
   .round-out-routine__card {
-    position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 380px;
   }
 
   .round-out-routine__card-media {
-    position: absolute;
-    inset: 0;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
     overflow: hidden;
   }
 
-  .round-out-routine__card-image {
+  .round-out-routine__card-media picture,
+  .round-out-routine__card-media .round-out-routine__card-image {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
+  }
+
+  .round-out-routine__card-image {
     object-fit: cover;
     object-position: center;
   }
 
   .round-out-routine__placeholder {
-    width: 100%;
-    height: 100%;
-    min-height: 280px;
+    position: absolute;
+    inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -301,12 +306,14 @@
   }
 
   .round-out-routine__card-overlay {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     padding: 24px;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    min-height: 200px;
     z-index: 1;
   }
 
@@ -379,9 +386,8 @@
   }
 
   .round-out-routine__card-content {
-    position: relative;
-    padding: 20px 24px 24px;
-    z-index: 1;
+    padding: 20px 24px 28px;
+    background: var(--ror-bg, #1a1a1a);
   }
 
   .round-out-routine__headline {
