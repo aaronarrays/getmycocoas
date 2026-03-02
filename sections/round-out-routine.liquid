@@ -167,8 +167,8 @@
         cardW = Math.min(w, 520);
         peek = 0;
       } else if (isMobile) {
-        cardW = w / 1.5;
-        peek = 0;
+        cardW = w * 0.5;
+        peek = w * 0.25;
       } else {
         cardW = w * 0.5;
         peek = w * 0.25;
@@ -309,15 +309,35 @@
 
   @media (max-width: 749px) {
     .round-out-routine__slider {
-      --ror-card-width: 66.666%;
-      --ror-peek-offset: 0;
+      --ror-card-width: 50%;
+      --ror-peek-offset: 25%;
       width: 100%;
       min-width: 0;
     }
 
     .round-out-routine__track {
       min-width: 0;
-      padding-left: 0;
+    }
+
+    .round-out-routine__product-card {
+      gap: 8px;
+      padding: 10px 12px;
+    }
+
+    .round-out-routine__product-card form {
+      flex-basis: 100%;
+      flex-grow: 0;
+      justify-content: center;
+    }
+
+    .round-out-routine__product-info {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
+    .round-out-routine__btn {
+      padding: 8px 14px;
+      font-size: 0.8rem;
     }
   }
 
@@ -437,14 +457,20 @@
     display: flex;
     flex-direction: column;
     gap: 2px;
-    flex: 1;
+    flex: 1 1 auto;
     min-width: 0;
     align-items: center;
+    overflow: hidden;
   }
 
   .round-out-routine__product-name {
     font-weight: 600;
     font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 
   .round-out-routine__product-subtitle {
