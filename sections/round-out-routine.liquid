@@ -25,6 +25,8 @@
     --ror-card-bg: {{ section.settings.content_background_color | default: '#1a1a1a' }};
     --ror-bg: {{ bg_color }};
     --ror-text: {{ text_color }};
+    --ror-headline-color: {{ section.settings.headline_color | default: text_color }};
+    --ror-description-color: {{ section.settings.description_color | default: text_color }};
     --ror-accent: {{ accent_color }};
     --ror-accent-text: {{ accent_text }};
     {% render 'spacing-style', settings: section.settings %}
@@ -585,7 +587,7 @@
     margin: 0 0 8px;
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--ror-text);
+    color: var(--ror-headline-color, var(--ror-text));
     text-align: center;
     width: 100%;
     box-sizing: border-box;
@@ -595,7 +597,7 @@
     margin: 0;
     font-size: 0.9375rem;
     line-height: 1.5;
-    color: var(--ror-text);
+    color: var(--ror-description-color, var(--ror-text));
     opacity: 0.95;
     text-align: center;
     width: 100%;
@@ -729,6 +731,18 @@
       "id": "content_background_color",
       "label": "Fondo del bloque de texto (headline y descripción)",
       "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "headline_color",
+      "label": "Color del headline",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Color de la descripción",
+      "default": "#ffffff"
     },
     {
       "type": "color",
