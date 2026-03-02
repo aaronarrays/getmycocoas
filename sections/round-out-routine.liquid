@@ -187,6 +187,9 @@
       var cardWidthPx = parseFloat(slider.style.getPropertyValue('--ror-card-width')) || (slider.offsetWidth * 0.5);
       var offset = index * (cardWidthPx + gap);
       track.style.transform = 'translate3d(-' + offset + 'px, 0, 0)';
+      cards.forEach(function(card, i) {
+        card.classList.toggle('round-out-routine__card--active', i === index);
+      });
       if (dotsEl) {
         dotsEl.innerHTML = Array.from({ length: total }, function(_, i) {
           return '<span role="button" tabindex="0" data-index="' + i + '" class="round-out-routine__dot' + (i === index ? ' is-active' : '') + '" aria-label="Slide ' + (i + 1) + '"></span>';
@@ -279,6 +282,17 @@
     width: var(--ror-card-width, 50%);
     min-width: 0;
     max-width: none;
+    transition: transform 0.35s ease, opacity 0.35s ease, box-shadow 0.35s ease;
+    transform: scale(0.92);
+    opacity: 0.78;
+    z-index: 0;
+  }
+
+  .round-out-routine__card--active {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 2;
+    box-shadow: 0 8px 40px rgb(0 0 0 / 0.25);
   }
 
   @media (max-width: 749px) {
@@ -298,6 +312,9 @@
     flex: 0 0 100%;
     width: 100%;
     max-width: 520px;
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: none;
   }
 
   .round-out-routine__card {
