@@ -15,6 +15,13 @@
 <div
   class="round-out-routine section section--{{ section.settings.section_width }}"
   style="
+    background-color: {{ bg_color }};
+    {% if section.settings.background_image %}
+      background-image: url({{ section.settings.background_image | image_url: width: 2000 }});
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    {% endif %}
     --ror-bg: {{ bg_color }};
     --ror-text: {{ text_color }};
     --ror-accent: {{ accent_color }};
@@ -422,7 +429,7 @@
     opacity: 0.4;
   }
 
-  {% comment %} Desktop: barra overlay sobre la imagen (esquina inferior derecha) {% endcomment %}
+ 
   @media (min-width: 750px) {
     .round-out-routine__product-bar--overlay {
       display: flex;
@@ -492,8 +499,7 @@
       flex: 0 0 auto;
     }
   }
-
-  {% comment %} Barra debajo de la foto: solo en móvil; en desktop se oculta {% endcomment %}
+ 
   .round-out-routine__product-bar--below {
     display: none;
   }
@@ -699,6 +705,16 @@
     {
       "type": "header",
       "content": "Colores"
+    },
+    {
+      "type": "header",
+      "content": "Fondo de sección"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Imagen de fondo de la sección",
+      "info": "Opcional. Si se usa, se coloca detrás del contenido y el color sirve de respaldo."
     },
     {
       "type": "color",

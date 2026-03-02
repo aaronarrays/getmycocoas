@@ -537,6 +537,7 @@
                       "name": "t:names.icon",
                       "settings": {
                         "icon": "truck",
+                        "svg_code": "",
                         "image_upload": "shopify://shop_images/entrega-rapida_1.png",
                         "width": 32,
                         "link": "",
@@ -621,6 +622,7 @@
                       "name": "t:names.icon",
                       "settings": {
                         "icon": "truck",
+                        "svg_code": "",
                         "image_upload": "shopify://shop_images/expresar.png",
                         "width": 32,
                         "link": "",
@@ -705,6 +707,7 @@
                       "name": "t:names.icon",
                       "settings": {
                         "icon": "check_box",
+                        "svg_code": "",
                         "image_upload": "shopify://shop_images/garantia-extendida.png",
                         "width": 32,
                         "link": "",
@@ -789,6 +792,7 @@
                       "name": "t:names.icon",
                       "settings": {
                         "icon": "lock",
+                        "svg_code": "",
                         "image_upload": "shopify://shop_images/proteger.png",
                         "width": 32,
                         "link": "",
@@ -1233,6 +1237,90 @@
         "gradient_direction": "to top",
         "padding-block-start": 64,
         "padding-block-end": 64
+      }
+    },
+    "round_out_routine_p7zVEq": {
+      "type": "round-out-routine",
+      "blocks": {
+        "item_7npNnr": {
+          "type": "item",
+          "settings": {
+            "image_fit": "cover",
+            "image_position": "center",
+            "image_aspect_ratio": "1",
+            "product": "",
+            "product_title_override": "",
+            "product_subtitle": "",
+            "headline": "Exfoliate.",
+            "description": "Witch hazel, willow bark, and volcanic rock scrub away and clear skin to reveal a smooth surface and clean slate to shave on.",
+            "button_label": "Add",
+            "button_link": ""
+          }
+        },
+        "item_jXpYdG": {
+          "type": "item",
+          "settings": {
+            "image_fit": "cover",
+            "image_position": "center",
+            "image_aspect_ratio": "1",
+            "product": "",
+            "product_title_override": "",
+            "product_subtitle": "",
+            "headline": "Exfoliate.",
+            "description": "Witch hazel, willow bark, and volcanic rock scrub away and clear skin to reveal a smooth surface and clean slate to shave on.",
+            "button_label": "Add",
+            "button_link": ""
+          }
+        },
+        "item_8ax4yt": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Copia_de_Este_San_Calentin_obten_hasta_un_47_OFF_jpg_74c3ac42-a34c-440a-9b22-5e72f769677e.jpg",
+            "image_fit": "fill",
+            "image_position": "center",
+            "image_aspect_ratio": "auto",
+            "product": "desodorante-de-cocos-mycocos®",
+            "product_title_override": "",
+            "product_subtitle": "",
+            "headline": "Exfoliate.",
+            "description": "Witch hazel, willow bark, and volcanic rock scrub away and clear skin to reveal a smooth surface and clean slate to shave on.",
+            "button_label": "Add",
+            "button_link": ""
+          }
+        },
+        "item_qTgU6r": {
+          "type": "item",
+          "settings": {
+            "image_fit": "cover",
+            "image_position": "center",
+            "image_aspect_ratio": "1",
+            "product": "",
+            "product_title_override": "",
+            "product_subtitle": "",
+            "headline": "Soothe.",
+            "description": "This post-shave lotion hydrates and helps reduce ball skin irritation, making your testicles the most comfortable they've felt in years.",
+            "button_label": "Add",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_7npNnr",
+        "item_jXpYdG",
+        "item_8ax4yt",
+        "item_qTgU6r"
+      ],
+      "name": "Round out your routine",
+      "settings": {
+        "title": "Round out your routine.",
+        "title_highlight": "#ffffff",
+        "section_width": "full-width",
+        "background_color": "#1d3686",
+        "text_color": "#ffffff",
+        "accent_color": "#ffba25",
+        "accent_text_color": "#011732",
+        "padding-block-start": 48,
+        "padding-block-end": 56
       }
     },
     "sp_icon_grid_FePY8X": {
@@ -1965,6 +2053,7 @@
                   "name": "t:names.icon",
                   "settings": {
                     "icon": "price_tag",
+                    "svg_code": "",
                     "image_upload": "shopify://shop_images/Diseno_sin_titulo_91.png",
                     "width": 160,
                     "link": "",
@@ -2049,6 +2138,7 @@
                   "name": "t:names.icon",
                   "settings": {
                     "icon": "price_tag",
+                    "svg_code": "",
                     "image_upload": "shopify://shop_images/Diseno_sin_titulo_93.png",
                     "width": 160,
                     "link": "",
@@ -2133,6 +2223,7 @@
                   "name": "t:names.icon",
                   "settings": {
                     "icon": "price_tag",
+                    "svg_code": "",
                     "image_upload": "shopify://shop_images/Diseno_sin_titulo_92.png",
                     "width": 160,
                     "link": "",
@@ -2745,6 +2836,7 @@
           "name": "t:names.icon",
           "settings": {
             "icon": "check_box",
+            "svg_code": "",
             "width": 46,
             "link": "",
             "open_in_new_tab": false
@@ -2849,6 +2941,7 @@
           "name": "t:names.icon",
           "settings": {
             "icon": "lightning_bolt",
+            "svg_code": "",
             "width": 46,
             "link": "",
             "open_in_new_tab": false
@@ -2953,6 +3046,7 @@
           "name": "t:names.icon",
           "settings": {
             "icon": "check_box",
+            "svg_code": "",
             "width": 46,
             "link": "",
             "open_in_new_tab": false
@@ -4059,6 +4153,7 @@
     "section_QnDbUw",
     "main",
     "section_H8P74R",
+    "round_out_routine_p7zVEq",
     "sp_icon_grid_FePY8X",
     "section_qECJHB",
     "section_gRL4Qf",
