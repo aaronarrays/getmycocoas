@@ -1158,6 +1158,22 @@
                 "padding-inline-end": 0
               }
             },
+            "variant_picker_9JdeMe": {
+              "type": "variant-picker",
+              "disabled": false,
+              "settings": {
+                "paragraph-330b4fe05d5ed648e0c7a4f2503d81a6": null,
+                "paragraph-607ba9ee29e5662fa51e830b635b71c9": null,
+                "variant_style": "buttons",
+                "show_swatches": true,
+                "alignment": "left",
+                "header-c8b12bc45e62353f5a7450bb716662ed": null,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
             "text_aEtTtq": {
               "settings": {
                 "text": "<h4>¿Por qué elegir este Pack?</h4><p>{{ closest.product.description }}</p>"
@@ -1167,6 +1183,7 @@
           "block_order": [
             "group_Dn9zjy",
             "group_aE8WTb",
+            "variant_picker_9JdeMe",
             "essential_upsell_frequently_bought_together_app_block_48yzG8",
             "text_aEtTtq",
             "accordion_WXMzry"
