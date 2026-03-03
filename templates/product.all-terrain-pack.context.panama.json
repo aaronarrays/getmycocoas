@@ -650,10 +650,6 @@
     "section_QnDbUw": {
       "settings": {},
       "blocks": {
-        "custom_liquid_U9W8mN": {
-          "disabled": true,
-          "settings": {}
-        },
         "group_fk7UPR": {
           "blocks": {
             "product_title_4mPkcw": {
@@ -722,7 +718,6 @@
         }
       },
       "block_order": [
-        "custom_liquid_U9W8mN",
         "group_fk7UPR",
         "group_4aLjn9",
         "loox_reviews_loox_rating_K7mmTM"
