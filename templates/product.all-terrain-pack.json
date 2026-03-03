@@ -12,11 +12,32 @@
     "section_QnDbUw": {
       "type": "section",
       "blocks": {
-        "custom_liquid_U9W8mN": {
-          "type": "custom-liquid",
-          "name": "t:names.custom_liquid",
+        "media-gallery": {
+          "type": "_product-media-gallery",
+          "static": true,
           "settings": {
-            "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Product Status Box</title>\n    <style>\n        \n        .product-status-box {\nbackground: #011732E0;\nborder-radius: 30px;\n            padding: 3px 15px;\n            font-size: 12px;\n            font-weight: bold;\n            color: #fff;\n            display: inline-block;\n            text-align: left;\n            text-transform: uppercase;\n        }\n        .center-wrapper {\n            display: flex;\n            justify-content: left;\n            align-items: left;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"center-wrapper\">\n    <div class=\"product-status-box\">PRECIO ESPECIAL</div>\n    </div>\n</body>"
+            "media_presentation": "carousel",
+            "media_columns": "one",
+            "image_gap": 4,
+            "large_first_image": false,
+            "icons_style": "chevron_large",
+            "slideshow_controls_style": "thumbnails",
+            "slideshow_mobile_controls_style": "dots",
+            "thumbnail_position": "left",
+            "thumbnail_width": 72,
+            "thumbnail_radius": 0,
+            "aspect_ratio": "adapt",
+            "constrain_to_viewport": true,
+            "media_fit": "cover",
+            "media_radius": 0,
+            "extend_media": false,
+            "zoom": true,
+            "video_loop": false,
+            "hide_variants": true,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {}
         },
@@ -193,7 +214,6 @@
         }
       },
       "block_order": [
-        "custom_liquid_U9W8mN",
         "group_fk7UPR",
         "group_4aLjn9"
       ],
