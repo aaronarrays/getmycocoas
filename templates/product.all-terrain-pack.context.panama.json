@@ -1337,6 +1337,19 @@
                 "padding-inline-end": 0
               }
             },
+            "divider_gQrX7w": {
+              "type": "_divider",
+              "name": "t:names.divider",
+              "disabled": false,
+              "settings": {
+                "thickness": 1,
+                "corner_radius": "square",
+                "width_percent": 100,
+                "header-d0b39d40ca4c449911fbc1e904ae42e9": null,
+                "padding-block-start": 0,
+                "padding-block-end": 0
+              }
+            },
             "text_aEtTtq": {
               "settings": {
                 "text": "<h4>¿Por qué elegir este Pack?</h4><p>{{ closest.product.description }}</p>"
@@ -1352,6 +1365,7 @@
             "custom_liquid_xxtLez",
             "essential_upsell_frequently_bought_together_app_block_d4dbr4",
             "group_eXX46t",
+            "divider_gQrX7w",
             "text_aEtTtq",
             "accordion_WXMzry"
           ],
