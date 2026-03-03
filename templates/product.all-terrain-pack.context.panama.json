@@ -1233,35 +1233,97 @@
         "klaviyo_reviews_product_reviews_zqNpyL"
       ]
     },
-    "comparison_table_khxXr": {
+    "comparison_table_LVMqAe": {
       "type": "comparison-table",
       "disabled": false,
       "settings": {
-        "title": "¿Cuál es ideal para ti?",
-        "max_width": 1000,
+        "title": "Por esto la MyCOCOS® es la MEJOR",
+        "max_width": 1400,
         "icon_size": 18,
-        "cross_color": "#999999",
+        "cross_color": "#ff0000",
         "row_alt_bg": "#f7f7f7",
-        "product_1_image": null,
-        "product_1_name": "Producto 1",
-        "product_2_image": null,
-        "product_2_name": "Producto 2",
-        "header-5ac2e2d9a211e69476391d7e518c0f4f": null,
-        "title_size_desktop": 28,
-        "title_size_mobile": 22,
+        "product_1_image": "shopify://shop_images/Diseno_sin_titulo_-_2025-07-01T192226.639.png",
+        "product_1_name": "MyCOCOS® 4.0",
+        "product_2_image": "shopify://shop_images/Diseno_sin_titulo_-_2025-07-01T192033.182_1c4cec20-e503-4516-8156-16da3646c5c9.png",
+        "product_2_name": "Otros",
+        "header-38dd0ee0962dfee3be684a20b993e422": null,
+        "title_size_desktop": 36,
+        "title_size_mobile": 32,
         "text_size_desktop": 16,
         "text_size_mobile": 14,
-        "header-e105b1c38899f636ccd6361ea0bad29a": null,
-        "text_color": "#000000",
-        "check_color": "#1a73e8",
-        "border_color": "#eeeeee",
-        "header-2de5cc2065e085cf4d89964792448bd4": null,
+        "header-62b18cee9c72c977605bf8d9240f59db": null,
+        "text_color": "#001936",
+        "check_color": "#001936",
+        "border_color": "#ffffff",
+        "header-fa6743e9adf395d2b5657be18fd1c759": null,
         "row_padding": 14,
-        "padding_top": 40,
-        "padding_bottom": 40
+        "padding_top": 60,
+        "padding_bottom": 60
       },
-      "blocks": {},
-      "block_order": [],
+      "blocks": {
+        "row_DzRrnJ": {
+          "type": "row",
+          "disabled": false,
+          "settings": {
+            "feature": "Diseñada para todo el cuerpo",
+            "col1": true,
+            "col2": false
+          }
+        },
+        "row_d7LERT": {
+          "type": "row",
+          "disabled": false,
+          "settings": {
+            "feature": "Sin irritaciones ni cortes",
+            "col1": true,
+            "col2": false
+          }
+        },
+        "row_HLkjeJ": {
+          "type": "row",
+          "disabled": false,
+          "settings": {
+            "feature": "100% a prueba de agua",
+            "col1": true,
+            "col2": false
+          }
+        },
+        "row_yXcCwb": {
+          "type": "row",
+          "disabled": false,
+          "settings": {
+            "feature": "Luz LED integrada",
+            "col1": true,
+            "col2": false
+          }
+        },
+        "row_K9hBQR": {
+          "type": "row",
+          "disabled": false,
+          "settings": {
+            "feature": "Batería de larga duración",
+            "col1": true,
+            "col2": false
+          }
+        },
+        "row_thqJPN": {
+          "type": "row",
+          "disabled": false,
+          "settings": {
+            "feature": "Sin protección para la piel",
+            "col1": true,
+            "col2": false
+          }
+        }
+      },
+      "block_order": [
+        "row_DzRrnJ",
+        "row_d7LERT",
+        "row_HLkjeJ",
+        "row_yXcCwb",
+        "row_K9hBQR",
+        "row_thqJPN"
+      ],
       "name": "Comparison Table"
     }
   },
@@ -1272,7 +1334,7 @@
     "sp_icon_grid_PxUQwN",
     "sp_before_and_after_cmURKt",
     "section_p8b3kQ",
-    "comparison_table_khxXr",
+    "comparison_table_LVMqAe",
     "section_kRJNMV",
     "section_Xtmnw9",
     "product_recommendations_tgHfRf",
