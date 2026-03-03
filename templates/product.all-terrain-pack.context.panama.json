@@ -1174,6 +1174,58 @@
                 "padding-inline-end": 0
               }
             },
+            "divider_CcFJXh": {
+              "type": "_divider",
+              "name": "t:names.divider",
+              "disabled": false,
+              "settings": {
+                "thickness": 1,
+                "corner_radius": "square",
+                "width_percent": 100,
+                "header-a53bdfb9714c92ee055b459ed7f53616": null,
+                "padding-block-start": 0,
+                "padding-block-end": 0
+              }
+            },
+            "buy_buttons_Tw6qtL": {
+              "type": "buy-buttons",
+              "disabled": false,
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "disabled": false,
+                  "static": true,
+                  "settings": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "disabled": false,
+                  "static": true,
+                  "settings": {
+                    "style_class": "button"
+                  }
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "disabled": false,
+                  "static": true,
+                  "settings": {}
+                }
+              },
+              "block_order": [],
+              "settings": {
+                "paragraph-723148ed01575a76a1ff0cd8cc082da3": null,
+                "stacking": true,
+                "show_pickup_availability": false,
+                "gift_card_form": true,
+                "paragraph-1ef4e99f6f839efddce033f086a8a122": null,
+                "header-52f2ccfc70656a6c435e09323d815748": null,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
             "text_aEtTtq": {
               "settings": {
                 "text": "<h4>¿Por qué elegir este Pack?</h4><p>{{ closest.product.description }}</p>"
@@ -1184,6 +1236,8 @@
             "group_Dn9zjy",
             "group_aE8WTb",
             "variant_picker_9JdeMe",
+            "divider_CcFJXh",
+            "buy_buttons_Tw6qtL",
             "essential_upsell_frequently_bought_together_app_block_48yzG8",
             "text_aEtTtq",
             "accordion_WXMzry"
