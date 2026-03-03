@@ -1226,6 +1226,117 @@
                 "padding-inline-end": 0
               }
             },
+            "custom_liquid_xxtLez": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "disabled": false,
+              "settings": {
+                "custom_liquid": "<!DOCTYPE html>\n<html lang=\"es\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Barra de Anuncios con Desplazamiento Infinito</title>\n    <style>\n      .unique-announcement-bar {\n        width: 100%;\n        background-image: linear-gradient(45deg, #011732, #012a5c 80%);\n        padding: 8px 0;\n        overflow: hidden;\n        white-space: nowrap;\n        position: relative;\n        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n        margin: 5px 0px 0px 0px;\n      }\n      .unique-announcement-wrapper {\n        display: flex;\n        animation: unique-scroll-text 8s linear infinite;\n      }\n      .unique-announcement-text {\n        color: #fffff9;\n        font-size: 14px;\n        font-weight: bold;\n        margin-right: 50px;\n      }\n      @keyframes unique-scroll-text {\n        0% {\n          transform: translateX(0);\n        }\n        100% {\n          transform: translateX(-100%);\n        }\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"unique-announcement-bar\">\n      <div class=\"unique-announcement-wrapper\">\n        <div class=\"unique-announcement-text\">Envío Express ciudad de Panamá </div>\n        <div class=\"unique-announcement-text\">Envíos al interior 2-3 días hábiles</div>\n        <div class=\"unique-announcement-text\">Garantía de 1 año</div>\n        <div class=\"unique-announcement-text\">Pago seguro</div>\n      </div>\n    </div>\n  </body>\n</html>"
+              }
+            },
+            "essential_upsell_frequently_bought_together_app_block_d4dbr4": {
+              "type": "shopify://apps/essential-upsell/blocks/frequently-bought-together-app-block/50627fd9-24fd-4250-8614-accc12826d80",
+              "disabled": false,
+              "settings": {}
+            },
+            "group_eXX46t": {
+              "type": "group",
+              "name": "t:names.group",
+              "disabled": false,
+              "blocks": {
+                "text_MNwVJe": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "disabled": false,
+                  "settings": {
+                    "text": "<p>Pago Seguro</p>",
+                    "header-ae5f178add8e7793837dba8c519d1cfe": null,
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "header-b68b6d6e4dba59c4ce91c5351806a956": null,
+                    "type_preset": "h5",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "header-5936d1a132f4b27e864e7ed3ded7d996": null,
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "header-43f1346e028ee082d371a36e34970264": null,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                },
+                "payment_icons_bB9qjf": {
+                  "type": "payment-icons",
+                  "name": "t:names.payment_icons",
+                  "disabled": false,
+                  "settings": {
+                    "horizontal_alignment": "flex-start",
+                    "gap": 10,
+                    "header-a88242f83e99b75360c658ed0744f8c3": null,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                }
+              },
+              "block_order": [
+                "text_MNwVJe",
+                "payment_icons_bB9qjf"
+              ],
+              "settings": {
+                "header-c2c317f8276ed4ec8d8ae8b95d46fc52": null,
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "header-5ec34130d58014a516567bb5eeeaae39": null,
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "header-4f4be5fe8db37f11c1cfdae2af0632cc": null,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video": null,
+                "video_position": "cover",
+                "background_image": null,
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "header-9f38ff36f59ee9ba4de7b58d26347db3": null,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "header-b5fd35f6f60ccf69ff26988070930dff": null,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
             "text_aEtTtq": {
               "settings": {
                 "text": "<h4>¿Por qué elegir este Pack?</h4><p>{{ closest.product.description }}</p>"
@@ -1238,7 +1349,9 @@
             "variant_picker_9JdeMe",
             "divider_CcFJXh",
             "buy_buttons_Tw6qtL",
-            "essential_upsell_frequently_bought_together_app_block_48yzG8",
+            "custom_liquid_xxtLez",
+            "essential_upsell_frequently_bought_together_app_block_d4dbr4",
+            "group_eXX46t",
             "text_aEtTtq",
             "accordion_WXMzry"
           ],
