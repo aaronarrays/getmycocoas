@@ -12,5 +12,32 @@
     "market": "panama"
   },
   "parent": "product.mundialista.json",
-  "sections": {}
+  "sections": {
+    "section_QnDbUw": {
+      "blocks": {
+        "group_4aLjn9": {
+          "blocks": {
+            "klaviyo_reviews_average_rating_RTRhg": {
+              "type": "shopify://apps/klaviyo-reviews/blocks/average-rating/db20e365-d984-4ac4-9655-e1588d951ca9",
+              "disabled": false,
+              "settings": {
+                "product": "{{closest.product}}",
+                "header-d1f9380e0b61f0b377e5b320e03755ee": null
+              }
+            }
+          },
+          "block_order": [
+            "price_fYDCtf",
+            "price_with_badge_mEyMzf",
+            "klaviyo_reviews_average_rating_RTRhg"
+          ]
+        }
+      },
+      "block_order": [
+        "custom_liquid_U9W8mN",
+        "group_fk7UPR",
+        "group_4aLjn9"
+      ]
+    }
+  }
 }

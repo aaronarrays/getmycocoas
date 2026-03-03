@@ -191,10 +191,19 @@
             "price_with_badge_mEyMzf"
           ]
         },
-        "klaviyo_reviews_average_rating_UCNNYh": {
-          "type": "shopify://apps/klaviyo-reviews/blocks/average-rating/db20e365-d984-4ac4-9655-e1588d951ca9",
+        "loox_reviews_loox_rating_9kyytd": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
-            "product": "{{closest.product}}"
+            "contentSize": 16,
+            "pattern": "",
+            "hideText": false,
+            "alignment": "",
+            "layout": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false
           }
         }
       },
@@ -202,7 +211,7 @@
         "custom_liquid_U9W8mN",
         "group_fk7UPR",
         "group_4aLjn9",
-        "klaviyo_reviews_average_rating_UCNNYh"
+        "loox_reviews_loox_rating_9kyytd"
       ],
       "name": "t:names.custom_section",
       "settings": {
