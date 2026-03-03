@@ -647,101 +647,11 @@
       ],
       "name": "Cocos %"
     },
-    "section_QnDbUw": {
-      "settings": {},
-      "blocks": {
-        "group_fk7UPR": {
-          "blocks": {
-            "product_title_4mPkcw": {
-              "settings": {
-                "type_preset": "h3"
-              }
-            },
-            "text_pkV6jd": {
-              "type": "text",
-              "name": "t:names.text",
-              "disabled": false,
-              "settings": {
-                "text": "<h6><strong>LO ESENCIAL QUE SÍ NECESITAS</strong></h6>",
-                "header-41f7d9448a689b1f38b30b60b4b5c574": null,
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "header-09b9ef9012cc35483b71b30a88a44bbb": null,
-                "type_preset": "paragraph",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground-heading)",
-                "header-3459adf9773ad73833c20f6ac1099360": null,
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "header-9e1809dc49fe2beab5a1a9f072ac29c5": null,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              }
-            }
-          },
-          "block_order": [
-            "product_title_4mPkcw",
-            "text_pkV6jd",
-            "divider_EMMGM7"
-          ],
-          "settings": {}
-        },
-        "loox_reviews_loox_rating_K7mmTM": {
-          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
-          "disabled": false,
-          "settings": {
-            "header-6c4fdc18079728f0549ba667db0493ce": null,
-            "contentSize": 16,
-            "pattern": "",
-            "paragraph-722098cdc823ba48278e3a4f6be8a600": null,
-            "hideText": false,
-            "alignment": "",
-            "layout": "",
-            "textColor": "",
-            "starColor": "",
-            "showAllReviews": false,
-            "looxOpenFloatingWidget": false,
-            "emptyRatingWidget": false,
-            "header-a2d6fe3331dcc2239ff3a14f83f0da8e": null,
-            "paragraph-29ddec0f2ed766abe987f6f23d270178": null,
-            "paragraph-bf2fdb7f58481bb1467bef60ac6838eb": null
-          }
-        }
-      },
-      "block_order": [
-        "group_fk7UPR",
-        "group_4aLjn9",
-        "loox_reviews_loox_rating_K7mmTM"
-      ]
-    },
     "main": {
       "settings": {},
       "blocks": {
         "product-details": {
           "blocks": {
-            "buy_buttons_eYQEYi": {
-              "blocks": {
-                "add-to-cart": {
-                  "settings": {
-                    "style_class": "button-secondary"
-                  }
-                },
-                "accelerated-checkout": {
-                  "disabled": false,
-                  "settings": {}
-                }
-              },
-              "settings": {}
-            },
             "custom_liquid_hQLht8": {
               "disabled": true,
               "settings": {}
@@ -1197,16 +1107,9 @@
             }
           },
           "block_order": [
-            "divider_rJqR9D",
-            "variant_picker_R3rGDr",
-            "divider_rQPr6F",
-            "buy_buttons_eYQEYi",
             "custom_liquid_hQLht8",
             "group_djRwgf",
             "essential_upsell_frequently_bought_together_app_block_48yzG8",
-            "group_fQyPTx",
-            "icon_rxA6Ay",
-            "divider_wm3rRJ",
             "text_aEtTtq",
             "accordion_WXMzry"
           ],
@@ -1474,7 +1377,6 @@
     }
   },
   "order": [
-    "section_QnDbUw",
     "main",
     "section_tPTxXc",
     "section_qECJHB",
