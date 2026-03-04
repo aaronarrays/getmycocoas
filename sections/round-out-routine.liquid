@@ -265,6 +265,78 @@
   })();
 </script>
 
+<script>
+  (function() {
+    const section = document.getElementById('round-out-routine-{{ section.id }}');
+    if (!section) return;
+    const forms = section.querySelectorAll('form[data-type="add-to-cart-form"]');
+    const cartAddUrl = (typeof Theme !== 'undefined' && Theme.routes && Theme.routes.cart_add_url) ? Theme.routes.cart_add_url : '/cart/add.js';
+
+    function getCartSectionIds() {
+      const components = document.querySelectorAll('cart-items-component');
+      const ids = [];
+      components.forEach(function(el) {
+        if (el.dataset && el.dataset.sectionId) ids.push(el.dataset.sectionId);
+      });
+      return ids;
+    }
+
+    function openCartDrawer() {
+      const drawer = document.querySelector('cart-drawer-component');
+      if (drawer && typeof drawer.open === 'function') drawer.open();
+    }
+
+    forms.forEach(function(form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        var formEl = e.target;
+        var formData = new FormData(formEl);
+        var sectionIds = getCartSectionIds();
+        if (sectionIds.length) formData.append('sections', sectionIds.join(','));
+
+        var submitBtn = formEl.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.setAttribute('aria-busy', 'true');
+        }
+        try {
+          var res = await fetch(cartAddUrl, {
+            method: 'POST',
+            headers: { 'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json' },
+            body: formData
+          });
+          var data = await res.json();
+          if (data.status && data.message) {
+            if (typeof window.alert === 'function') window.alert(data.message);
+            return;
+          }
+          document.dispatchEvent(new CustomEvent('cart:update', {
+            bubbles: true,
+            detail: {
+              resource: {},
+              sourceId: formEl.id || '',
+              data: {
+                source: 'round-out-routine',
+                itemCount: parseInt(formData.get('quantity') || '1', 10) || 1,
+                sections: data.sections || {}
+              }
+            }
+          }));
+          openCartDrawer();
+        } catch (err) {
+          console.error('Add to cart failed:', err);
+          if (typeof window.alert === 'function') window.alert('No se pudo agregar al carrito. Intenta de nuevo.');
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.removeAttribute('aria-busy');
+          }
+        }
+      });
+    });
+  })();
+</script>
+
 {% stylesheet %}
   .round-out-routine {
     background-color: var(--ror-bg, #1a1a1a);
