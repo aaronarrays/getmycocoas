@@ -1994,31 +1994,15 @@
         "item_b7ngpA": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/REPUESTO_DE_CUCHILLA__jpg.webp",
+            "image": "shopify://shop_images/MC_banner.webp",
             "image_fit": "cover",
             "image_position": "center",
             "image_aspect_ratio": "16/9",
-            "product": "pack-3-hojillas-skinsecure-mycocos®-cuchilla-de-ceramica",
+            "product": "desodorante-de-cocos-mycocos®",
             "product_title_override": "",
             "product_subtitle": "",
-            "headline": "HOJILLAS SKINSECURE",
-            "description": "Renueva tu afeitadora con las Cuchillas de Cerámica MyCOCOS™, diseñadas para ofrecer un corte suave, preciso y sin irritación. Su tecnología avanzada reduce la fricción con la piel, garantizando un afeitado más cómodo y seguro.",
-            "button_label": "Agregar",
-            "button_link": ""
-          }
-        },
-        "item_zpwdxp": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/REPUESTO_DE_CUCHILLA__jpg.webp",
-            "image_fit": "cover",
-            "image_position": "center",
-            "image_aspect_ratio": "16/9",
-            "product": "pack-3-hojillas-skinsecure-mycocos®-cuchilla-de-ceramica",
-            "product_title_override": "",
-            "product_subtitle": "",
-            "headline": "HOJILLAS SKINSECURE",
-            "description": "Renueva tu afeitadora con las Cuchillas de Cerámica MyCOCOS™, diseñadas para ofrecer un corte suave, preciso y sin irritación. Su tecnología avanzada reduce la fricción con la piel, garantizando un afeitado más cómodo y seguro.",
+            "headline": "Desodorante de Cocos MyCOCOS®",
+            "description": "Mantente fresco y seguro todo el día con el Desodorante de Cocos MyCOCOS®. Su fórmula natural, libre de aluminio, cuida tu piel mientras neutraliza los malos olores, incluso en las zonas más sensibles. Diseñado para el cuidado masculino, combina protección duradera con un aroma fresco y ligero a coco que te acompaña en cualquier ocasión. Ideal para hombres que buscan sentirse limpios, seguros y confiados sin comprometer su salud ni su estilo.",
             "button_label": "Agregar",
             "button_link": ""
           }
@@ -2026,8 +2010,7 @@
       },
       "block_order": [
         "item_d83kHr",
-        "item_b7ngpA",
-        "item_zpwdxp"
+        "item_b7ngpA"
       ],
       "name": "Round out your routine",
       "settings": {
