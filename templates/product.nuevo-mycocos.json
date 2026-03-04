@@ -1991,25 +1991,43 @@
             "button_link": ""
           }
         },
-        "item_YDw6xw": {
+        "item_b7ngpA": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/REPUESTO_DE_CUCHILLA__jpg.webp",
             "image_fit": "cover",
             "image_position": "center",
-            "image_aspect_ratio": "1",
-            "product": "",
+            "image_aspect_ratio": "16/9",
+            "product": "pack-3-hojillas-skinsecure-mycocos®-cuchilla-de-ceramica",
             "product_title_override": "",
             "product_subtitle": "",
-            "headline": "Soothe.",
-            "description": "This post-shave lotion hydrates and helps reduce ball skin irritation, making your testicles the most comfortable they've felt in years.",
-            "button_label": "Add",
+            "headline": "HOJILLAS SKINSECURE",
+            "description": "Renueva tu afeitadora con las Cuchillas de Cerámica MyCOCOS™, diseñadas para ofrecer un corte suave, preciso y sin irritación. Su tecnología avanzada reduce la fricción con la piel, garantizando un afeitado más cómodo y seguro.",
+            "button_label": "Agregar",
+            "button_link": ""
+          }
+        },
+        "item_zpwdxp": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/REPUESTO_DE_CUCHILLA__jpg.webp",
+            "image_fit": "cover",
+            "image_position": "center",
+            "image_aspect_ratio": "16/9",
+            "product": "pack-3-hojillas-skinsecure-mycocos®-cuchilla-de-ceramica",
+            "product_title_override": "",
+            "product_subtitle": "",
+            "headline": "HOJILLAS SKINSECURE",
+            "description": "Renueva tu afeitadora con las Cuchillas de Cerámica MyCOCOS™, diseñadas para ofrecer un corte suave, preciso y sin irritación. Su tecnología avanzada reduce la fricción con la piel, garantizando un afeitado más cómodo y seguro.",
+            "button_label": "Agregar",
             "button_link": ""
           }
         }
       },
       "block_order": [
         "item_d83kHr",
-        "item_YDw6xw"
+        "item_b7ngpA",
+        "item_zpwdxp"
       ],
       "name": "Round out your routine",
       "settings": {
