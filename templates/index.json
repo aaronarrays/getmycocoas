@@ -2753,12 +2753,21 @@
             "logo_alt": "",
             "logo_link": ""
           }
+        },
+        "logo_JXpwGK": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/ultra_39abee12-1b6c-46ee-8c71-71a3309c1683.png",
+            "logo_alt": "",
+            "logo_link": ""
+          }
         }
       },
       "block_order": [
         "logo_cmnLtA",
         "logo_PU9VhD",
-        "logo_qrcrgf"
+        "logo_qrcrgf",
+        "logo_JXpwGK"
       ],
       "custom_css": [
         ".logo-carousel-container {padding: 40px 0 40px 0; background-color: #001936; overflow: hidden;}",
