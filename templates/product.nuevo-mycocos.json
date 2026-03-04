@@ -1978,10 +1978,11 @@
         "item_d83kHr": {
           "type": "item",
           "settings": {
-            "image_fit": "cover",
+            "image": "shopify://shop_images/REPUESTO_DE_CUCHILLA__jpg.webp",
+            "image_fit": "contain",
             "image_position": "center",
-            "image_aspect_ratio": "1",
-            "product": "",
+            "image_aspect_ratio": "16/9",
+            "product": "pack-3-hojillas-skinsecure-mycocos®-cuchilla-de-ceramica",
             "product_title_override": "",
             "product_subtitle": "",
             "headline": "Exfoliate.",
