@@ -1979,15 +1979,15 @@
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/REPUESTO_DE_CUCHILLA__jpg.webp",
-            "image_fit": "contain",
+            "image_fit": "cover",
             "image_position": "center",
             "image_aspect_ratio": "16/9",
             "product": "pack-3-hojillas-skinsecure-mycocos®-cuchilla-de-ceramica",
             "product_title_override": "",
             "product_subtitle": "",
-            "headline": "Exfoliate.",
-            "description": "Witch hazel, willow bark, and volcanic rock scrub away and clear skin to reveal a smooth surface and clean slate to shave on.",
-            "button_label": "Add",
+            "headline": "HOJILLAS SKINSECURE",
+            "description": "Renueva tu afeitadora con las Cuchillas de Cerámica MyCOCOS™, diseñadas para ofrecer un corte suave, preciso y sin irritación. Su tecnología avanzada reduce la fricción con la piel, garantizando un afeitado más cómodo y seguro.",
+            "button_label": "Agregar",
             "button_link": ""
           }
         },
