@@ -69,6 +69,10 @@
           if variant and variant.available
             assign can_add = true
           endif
+          assign product_price = ''
+if variant
+  assign product_price = variant.price | money
+endif
           assign image_fit = block.settings.image_fit | default: 'cover'
           assign image_position = block.settings.image_position | default: 'center'
           assign image_aspect = block.settings.image_aspect_ratio | default: '1'
@@ -101,13 +105,18 @@
                 </div>
               {% endif %}
               <div class="round-out-routine__product-info">
-                {% if product_title != blank %}
-                  <span class="round-out-routine__product-name">{{ product_title }}</span>
-                {% endif %}
-                {% if product_subtitle != blank %}
-                  <span class="round-out-routine__product-subtitle">{{ product_subtitle }}</span>
-                {% endif %}
-              </div>
+  {% if product_title != blank %}
+    <span class="round-out-routine__product-name">{{ product_title }}</span>
+  {% endif %}
+
+  {% if product_price != blank %}
+    <span class="round-out-routine__product-price">{{ product_price }}</span>
+  {% endif %}
+
+  {% if product_subtitle != blank %}
+    <span class="round-out-routine__product-subtitle">{{ product_subtitle }}</span>
+  {% endif %}
+</div>
               {% if item_product != blank and variant != blank %}
                 {% assign form_id_overlay = 'ror-form-overlay-' | append: section.id | append: '-' | append: block.id %}
                 {% form 'product', item_product, id: form_id_overlay, data-type: 'add-to-cart-form' %}
@@ -128,10 +137,14 @@
           {% comment %} Móvil: barra debajo de la foto, solo título + botón {% endcomment %}
           <div class="round-out-routine__product-bar round-out-routine__product-bar--below">
             <div class="round-out-routine__product-info">
-              {% if product_title != blank %}
-                <span class="round-out-routine__product-name">{{ product_title }}</span>
-              {% endif %}
-            </div>
+  {% if product_title != blank %}
+    <span class="round-out-routine__product-name">{{ product_title }}</span>
+  {% endif %}
+
+  {% if product_price != blank %}
+    <span class="round-out-routine__product-price">{{ product_price }}</span>
+  {% endif %}
+</div>
             {% if item_product != blank and variant != blank %}
               {% assign form_id = 'ror-form-' | append: section.id | append: '-' | append: block.id %}
               {% form 'product', item_product, id: form_id, data-type: 'add-to-cart-form' %}
@@ -738,6 +751,13 @@
   .round-out-routine__dot:hover {
     background: rgb(255 255 255 / 0.7);
   }
+
+  .round-out-routine__product-price{
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  line-height: 1.2;
+}
 {% endstylesheet %}
 
 {% schema %}
