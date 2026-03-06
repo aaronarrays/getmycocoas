@@ -1555,7 +1555,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>Para quienes quieren estar listos en cualquier situación.</p>",
+                    "text": "<p>El pack todoterreno para tu grooming.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1581,7 +1581,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>Cubre todas las zonas clave con seguridad y precisión.</p>",
+                    "text": "<p>Cuerpo, barba, nariz y orejas bajo control.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1607,7 +1607,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>De la barba a los detalles: si quieres que nada se te escape.</p>",
+                    "text": "<p>Incluye MyCOCOS 4.0, Daily Shaver y trimmer de nariz/orejas.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1633,7 +1633,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>Un pack versátil para un estilo siempre impecable.</p>",
+                    "text": "<p>Cubre todas las zonas clave con precisión y seguridad.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1659,7 +1659,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>Ideal si buscas control total sin llegar a lo más premium.</p>",
+                    "text": "<p>El pack más versátil para estar listo en cualquier situación.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
