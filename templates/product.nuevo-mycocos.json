@@ -1298,7 +1298,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>Para quienes buscan precisión sin complicarse.</p>",
+                    "text": "<p>Para quienes quieren mantener cuerpo y barba impecables.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1324,7 +1324,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>Ideal si quieres cubrir lo esencial con un enfoque práctico y efectivo.</p>",
+                    "text": "<p>Grooming completo para cuerpo y rostro.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1350,7 +1350,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>Rutina básica pero poderosa: cuerpo y rostro bajo control.</p>",
+                    "text": "<p>Incluye MyCOCOS 4.0 + Daily Shaver.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1376,7 +1376,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>Sin excesos — solo resultados.</p>",
+                    "text": "<p>Recorta cuerpo con seguridad y manten tu barba con precisión.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1402,7 +1402,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>Perfecto para empezar o mantener un grooming limpio y funcional.</p>",
+                    "text": "<p>El combo esencial para tu rutina de grooming.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
