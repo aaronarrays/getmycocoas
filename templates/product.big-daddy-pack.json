@@ -1016,7 +1016,12 @@
         }
       },
       "custom_css": [
-        "legend {font-weight: bold;}"
+        ".variant-option__button-label {width: 32px; height: 32px;}",
+        ".variant-option__button-label .swatch {width: 100%; height: 100%;}",
+        ".variant-option__buttons {gap: 6px !important;}",
+        "@media (min-width: 1024px) {.product-information__grid {grid-template-columns: 60% 40%; }}",
+        "@media (max-width: 768px) {.product-information {padding-top: 0px; }}",
+        ".text-block {line-height: 16px;}"
       ],
       "settings": {
         "product": "{{ product }}",
@@ -1026,8 +1031,8 @@
         "limit_details_width": false,
         "gap": 48,
         "color_scheme": "",
-        "padding-block-start": 0,
-        "padding-block-end": 50
+        "padding-block-start": 40,
+        "padding-block-end": 60
       }
     },
     "section_H8P74R": {
