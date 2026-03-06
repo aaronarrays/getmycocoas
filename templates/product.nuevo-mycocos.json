@@ -1812,7 +1812,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>Para quienes quieren TODO lo necesario en un solo PACK.</p>",
+                    "text": "<p>El kit definitivo de grooming masculino.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1838,7 +1838,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>La solución definitiva de pies a cabeza.</p>",
+                    "text": "<p>Cuerpo, rostro y cuidado completo.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1864,7 +1864,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>Incluye herramientas y cuidado completo para cada detalle.</p>",
+                    "text": "<p>Incluye todas las herramientas + accesorios esenciales.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1890,7 +1890,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>Preparas, mantienes y perfeccionas tu imagen sin esfuerzo.</p>",
+                    "text": "<p>Travel bag, kit de uñas, desodorante íntimo y crema de afeitar.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
@@ -1916,7 +1916,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>Si te tomas en serio tu grooming, este es tu nivel.</p>",
+                    "text": "<p>Todo lo que necesitas para un grooming de nivel profesional.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
