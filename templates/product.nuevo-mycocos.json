@@ -1916,7 +1916,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p>Todo lo que necesitas para un grooming de nivel profesional.</p>",
+                    "text": "<p>Para quienes se toman su grooming en serio.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
