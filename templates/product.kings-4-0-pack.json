@@ -1336,6 +1336,320 @@
         "headline_spacing": 15
       }
     },
+    "ss_shoppable_video_PPUKGt": {
+      "type": "ss-shoppable-video",
+      "blocks": {
+        "item_ikrLcQ": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/Img 2622.mp4",
+            "video_url": "",
+            "autoplay": true,
+            "product": "rasuradora-masculina-my-cocos-4-0",
+            "use_variants": true,
+            "modal_heading": "<h4><strong>¿Por qué elegir la MyCOCOS® 4.0?</strong></h4>",
+            "modal_text": "<p>✔️<strong> SKINSECURE</strong> Rasurado seguro, incluso en zonas sensibles</p><p><strong>✔️ Resistente al agua (IPX7)</strong>  úsala dentro o fuera de la ducha.</p><p><strong>✔️ Batería duradera,</strong> hasta <strong>120 minutos</strong> de uso continuo. </p><p><strong>✔️ </strong> <strong>Resultados limpios en minutos</strong></p><p>✔️<strong> Diseñada para todo el cuerpo</strong></p>"
+          }
+        },
+        "item_3wFCaT": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/Img 2623.mp4",
+            "video_url": "",
+            "autoplay": true,
+            "product": "rasuradora-de-nariz-y-orejas-mycocos®",
+            "use_variants": true,
+            "modal_heading": "<p>Rasuradora de nariz y orejas - MYCOCOS</p>",
+            "modal_text": "<p>Dile adiós a los vellos indeseados con la Rasuradora de Nariz y Orejas MyCOCOS®, diseñada para mantener tu apariencia siempre cuidada. Gracias a su sistema giratorio de doble hoja en 360°, recorta en cualquier dirección y ángulo sin riesgo de cortes o irritación.<br/><br/>Corte preciso sin tirones ni heridas<br/><br/>Sistema giratorio de doble hoja en 360°<br/><br/>Batería recargable con carga USB<br/><br/>Incluye cepillo de limpieza y manual de uso<br/><br/>Cabezal desmontable y lavable para máxima higiene<br/><br/>Diseño compacto y ergonómico, ideal para viajes</p>"
+          }
+        },
+        "item_D3gYz6": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/Img 2621.mp4",
+            "video_url": "",
+            "autoplay": true,
+            "product": "dayli-shaver-rasuradora-de-cartera",
+            "use_variants": true,
+            "modal_heading": "<h3>Daily Shaver</h3>",
+            "modal_text": "<p>La Daily Shaver es tu mejor aliada para un look limpio, fresco y siempre al punto. Diseñada para hombres que no dejan espacio a la improvisación, su cabezal flotante se adapta perfectamente al contorno del rostro, cuello y cabeza, entregando un afeitado ultra al ras sin irritación.<br/><br/>Compacta, potente y lista para la acción en segundos. Ideal para la rutina diaria o esos retoques express antes de una reunión o cita importante.</p>"
+          }
+        },
+        "item_xDxytX": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/Img 6986.mp4",
+            "video_url": "",
+            "autoplay": true,
+            "product": "rasuradora-masculina-my-cocos-4-0",
+            "use_variants": true,
+            "modal_heading": "<h3>Daily Shaver</h3>",
+            "modal_text": "<p>La Daily Shaver es tu mejor aliada para un look limpio, fresco y siempre al punto. Diseñada para hombres que no dejan espacio a la improvisación, su cabezal flotante se adapta perfectamente al contorno del rostro, cuello y cabeza, entregando un afeitado ultra al ras sin irritación.<br/><br/>Compacta, potente y lista para la acción en segundos. Ideal para la rutina diaria o esos retoques express antes de una reunión o cita importante.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_ikrLcQ",
+        "item_3wFCaT",
+        "item_D3gYz6",
+        "item_xDxytX"
+      ],
+      "name": "SS - Shoppable video",
+      "settings": {
+        "heading": "<h2>Ellos ya recomiendan GetMyCocos®</h2>",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 48,
+        "heading_size_mobile": 34,
+        "heading_height": 130,
+        "heading_align": "center",
+        "heading_align_mobile": "center",
+        "slider_view": 4,
+        "slider_view_mobile": 1.3,
+        "slider_gap": 16,
+        "slider_gap_mobile": 16,
+        "slider_mt": 20,
+        "card_radius": 10,
+        "card_border_thickness": 0,
+        "card_shadow": true,
+        "video_ratio": "portrait",
+        "video_ratio_mobile": "portrait",
+        "video_overlay": 0.2,
+        "image_width": 44,
+        "image_width_mobile": 44,
+        "image_radius": 6,
+        "image_border_thickness": 0,
+        "title_custom": false,
+        "title_font": "josefin_sans_n4",
+        "title_size": 14,
+        "title_size_mobile": 14,
+        "title_height": 130,
+        "title_uppercase": false,
+        "price_custom": false,
+        "price_font": "josefin_sans_n4",
+        "price_size": 14,
+        "price_size_mobile": 14,
+        "price_height": 130,
+        "button": "Añadir al carrito",
+        "button_soldout": "Agotado",
+        "button_custom": false,
+        "button_font": "josefin_sans_n4",
+        "button_size": 16,
+        "button_size_mobile": 16,
+        "button_padding_vertical": 10,
+        "button_padding_vertical_mobile": 10,
+        "button_padding_horizontal": 10,
+        "button_padding_horizontal_mobile": 10,
+        "reload_after_adding": false,
+        "redirect_after_adding": false,
+        "option_custom": false,
+        "option_font": "josefin_sans_n4",
+        "option_size": 12,
+        "option_size_mobile": 12,
+        "option_height": 100,
+        "option_mt": 24,
+        "variants_price_custom": false,
+        "variants_price_font": "josefin_sans_n4",
+        "variants_price_size": 14,
+        "variants_price_size_mobile": 14,
+        "variants_price_height": 130,
+        "variants_price_mt": 10,
+        "variants_price_align": "center",
+        "variants_price_align_mobile": "center",
+        "modal_width": 740,
+        "modal_width_mobile": 100,
+        "modal_radius": 16,
+        "modal_border_thickness": 0,
+        "modal_overlay": 50,
+        "close_size": 42,
+        "close_size_mobile": 42,
+        "close_radius": 8,
+        "close_border_thickness": 0,
+        "buttons_size": 48,
+        "buttons_size_mobile": 48,
+        "buttons_radius": 8,
+        "buttons_border_thickness": 0,
+        "modal_video_radius": 0,
+        "modal_video_border_thickness": 0,
+        "modal_video_ratio": "portrait",
+        "modal_video_ratio_mobile": "portrait",
+        "modal_heading_custom": false,
+        "modal_heading_font": "josefin_sans_n4",
+        "modal_heading_size": 28,
+        "modal_heading_size_mobile": 28,
+        "modal_heading_height": 130,
+        "modal_heading_align": "center",
+        "modal_heading_align_mobile": "center",
+        "modal_text_custom": false,
+        "modal_text_font": "josefin_sans_n4",
+        "modal_text_size": 16,
+        "modal_text_size_mobile": 16,
+        "modal_text_height": 150,
+        "modal_text_align": "center",
+        "modal_text_align_mobile": "center",
+        "modal_text_mt": 16,
+        "use_modal_product": true,
+        "modal_image_width": 70,
+        "modal_image_width_mobile": 66,
+        "modal_image_radius": 12,
+        "modal_image_border_thickness": 0,
+        "modal_title_custom": false,
+        "modal_title_font": "josefin_sans_n4",
+        "modal_title_size": 16,
+        "modal_title_size_mobile": 16,
+        "modal_title_height": 130,
+        "modal_title_uppercase": false,
+        "modal_price_custom": false,
+        "modal_price_font": "josefin_sans_n4",
+        "modal_price_size": 14,
+        "modal_price_size_mobile": 14,
+        "modal_price_height": 130,
+        "modal_button": "Añadir al carrito",
+        "modal_button_soldout": "Agotado",
+        "modal_button_custom": false,
+        "modal_button_font": "josefin_sans_n4",
+        "modal_button_size": 16,
+        "modal_button_size_mobile": 16,
+        "modal_button_radius": 8,
+        "modal_button_border_thickness": 1,
+        "modal_button_mt": 16,
+        "modal_button_align": "center",
+        "modal_button_align_mobile": "center",
+        "card_bg_color": "#ffffff",
+        "card_border_color": "#121212",
+        "video_overlay_color": "#001936",
+        "card_shadow_color": "#001936",
+        "title_color": "#ffffff",
+        "price_color": "#ffffff",
+        "image_border_color": "#121212",
+        "button_color": "#001936",
+        "button_hover_color": "#ffffff",
+        "button_bg_color": "#ffba25",
+        "button_bg_hover_color": "#001936",
+        "arrow_icon_color": "#001936",
+        "arrow_bg_color": "#ffba25",
+        "arrow_border_color": "#ffffff",
+        "option_color": "#001936",
+        "variants_price_color": "#001936",
+        "modal_heading_color": "#001936",
+        "modal_text_color": "#001936",
+        "modal_video_border_color": "#121212",
+        "modal_content_bg_color": "#ffffff",
+        "modal_border_color": "#121212",
+        "close_icon_color": "#ffffff",
+        "close_bg_color": "#ffffff",
+        "close_border_color": "#121212",
+        "buttons_icon_color": "#ffffff",
+        "buttons_bg_color": "#ffffff",
+        "buttons_border_color": "#121212",
+        "modal_title_color": "#001936",
+        "modal_price_color": "#001936",
+        "modal_image_border_color": "#121212",
+        "modal_button_color": "#001936",
+        "modal_button_hover_color": "#ffffff",
+        "modal_button_bg_color": "#ffba25",
+        "modal_button_bg_hover_color": "#001936",
+        "modal_button_border_color": "#ffba25",
+        "modal_button_border_hover_color": "#001936",
+        "heading_color": "#ffffff",
+        "background_color": "#001936",
+        "background_gradient": "",
+        "border_color": "#001936",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 1400,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "comparison_table_CVRCRN": {
+      "type": "comparison-table",
+      "blocks": {
+        "row_8ckPLB": {
+          "type": "row",
+          "settings": {
+            "feature": "Diseñada para todo el cuerpo",
+            "col1": true,
+            "col2": false
+          }
+        },
+        "row_3cGEGV": {
+          "type": "row",
+          "settings": {
+            "feature": "Sin irritaciones ni cortes",
+            "col1": true,
+            "col2": false
+          }
+        },
+        "row_FBG7jQ": {
+          "type": "row",
+          "settings": {
+            "feature": "100% a prueba de agua",
+            "col1": true,
+            "col2": false
+          }
+        },
+        "row_cwjCzK": {
+          "type": "row",
+          "settings": {
+            "feature": "Luz LED integrada",
+            "col1": true,
+            "col2": false
+          }
+        },
+        "row_aDbPHJ": {
+          "type": "row",
+          "settings": {
+            "feature": "Batería de larga duración",
+            "col1": true,
+            "col2": false
+          }
+        },
+        "row_LYTccX": {
+          "type": "row",
+          "settings": {
+            "feature": "Sin protección para la piel",
+            "col1": true,
+            "col2": false
+          }
+        }
+      },
+      "block_order": [
+        "row_8ckPLB",
+        "row_3cGEGV",
+        "row_FBG7jQ",
+        "row_cwjCzK",
+        "row_aDbPHJ",
+        "row_LYTccX"
+      ],
+      "name": "Comparison Table",
+      "settings": {
+        "title": "Por esto la MyCOCOS® es la MEJOR",
+        "max_width": 1400,
+        "icon_size": 18,
+        "cross_color": "#ff0000",
+        "row_alt_bg": "#f7f7f7",
+        "product_1_image": "shopify://shop_images/Diseno_sin_titulo_-_2025-07-01T192226.639.png",
+        "product_1_name": "MyCOCOS® 4.0",
+        "product_2_image": "shopify://shop_images/Diseno_sin_titulo_-_2025-07-01T192033.182_1c4cec20-e503-4516-8156-16da3646c5c9.png",
+        "product_2_name": "Otros",
+        "title_size_desktop": 36,
+        "title_size_mobile": 32,
+        "text_size_desktop": 16,
+        "text_size_mobile": 14,
+        "text_color": "#001936",
+        "check_color": "#001936",
+        "border_color": "#ffffff",
+        "row_padding": 14,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "section_3THHC9": {
       "type": "section",
       "blocks": {
@@ -1795,77 +2109,6 @@
         "button_border_radius": 5
       }
     },
-    "product_recommendations_WdMjrX": {
-      "type": "product-recommendations",
-      "blocks": {
-        "text_eD8bfz": {
-          "type": "text",
-          "name": "t:names.header",
-          "settings": {
-            "text": "<h3>Productos Relacionados</h3>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "h2",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "static-product-card": {
-          "type": "_product-card",
-          "static": true,
-          "settings": {
-            "product_card_gap": 16,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_eD8bfz"
-      ],
-      "name": "t:names.product_recommendations",
-      "settings": {
-        "product": "{{ closest.product }}",
-        "recommendation_type": "related",
-        "layout_type": "carousel",
-        "carousel_on_mobile": false,
-        "max_products": 8,
-        "columns": 4,
-        "mobile_columns": "2",
-        "columns_gap": 12,
-        "rows_gap": 36,
-        "icons_style": "arrow",
-        "icons_shape": "circle",
-        "section_width": "page-width",
-        "gap": 28,
-        "color_scheme": "scheme-a6eb0771-790e-420d-855a-983f2e641659",
-        "padding-block-start": 48,
-        "padding-block-end": 60
-      }
-    },
     "blocks_VgGcHU": {
       "type": "_blocks",
       "blocks": {
@@ -2111,9 +2354,10 @@
     "main",
     "section_H8P74R",
     "sp_icon_grid_9kiryj",
+    "ss_shoppable_video_PPUKGt",
+    "comparison_table_CVRCRN",
     "section_3THHC9",
     "sp_before_and_after_cmURKt",
-    "product_recommendations_WdMjrX",
     "blocks_VgGcHU",
     "product_recommendations_3W69kE"
   ]
