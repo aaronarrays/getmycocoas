@@ -13,34 +13,6 @@
   },
   "parent": "product.mundialista.json",
   "sections": {
-    "section_QnDbUw": {
-      "settings": {},
-      "blocks": {
-        "group_4aLjn9": {
-          "blocks": {
-            "klaviyo_reviews_average_rating_RTRhg": {
-              "type": "shopify://apps/klaviyo-reviews/blocks/average-rating/db20e365-d984-4ac4-9655-e1588d951ca9",
-              "disabled": false,
-              "settings": {
-                "product": "{{closest.product}}",
-                "header-3cd17d079f3155a623a876db266f169d": null
-              }
-            }
-          },
-          "block_order": [
-            "price_fYDCtf",
-            "price_with_badge_mEyMzf",
-            "klaviyo_reviews_average_rating_RTRhg"
-          ],
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "custom_liquid_U9W8mN",
-        "group_fk7UPR",
-        "group_4aLjn9"
-      ]
-    },
     "product_recommendations_wpQHJm": {
       "type": "product-recommendations",
       "disabled": false,
@@ -252,28 +224,8 @@
     }
   },
   "order": [
-    "section_QnDbUw",
     "main",
-    "section_tPTxXc",
-    "section_qECJHB",
     "sp_icon_grid_PxUQwN",
-    "sp_before_and_after_cmURKt",
-    "section_p8b3kQ",
-    "ss_comparison_table_20_jeYRpL",
-    "1772555650a2096cf6",
-    "section_HKw9P4",
-    "section_Xtmnw9",
-    "product_recommendations_wpQHJm",
-    "section_fM9CA8",
-    "sp_hero_XVx3aY",
-    "hero_ANQYcF",
-    "hero_jXhkhX",
-    "hero_PAX7im",
-    "hero_HfkF6c",
-    "sp_comparison_grid_4pVL8t",
-    "section_rJGPUA",
-    "section_dAnbpV",
-    "section_3qTT8p",
-    "1755183683a651615f"
+    "product_recommendations_wpQHJm"
   ]
 }
