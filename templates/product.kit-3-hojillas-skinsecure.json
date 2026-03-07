@@ -281,15 +281,15 @@
             "icons_style": "chevron_large",
             "slideshow_controls_style": "thumbnails",
             "slideshow_mobile_controls_style": "dots",
-            "thumbnail_position": "bottom",
+            "thumbnail_position": "left",
             "thumbnail_width": 72,
             "thumbnail_radius": 0,
             "aspect_ratio": "adapt",
-            "constrain_to_viewport": false,
+            "constrain_to_viewport": true,
             "media_fit": "cover",
             "media_radius": 0,
             "extend_media": false,
-            "zoom": false,
+            "zoom": true,
             "video_loop": false,
             "hide_variants": true,
             "padding-block-start": 0,
@@ -622,6 +622,7 @@
                       "name": "t:names.icon",
                       "settings": {
                         "icon": "truck",
+                        "svg_code": "",
                         "image_upload": "shopify://shop_images/entrega-rapida_1.png",
                         "width": 32,
                         "link": "",
@@ -706,6 +707,7 @@
                       "name": "t:names.icon",
                       "settings": {
                         "icon": "return",
+                        "svg_code": "",
                         "image_upload": "shopify://shop_images/expresar.png",
                         "width": 32,
                         "link": "",
@@ -790,6 +792,7 @@
                       "name": "t:names.icon",
                       "settings": {
                         "icon": "return",
+                        "svg_code": "",
                         "image_upload": "shopify://shop_images/garantia-extendida.png",
                         "width": 32,
                         "link": "",
@@ -874,6 +877,7 @@
                       "name": "t:names.icon",
                       "settings": {
                         "icon": "return",
+                        "svg_code": "",
                         "image_upload": "shopify://shop_images/proteger.png",
                         "width": 32,
                         "link": "",
@@ -1080,16 +1084,24 @@
           ]
         }
       },
+      "custom_css": [
+        ".variant-option__button-label {width: 32px; height: 32px;}",
+        ".variant-option__button-label .swatch {width: 100%; height: 100%;}",
+        ".variant-option__buttons {gap: 6px !important;}",
+        "@media (min-width: 1024px) {.product-information__grid {grid-template-columns: 60% 40%; }}",
+        "@media (max-width: 768px) {.product-information {padding-top: 0px; }}",
+        ".text-block {line-height: 16px;}"
+      ],
       "settings": {
         "product": "{{ product }}",
         "content_width": "content-center-aligned",
         "desktop_media_position": "left",
-        "equal_columns": true,
+        "equal_columns": false,
         "limit_details_width": true,
-        "gap": 0,
+        "gap": 48,
         "color_scheme": "",
-        "padding-block-start": 50,
-        "padding-block-end": 50
+        "padding-block-start": 40,
+        "padding-block-end": 60
       }
     },
     "1755189666b1242b6c": {
