@@ -367,21 +367,21 @@
               },
               "block_order": []
             },
-            "group_NQBbnR": {
+            "group_x8Kygw": {
               "type": "group",
               "name": "t:names.group",
               "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
+                "content_direction": "row",
+                "vertical_on_mobile": false,
                 "horizontal_alignment": "flex-start",
                 "vertical_alignment": "center",
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "center",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 12,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
+                "width": "custom",
+                "custom_width": 60,
+                "width_mobile": "fit-content",
                 "custom_width_mobile": 100,
                 "height": "fit",
                 "custom_height": 100,
@@ -407,13 +407,13 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "text_mPUUJr": {
+                "text_6dhQrh": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
                     "text": "<p>Pago Seguro</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
+                    "width": "100%",
+                    "max_width": "none",
                     "alignment": "left",
                     "type_preset": "h5",
                     "font": "var(--font-body--family)",
@@ -433,11 +433,11 @@
                   },
                   "blocks": {}
                 },
-                "payment_icons_N3VHNE": {
+                "payment_icons_JDnheW": {
                   "type": "payment-icons",
                   "name": "t:names.payment_icons",
                   "settings": {
-                    "horizontal_alignment": "center",
+                    "horizontal_alignment": "flex-start",
                     "gap": 10,
                     "padding-block-start": 0,
                     "padding-block-end": 0,
@@ -448,8 +448,8 @@
                 }
               },
               "block_order": [
-                "text_mPUUJr",
-                "payment_icons_N3VHNE"
+                "text_6dhQrh",
+                "payment_icons_JDnheW"
               ]
             },
             "divider_wm3rRJ": {
@@ -887,7 +887,7 @@
             "variant_picker_R3rGDr",
             "divider_rQPr6F",
             "buy_buttons_eYQEYi",
-            "group_NQBbnR",
+            "group_x8Kygw",
             "divider_wm3rRJ",
             "group_JbmQwr",
             "text_aEtTtq"
