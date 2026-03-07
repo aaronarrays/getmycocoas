@@ -1225,6 +1225,7 @@
         "text_DwyjhC",
         "group_K6D6Vk"
       ],
+      "disabled": true,
       "name": "Reviews",
       "settings": {
         "content_direction": "row",
@@ -1252,6 +1253,1182 @@
         "gradient_direction": "to top",
         "padding-block-start": 64,
         "padding-block-end": 64
+      }
+    },
+    "carousel_i3in8R": {
+      "type": "carousel",
+      "blocks": {
+        "static-header": {
+          "type": "group",
+          "name": "t:names.header",
+          "static": true,
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": false,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "flex-end",
+            "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 16,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_fdenb4": {
+              "type": "text",
+              "name": "t:names.header",
+              "settings": {
+                "text": "<h3>ENCUENTRA TU PACK IDEAL</h3>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "h2",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_fdenb4"
+          ]
+        },
+        "static-carousel-content": {
+          "type": "_carousel-content",
+          "name": "t:names.carousel_content",
+          "static": true,
+          "settings": {
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "height": "fit",
+            "position": "top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "card_AhKgQt": {
+              "type": "_card",
+              "name": "t:names.card",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 0,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "aspect_ratio": "adapt",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "product_card_XCALcd": {
+                  "type": "product-card",
+                  "name": "t:names.product_card",
+                  "settings": {
+                    "product": "mundialista-pack-1",
+                    "product_card_gap": 8,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 15,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "product_card_gallery_jXHBFn": {
+                      "type": "_product-card-gallery",
+                      "name": "t:names.product_card_media",
+                      "settings": {
+                        "image_ratio": "square",
+                        "border": "none",
+                        "border_width": 1,
+                        "border_opacity": 100,
+                        "border_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    },
+                    "product_title_cBmjp4": {
+                      "type": "product-title",
+                      "name": "t:names.product_title",
+                      "settings": {
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "center",
+                        "type_preset": "h4",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 4,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    },
+                    "price_xFGjr8": {
+                      "type": "price",
+                      "name": "t:names.product_price",
+                      "settings": {
+                        "show_sale_price_first": true,
+                        "show_installments": false,
+                        "show_tax_info": false,
+                        "type_preset": "h4",
+                        "width": "100%",
+                        "alignment": "center",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "color": "var(--color-foreground)",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "product_card_gallery_jXHBFn",
+                    "product_title_cBmjp4",
+                    "price_xFGjr8"
+                  ]
+                },
+                "text_6qA9Lz": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Para quienes quieren mantener cuerpo y barba impecables.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#ffba24",
+                    "corner_radius": 0,
+                    "padding-block-start": 8,
+                    "padding-block-end": 8,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_M98D3E": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Grooming completo para cuerpo y rostro.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#f7db5d",
+                    "corner_radius": 0,
+                    "padding-block-start": 8,
+                    "padding-block-end": 8,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_p9kJKn": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Incluye MyCOCOS 4.0 + Daily Shaver.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#ffba24",
+                    "corner_radius": 0,
+                    "padding-block-start": 8,
+                    "padding-block-end": 8,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_98P7RL": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Recorta cuerpo con seguridad y manten tu barba con precisión.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#f7db5d",
+                    "corner_radius": 0,
+                    "padding-block-start": 8,
+                    "padding-block-end": 8,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_rXXpAM": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>El combo esencial para tu rutina de grooming.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#ffba24",
+                    "corner_radius": 0,
+                    "padding-block-start": 8,
+                    "padding-block-end": 8,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "product_card_XCALcd",
+                "text_6qA9Lz",
+                "text_M98D3E",
+                "text_p9kJKn",
+                "text_98P7RL",
+                "text_rXXpAM"
+              ]
+            },
+            "card_j8jc97": {
+              "type": "_card",
+              "name": "t:names.card",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 0,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "aspect_ratio": "adapt",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "product_card_WEHB7F": {
+                  "type": "product-card",
+                  "name": "t:names.product_card",
+                  "settings": {
+                    "product": "all-terrain-pack™",
+                    "product_card_gap": 8,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 15,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "product_card_gallery_gGYh88": {
+                      "type": "_product-card-gallery",
+                      "name": "t:names.product_card_media",
+                      "settings": {
+                        "image_ratio": "square",
+                        "border": "none",
+                        "border_width": 1,
+                        "border_opacity": 100,
+                        "border_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    },
+                    "product_title_tTaiRA": {
+                      "type": "product-title",
+                      "name": "t:names.product_title",
+                      "settings": {
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "center",
+                        "type_preset": "h4",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 4,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    },
+                    "price_BxCC4e": {
+                      "type": "price",
+                      "name": "t:names.product_price",
+                      "settings": {
+                        "show_sale_price_first": true,
+                        "show_installments": false,
+                        "show_tax_info": false,
+                        "type_preset": "h4",
+                        "width": "100%",
+                        "alignment": "center",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "color": "var(--color-foreground)",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "product_card_gallery_gGYh88",
+                    "product_title_tTaiRA",
+                    "price_BxCC4e"
+                  ]
+                },
+                "text_qDLEBm": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>El pack todoterreno para tu grooming.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#ffba24",
+                    "corner_radius": 0,
+                    "padding-block-start": 8,
+                    "padding-block-end": 8,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_EtqUVc": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Cuerpo, barba, nariz y orejas bajo control.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#f7db5d",
+                    "corner_radius": 0,
+                    "padding-block-start": 8,
+                    "padding-block-end": 8,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_9HBKpJ": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Incluye MyCOCOS 4.0, Daily Shaver y trimmer de nariz/orejas.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#ffba24",
+                    "corner_radius": 0,
+                    "padding-block-start": 8,
+                    "padding-block-end": 8,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_eKQRwd": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Cubre todas las zonas clave con precisión y seguridad.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#f7db5d",
+                    "corner_radius": 0,
+                    "padding-block-start": 8,
+                    "padding-block-end": 8,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_3fe6f4": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>El pack más versátil para estar listo en cualquier situación.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#ffba24",
+                    "corner_radius": 0,
+                    "padding-block-start": 8,
+                    "padding-block-end": 8,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "product_card_WEHB7F",
+                "text_qDLEBm",
+                "text_EtqUVc",
+                "text_9HBKpJ",
+                "text_eKQRwd",
+                "text_3fe6f4"
+              ]
+            },
+            "card_ny6x7B": {
+              "type": "_card",
+              "name": "t:names.card",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 0,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "aspect_ratio": "adapt",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "product_card_fTMpLD": {
+                  "type": "product-card",
+                  "name": "t:names.product_card",
+                  "settings": {
+                    "product": "kin-gs-pack-4-0",
+                    "product_card_gap": 8,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 15,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "product_card_gallery_L9DQJg": {
+                      "type": "_product-card-gallery",
+                      "name": "t:names.product_card_media",
+                      "settings": {
+                        "image_ratio": "square",
+                        "border": "none",
+                        "border_width": 1,
+                        "border_opacity": 100,
+                        "border_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    },
+                    "product_title_LmhNRB": {
+                      "type": "product-title",
+                      "name": "t:names.product_title",
+                      "settings": {
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "center",
+                        "type_preset": "h4",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 4,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    },
+                    "price_xEpTcb": {
+                      "type": "price",
+                      "name": "t:names.product_price",
+                      "settings": {
+                        "show_sale_price_first": true,
+                        "show_installments": false,
+                        "show_tax_info": false,
+                        "type_preset": "h4",
+                        "width": "100%",
+                        "alignment": "center",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "color": "var(--color-foreground)",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "product_card_gallery_L9DQJg",
+                    "product_title_LmhNRB",
+                    "price_xEpTcb"
+                  ]
+                },
+                "text_3BXHJP": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>El kit definitivo de grooming masculino.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#ffba24",
+                    "corner_radius": 0,
+                    "padding-block-start": 8,
+                    "padding-block-end": 8,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_QGUHAN": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Cuerpo, rostro y cuidado completo.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#f7db5d",
+                    "corner_radius": 0,
+                    "padding-block-start": 8,
+                    "padding-block-end": 8,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_yDBFVV": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Incluye todas las herramientas + accesorios esenciales.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#ffba24",
+                    "corner_radius": 0,
+                    "padding-block-start": 8,
+                    "padding-block-end": 8,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_DmVYVQ": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Travel bag, kit de uñas, desodorante íntimo y crema de afeitar.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#f7db5d",
+                    "corner_radius": 0,
+                    "padding-block-start": 8,
+                    "padding-block-end": 8,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_eM3MYc": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Para quienes se toman su grooming en serio.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#ffba24",
+                    "corner_radius": 0,
+                    "padding-block-start": 8,
+                    "padding-block-end": 8,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "product_card_fTMpLD",
+                "text_3BXHJP",
+                "text_QGUHAN",
+                "text_yDBFVV",
+                "text_DmVYVQ",
+                "text_eM3MYc"
+              ]
+            }
+          },
+          "block_order": [
+            "card_AhKgQt",
+            "card_j8jc97",
+            "card_ny6x7B"
+          ]
+        }
+      },
+      "custom_css": [
+        ".custom-color,.custom-color > :is(h1, h2, h3, h4, h5, h6, p, *) {color: #001936;}"
+      ],
+      "name": "t:names.carousel",
+      "settings": {
+        "columns": 3,
+        "mobile_columns": "1",
+        "section_width": "page-width",
+        "columns_gap": 60,
+        "color_scheme": "scheme-91a8241d-7843-48e4-aea0-44a67fb75cd3",
+        "icons_style": "none",
+        "icons_shape": "none",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "round_out_routine_CfVBgh": {
+      "type": "round-out-routine",
+      "blocks": {
+        "item_HkMgfG": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/REPUESTO_DE_CUCHILLA__jpg.webp",
+            "image_fit": "cover",
+            "image_position": "center",
+            "image_aspect_ratio": "16/9",
+            "product": "pack-3-hojillas-skinsecure-mycocos®-cuchilla-de-ceramica",
+            "product_title_override": "",
+            "product_subtitle": "",
+            "headline": "HOJILLAS SKINSECURE",
+            "description": "Renueva tu afeitadora con las Cuchillas de Cerámica MyCOCOS™, diseñadas para ofrecer un corte suave, preciso y sin irritación. Su tecnología avanzada reduce la fricción con la piel, garantizando un afeitado más cómodo y seguro.",
+            "button_label": "Agregar",
+            "button_link": ""
+          }
+        },
+        "item_YhaY3B": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/MC_banner.webp",
+            "image_fit": "cover",
+            "image_position": "center",
+            "image_aspect_ratio": "16/9",
+            "product": "desodorante-de-cocos-mycocos®",
+            "product_title_override": "",
+            "product_subtitle": "",
+            "headline": "Desodorante de Cocos MyCOCOS®",
+            "description": "Mantente fresco y seguro todo el día con el Desodorante de Cocos MyCOCOS®. Su fórmula natural, libre de aluminio, cuida tu piel mientras neutraliza los malos olores, incluso en las zonas más sensibles.",
+            "button_label": "Agregar",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_HkMgfG",
+        "item_YhaY3B"
+      ],
+      "name": "Round out your routine",
+      "settings": {
+        "title": "Complementa tu rutina",
+        "title_highlight": "",
+        "section_width": "full-width",
+        "background_color": "#ececec",
+        "content_background_color": "#001936",
+        "headline_color": "#ffffff",
+        "description_color": "#ffffff",
+        "text_color": "#001936",
+        "accent_color": "#ffba25",
+        "accent_text_color": "#011732",
+        "padding-block-start": 60,
+        "padding-block-end": 60
+      }
+    },
+    "ss_shoppable_video_p6nJNe": {
+      "type": "ss-shoppable-video",
+      "blocks": {
+        "item_F8QD4n": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/Img 2622.mp4",
+            "video_url": "",
+            "autoplay": true,
+            "product": "rasuradora-masculina-my-cocos-4-0",
+            "use_variants": true,
+            "modal_heading": "<h4><strong>¿Por qué elegir la MyCOCOS® 4.0?</strong></h4>",
+            "modal_text": "<p>✔️<strong> SKINSECURE</strong> Rasurado seguro, incluso en zonas sensibles</p><p><strong>✔️ Resistente al agua (IPX7)</strong>  úsala dentro o fuera de la ducha.</p><p><strong>✔️ Batería duradera,</strong> hasta <strong>120 minutos</strong> de uso continuo. </p><p><strong>✔️ </strong> <strong>Resultados limpios en minutos</strong></p><p>✔️<strong> Diseñada para todo el cuerpo</strong></p>"
+          }
+        },
+        "item_PeJcGz": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/Img 2623.mp4",
+            "video_url": "",
+            "autoplay": true,
+            "product": "rasuradora-de-nariz-y-orejas-mycocos®",
+            "use_variants": true,
+            "modal_heading": "<p>Rasuradora de nariz y orejas - MYCOCOS</p>",
+            "modal_text": "<p>Dile adiós a los vellos indeseados con la Rasuradora de Nariz y Orejas MyCOCOS®, diseñada para mantener tu apariencia siempre cuidada. Gracias a su sistema giratorio de doble hoja en 360°, recorta en cualquier dirección y ángulo sin riesgo de cortes o irritación.<br/><br/>Corte preciso sin tirones ni heridas<br/><br/>Sistema giratorio de doble hoja en 360°<br/><br/>Batería recargable con carga USB<br/><br/>Incluye cepillo de limpieza y manual de uso<br/><br/>Cabezal desmontable y lavable para máxima higiene<br/><br/>Diseño compacto y ergonómico, ideal para viajes</p>"
+          }
+        },
+        "item_jrVPAf": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/Img 2621.mp4",
+            "video_url": "",
+            "autoplay": true,
+            "product": "dayli-shaver-rasuradora-de-cartera",
+            "use_variants": true,
+            "modal_heading": "<h3>Daily Shaver</h3>",
+            "modal_text": "<p>La Daily Shaver es tu mejor aliada para un look limpio, fresco y siempre al punto. Diseñada para hombres que no dejan espacio a la improvisación, su cabezal flotante se adapta perfectamente al contorno del rostro, cuello y cabeza, entregando un afeitado ultra al ras sin irritación.<br/><br/>Compacta, potente y lista para la acción en segundos. Ideal para la rutina diaria o esos retoques express antes de una reunión o cita importante.</p>"
+          }
+        },
+        "item_w3X6aC": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/Img 6986.mp4",
+            "video_url": "",
+            "autoplay": true,
+            "product": "rasuradora-masculina-my-cocos-4-0",
+            "use_variants": true,
+            "modal_heading": "<h3>Daily Shaver</h3>",
+            "modal_text": "<p>La Daily Shaver es tu mejor aliada para un look limpio, fresco y siempre al punto. Diseñada para hombres que no dejan espacio a la improvisación, su cabezal flotante se adapta perfectamente al contorno del rostro, cuello y cabeza, entregando un afeitado ultra al ras sin irritación.<br/><br/>Compacta, potente y lista para la acción en segundos. Ideal para la rutina diaria o esos retoques express antes de una reunión o cita importante.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_F8QD4n",
+        "item_PeJcGz",
+        "item_jrVPAf",
+        "item_w3X6aC"
+      ],
+      "name": "SS - Shoppable video",
+      "settings": {
+        "heading": "<h2>Ellos ya recomiendan GetMyCocos®</h2>",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 48,
+        "heading_size_mobile": 34,
+        "heading_height": 130,
+        "heading_align": "center",
+        "heading_align_mobile": "center",
+        "slider_view": 4,
+        "slider_view_mobile": 1.3,
+        "slider_gap": 16,
+        "slider_gap_mobile": 16,
+        "slider_mt": 20,
+        "card_radius": 10,
+        "card_border_thickness": 0,
+        "card_shadow": true,
+        "video_ratio": "portrait",
+        "video_ratio_mobile": "portrait",
+        "video_overlay": 0.2,
+        "image_width": 44,
+        "image_width_mobile": 44,
+        "image_radius": 6,
+        "image_border_thickness": 0,
+        "title_custom": false,
+        "title_font": "josefin_sans_n4",
+        "title_size": 14,
+        "title_size_mobile": 14,
+        "title_height": 130,
+        "title_uppercase": false,
+        "price_custom": false,
+        "price_font": "josefin_sans_n4",
+        "price_size": 14,
+        "price_size_mobile": 14,
+        "price_height": 130,
+        "button": "Añadir al carrito",
+        "button_soldout": "Agotado",
+        "button_custom": false,
+        "button_font": "josefin_sans_n4",
+        "button_size": 16,
+        "button_size_mobile": 16,
+        "button_padding_vertical": 10,
+        "button_padding_vertical_mobile": 10,
+        "button_padding_horizontal": 10,
+        "button_padding_horizontal_mobile": 10,
+        "reload_after_adding": false,
+        "redirect_after_adding": false,
+        "option_custom": false,
+        "option_font": "josefin_sans_n4",
+        "option_size": 12,
+        "option_size_mobile": 12,
+        "option_height": 100,
+        "option_mt": 24,
+        "variants_price_custom": false,
+        "variants_price_font": "josefin_sans_n4",
+        "variants_price_size": 14,
+        "variants_price_size_mobile": 14,
+        "variants_price_height": 130,
+        "variants_price_mt": 10,
+        "variants_price_align": "center",
+        "variants_price_align_mobile": "center",
+        "modal_width": 740,
+        "modal_width_mobile": 100,
+        "modal_radius": 16,
+        "modal_border_thickness": 0,
+        "modal_overlay": 50,
+        "close_size": 42,
+        "close_size_mobile": 42,
+        "close_radius": 8,
+        "close_border_thickness": 0,
+        "buttons_size": 48,
+        "buttons_size_mobile": 48,
+        "buttons_radius": 8,
+        "buttons_border_thickness": 0,
+        "modal_video_radius": 0,
+        "modal_video_border_thickness": 0,
+        "modal_video_ratio": "portrait",
+        "modal_video_ratio_mobile": "portrait",
+        "modal_heading_custom": false,
+        "modal_heading_font": "josefin_sans_n4",
+        "modal_heading_size": 28,
+        "modal_heading_size_mobile": 28,
+        "modal_heading_height": 130,
+        "modal_heading_align": "center",
+        "modal_heading_align_mobile": "center",
+        "modal_text_custom": false,
+        "modal_text_font": "josefin_sans_n4",
+        "modal_text_size": 16,
+        "modal_text_size_mobile": 16,
+        "modal_text_height": 150,
+        "modal_text_align": "center",
+        "modal_text_align_mobile": "center",
+        "modal_text_mt": 16,
+        "use_modal_product": true,
+        "modal_image_width": 70,
+        "modal_image_width_mobile": 66,
+        "modal_image_radius": 12,
+        "modal_image_border_thickness": 0,
+        "modal_title_custom": false,
+        "modal_title_font": "josefin_sans_n4",
+        "modal_title_size": 16,
+        "modal_title_size_mobile": 16,
+        "modal_title_height": 130,
+        "modal_title_uppercase": false,
+        "modal_price_custom": false,
+        "modal_price_font": "josefin_sans_n4",
+        "modal_price_size": 14,
+        "modal_price_size_mobile": 14,
+        "modal_price_height": 130,
+        "modal_button": "Añadir al carrito",
+        "modal_button_soldout": "Agotado",
+        "modal_button_custom": false,
+        "modal_button_font": "josefin_sans_n4",
+        "modal_button_size": 16,
+        "modal_button_size_mobile": 16,
+        "modal_button_radius": 8,
+        "modal_button_border_thickness": 1,
+        "modal_button_mt": 16,
+        "modal_button_align": "center",
+        "modal_button_align_mobile": "center",
+        "card_bg_color": "#ffffff",
+        "card_border_color": "#121212",
+        "video_overlay_color": "#001936",
+        "card_shadow_color": "#001936",
+        "title_color": "#ffffff",
+        "price_color": "#ffffff",
+        "image_border_color": "#121212",
+        "button_color": "#001936",
+        "button_hover_color": "#ffffff",
+        "button_bg_color": "#ffba25",
+        "button_bg_hover_color": "#001936",
+        "arrow_icon_color": "#001936",
+        "arrow_bg_color": "#ffba25",
+        "arrow_border_color": "#ffffff",
+        "option_color": "#001936",
+        "variants_price_color": "#001936",
+        "modal_heading_color": "#001936",
+        "modal_text_color": "#001936",
+        "modal_video_border_color": "#121212",
+        "modal_content_bg_color": "#ffffff",
+        "modal_border_color": "#121212",
+        "close_icon_color": "#ffffff",
+        "close_bg_color": "#ffffff",
+        "close_border_color": "#121212",
+        "buttons_icon_color": "#ffffff",
+        "buttons_bg_color": "#ffffff",
+        "buttons_border_color": "#121212",
+        "modal_title_color": "#001936",
+        "modal_price_color": "#001936",
+        "modal_image_border_color": "#121212",
+        "modal_button_color": "#001936",
+        "modal_button_hover_color": "#ffffff",
+        "modal_button_bg_color": "#ffba25",
+        "modal_button_bg_hover_color": "#001936",
+        "modal_button_border_color": "#ffba25",
+        "modal_button_border_hover_color": "#001936",
+        "heading_color": "#ffffff",
+        "background_color": "#001936",
+        "background_gradient": "",
+        "border_color": "#001936",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 1400,
+        "border_thickness": 0,
+        "lazy": true
       }
     },
     "sp_icon_grid_EgqCPj": {
@@ -1291,6 +2468,7 @@
         "image_9i6YD7",
         "image_nJBLaV"
       ],
+      "disabled": true,
       "name": "🚀 Cuadrícula de iconos",
       "settings": {
         "override_fonts": false,
@@ -1349,505 +2527,6 @@
         "headline": "Prueba las herramientas que revolucionan el cuidado masculino",
         "text": "",
         "headline_spacing": 15
-      }
-    },
-    "section_qECJHB": {
-      "type": "section",
-      "blocks": {
-        "text_eVHMyG": {
-          "type": "text",
-          "name": "t:names.heading",
-          "settings": {
-            "text": "<h2>Prueba las herramientas que revolucionan<br/> el cuidado masculino</h2>",
-            "width": "100%",
-            "max_width": "none",
-            "alignment": "center",
-            "type_preset": "h2",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "image_MHbtfh": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "link": "",
-            "image_ratio": "square",
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "group_9Uz76z": {
-          "type": "group",
-          "settings": {
-            "content_direction": "row",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 32,
-            "width": "custom",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "group_xGBaDC": {
-              "type": "group",
-              "name": "t:names.group",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "link": "",
-                "open_in_new_tab": false,
-                "placeholder": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "image_WhJApN": {
-                  "type": "image",
-                  "name": "t:names.image",
-                  "settings": {
-                    "image": "shopify://shop_images/gempages_516719648461292347-f6acb24a-ffb2-42a2-ba6a-3e5d533599d6.png",
-                    "link": "",
-                    "image_ratio": "square",
-                    "width": "fill",
-                    "custom_width": 100,
-                    "width_mobile": "fill",
-                    "custom_width_mobile": 100,
-                    "height": "fit",
-                    "border": "none",
-                    "border_width": 1,
-                    "border_opacity": 100,
-                    "border_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "text_T4FDVr": {
-                  "type": "text",
-                  "name": "t:names.heading",
-                  "settings": {
-                    "text": "<h4>TODO EL CUERPO: RASURATE SIN LÍMITES</h4>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "text_Qd8jfj": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>Diseñada para adaptarse a cualquier zona del cuerpo, desde la cabeza hasta los cocos, 😉 las piernas y más. </p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "image_WhJApN",
-                "text_T4FDVr",
-                "text_Qd8jfj"
-              ]
-            },
-            "group_mnbBid": {
-              "type": "group",
-              "name": "t:names.group",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "link": "",
-                "open_in_new_tab": false,
-                "placeholder": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "image_Wb4Aw8": {
-                  "type": "image",
-                  "name": "t:names.image",
-                  "settings": {
-                    "image": "shopify://shop_images/gempages_516719648461292347-310e833b-6218-4651-a3a8-36b468e7a4ad.png",
-                    "link": "",
-                    "image_ratio": "square",
-                    "width": "custom",
-                    "custom_width": 100,
-                    "width_mobile": "fit-content",
-                    "custom_width_mobile": 0,
-                    "height": "fit",
-                    "border": "none",
-                    "border_width": 1,
-                    "border_opacity": 100,
-                    "border_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "text_t76Mnd": {
-                  "type": "text",
-                  "name": "t:names.heading",
-                  "settings": {
-                    "text": "<h4>ADIÓS VELLOS MOLESTOS EN NARIZ Y OREJas</h4>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "text_7BEfaW": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>Olvidate de esos pelitos traicioneros que arruinan tu imagen. Limpieza rápida, segura y sin tirones.</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "image_Wb4Aw8",
-                "text_t76Mnd",
-                "text_7BEfaW"
-              ]
-            },
-            "group_PfkHVk": {
-              "type": "group",
-              "name": "t:names.group",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "center",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "link": "",
-                "open_in_new_tab": false,
-                "placeholder": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "image_PK68Ci": {
-                  "type": "image",
-                  "name": "t:names.image",
-                  "settings": {
-                    "image": "shopify://shop_images/gempages_516719648461292347-c6d9b0bd-7cfa-4846-ba67-62cccc129d36.png",
-                    "link": "",
-                    "image_ratio": "square",
-                    "width": "fill",
-                    "custom_width": 100,
-                    "width_mobile": "fill",
-                    "custom_width_mobile": 100,
-                    "height": "fit",
-                    "border": "none",
-                    "border_width": 1,
-                    "border_opacity": 100,
-                    "border_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "text_nWaWK3": {
-                  "type": "text",
-                  "name": "t:names.heading",
-                  "settings": {
-                    "text": "<h4>RASURADORA DE BARBA CON 20 MEDIDAS DE CORTE PARA TU ESTILo</h4><h4></h4><h4></h4>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "text_LV9R6E": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>Con su rodillo 360°, ajusta entre 20 longitudes de cortes (de 0,5mm a 10mm).</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "image_PK68Ci",
-                "text_nWaWK3",
-                "text_LV9R6E"
-              ]
-            }
-          },
-          "block_order": [
-            "group_xGBaDC",
-            "group_mnbBid",
-            "group_PfkHVk"
-          ]
-        }
-      },
-      "block_order": [
-        "text_eVHMyG",
-        "image_MHbtfh",
-        "group_9Uz76z"
-      ],
-      "disabled": true,
-      "name": "Prueba las herramientas",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 32,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-5",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 40,
-        "padding-block-end": 40
       }
     },
     "section_ULeYEw": {
@@ -2208,6 +2887,7 @@
         "image_JcxN3k",
         "group_YWBtJq"
       ],
+      "disabled": true,
       "name": "Cocos %",
       "settings": {
         "content_direction": "column",
@@ -2237,1038 +2917,93 @@
         "padding-block-end": 30
       }
     },
-    "section_yFWPz7": {
-      "type": "section",
+    "comparison_table_pqwMqE": {
+      "type": "comparison-table",
       "blocks": {
-        "group_LNTkXT": {
-          "type": "group",
-          "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "custom",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "text_hqC9bC": {
-              "type": "text",
-              "name": "t:names.heading",
-              "settings": {
-                "text": "<h2>¿POR QUÉ MY COCOS?</h2>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "center",
-                "type_preset": "h2",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground-heading)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_hqC9bC"
-          ]
-        }
-      },
-      "block_order": [
-        "group_LNTkXT"
-      ],
-      "name": "t:names.image_with_text",
-      "settings": {
-        "content_direction": "row",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 32,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 40,
-        "padding-block-end": 40
-      }
-    },
-    "sp_before_and_after_cmURKt": {
-      "type": "sp-before-and-after",
-      "disabled": true,
-      "custom_css": [],
-      "name": "🚀 Antes y Después",
-      "settings": {
-        "override_fonts": false,
-        "headline_font": "system_ui_n4",
-        "text_font": "system_ui_n4",
-        "override_text_sizes": false,
-        "text_size": 15,
-        "mobile_text_size": 15,
-        "text_line_height": "inherit",
-        "headline_size": 40,
-        "mobile_headline_size": 40,
-        "headline_line_height": "inherit",
-        "override_text_colors": true,
-        "text_color": "#ffffff",
-        "link_color": "#005bd3",
-        "show_on_device": "all",
-        "section_background_color": "linear-gradient(127deg, rgba(0, 25, 54, 1) 11%, rgba(0, 25, 54, 1) 81%)",
-        "section_background_image_color": "",
-        "section_background_size": "cover",
-        "mobile_section_background_image_color": "",
-        "mobile_section_background_size": "contain",
-        "section_padding_top_bottom": 50,
-        "mobile_section_padding_top_bottom": 30,
-        "section_padding_left_right": 0,
-        "mobile_section_padding_left_right": 25,
-        "container_background_color": "",
-        "container_max_width": 1000,
-        "container_padding_top_bottom": 20,
-        "mobile_container_padding_top_bottom": 10,
-        "container_padding_left_right": 10,
-        "mobile_container_padding_left_right": 10,
-        "element_spacing": 15,
-        "container_radius": 0,
-        "container_shadow": false,
-        "container_border_size": 0,
-        "container_border_color": "#888888",
-        "grid_gap": 20,
-        "media_location": "left",
-        "direction": "horizontal",
-        "start_percent": 50,
-        "show_bar": true,
-        "show_circle": true,
-        "bar_color": "#ffffff",
-        "bar_opacity": 50,
-        "circle_color": "#ffffff",
-        "circle_opacity": 95,
-        "circle_icon_color": "{{ shop.brand.colors.primary[0].background }}",
-        "media_aspect_ratio": "3 / 4",
-        "media_radius": 5,
-        "media_shadow": true,
-        "before_image": "shopify://shop_images/gempages_516719648461292347-f55825ff-ca74-4bd0-b21f-77af6b452b5d_768x_d8795b19-6bc7-408f-9dcf-c3e02871a1c3.png",
-        "before_caption": "Antes",
-        "after_image": "shopify://shop_images/gempages_516719648461292347-583778ab-db3f-40ea-a88e-6e216c011299.png",
-        "after_caption": "Despues",
-        "text_alignment": "left",
-        "mobile_text_alignment": "center",
-        "headline": "ANTES SIN MYCOCOS Y DESPUES CON MYCOCOS",
-        "content": "<p>Si no cuidas tus cocos, nadie más lo hará. </p>",
-        "link_text": "",
-        "link": "",
-        "headline_spacing": -12,
-        "button_background_color": "linear-gradient(164deg, rgba(17, 17, 17, 1), rgba(51, 51, 51, 1) 100%)",
-        "button_text_color": "#ffffff",
-        "button_text_size": 15,
-        "button_padding_tb": 10,
-        "button_padding_lr": 25,
-        "button_border_radius": 5
-      }
-    },
-    "ss_comparison_table_20_wTTNTi": {
-      "type": "ss-comparison-table-20",
-      "blocks": {
-        "row_qehm6Y": {
+        "row_eac6fJ": {
           "type": "row",
           "settings": {
-            "left_text": "<p><strong>Diseñada para todo el cuerpo</strong></p>",
-            "left_icon": "yes",
-            "right_text": "<p><strong>No aptas para todo el cuerpo</strong></p>",
-            "right_icon": "no"
+            "feature": "Diseñada para todo el cuerpo",
+            "col1": true,
+            "col2": false
           }
         },
-        "row_kJjDt9": {
+        "row_k49Xym": {
           "type": "row",
           "settings": {
-            "left_text": "<p><strong>Sin irritaciones ni cortes</strong></p>",
-            "left_icon": "yes",
-            "right_text": "<p><strong>Mayor riesgo de cortes y tirones</strong></p>",
-            "right_icon": "no"
+            "feature": "Sin irritaciones ni cortes",
+            "col1": true,
+            "col2": false
           }
         },
-        "row_ALT6Ji": {
+        "row_43ietB": {
           "type": "row",
           "settings": {
-            "left_text": "<p><strong>100% Waterproof</strong></p>",
-            "left_icon": "yes",
-            "right_text": "<p><strong>Dependientede cables</strong></p>",
-            "right_icon": "no"
+            "feature": "100% a prueba de agua",
+            "col1": true,
+            "col2": false
           }
         },
-        "row_kUU6Tr": {
+        "row_CGWqGK": {
           "type": "row",
           "settings": {
-            "left_text": "<p><strong>Luz LED integrada</strong></p>",
-            "left_icon": "yes",
-            "right_text": "<p><strong>Batería de corta duración</strong></p>",
-            "right_icon": "no"
+            "feature": "Luz LED integrada",
+            "col1": true,
+            "col2": false
           }
         },
-        "row_HhqCYX": {
+        "row_FqFy7m": {
           "type": "row",
           "settings": {
-            "left_text": "<p><strong>120 minutos de uso continuo</strong></p>",
-            "left_icon": "yes",
-            "right_text": "<p><strong>Sin protección para la piel</strong></p>",
-            "right_icon": "no"
+            "feature": "Batería de larga duración",
+            "col1": true,
+            "col2": false
           }
         },
-        "sticker_Vwyf4e": {
-          "type": "sticker",
-          "disabled": true,
+        "row_qcftPU": {
+          "type": "row",
           "settings": {
-            "sticker_text": "MY COCOS",
-            "sticker_text_custom": false,
-            "sticker_text_font": "josefin_sans_n4",
-            "sticker_text_size": 16,
-            "sticker_text_size_mobile": 11,
-            "sticker_text_height": 130,
-            "sticker_text_align": "center",
-            "sticker_text_align_mobile": "center",
-            "sticker_shape": "wavy_circle_1",
-            "shape_shadow": true,
-            "sticker_width": 152,
-            "sticker_width_mobile": 60,
-            "show_mobile": true,
-            "vertical_position": 10,
-            "vertical_position_mobile": 10,
-            "horizontal_position": 4,
-            "horizontal_position_mobile": 12,
-            "rotate": 0,
-            "sticker_text_color": "{{ shop.brand.colors.secondary[0].foreground }}",
-            "sticker_bg_color": "{{ shop.brand.colors.primary[0].background }}",
-            "sticker_shadow_color": "{{ shop.brand.colors.secondary[0].foreground }}"
+            "feature": "Sin protección para la piel",
+            "col1": true,
+            "col2": false
           }
         }
       },
       "block_order": [
-        "row_qehm6Y",
-        "row_kJjDt9",
-        "row_ALT6Ji",
-        "row_kUU6Tr",
-        "row_HhqCYX",
-        "sticker_Vwyf4e"
+        "row_eac6fJ",
+        "row_k49Xym",
+        "row_43ietB",
+        "row_CGWqGK",
+        "row_FqFy7m",
+        "row_qcftPU"
       ],
-      "name": "SS - Comparison table #20",
+      "name": "Comparison Table",
       "settings": {
-        "heading": "",
-        "heading_custom": false,
-        "heading_font": "josefin_sans_n4",
-        "heading_size": 40,
-        "heading_size_mobile": 24,
-        "heading_height": 130,
-        "heading_padding_horizontal": 0,
-        "heading_padding_horizontal_mobile": 0,
-        "heading_align": "center",
-        "heading_align_mobile": "center",
-        "images_mt": 0,
-        "images_mt_mobile": 0,
-        "left_image": "shopify://shop_images/Diseno_sin_titulo_-_2025-07-01T192226.639.png",
-        "right_image": "shopify://shop_images/Diseno_sin_titulo_-_2025-07-01T192033.182.png",
-        "image_radius": 0,
-        "image_border_thickness": 0,
-        "image_ratio": "square",
-        "image_ratio_mobile": "square",
-        "versus": "VS.",
-        "versus_custom": false,
-        "versus_font": "josefin_sans_n4",
-        "versus_size": 20,
-        "versus_size_mobile": 16,
-        "versus_height": 100,
-        "versus_padding": 20,
-        "versus_padding_mobile": 16,
-        "versus_radius": 100,
-        "versus_border_thickness": 0,
-        "rows_gap": 8,
-        "rows_gap_mobile": 8,
-        "rows_mt": 24,
-        "rows_mt_mobile": 20,
-        "row_width": 94,
-        "row_width_mobile": 100,
-        "row_padding_horizontal": 12,
-        "row_padding_horizontal_mobile": 10,
-        "row_padding_vertical": 12,
-        "row_padding_vertical_mobile": 12,
-        "row_radius": 6,
+        "title": "Por esto la MyCOCOS® es la MEJOR",
+        "max_width": 1400,
         "icon_size": 18,
-        "icon_size_mobile": 18,
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 12,
-        "text_size_mobile": 12,
-        "text_height": 150,
-        "versus_color": "#ffffff",
-        "versus_bg_color": "{{ shop.brand.colors.secondary[0].foreground }}",
-        "versus_border_color": "#ffffff",
-        "text_left_color": "#ffffff",
-        "text_right_color": "{{ shop.brand.colors.secondary[0].foreground }}",
-        "row_left_bg_color": "{{ shop.brand.colors.secondary[0].foreground }}",
-        "row_right_bg_color": "#f3f3f3",
-        "icon_left_bg_color": "{{ shop.brand.colors.primary[0].background }}",
-        "icon_right_bg_color": "{{ shop.brand.colors.secondary[0].foreground }}",
-        "heading_color": "{{ shop.brand.colors.secondary[0].foreground }}",
-        "image_border_color": "{{ shop.brand.colors.secondary[0].foreground }}",
-        "background_color": "{{ shop.brand.colors.primary[0].foreground }}",
-        "background_gradient": "",
-        "border_color": "{{ shop.brand.colors.secondary[0].foreground }}",
-        "margin_top": 32,
-        "margin_bottom": 32,
-        "margin_horizontal": 0,
-        "margin_horizontal_mobile": 0,
-        "padding_top": 0,
-        "padding_bottom": 28,
-        "padding_horizontal": 5,
-        "padding_horizontal_mobile": 1.5,
-        "full_width": false,
-        "content_width": 800,
-        "border_thickness": 0,
-        "section_radius": 0,
-        "lazy": true
+        "cross_color": "#ff0000",
+        "row_alt_bg": "#f7f7f7",
+        "product_1_image": "shopify://shop_images/Diseno_sin_titulo_-_2025-07-01T192226.639.png",
+        "product_1_name": "MyCOCOS® 4.0",
+        "product_2_image": "shopify://shop_images/Diseno_sin_titulo_-_2025-07-01T192033.182_1c4cec20-e503-4516-8156-16da3646c5c9.png",
+        "product_2_name": "Otros",
+        "title_size_desktop": 36,
+        "title_size_mobile": 32,
+        "text_size_desktop": 16,
+        "text_size_mobile": 14,
+        "text_color": "#001936",
+        "check_color": "#001936",
+        "border_color": "#ffffff",
+        "row_padding": 14,
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
-    "product_recommendations_fGAXyj": {
-      "type": "product-recommendations",
-      "blocks": {
-        "text_TQM6xt": {
-          "type": "text",
-          "name": "t:names.header",
-          "settings": {
-            "text": "<h3>Productos Relacionados</h3>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "h2",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "static-product-card": {
-          "type": "_product-card",
-          "static": true,
-          "settings": {
-            "product_card_gap": 16,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_TQM6xt"
-      ],
-      "name": "t:names.product_recommendations",
-      "settings": {
-        "product": "{{ closest.product }}",
-        "recommendation_type": "related",
-        "layout_type": "carousel",
-        "carousel_on_mobile": false,
-        "max_products": 8,
-        "columns": 4,
-        "mobile_columns": "2",
-        "columns_gap": 12,
-        "rows_gap": 36,
-        "icons_style": "arrow",
-        "icons_shape": "circle",
-        "section_width": "page-width",
-        "gap": 28,
-        "color_scheme": "scheme-a6eb0771-790e-420d-855a-983f2e641659",
-        "padding-block-start": 48,
-        "padding-block-end": 60
-      }
-    },
-    "section_fM9CA8": {
+    "section_qkAwxk": {
       "type": "section",
       "blocks": {
-        "jumbo_text_6E9yfq": {
-          "type": "jumbo-text",
-          "name": "t:names.jumbo_text",
-          "settings": {
-            "text": "MYCOCOS 4.0",
-            "font": "heading",
-            "alignment": "center",
-            "line_height": "0.8",
-            "letter_spacing": "-0.03em",
-            "case": "uppercase",
-            "text_effect": "reveal",
-            "animation_repeat": true
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "jumbo_text_6E9yfq"
-      ],
-      "disabled": true,
-      "name": "Texto jumbo",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-5",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 19,
-        "padding-block-end": 19
-      }
-    },
-    "sp_hero_XVx3aY": {
-      "type": "sp-hero",
-      "disabled": true,
-      "name": "Banner responsive",
-      "settings": {
-        "override_fonts": false,
-        "headline_font": "system_ui_n4",
-        "text_font": "system_ui_n4",
-        "override_text_sizes": false,
-        "text_size": 15,
-        "mobile_text_size": 15,
-        "text_line_height": "inherit",
-        "headline_size": 40,
-        "mobile_headline_size": 40,
-        "headline_line_height": "inherit",
-        "override_text_colors": false,
-        "text_color": "#111111",
-        "link_color": "#005bd3",
-        "show_on_device": "all",
-        "section_background_color": "linear-gradient(127deg, rgba(2, 25, 53, 1) 11%, rgba(2, 25, 53, 1) 81%)",
-        "section_background_image_color": "#021935",
-        "section_background_size": "cover",
-        "mobile_section_background_image_color": "#021935",
-        "mobile_section_background_size": "cover",
-        "section_padding_top_bottom": 0,
-        "mobile_section_padding_top_bottom": 0,
-        "section_padding_left_right": 0,
-        "mobile_section_padding_left_right": 0,
-        "container_background_color": "",
-        "container_max_width": 1280,
-        "container_padding_top_bottom": 150,
-        "mobile_container_padding_top_bottom": 100,
-        "container_padding_left_right": 0,
-        "mobile_container_padding_left_right": 100,
-        "element_spacing": 15,
-        "container_radius": 0,
-        "container_shadow": false,
-        "container_border_size": 0,
-        "container_border_color": "#888888",
-        "grid_padding_tb": 100,
-        "grid_padding_lr": 0,
-        "show_text_shadow": true,
-        "cover_background": "linear-gradient(164deg, rgba(17, 17, 17, 1), rgba(85, 85, 85, 1) 100%)",
-        "cover_opacity": 25,
-        "box_alignment": "center",
-        "button_background_color": "linear-gradient(164deg, rgba(17, 17, 17, 1), rgba(51, 51, 51, 1) 100%)",
-        "button_text_color": "#ffffff",
-        "button_padding_tb": 10,
-        "button_padding_lr": 25,
-        "button_border_radius": 5,
-        "text_alignment": "center",
-        "mobile_text_alignment": "center",
-        "headline": "",
-        "content": "",
-        "cta": "",
-        "cta_link": "",
-        "hero_image": "shopify://shop_images/Screenshot-2025-06-05-at-09.37.58.png",
-        "image_size": 1100,
-        "mobile_image_size": 800
-      }
-    },
-    "hero_ANQYcF": {
-      "type": "hero",
-      "blocks": {
-        "icon_pYkYTw": {
-          "type": "icon",
-          "name": "t:names.icon",
-          "settings": {
-            "icon": "check_box",
-            "svg_code": "",
-            "width": 46,
-            "link": "",
-            "open_in_new_tab": false
-          },
-          "blocks": {}
-        },
-        "text_nPNA3G": {
-          "type": "text",
-          "settings": {
-            "text": "<h1>Rasurado en la ducha</h1>",
-            "width": "fit-content",
-            "max_width": "narrow",
-            "alignment": "left",
-            "type_preset": "h2",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "text_Khzdfe": {
-          "type": "text",
-          "settings": {
-            "text": "<p>La MyCOCOS 4.0 tiene un rendimiento impecable con la piel seca o mojada bajo el grifo para una fácil limpieza. Haciendo tu rutina de cuidado personal más rápida, práctica y eficiente.</p>",
-            "width": "fit-content",
-            "max_width": "narrow",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 32,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "icon_pYkYTw",
-        "text_nPNA3G",
-        "text_Khzdfe"
-      ],
-      "disabled": true,
-      "name": "Banner featue#1",
-      "settings": {
-        "media_type_1": "image",
-        "image_1": "shopify://shop_images/mycocos4.0agua.jpg",
-        "media_type_2": "image",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
-        "media_type_1_mobile": "image",
-        "media_type_2_mobile": "image",
-        "link": "",
-        "open_in_new_tab": false,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 16,
-        "section_width": "page-width",
-        "section_height": "large",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-5",
-        "toggle_overlay": true,
-        "overlay_color": "#00000026",
-        "overlay_style": "gradient",
-        "gradient_direction": "to top",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 40,
-        "padding-block-end": 40
-      }
-    },
-    "hero_jXhkhX": {
-      "type": "hero",
-      "blocks": {
-        "icon_6eFrCR": {
-          "type": "icon",
-          "name": "t:names.icon",
-          "settings": {
-            "icon": "lightning_bolt",
-            "svg_code": "",
-            "width": 46,
-            "link": "",
-            "open_in_new_tab": false
-          },
-          "blocks": {}
-        },
-        "text_BVdRmq": {
-          "type": "text",
-          "settings": {
-            "text": "<h1>Ilumina el Camino</h1>",
-            "width": "fit-content",
-            "max_width": "narrow",
-            "alignment": "left",
-            "type_preset": "h2",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "text_ATAHUF": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Ahora no tendrás que adinivar, cada rincón de tu cuerpo estará iluminado con la nueva luz led.</p>",
-            "width": "fit-content",
-            "max_width": "narrow",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 32,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "icon_6eFrCR",
-        "text_BVdRmq",
-        "text_ATAHUF"
-      ],
-      "disabled": true,
-      "name": "Banner featue#2",
-      "settings": {
-        "media_type_1": "image",
-        "image_1": "shopify://shop_images/banner-feature-_2---led---mycocos4.0.jpg",
-        "media_type_2": "image",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
-        "media_type_1_mobile": "image",
-        "media_type_2_mobile": "image",
-        "link": "",
-        "open_in_new_tab": false,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-end",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 16,
-        "section_width": "page-width",
-        "section_height": "large",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-5",
-        "toggle_overlay": true,
-        "overlay_color": "#00000026",
-        "overlay_style": "gradient",
-        "gradient_direction": "to top",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 40,
-        "padding-block-end": 40
-      }
-    },
-    "hero_PAX7im": {
-      "type": "hero",
-      "blocks": {
-        "icon_38Emjy": {
-          "type": "icon",
-          "name": "t:names.icon",
-          "settings": {
-            "icon": "check_box",
-            "svg_code": "",
-            "width": 46,
-            "link": "",
-            "open_in_new_tab": false
-          },
-          "blocks": {}
-        },
-        "text_kYJCfq": {
-          "type": "text",
-          "settings": {
-            "text": "<h1>2 Horas de bateria</h1>",
-            "width": "fit-content",
-            "max_width": "narrow",
-            "alignment": "left",
-            "type_preset": "h2",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "text_G64KCR": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Para que pases mas tiempo rasurando y menos cargando</p>",
-            "width": "fit-content",
-            "max_width": "narrow",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 32,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "icon_38Emjy",
-        "text_kYJCfq",
-        "text_G64KCR"
-      ],
-      "disabled": true,
-      "name": "Banner featue#3",
-      "settings": {
-        "media_type_1": "image",
-        "image_1": "shopify://shop_images/mycocos4.0agua.jpg",
-        "media_type_2": "image",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
-        "media_type_1_mobile": "image",
-        "media_type_2_mobile": "image",
-        "link": "",
-        "open_in_new_tab": false,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 16,
-        "section_width": "page-width",
-        "section_height": "large",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-5",
-        "toggle_overlay": true,
-        "overlay_color": "#00000026",
-        "overlay_style": "gradient",
-        "gradient_direction": "to top",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 40,
-        "padding-block-end": 40
-      }
-    },
-    "hero_HfkF6c": {
-      "type": "hero",
-      "blocks": {
-        "marquee_WwtJVN": {
-          "type": "_marquee",
-          "name": "t:names.marquee",
-          "settings": {
-            "movement_direction": "normal",
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "transparent_background": true,
-            "padding-block-start": 24,
-            "padding-block-end": 24,
-            "gap_between_elements": 24
-          },
-          "blocks": {
-            "text_emVgap": {
-              "type": "text",
-              "settings": {
-                "text": "<p>La rasuradora #1</p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "center",
-                "type_preset": "h2",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "tight",
-                "letter_spacing": "tight",
-                "case": "none",
-                "wrap": "nowrap",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_emVgap"
-          ]
-        }
-      },
-      "block_order": [
-        "marquee_WwtJVN"
-      ],
-      "disabled": true,
-      "name": "Video",
-      "settings": {
-        "media_type_1": "video",
-        "video_1": "shopify://files/videos/ac3095cbd9ea49bfb48afcdfbd9a9716.HD-1080p-7.2Mbps-33419729.mp4",
-        "media_type_2": "image",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
-        "media_type_1_mobile": "image",
-        "media_type_2_mobile": "image",
-        "link": "",
-        "open_in_new_tab": false,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 16,
-        "section_width": "full-width",
-        "section_height": "medium",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-6",
-        "toggle_overlay": true,
-        "overlay_color": "#000e2024",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 40,
-        "padding-block-end": 40
-      }
-    },
-    "sp_comparison_grid_4pVL8t": {
-      "type": "sp-comparison-grid",
-      "blocks": {
-        "comparison_Yjt6Ge": {
-          "type": "comparison",
-          "settings": {
-            "label": "Diseño para todo el cuerpo",
-            "product_support": true,
-            "competitor_support": false
-          }
-        },
-        "comparison_j6VRjT": {
-          "type": "comparison",
-          "settings": {
-            "label": "Sin irritaciones ni cortes",
-            "product_support": true,
-            "competitor_support": false
-          }
-        },
-        "comparison_rHj4CX": {
-          "type": "comparison",
-          "settings": {
-            "label": "100% waterproof",
-            "product_support": true,
-            "competitor_support": false
-          }
-        },
-        "comparison_NGijQB": {
-          "type": "comparison",
-          "settings": {
-            "label": "Luz led integrada",
-            "product_support": true,
-            "competitor_support": false
-          }
-        },
-        "comparison_zYT9NG": {
-          "type": "comparison",
-          "settings": {
-            "label": "120 Minutos de uso continuo",
-            "product_support": true,
-            "competitor_support": false
-          }
-        }
-      },
-      "block_order": [
-        "comparison_Yjt6Ge",
-        "comparison_j6VRjT",
-        "comparison_rHj4CX",
-        "comparison_NGijQB",
-        "comparison_zYT9NG"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "/* Reemplaza .text-color con el selector correcto */.text-color {}"
-      ],
-      "name": "Cuadro comparativo",
-      "settings": {
-        "override_fonts": false,
-        "headline_font": "system_ui_n4",
-        "text_font": "system_ui_n4",
-        "override_text_sizes": false,
-        "text_size": 15,
-        "mobile_text_size": 15,
-        "text_line_height": "inherit",
-        "headline_size": 40,
-        "mobile_headline_size": 40,
-        "headline_line_height": "inherit",
-        "override_text_colors": false,
-        "text_color": "#111111",
-        "link_color": "#005bd3",
-        "show_on_device": "all",
-        "section_background_color": "linear-gradient(0deg, rgba(236, 236, 236, 1) 69%, rgba(236, 236, 236, 1) 92%)",
-        "section_background_image_color": "",
-        "section_background_size": "cover",
-        "mobile_section_background_image_color": "",
-        "mobile_section_background_size": "auto",
-        "section_padding_top_bottom": 25,
-        "mobile_section_padding_top_bottom": 25,
-        "section_padding_left_right": 25,
-        "mobile_section_padding_left_right": 10,
-        "container_background_color": "",
-        "container_max_width": 1000,
-        "container_padding_top_bottom": 10,
-        "mobile_container_padding_top_bottom": 10,
-        "container_padding_left_right": 10,
-        "mobile_container_padding_left_right": 0,
-        "element_spacing": 15,
-        "container_radius": 0,
-        "container_shadow": false,
-        "container_border_size": 0,
-        "container_border_color": "#888888",
-        "text_alignment": "center",
-        "mobile_text_alignment": "center",
-        "headline": "¿POR QUÉ MY COCOS?",
-        "content": "",
-        "headline_spacing": 15,
-        "highlight_background": "#ffffffc7",
-        "border_color": "#001936",
-        "check_color": "#ffba24",
-        "x_color": "#000e2073",
-        "cell_padding": 7,
-        "product_title": "My Cocos",
-        "competitor_title": "Otras"
-      }
-    },
-    "section_rJGPUA": {
-      "type": "section",
-      "blocks": {
-        "text_wUFD8N": {
+        "text_jz8FCk": {
           "type": "text",
           "name": "t:names.heading",
           "settings": {
@@ -3276,25 +3011,25 @@
             "width": "100%",
             "max_width": "narrow",
             "alignment": "center",
-            "type_preset": "h2",
+            "type_preset": "h3",
             "font": "var(--font-body--family)",
             "font_size": "",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
-            "color": "var(--color-foreground)",
+            "color": "var(--color-foreground-heading)",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
+            "padding-block-start": 15,
+            "padding-block-end": 15,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
           "blocks": {}
         },
-        "accordion_8txx4W": {
+        "accordion_crYagW": {
           "type": "accordion",
           "name": "t:names.accordion",
           "settings": {
@@ -3313,19 +3048,19 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "accordion_row_7kMgG4": {
+            "accordion_row_r4WGh6": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "¿Por qué elegir MyCOCOS 4.0?",
+                "heading": "¿Por qué elegir MyCOCOS® 4.0?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
               },
               "blocks": {
-                "text_m3CtPW": {
+                "text_3LT8Hm": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Rasura todo el cuerpo, desde la cabeza hasta los pies.</p><p>Tecnología SkinSecure®, evita cortes e irritaciones.</p><p>100% resistente al agua, úsala en seco o en la ducha.</p><p>Batería de larga duración, hasta 120 minutos de uso continuo.</p><p>Inalámbrica y portátil, sin cables molestos.</p><p>Bloqueo de viajes, perfecta para llevar a cualquier lugar.</p>",
+                    "text": "<ul><li>Rasura todo el cuerpo, desde la cabeza hasta los pies.</li><li>Tecnología SkinSecure®, evita cortes e irritaciones.</li><li>100% resistente al agua, úsala en seco o en la ducha.</li><li>Batería de larga duración, hasta 120 minutos de uso continuo.</li><li>Inalámbrica y portátil, sin cables molestos.</li><li>Bloqueo de viajes, perfecta para llevar a cualquier lugar.</li></ul>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3349,91 +3084,12 @@
                 }
               },
               "block_order": [
-                "text_m3CtPW"
+                "text_3LT8Hm"
               ]
             },
-            "accordion_row_LpBPrR": {
+            "accordion_row_8xGjc3": {
               "type": "_accordion-row",
-              "settings": {
-                "heading": "¿Cuánto tarda el envío?",
-                "open_by_default": false,
-                "icon": "none",
-                "width": 20
-              },
-              "blocks": {
-                "text_WmjF7H": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>Los pedidos se procesan en 24 horas y la entrega toma entre 1 a 3 días hábiles en Costa Rica.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_WmjF7H"
-              ]
-            },
-            "accordion_row_zV6br6": {
-              "type": "_accordion-row",
-              "settings": {
-                "heading": "¿Cuánto dura la batería?",
-                "open_by_default": false,
-                "icon": "none",
-                "width": 20
-              },
-              "blocks": {
-                "text_ypha3Y": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>La MyCOCOS 4.0 ofrece <strong>hasta 120 minutos de uso continuo </strong>con una sola carga, perfecta para viajes y múltiples sesiones de rasurado.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_ypha3Y"
-              ]
-            },
-            "accordion_row_g8UiN6": {
-              "type": "_accordion-row",
+              "name": "t:names.accordion_dash_row",
               "settings": {
                 "heading": "¿Cuántos peines vienen incluidos?",
                 "open_by_default": false,
@@ -3441,11 +3097,11 @@
                 "width": 20
               },
               "blocks": {
-                "text_LfnUJU": {
+                "text_nnGm9a": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Incluye<strong>2 peines guía </strong>con diferentes longitudes para personalizar tu estilo en cualquier zona del cuerpo.</p>",
+                    "text": "<ul><li>Incluye 2 peines guía con diferentes longitudes para personalizar tu estilo en cualquier zona del cuerpo.</li></ul>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3469,11 +3125,94 @@
                 }
               },
               "block_order": [
-                "text_LfnUJU"
+                "text_nnGm9a"
               ]
             },
-            "accordion_row_4UAQkB": {
+            "accordion_row_xy9bit": {
               "type": "_accordion-row",
+              "name": "t:names.accordion_dash_row",
+              "settings": {
+                "heading": "¿Cuánto dura la batería?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_gHiinM": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<ul><li>La MyCOCOS 4.0 ofrece hasta 120 minutos de uso continuo con una sola carga, perfecta para viajes y múltiples sesiones de rasurado.</li></ul>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_gHiinM"
+              ]
+            },
+            "accordion_row_PMwWWa": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_dash_row",
+              "settings": {
+                "heading": "¿Cuánto tarda el envío?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_pNki4w": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<ul><li>Los pedidos se procesan en 24 horas y la entrega toma entre 1 a 3 días hábiles en Panamá.</li></ul>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_pNki4w"
+              ]
+            },
+            "accordion_row_WgYKQE": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_dash_row",
               "settings": {
                 "heading": "¿Qué cubre la garantía de 1 año?",
                 "open_by_default": false,
@@ -3481,11 +3220,11 @@
                 "width": 20
               },
               "blocks": {
-                "text_UP3mTC": {
+                "text_aFRAe3": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>La garantía cubre defectos de fabricación y funcionamiento del producto. Si la MyCOCOS 4.0 presenta alguna falla dentro del primer año, puedes solicitar una reparación o un reemplazo.</p>",
+                    "text": "<ul><li>La garantía cubre defectos de fabricación y funcionamiento del producto. Si la MyCOCOS 4.0 presenta alguna falla dentro del primer año, puedes solicitar una reparación o un reemplazo.</li></ul>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3509,24 +3248,23 @@
                 }
               },
               "block_order": [
-                "text_UP3mTC"
+                "text_aFRAe3"
               ]
             }
           },
           "block_order": [
-            "accordion_row_7kMgG4",
-            "accordion_row_LpBPrR",
-            "accordion_row_zV6br6",
-            "accordion_row_g8UiN6",
-            "accordion_row_4UAQkB"
+            "accordion_row_r4WGh6",
+            "accordion_row_8xGjc3",
+            "accordion_row_xy9bit",
+            "accordion_row_PMwWWa",
+            "accordion_row_WgYKQE"
           ]
         }
       },
       "block_order": [
-        "text_wUFD8N",
-        "accordion_8txx4W"
+        "text_jz8FCk",
+        "accordion_crYagW"
       ],
-      "disabled": true,
       "name": "t:names.faq_section",
       "settings": {
         "content_direction": "column",
@@ -3540,7 +3278,7 @@
         "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-5",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
@@ -3552,137 +3290,51 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-start": 60,
+        "padding-block-end": 60
       }
     },
-    "section_dAnbpV": {
-      "type": "section",
+    "blocks_iz6WDp": {
+      "type": "_blocks",
       "blocks": {
-        "image_WeFjaH": {
-          "type": "image",
-          "disabled": true,
+        "loox_reviews_loox_card_carousel_section_kqbttw": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-card-carousel-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
-            "link": "",
-            "image_ratio": "square",
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "group_3X8HFn": {
-          "type": "group",
-          "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "custom",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": false,
-            "color_scheme": "scheme-4",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "padding-block-start": 0,
-            "padding-block-end": 25,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "text_kbfVhD": {
-              "type": "text",
-              "name": "t:names.heading",
-              "settings": {
-                "text": "<p>Pon tus cocos en buenas manos</p>",
-                "width": "100%",
-                "max_width": "none",
-                "alignment": "center",
-                "type_preset": "h2",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 34,
-                "padding-block-end": 2,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "button_tF8BA6": {
-              "type": "button",
-              "settings": {
-                "label": "Comprar {{ closest.product.title }}",
-                "link": "shopify://products/all-terrain-pack™",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_kbfVhD",
-            "button_tF8BA6"
-          ]
+            "maxWidth": 1440,
+            "borderRadius": 8,
+            "itemsPerView": 4,
+            "mobileItemsPerView": 1,
+            "maxNumberOfCharacters": 100,
+            "imageRatio": "0.72",
+            "reviewerNameColor": "#000000",
+            "textColor": "#000000",
+            "itemBackgroundColor": "#ffffff",
+            "starsColor": "",
+            "starsBackgroundColor": "#ffffff",
+            "arrows_backgroundColor": "#ffffff",
+            "arrows_iconColor": "#9a9a9a",
+            "shadow": "offset-dark",
+            "border_active": false,
+            "border_width": 2,
+            "border_color": "#000000",
+            "productIds": ""
+          }
         }
       },
       "block_order": [
-        "image_WeFjaH",
-        "group_3X8HFn"
+        "loox_reviews_loox_card_carousel_section_kqbttw"
       ],
-      "disabled": true,
-      "name": "Boton de compra",
+      "custom_css": [],
       "settings": {
         "content_direction": "row",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
         "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
+        "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
-        "gap": 32,
-        "section_width": "full-width",
+        "gap": 12,
+        "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
         "color_scheme": "",
@@ -3701,16 +3353,42 @@
         "padding-block-end": 0
       }
     },
-    "section_3qTT8p": {
-      "type": "section",
+    "product_recommendations_XBHhWY": {
+      "type": "product-recommendations",
       "blocks": {
-        "product_card_E6CQFB": {
-          "type": "product-card",
-          "name": "t:names.product_card",
+        "text_TQK7Ry": {
+          "type": "text",
+          "name": "t:names.header",
           "settings": {
-            "product": "{{ closest.product }}",
-            "product_card_gap": 16,
-            "inherit_color_scheme": true,
+            "text": "<h3>Productos relacionados</h3>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground-heading)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "name": "t:names.product_card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 4,
+            "inherit_color_scheme": false,
             "color_scheme": "",
             "border": "none",
             "border_width": 1,
@@ -3722,8 +3400,9 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "product_card_gallery_fcQYWY": {
+            "product_card_gallery_r4HnLx": {
               "type": "_product-card-gallery",
+              "name": "t:names.product_card_media",
               "settings": {
                 "image_ratio": "adapt",
                 "border": "none",
@@ -3736,182 +3415,11 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
-            }
-          },
-          "block_order": [
-            "product_card_gallery_fcQYWY"
-          ]
-        },
-        "group_jnx7ii": {
-          "type": "group",
-          "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "custom",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "product_title_XxjCpT": {
+            },
+            "product_title_r4cY7P": {
               "type": "product-title",
               "name": "t:names.product_title",
               "settings": {
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h2",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground-heading)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "divider_Qwe47N": {
-              "type": "_divider",
-              "name": "t:names.divider",
-              "settings": {
-                "thickness": 1,
-                "corner_radius": "square",
-                "width_percent": 100,
-                "padding-block-start": 0,
-                "padding-block-end": 0
-              },
-              "blocks": {}
-            },
-            "group_nPTDhA": {
-              "type": "group",
-              "name": "t:names.group",
-              "settings": {
-                "content_direction": "row",
-                "vertical_on_mobile": false,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "link": "",
-                "open_in_new_tab": false,
-                "placeholder": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "price_jAqhrg": {
-                  "type": "price",
-                  "name": "t:names.product_price",
-                  "settings": {
-                    "show_sale_price_first": true,
-                    "show_installments": false,
-                    "show_tax_info": false,
-                    "type_preset": "h4",
-                    "width": "fit-content",
-                    "alignment": "left",
-                    "font": "var(--font-subheading--family)",
-                    "font_size": "1.125rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "color": "var(--color-foreground)",
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "price_with_badge_iPXwAx": {
-                  "type": "price_with_badge",
-                  "name": "Discount Badge",
-                  "settings": {
-                    "badge_text": "OFF",
-                    "color_scheme": "",
-                    "badge_background_color": "{{ shop.brand.colors.secondary[0].foreground }}",
-                    "badge_text_color": "#ffffff",
-                    "percentage_text_color": "#ffffff",
-                    "badge_font_size": 14,
-                    "percentage_font_size": 16,
-                    "badge_border_radius": 4,
-                    "badge_position": "top-left",
-                    "badge_margin": 10,
-                    "badge_rotation": 0,
-                    "show_shadow": true
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "price_jAqhrg",
-                "price_with_badge_iPXwAx"
-              ]
-            },
-            "product_description_GfAW6i": {
-              "type": "product-description",
-              "name": "t:names.product_description",
-              "disabled": true,
-              "settings": {
-                "text": "{{ closest.product.description }}",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -3926,6 +3434,29 @@
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
+                "padding-block-start": 4,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "price_XeE3tx": {
+              "type": "price",
+              "name": "t:names.product_price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": false,
+                "show_tax_info": false,
+                "type_preset": "h6",
+                "width": "100%",
+                "alignment": "left",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "color": "var(--color-foreground)",
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
@@ -3933,39 +3464,13 @@
               },
               "blocks": {}
             },
-            "divider_HFFwW4": {
-              "type": "_divider",
-              "name": "t:names.divider",
-              "settings": {
-                "thickness": 1,
-                "corner_radius": "square",
-                "width_percent": 100,
-                "padding-block-start": 0,
-                "padding-block-end": 0
-              },
-              "blocks": {}
-            },
-            "variant_picker_yAkbQD": {
-              "type": "variant-picker",
-              "name": "t:names.product_variant_picker",
-              "settings": {
-                "variant_style": "buttons",
-                "show_swatches": true,
-                "alignment": "left",
-                "padding-block-start": 0,
-                "padding-block-end": 8,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "buy_buttons_zRCmt7": {
+            "buy_buttons_iX4WHy": {
               "type": "buy-buttons",
               "name": "t:names.product_buy_buttons",
               "settings": {
                 "stacking": false,
-                "show_pickup_availability": true,
-                "gift_card_form": true,
+                "show_pickup_availability": false,
+                "gift_card_form": false,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
@@ -3974,6 +3479,7 @@
               "blocks": {
                 "quantity": {
                   "type": "quantity",
+                  "disabled": true,
                   "static": true,
                   "settings": {},
                   "blocks": {}
@@ -3998,110 +3504,48 @@
             }
           },
           "block_order": [
-            "product_title_XxjCpT",
-            "divider_Qwe47N",
-            "group_nPTDhA",
-            "product_description_GfAW6i",
-            "divider_HFFwW4",
-            "variant_picker_yAkbQD",
-            "buy_buttons_zRCmt7"
+            "product_card_gallery_r4HnLx",
+            "product_title_r4cY7P",
+            "price_XeE3tx",
+            "buy_buttons_iX4WHy"
           ]
         }
       },
       "block_order": [
-        "product_card_E6CQFB",
-        "group_jnx7ii"
+        "text_TQK7Ry"
       ],
-      "disabled": true,
-      "name": "t:names.image_with_text",
+      "name": "t:names.product_recommendations",
       "settings": {
-        "content_direction": "row",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 32,
+        "product": "{{ closest.product }}",
+        "recommendation_type": "related",
+        "layout_type": "carousel",
+        "carousel_on_mobile": true,
+        "max_products": 8,
+        "columns": 4,
+        "mobile_columns": "2",
+        "columns_gap": 12,
+        "rows_gap": 24,
+        "icons_style": "arrow",
+        "icons_shape": "circle",
         "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 50,
-        "padding-block-end": 50
-      }
-    },
-    "17551844788b55f58a": {
-      "type": "_blocks",
-      "blocks": {
-        "klaviyo_reviews_product_reviews_49ed6C": {
-          "type": "shopify://apps/klaviyo-reviews/blocks/product-reviews/db20e365-d984-4ac4-9655-e1588d951ca9",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "klaviyo_reviews_product_reviews_49ed6C"
-      ],
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0
+        "gap": 28,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 48,
+        "padding-block-end": 48
       }
     }
   },
   "order": [
     "main",
     "section_H8P74R",
+    "carousel_i3in8R",
+    "round_out_routine_CfVBgh",
+    "ss_shoppable_video_p6nJNe",
     "sp_icon_grid_EgqCPj",
-    "section_qECJHB",
     "section_ULeYEw",
-    "section_yFWPz7",
-    "sp_before_and_after_cmURKt",
-    "ss_comparison_table_20_wTTNTi",
-    "product_recommendations_fGAXyj",
-    "section_fM9CA8",
-    "sp_hero_XVx3aY",
-    "hero_ANQYcF",
-    "hero_jXhkhX",
-    "hero_PAX7im",
-    "hero_HfkF6c",
-    "sp_comparison_grid_4pVL8t",
-    "section_rJGPUA",
-    "section_dAnbpV",
-    "section_3qTT8p",
-    "17551844788b55f58a"
+    "comparison_table_pqwMqE",
+    "section_qkAwxk",
+    "blocks_iz6WDp",
+    "product_recommendations_XBHhWY"
   ]
 }
