@@ -21,23 +21,11 @@
             "custom_liquid_Ah9BWr": {
               "disabled": true,
               "settings": {}
-            },
-            "group_JbmQwr": {
-              "disabled": false,
-              "settings": {}
-            },
-            "payment_icons_APmeyj": {
-              "disabled": true,
-              "settings": {}
             }
           },
           "block_order": [
-            "buy_buttons_eYQEYi",
             "custom_liquid_Ah9BWr",
             "essential_upsell_frequently_bought_together_app_block_zgCbfJ",
-            "group_JbmQwr",
-            "group_exLLmr",
-            "payment_icons_APmeyj",
             "text_aEtTtq",
             "variant_picker_R3rGDr",
             "accordion_BxYggA"
@@ -257,27 +245,10 @@
     }
   },
   "order": [
-    "section_QnDbUw",
     "main",
     "section_KNk4ED",
     "sp_icon_grid_FePY8X",
-    "section_qECJHB",
     "section_Mmj3Lq",
-    "section_LHVQN7",
-    "ss_comparison_table_20_NdDjHf",
-    "1772557623f34f690e",
-    "product_recommendations_TJ6KQj",
-    "sp_before_and_after_cmURKt",
-    "section_fM9CA8",
-    "sp_hero_XVx3aY",
-    "hero_ANQYcF",
-    "hero_jXhkhX",
-    "hero_PAX7im",
-    "hero_HfkF6c",
-    "sp_comparison_grid_4pVL8t",
-    "section_rJGPUA",
-    "section_dAnbpV",
-    "section_3qTT8p",
-    "1755184573d799fa0f"
+    "product_recommendations_TJ6KQj"
   ]
 }

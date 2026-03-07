@@ -21,23 +21,11 @@
             "custom_liquid_Ah9BWr": {
               "disabled": true,
               "settings": {}
-            },
-            "payment_icons_APmeyj": {
-              "disabled": true,
-              "settings": {}
-            },
-            "group_JbmQwr": {
-              "disabled": false,
-              "settings": {}
             }
           },
           "block_order": [
-            "buy_buttons_eYQEYi",
             "custom_liquid_Ah9BWr",
             "essential_upsell_frequently_bought_together_app_block_zgCbfJ",
-            "group_JbmQwr",
-            "group_exLLmr",
-            "payment_icons_APmeyj",
             "text_aEtTtq",
             "variant_picker_R3rGDr",
             "accordion_BxYggA"
