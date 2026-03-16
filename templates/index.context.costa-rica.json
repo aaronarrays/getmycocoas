@@ -2798,6 +2798,9 @@
     "logo_carousel_ArnbP": {
       "type": "logo-carousel",
       "disabled": false,
+      "custom_css": [
+        ".section-title {color: white;}"
+      ],
       "settings": {
         "enable_carousel": true,
         "section_title": "VALIDADO POR LOS MEJORES",
