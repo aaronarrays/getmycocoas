@@ -24,8 +24,8 @@
       "blocks": {
         "announcement_xyPzGe": {
           "settings": {
-            "text": "<strong>¡COCOS DAY! HASTA 35%    🏃🏻‍♂️💨 CORRE QUE SE ACABA</strong>",
-            "countdown_date": "2026-03-25 23:59"
+            "countdown_date": "2026-03-25 23:59",
+            "text": "<strong>¡COCOS DAY! HASTA 35%    🏃🏻‍♂️💨 CORRE QUE SE ACABA</strong>"
           }
         }
       }
