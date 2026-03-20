@@ -11,6 +11,39 @@
   "type": "header",
   "name": "Header",
   "sections": {
+    "header_announcements_pecRGC": {
+      "type": "header-announcements",
+      "blocks": {
+        "announcement_xyPzGe": {
+          "type": "_announcement",
+          "settings": {
+            "countdown_date": "2026-03-30 23:59",
+            "expiry_text": "¡Oferta terminada!",
+            "text": "¡Compra nuestras últimas novedades!",
+            "link": "",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "weight": "",
+            "letter_spacing": "normal",
+            "case": "none"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "announcement_xyPzGe"
+      ],
+      "disabled": true,
+      "name": "t:names.announcement_bar",
+      "settings": {
+        "speed": 5,
+        "section_width": "page-width",
+        "color_scheme": "",
+        "divider_width": 0,
+        "padding-block-start": 15,
+        "padding-block-end": 15
+      }
+    },
     "header_section": {
       "type": "header",
       "blocks": {
@@ -80,42 +113,10 @@
         "enable_transparent_header_collection": false,
         "collection_color_scheme": "default"
       }
-    },
-    "header_announcements_pecRGC": {
-      "type": "header-announcements",
-      "blocks": {
-        "announcement_xyPzGe": {
-          "type": "_announcement",
-          "settings": {
-            "countdown_date": "",
-            "expiry_text": "¡Oferta terminada!",
-            "text": "¡Compra nuestras últimas novedades!",
-            "link": "",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "weight": "",
-            "letter_spacing": "normal",
-            "case": "none"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "announcement_xyPzGe"
-      ],
-      "name": "t:names.announcement_bar",
-      "settings": {
-        "speed": 5,
-        "section_width": "page-width",
-        "color_scheme": "",
-        "divider_width": 0,
-        "padding-block-start": 15,
-        "padding-block-end": 15
-      }
     }
   },
   "order": [
-    "header_section",
-    "header_announcements_pecRGC"
+    "header_announcements_pecRGC",
+    "header_section"
   ]
 }
