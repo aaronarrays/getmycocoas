@@ -17,6 +17,18 @@
       "disabled": false,
       "settings": {},
       "blocks": {}
+    },
+    "header_announcements_pecRGC": {
+      "disabled": false,
+      "settings": {},
+      "blocks": {
+        "announcement_xyPzGe": {
+          "settings": {
+            "text": "<strong>¡COCOS DAY! HASTA 35%    🏃🏻‍♂️💨 CORRE QUE SE ACABA</strong>",
+            "countdown_date": "2026-03-25 23:59"
+          }
+        }
+      }
     }
   }
 }
