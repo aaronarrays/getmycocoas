@@ -26,9 +26,20 @@
     {{ block.shopify_attributes }}
     aria-hidden="{% if block_index == 0 %}false{% else %}true{% endif %}"
   >
-    <p class="announcement-bar__text">
-      {{ block.settings.text }}
-    </p>
+    <div class="announcement-bar__content-wrapper" style="display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;">
+  <p class="announcement-bar__text" style="margin: 0;">
+    {{ block.settings.text }}
+  </p>
+
+  {% if block_settings.countdown_date != blank %}
+    <div class="announcement-bar__timer" 
+         data-date="{{ block_settings.countdown_date }}" 
+         data-expiry="{{ block_settings.expiry_text }}"
+         style="font-weight: bold; display: flex; gap: 5px;">
+      <span class="timer-display"></span>
+    </div>
+  {% endif %}
+</div>
 
     {% if block_settings.link != blank %}
       <a
@@ -114,11 +125,68 @@
   }
 {% endstylesheet %}
 
+
+
+<script>
+  function initializeCountdown() {
+    const timers = document.querySelectorAll('.announcement-bar__timer');
+    
+    timers.forEach(timer => {
+      const endDate = new Date(timer.dataset.date).getTime();
+      const display = timer.querySelector('.timer-display');
+      const expiryText = timer.dataset.expiry;
+
+      if (isNaN(endDate)) return;
+
+      const updateTimer = () => {
+        const now = new Date().getTime();
+        const distance = endDate - now;
+
+        if (distance < 0) {
+          display.innerHTML = expiryText;
+          clearInterval(interval);
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Formato: 00d 00h 00m 00s
+        display.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      };
+
+      const interval = setInterval(updateTimer, 1000);
+      updateTimer();
+    });
+  }
+
+  // Inicializar al cargar y si el editor de Shopify actualiza la sección
+  document.addEventListener('DOMContentLoaded', initializeCountdown);
+  document.addEventListener('shopify:section:load', initializeCountdown);
+</script>
+
+
+
+
 {% schema %}
 {
   "name": "t:names.announcement",
   "tag": null,
   "settings": [
+    {
+  "type": "text",
+  "id": "countdown_date",
+  "label": "Fecha de finalización (Formato: YYYY-MM-DD HH:MM)",
+  "info": "Ejemplo: 2024-12-31 23:59"
+},
+{
+  "type": "text",
+  "id": "expiry_text",
+  "label": "Mensaje al terminar",
+  "default": "¡Oferta terminada!"
+},
     {
       "type": "inline_richtext",
       "id": "text",
