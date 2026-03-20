@@ -13,11 +13,6 @@
     "market": "panama"
   },
   "sections": {
-    "header_section": {
-      "disabled": false,
-      "settings": {},
-      "blocks": {}
-    },
     "header_announcements_pecRGC": {
       "disabled": false,
       "settings": {},
@@ -25,10 +20,15 @@
         "announcement_xyPzGe": {
           "settings": {
             "countdown_date": "2026-03-25 23:59",
-            "text": "<strong>¡COCOS DAY! HASTA 35%    🏃🏻‍♂️💨 CORRE QUE SE ACABA</strong>"
+            "text": "<strong>¡COCOS DAY! HASTA 25%    🏃🏻‍♂️💨 CORRE QUE SE ACABA</strong>"
           }
         }
       }
+    },
+    "header_section": {
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
     }
   }
 }
